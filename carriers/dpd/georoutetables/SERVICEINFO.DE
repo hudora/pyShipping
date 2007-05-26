@@ -1,0 +1,235 @@
+#Filename: SERVICEINFO.DE
+#Version: 20070102
+#Expiration: 20070501
+#Hash: 964398142584c438cf1475b527a808c6ab977118
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20070102.txt
+#Fields: ServiceCode|ServiceFieldInfo|
+#Key: ServiceCode|
+101||
+102|Gefahrgut / hazardous goods|
+103|Samstag / saturday|
+104||
+105|Unfrei / ex works|
+106|Unfrei / ex works Gefahrgut / hazardous goods|
+107||
+108||
+109|Nachnahme / C.O.D.|
+110|Nachnahme / C.O.D. Gefahrgut / hazardous goods|
+111||
+112||
+113|Austausch / exchange|
+114||
+115||
+116||
+117||
+118||
+119||
+120||
+121|Gefahrgut / hazardous goods|
+122||
+123||
+124|Unfrei / ex works|
+125|Unfrei / ex works Gefahrgut / hazardous goods|
+126||
+127||
+128|Nachnahme / C.O.D.|
+129|Nachnahme / C.O.D. Gefahrgut / hazardous goods|
+130||
+131||
+132|Austausch / exchange|
+133||
+134||
+135||
+136||
+137|Samstag / saturday|
+138|Unfrei / ex works|
+139||
+140|Nachnahme / C.O.D.|
+141||
+142|Austausch / exchange|
+143||
+144||
+145||
+146||
+147||
+148|Unfrei / ex works|
+149||
+150|Nachnahme / C.O.D.|
+151||
+152|Austausch / exchange|
+153||
+154|DPD PARCELLetter|
+155|DPD GUARANTEE|
+156||
+157||
+158|DPD GUARANTEE Unfrei / ex works|
+159||
+160||
+161|DPD GUARANTEE Nachnahme / C.O.D.|
+162||
+163||
+164||
+165||
+166||
+167||
+168|DPD GUARANTEE|
+169||
+170||
+171|DPD GUARANTEE Unfrei / ex works|
+172||
+173||
+174|DPD GUARANTEE Nachnahme / C.O.D.|
+175||
+176||
+177||
+178||
+179|DPD EXPRESS10|
+180||
+181||
+182||
+183||
+184||
+185|DPD EXPRESS10 Unfrei / ex works|
+186||
+187||
+188||
+189||
+190||
+191|DPD EXPRESS10 Nachnahme / C.O.D.|
+192||
+193||
+194||
+195||
+196||
+197||
+198||
+199||
+200||
+201||
+202||
+203|DPD EXPRESS10|
+204||
+205||
+206||
+207||
+208||
+209|DPD EXPRESS10 Unfrei / ex works|
+210||
+211||
+212||
+213||
+214||
+215|DPD EXPRESS10 Nachnahme / C.O.D.|
+216||
+217||
+218||
+219||
+220||
+221||
+222||
+223||
+224||
+225|DPD EXPRESS12|
+226||
+227||
+228|DPD EXPRESS12 Samstag / saturday|
+229||
+230||
+231|DPD EXPRESS12 Unfrei / ex works|
+232||
+233||
+234|DPD EXPRESS12 Samstag / saturday Unfrei / ex works|
+235||
+236||
+237|DPD EXPRESS12 Nachnahme / C.O.D.|
+238||
+239||
+240|DPD EXPRESS12 Samstag / saturday Nachnahme / C.O.D.|
+241||
+242||
+243||
+244||
+245||
+246||
+247||
+248||
+249|DPD EXPRESS12|
+250||
+251||
+252|DPD EXPRESS12 Samstag / saturday|
+253||
+254||
+255|DPD EXPRESS12 Unfrei / ex works|
+256||
+257||
+258|DPD EXPRESS12 Samstag / saturday Unfrei / ex works|
+259||
+260||
+261|DPD EXPRESS12 Nachnahme / C.O.D.|
+262||
+263||
+264|DPD EXPRESS12 Samstag / saturday Nachnahme / C.O.D.|
+265||
+266||
+267||
+268||
+269||
+270||
+271|same day|
+272||
+273||
+274||
+275||
+276||
+277||
+278||
+279||
+280||
+281||
+282||
+283||
+284||
+285||
+286||
+287||
+288||
+289||
+290||
+291||
+292||
+293||
+294|DPD International Mail|
+298||
+299||
+300||
+301||
+302|DPD EXPRESSInternational|
+303||
+304||
+305||
+306||
+307||
+308||
+309||
+310||
+311||
+312||
+313||
+314||
+350|DPD EXPRESS8:30|
+351|DPD EXPRESS8:30 Unfrei / ex works|
+352|DPD EXPRESS8:30 Nachnahme / C.O.D.|
+353|DPD EXPRESS8:30 Austausch / exchange|
+354|DPD EXPRESS8:30|
+355|DPD EXPRESS8:30|
+356|DPD EXPRESS8:30 Unfrei / ex works|
+357|DPD EXPRESS8:30 Nachnahme / C.O.D.|
+358|DPD EXPRESS8:30 Austausch / exchange|
+810|Service Werktag 09:00 Uhr|
+811|Service Werktag 12:00 Uhr|
+812|Service Werktag 17:00 Uhr|
+813|Service Werktag Zeitfenster|
+814|Service Samstag 09:00 Uhr|
+815|Service Samstag 12:00 Uhr|
+816|Service Fixtermin|
+817|Privatpaket|

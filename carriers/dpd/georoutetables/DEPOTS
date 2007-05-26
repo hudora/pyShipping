@@ -1,0 +1,1124 @@
+#Filename: DEPOTS
+#Version: 20070102
+#Expiration: 20070501
+#Hash: a6901460a8f6780d4539e3fcab737b7a702a45db
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20070102.txt
+#Fields: GeoPostDepotNumber|IATALikeCode|GroupID|Name1|Name2|Address1|Address2|PostCode|CityName|ISO-Alpha2CountryCode|Phone|Fax|Mail|WEB|
+#Key: GeoPostDepotNumber|
+0010||EDED,EFDX|Betriebsgesellschaft DPD Deutscher||Die Marck 4||00010|Moersdorf|DE|+49-3 64 28-6 82-0|+49-3 64 28-6 82-19|hubleitung@hub10.dpd.de||
+0012||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Inselallee||01723|Kesselsdorf|DE|03 52 04-654-0|03 52 04/60-500|info@depot101.dpd.de||
+0013||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Europastrasse 1||31275|Lehrte|DE|+49-(0) 51 32-8 58-0|+49-(0) 51 32-8 58-51 14|vorname.nachname@depot130.dpd.net||
+0014||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Bahnwiesenweg 20||34281|Gudensberg|DE|+49-(0) 56 03-9 31-0|+49-(0) 56 03-9 31-1 25|hub14@depot134.dpd.de||
+0015||EDED,EFDX|Betriebsgesellschaft DPD Deutscher||Otto-Hahn-Strasse 5||59423|Unna|DE|+49-(0) 23 03-8 88-0|+49-(0) 23 03-8 88-31|||
+0016||EDED,EFDX|Betriebsgesellschaft DPD Deutscher||Obernburger Strasse 45||00016|Aschaffenburg|DE|+49-(0) 60 21-86 08-0|+49-(0) 60 21-86 08-39|||
+0017||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Carl-Benz-Str. 17/1||71634|Ludwigsburg|DE|+49-(0) 71 41-30 03-4 10|+49-(0) 71 41-30 03-4 79|||
+0019||EDED,EFDX|PCQ Beteiligungs- und Logistik GmbH||Duisburger Strasse 24||90451|Nuernberg|DE|+49-(0)9 11-64 91 00-5|+49-(0)9 11-6 49 86 85|||
+0021|||Express SoDExi||Zone de Fret 4, Batiment Air France||95703|Roissy CDG Cedex|FR|||||
+0029||EGRD,EALC|Athens||||18233||GR|||||
+0030||EDED,EFDX|DPD Sweden c/o Posten AB||Vevaxelgatan 8||21241|Malmoe|SE|+46-(0)7 71-9 09-8 98|+46-(0)8-7 81-78 04|international.support@posten.se||
+0031||EDED,EFDX|DPD Sweden c/o Posten AB||Haeradsvaegen 253||14171|Segeltorp|SE|+46-(0)7 71-90 98 98|+46-(0)8-7 81 78 04|international.support@posten.se||
+0032||EDED,EFDX|DPD Sweden c/o Posten AB||Truckgatan 6||70227|Oerebro|SE|+46-(0)7 71-90 98 98|+46-(0)8-7 81 78 04|international.support@posten.se||
+0033|||Armadillo Business Parcel||Vostriakovsky pr., 10D||113403|Moscow|RU|||||
+0034|||Direct Parcel Distribution Norge AS||Alfaset 3, Industrivei 25||668|Oslo|NO|+47-22 32-90 00|+47-22 32-93 83|||
+0038||EDED,EFDX|DPD Finland Oy||Ayritie 12 C||01510|Vantaa|FI|+3 58-10-80 48-48|+3 58-10-56 22-6 02|dpd.info@dpd.fi||
+0039||EDED,EFDX|DPD Finland Oy||Uhrilaehteenkatu 2||20250|Turku|FI|+3 58-10-56 22-00|+3 58-10-56 22-6 30|dpd.info@dpd.fi||
+0040||EFRD|Chronopost S.A.||ZI, rue du Perou, ZI du Perou||91300|Massy|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|international.deferred@chronopost.f||
+0041||EFRD|Chronopost S.A.||Rue Saint Exupery, ZI de la Butte a||91380|Chilly Mazarin|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|international.deferred@chronopost.f||
+0042||EFRD,LSTD|Tat Express||Boulevard Jean Monnet||77127|Lieusaint|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|international.deferred@chronopost.f||
+0043||EFRD|Chronopost S.A.||Espace Commercial Frejorgues Est||34999|Montpellier|FR|||||
+0044||EFRD|Chronopost S.A.||1, rue Rimbaud, Parc dActivlties -||69150|Decines Charpieu|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|international.deferred@chronopost.f||
+0045|GEN|EFRD|GENNEVILLIERS||3 ROUTE ANNEXE|BASSIN N 1|92230|GENNEVILLIERS|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0046|CRE|EFRD|CREIL||1 AVENUE DES CHARMES|PARC ALATA|60100|CREIL|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0047||EFRD|EASYDIS||ZAC de la petite montagne|Rue de Cevennes|91090|Lisses|FR|||||
+0050||EDED,EFDX|Direct Parcel Distribution (Denmark||Gejlhavegard 16||6000|Kolding|DK|00 45 70 10 05 10|00 45 76 30 25 15|dpd@dpddk.dk||
+0051||EDED,EFDX|Direct Parcel Distribution (Denmark||Bohus Boulevard 3||2630|Taastrup|DK|+45 70 10 05 10|+45 43 30 02-30/31|dpd@dpddk.dk||
+0052||ENLD|GeoPost (Nederland) B.V.||Tormentil 10||5684|PK Best|NL|+31-4 99-33 99-54|+31-4 99-33 99-57|info@geopost.nl||
+0055||EGBD,EFDX|Direct Parcel Distribution (UK) Ltd||Roebuck Lane, Smethwick||B661BY|West Midlands|GB|+44-1 21-5 00-25 00|+44-1 21-6 97-28 58|dpd.imports@parceline.com||
+0057|||DPD GeoPost Korea||Kyungi Gimpo-si, Incheon Ganghwa-gu|Gyeyang-gu, Seo-gu|40740|Gimpo|KR|||||
+0058|||DPD GeoPost Vietnam|||||Hanoi|VN|||||
+0062||EDED,EFDX|APS Austria Paket System GmbH||Fischerweg 10||4063|Hoersching|AT|+43-72 21-7 47 50-0|+43-72 21-7 47 50-5 09|hup@dpd.at||
+0064||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Komercni zona Modletice|Modletice 135|25101|Ricany u Prahy|CZ|+4 20-27 20-0 16-1 55|+4 20-27 20-16-1 57|hub@dpd.cz||
+0065||EDED,EFDX|DPD Direct Parcel Distribution SK s||K cintorinu 51/97||1089|Zilina-Banova|SK|+4 21-4 15-6 40-2 36|+4 21-4 15-6 40-1 02|Depot635@dpd.sk||
+0066||EDED,EFDX|DPD Hungaria Kft||Kesmark u. 14||1158|Budapest|HU|-589|-599|dpd@dpd.hu||
+0067||EBGD,EALT|GeoPost Bulgaria OOD||63, Shipchenski prohod blvd.||1574|Sofia|BG|+3 59-2-9 71 35 24|+3 59-2-9 71 26 28|OPS@geopost.bg||
+0068||EROD,EALT|S.C. GeoPost Cargus SA||Sos. Bucuresti Ploiesti nr.1||75100|Otopeni|RO|+40-21-93 30-0 00|+40-31-10 02-0 10|geopostcargus@cargus.ro||
+0069|||Estafeta Mexicana S.A. de C.V.||Aduana del Aeropuerto Intern. Cd. d||15520|Mexico D.F.|MX|+52-55-52 42 91 59-84 21||karla.sosa@estafeta.com||
+0071||EESD,EFDX|Seur Internacional Express S.A.||Poligono Industrial Gran Via Sur -||8908|LHospitalet de Llobregat (Barcelona)|ES|+34-93-3 36 85 85|+34-93-2 63 08 01|||
+0075||EPLD|Masterlink Express Sp.z.oo||ul. Mineralna 15||02274|WARSZAWA|PL|48 22 66 80 80 02 12|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0077||EPLD|Masterlink Express Sp.z.oo||ul. Lanowa||95100|Zgierz, Lucmierz|PL|||||
+0080|||China|||||Guangzhou|CN|||||
+0081|||La Poste Tunisienne|| Centre des Colis Postaux - Complex||2035|Tunis Carthage|TN|||||
+0082||EDED,EFDX|Bartolini - Torino Orbassano||Interporto Orbassano||10043|Orbassano|IT|+39-(0) 25-80 39-81|+39-(0) 25-80 19-2 85|int049@bartolini.it||
+0083||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||via Monte Pastello 30||37057|San Giovanni Lupatoto (VR)|IT|+39-(0) 45-8 95 01 11|+39-(0) 45-8 77 92 01|||
+0086||ETRD,EALT|Surdisi Aktarma Merkezi||Merkez Mh. Tasocaklari Mh. No:25 Ma||3439|Istanbul-Bagcilar|TR|90 21 24 46 36 80||||
+0088|||GeoPost Caspian LLP||52 Kabanbay Batyr Street||50010|Almaty|KZ|||||
+0091|||DPD d.o.o.||Zrenjaninski put 153h||11211|Beograd|CS|+3 81-11-33 21  4 74|+3 81-11-33 20  1 98|dpd@dpd.co.yu||
+0092||EHRD,EEUT|DPD Croatia d.o.o.||Franje Lucica 23||10090|Zagreb|HR|38 50 13 43 06 00|38 50 13 43 06 66|dpd@dpd.hr||
+0093||EDED,EFDX|DPD d.o.o.||Trzaska cesta 43||2000|Maribor|SI|+386 (0) 2 330 22 60|+386 (0) 2 330 22 65|dpd@dpd.si||
+0094|||DPD d.o.o.||Halilovici bb||71000|Sarajevo|BA|+3 87-33-7 69-5 00|+3 87-33-7 69-6 61|dpd@dpd.ba||
+0095||EPTD,EFDX|Chronopost Portugal - Transporte Ex||Av.Infante D.Henrique, Lote 10||1849003|Olivais Sul (Lisboa)|PT|||||
+0097||EDED,EFDX|AS Baltic Logistic System Eesti||Peterburi tee 38||11415|Tallinn|EE|+3 72-(0)-6 13 00-00|+3 72-(0)-6 13 00-13|bizpak@bizpak.com||
+0098||EDED,EFDX|UAB Baltic Logistic System Vilnius||Ateities 45b||52119|Kaunas|LT|+3 70-5-2 10 67 50|+3 70-5-2 10 67 40|dpd@bizpak.lt||
+0099||EDED,EFDX|SIA Baltic Logistic System-Latvija||Rankas iela11||1005|Riga|LV|+3 71-7-3 87-2 84|+3 71-7-3 87-2 88|info@bizpak.lv||
+0101||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Inselallee 11||01723|Kesselsdorf|DE|+49-(0)3 52 04-6 54-0|+49-(0)3 52 04-6 54-50|info@depot101.dpd.de||
+0103||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||OT Gross Beuchow-Robinienweg||03222|Luebbenau/Spreewald|DE|+49-(0) 35 42-89 04-0|+49-(0) 35 42-89 04-90|info@depot103.dpd.de||
+0104||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Hilchenbacher Strasse 20||04509|Krostitz|DE|+49-(0)3 42 95-78-1 50|+49-(0)3 42 95-78-1 55|kundendienst@depot104.dpd.de||
+0107||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Raiffeisenstrasse 11||00107|Leupoldsgruen|DE|+49-(0) 92 92-9 61-0|+49-(0) 92 92-9 61-1 50|depot@depot195.dpd.de||
+0108||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Eichelbergstrasse 1||09212|Limbach-Oberfrohna|DE|+49-(0)3 76 08-24-0|+49-(0)3 76 08-24-1 97|info@depot109.dpd.de||
+0109||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Gewerbegebiet 1||00109|Callenberg|DE|+49-(0)3 76 08-24-0|+49-(0)3 76 08-24-1 97|info@depot109.dpd.de||
+0110||EDED,EFDX|Deutscher Paket Dienst Zeitfracht G||Friedrich-Olbricht-Damm 46-48||13627|Berlin|DE|+49-(0) 30-34 68 04-0|+49-(0) 30-34 68 04-15|Kundendienst@depot110.dpd.de||
+0111|BER|EDED,EFDX|Berlin|Chronopost International Deutschlan|Tempelhofer Damm 1-7||12101|Berlin|DE|+49-(0)30-410002-0|+49-(0)30-410002-22|customerserviceber@chronopost.de||
+0112||EDED,EFDX|Deutscher Paket Dienst Zeitfracht G||Marzahner Strasse 22||13053|Berlin-Hohenschoenhausen|DE|+49-(0) 30-98 60 92-0|+49-(0) 30-98 60 92-22|Kundendienst@depot110.dpd.de||
+0114||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Magdeburger Strasse 7||14641|Wustermark|DE|+49-(0)3 32 34-20-0|+49-(0)3 32 34-20-1 14|info@depot114.dpd.de||
+0115||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Eichenweg 3||15749|Mittenwalde|DE|+49-(0)3 37 64-2 51-0|+49-(0)3 37 64-2 51-1 52|info@depot115.dpd.de||
+0117||EDED,EFDX|Deutscher Paket Dienst Altentreptow||Gewerbehof 16||17087|Altentreptow|DE|+49-(0) 39 61-2 71-2 00|+49-(0) 39 61-2 71-2 90|verkauf@depot117.dpd.de||
+0118||EDED,EFDX|TM Logistik GmbH||Friedrichshoehe 1||18198|Kritzmow/OT Gross Schwass|DE|||||
+0119||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Gewerbeallee 11||19089|Crivitz|DE|+49-(0) 38 63-54 02-0|+49-(0) 38 63-33 38-36|info@depot119.dpd.net||
+0120||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Neue Wollkaemmereistrasse 2||21107|Hamburg|DE|+49-(0) 40-75 37-01|+49-(0) 40-75 37-25 97|info@depot120.dpd.de||
+0121||EDED,EFDX|Felz & Schorr GmbH||Bessemerstr. 12||21339|Lueneburg|DE|+49-(0) 41 31-38 02-01|+49-(0) 41 31-38 02-03|Manuela.Felz@depot121.dpd.de||
+0122||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||August-Borsig-Strasse 11||24783|Osterroenfeld|DE|+49-(0) 43 31-80 95-3 33|+49-(0) 43 31-80 95-6 99|mailbox@depot122.dpd.de||
+0123||EDED,EFDX|Paket Logistic Lubeca GmbH||Spenglerstrasse 21||23556|Luebeck|DE|+49-(0)4 51-8 99 48-13|+49-(0)4 51-89 14-19|Iris.Hammermann@depot123.dpd.de||
+0124||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Liebigstrasse 15||24941|Flensburg|DE|+49-(0)4 61-99 99-3 33|+49-(0)4 61-99 99-6 99|mailbox@depot124.dpd.de||
+0125||EDED,EFDX|Peters Logistik GmbH||Muehlenweg 131||22844|Norderstedt-Harksheide|DE|+49-(0) 40-5 30 55-8 41|+49-(0) 40-5 30 55-8 43|Uta.Pape@depot125.dpd.de||
+0126||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||August-Wilhelm-Kuehnholz-Strasse 31||26135|Oldenburg|DE|+49-(0)4 41-20 00-7 50|+49-(0)4 41-20 00-7 80|info@depot126.dpd.de||
+0127||EDED,EFDX|Dreesmann & Lanzerath GmbH & Co. KG||Gewerbestrasse 6||26835|Brinkum|DE|+49-(0) 49 50-93 71-44|+49-(0) 49 50-35 27|info@depot127.dpd.de||
+0128||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Ludwig-Erhard-Strasse 7||28197|Bremen|DE|+49-(0)4 21-5 22-01|+49-(0)4 21-5 22-35 02|info@depot128.dpd.de||
+0129||EDED,EFDX|IBLO Transport GmbH||Meyerhof-Ahrsen||29699|Bomlitz|DE|+49-(0) 42 62-95 56-0|+49-(0) 42 62-95 56-79|info@depot129.dpd.de||
+0130||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Europastrasse 1||31275|Lehrte|DE|+49-(0) 51 32-8 58-0|+49-(0) 51 32-8 58-51 12|info@depot130.dpd.de||
+0132||EDED,EFDX|Marrek + Koennecker GmbH||Salzuflener Strasse 102-104||32602|Vlotho|DE|+49-(0) 57 33-91 16-0|+49-(0) 57 33-91 16-66|info@depot132.dpd.de||
+0134||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Bahnwiesenweg 20||34281|Gudensberg|DE|+49-(0) 56 03-9 31-0|+49-(0) 56 03-9 31-1 25|info@depot134.dpd.de||
+0135||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Didierstrasse 42||00135|Staufenberg-Mainzlar|DE|+49-(0) 64 06-91 15-0|+49-(0) 64 06-91 15-49|info@depot135.dpd.de||
+0136||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Schaffeld 6||36119|Neuhof-Dorfborn|DE|+49-(0) 66 55-96 99-0|+49-(0) 66 55-96 99-96|info@depot136.dpd.de||
+0137||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Klosteracker 5||37176|Noerten-Hardenberg|DE|+49-(0) 55 03-80 09-0|+49-(0) 55 03-80 09-99|info@depot137.dpd.de||
+0138||EDED,EFDX|PKD Paket-Kurier-Dienst GmbH||Carl-Zeiss-Weg 3||38239|Salzgitter|DE|+49-(0) 53 41-22 00-0|+49-(0) 53 41-22 00-33|info@depot138.dpd.de||
+0139||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Am Knuehl 9||39326|Hermsdorf|DE|+49-(0)3 92 06-6 53-0|+49-(0)3 92 06-6 53-10|Info@depot139.dpd.de||
+0140||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Am Roehrenwerk 9||47259|Duisburg|DE|+49-(0)2 03-99 88-0|+49-(0)2 03-99 88-1 00|info@depot147.dpd.de||
+0141||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Opelstr. 5||41836|Hueckelhoven|DE|+49-(0) 24 33-4 41-0|+49-(0) 24 33-4 41-1 09|info@depot147.dpd.de||
+0142||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Porschestrasse 20||00142|Wuppertal|DE|+49-(0)2 02-2 60 91-0|+49-(0)2 02-2 60 91-55|info@depot142.dpd.de||
+0143|GDK|EDED,EFDX|GDSK Agent| Gesellschaft der Schnellkuriere Gm|Dieselstrasse 27||49076|Osnabrueck|DE|+49-(0)541-912 22-0|+49-(0)541-912 22-55|gdsk@gdsk.de||
+0144||EDED,EFDX|Nurmann Transport GmbH||Luxemburger Strasse 14||48455|Bad Bentheim|DE|+49-(0) 59 24-78 77-0|+49-(0) 59 24-78 77-70|service@depot144.dpd.de||
+0145||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Am Stadthafen 16||45356|Essen|DE|+49-(0)2 01-8 35 97-0|+49-(0)2 01-8 35 97-19|info@depot145.dpd.de||
+0146||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Borker Strasse||45731|Waltrop|DE|+49-(0) 23 09-96 04-0|+49-(0) 23 09-96 04-18|depotleitung@depot146.dpd.de||
+0147||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Am Roehrenwerk 9||47259|Duisburg|DE|+49-(0)2 03-99 88-0|+49-(0)2 03-99 88-1 00|info@depot147.dpd.de||
+0148||EDED,EFDX|Nurmann Transport GmbH||Weseler Strasse 567 a||48163|Muenster|DE|+49-(0)2 51-7 49 79-0|+49-(0)2 51-7 49 79-24|info@depot148.dpd.de||
+0149||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Elbestr. 39||49090|Osnabrueck|DE|+49-(0)5 41-9 65-0|+49-(0)5 41-9 65-11 32|info@depot149.dpd.de||
+0150||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Europaallee||50226|Frechen|DE|+49-(0) 22 34-18 10-0|+49-(0) 22 34-18 10-5 03 99|info@depot150.dpd.de||
+0152||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Europaallee||50226|Frechen|DE|+49-(0) 22 34-18 10-0|+49-(0) 22 34-18 10-5 03 99|info@depot150.dpd.de||
+0153||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Borsigstrasse 2||59609|Anroechte|DE|+49-(0) 29 47-97 60-0|+49-(0) 29 47-97 60-80|depotleitung@depot153.dpd.de||
+0154||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Gewerbegebiet||54518|Sehlem|DE|+49-(0) 65 08-1 89-0|+49-(0) 65 08-16 27|info@depot154.dpd.de||
+0156||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Im Metternicher Feld 32||56072|Koblenz|DE|+49-(0)2 61-9 22 62-0|+49-(0)2 61-9 22 62-16|info@depot156.dpd.de||
+0157||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Oberhausener Strasse 9||57234|Wilnsdorf|DE|+49-(0) 27 39-8 06-0|+49-(0) 27 39-8 06-45|info@depot157.dpd.de||
+0158||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Spannstiftstr. 23||58119|Hagen|DE|+49-(0) 23 34-5 00-0|+49-(0) 23 34-5 00-4 45|info@depot158.dpd.de||
+0159||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Schleiferstr. 7||59425|Unna|DE|+49-(0) 23 03-6 74-0|+49-(0) 23 03-6 74-3 85|depotleitung@depot159.dpd.de||
+0160||EDED,EFDX|Deutscher Paket Dienst Zeitfracht G||Kelsterbacher Str. 64||00160|Raunheim|DE|+49-(0) 61 42-2 02-0|+49-(0) 61 42-2 02-1 34|kundendienst@depot160.dpd.de||
+0161||EDED,EFDX|Chronopost Deutschland||Kelsterbacher Strasse 64||65479|Raunheim|DE|+49-(0) 61 42-7 93 08-0|+49-(0) 61 42-7 93 08-29|||
+0162|FRA|EDED,EFDX|Frankfurt|Chronopost International Deutschlan|Kelsterbacher Str. 64||65479|Raunheim|DE|+49-(0)2 03-99 88-0|+49-(0)2 03-99 88-1 00|customerservicefra@chronopost.de||
+0163||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Auhofstr. 25||63741|Aschaffenburg|DE|+49-(0) 60 21-4 43 94-0|+49-(0) 60 21-4 43 94-39|Zentrale@depot163.dpd.de||
+0165||EDED,EFDX|Deutscher Paket Dienst Zeitfracht G||Kelsterbacher Str. 64||00165|Raunheim|DE|+49-(0) 61 42-2 02-0|+49-(0) 61 42-2 02-1 34|kundendienst@depot160.dpd.de||
+0166||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Suedstrasse 51||66386|St. Ingbert|DE|+49-(0) 68 94-89 07-0|+49-(0) 68 94-66 54|info@depot166.dpd.de||
+0167||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Mittelrheinstr. 19||67550|Worms|DE|+49-(0) 62 42-9 09-01|+49-(0) 62 42-9 09-1 49|info@depot167.dpd.de||
+0168||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Mittelrheinstrasse 19||00168|Worms|DE|+49-(0)  6 2  42-9 09-01|+49-(0)  6 2  42-9 09-1 49|info@depot167.dpd.de||
+0169||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Suedstrasse 51||66386|St. Ingbert|DE|+49-(0) 68 94-89 07-0|+49-(0) 68 94-66 54|info@depot166.dpd.de||
+0170||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Carl-Benz-Strasse 17||00170|Ludwigsburg|DE|+49-(0) 71 41-30 03-0|+49-(0) 71 41-30 03-9 99|Depotleitung@depot171.dpd.de||
+0171||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Carl-Benz-Str. 17||00171|Ludwigsburg|DE|+49-(0) 71 41-30 03-0|+49-(0) 71 41-30 03-9 99|Depotleitung@depot171.dpd.de||
+0172||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||In der Au 11||72622|Nuertingen|DE|+49-(0) 70 22-30 03-0|+49-(0) 70 22-30 03-39|info@depot172.dpd.de||
+0173||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Carl-Benz-Str. 17||71634|Ludwigsburg|DE|+49-(0) 71 41-30 03-0|+49-(0) 71 41-30 03-9 99|Depotleitung@depot171.dpd.de||
+0174||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Pfaffenstrasse 31||00174|Heilbronn|DE|+49-(0) 71 31-2 92-0|+49-(0) 71 31-2 92-15|verkauf@depot174.dpd.de||
+0175||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Siemensstrasse 1||00175|Malsch|DE|+49-(0) 72 46-9 11-0|+49-(0) 72 46-9 11-1 50|kundendienst@depot176.dpd.de||
+0176||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Siemensstrasse 1||00176|Malsch|DE|+49-(0) 72 46-9 11-0|+49-(0) 72 46-9 11-1 50|kundendienst@depot176.dpd.de||
+0177||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||In Rammelswiesen 20||78056|Villingen-Schwenningen|DE|+49-(0) 77 20-80 99-8 00|+49-(0) 77 20-80 99-9 00|info@depot178.dpd.de||
+0178||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||In Rammelswiesen 20||78056|Villingen-Schwenningen|DE|+49-(0) 77 20-80 99-8 00|+49-(0) 77 20-80 99-9 00|info@depot178.dpd.de||
+0179||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Blankreutestr. 5||79108|Freiburg|DE|0049 761 888 585 00|0049 761 888 585 99|info@depot179.dpd.de||
+0180||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Ludwig-Erhard-Str. 12||00180|Neufahrn|DE|+49-(0) 81 65-9 42-0|+49-(0) 81 65-9 42-3 77|info@depot180.dpd.de||
+0181|MUC|EDED,EFDX|Munich|Chronopost International Deutschlan|Am Pfanderling 1||85778|Haimhausen|DE|+49-(0)8133-9185-6|+49-(0)8133-9185-74|customerservicemuc@chronopost.de||
+0182||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Buergermeister-Graf-Ring 12||82538|Geretsried - Gelting|DE|+49-(0) 81 71-43 33-0|+49-(0) 81 71-43 33-10|info@depot182.dpd.de||
+0183||EDED,EFDX|CHRONOPOST Express International||||82538||DE|||||
+0184||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Braeuackerring 1||00184|Obing|DE|+49-(0) 86 24-89 67-0|+49-(0) 86 24-89 67-99|info@depot184.dpd.de||
+0185||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Siemensstrasse 1||00176|Malsch|DE|+49-(0) 72 46-9 11-0|+49-(0) 72 46-9 11-1 50|kundendienst@depot176.dpd.de||
+0186||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Kalterer Str. 11||86165|Augsburg|DE|+49-(0)8 21-7 94 00-0|+49-(0)8 21-7 94 00-62|info@depot186.dpd.de||
+0187||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Memminger Str. 140||87439|Kempten|DE|+49-(0)8 31-5 92 14-0|+49-(0)8 31-5 92 14-39|info@depot187.dpd.de||
+0188||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Memminger Str. 140||00188|Kempten|DE|+49-(0)8 31-5 92 14-0|+49-(0)8 31-5 92 14-39|info@depot187.dpd.de||
+0189||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Ernst-Abbe-Strasse 5||89231|Neu-Ulm|DE|+49-(0)7 31-97 54-1|+49-(0)7 31-97 54-4 00|info@depot189.dpd.de||
+0190||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Hamburger Str. 2||90451|Nuernberg|DE|+49-(0)9 11-6 41 35-0|+49-(0)9 11-6 41 35-1 50|zentrale190@depot190.dpd.de||
+0191||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Duisburger Strasse 24||00191|Nuernberg|DE|49 09 11-6 41 35-0|49 09 11-6 41 35-1 50|zentrale190@depot190.dpd.de||
+0193||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Am Langwiesfeld 11||93083|Obertraubling|DE|+49-(0) 94 01-60 09-0|+49-(0) 94 01-60 09-30|maria.kazyk@depot193.dpd.de||
+0194||EDED,EFDX|Karl Doubeck GmbH & Co. KG||Gunskirchener Str. 2||94491|Hengersberg|DE|+49-(0) 99 01-9 49 06-0|+49-(0) 99 01-9 49 06-9|info@depot194.dpd.de||
+0195||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Raiffeisenstrasse 11||95191|Leupoldsgruen|DE|+49-(0) 92 92-9 61-0|+49-(0) 92 92-9 61-1 50|depot@depot195.dpd.de||
+0196||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Birkleite 4||96237|Ebersdorf|DE|+49-(0) 95 62-40 32-0|+49-(0) 95 62-40 32-50|depotleitung@depot196.dpd.de||
+0197||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Friedrich-Koenig-Strasse 45||97080|Wuerzburg|DE|+49-(0)9 31-3 04 26-0|+49-(0)9 31-3 04 26-40|zentrale197@depot197.dpd.de||
+0199||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Steinbruechenstrasse 15||99428|Nohra|DE|+49-(0) 36 43-24 65-0|+49-(0) 36 43-24 65-20|info@depot199.dpd.de||
+0201||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Inselallee 11||01723|Kesselsdorf|DE|+49-(0)3 52 04-6 54-0|+49-(0)3 52 04-6 54-50|info@depot101.dpd.de||
+0204||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Hilchenbacher Strasse 20||04509|Krostitz|DE|+49-(0)3 42 95-78-1 50|+49-(0)3 42 95-78-1 55|kundendienst@depot104.dpd.de||
+0209||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Gewerbegebiet 1||00209|Callenberg|DE|+49-(0)3 76 08-24-0|+49-(0)3 76 08-24-1 97|info@depot109.dpd.de||
+0220||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Neue Wollkaemmereistrasse 2||21107|Hamburg|DE|+49-(0) 40-75 37-01|+49-(0) 40-75 37-25 97|info@depot120.dpd.de||
+0224||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Liebigstrasse 15||24941|Flensburg|DE|+49-(0)4 61-99 99-3 33|+49-(0)4 61-99 99-6 99|mailbox@depot124.dpd.de||
+0225||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Neue Wollkaemmereistrasse 2||21107|Hamburg|DE|+49-(0) 40-75 37-01|+49-(0) 40-75 37-25 97|info@depot120.dpd.de||
+0226||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Balzweg 5||49377|Vechta|DE| +49-(0) 44 41 91 62-10| +49-(0) 44 41 91 62-13|||
+0227||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Ludwig-Erhard-Strasse 7||28197|Bremen|DE|+49-(0)4 21-5 22-01|+49-(0)4 21-5 22-35 02|info@depot128.dpd.de||
+0228||EDED,EFDX|Karsten Moeschke Logistik||Grosser Westring 17||27572|Bremerhaven|DE|+49-(0)4 71-9 26 57-29|+49-(0)4 71-9 26 57-28|info@depot228.dpd.de||
+0230||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Europastrasse 1||31275|Lehrte|DE|+49-(0) 51 32-8 58-0|+49-(0) 51 32-8 58-51 12|info@depot130.dpd.de||
+0232||EDED,EFDX|Marrek + Koennecker GmbH||Salzuflener Strasse 102-104||32602|Vlotho|DE|+49-(0) 57 33-91 16-0|+49-(0) 57 33-91 16-66|info@depot132.dpd.de||
+0234||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Bahnwiesenweg 20||00234|Gudensberg|DE|+49-(0) 56 03-9 31-0|+49-(0) 56 03-9 31-1 25|info@depot134.dpd.de||
+0235||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Didierstrasse 42||00235|Staufenberg-Mainzlar|DE|+49-(0) 64 06-91 15-0|+49-(0) 64 06-91 15-49|info@depot135.dpd.de||
+0236||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Schaffeld 6||00236|Neuhof-Dorfborn|DE|+49-(0) 66 55-96 99-0|+49-(0) 66 55-96 99-96|info@depot136.dpd.de||
+0237||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Klosteracker 5||00237|Noerten-Hardenberg|DE|+49-(0) 55 03-80 09-0|+49-(0) 55 03-80 09-99|info@depot137.dpd.de||
+0240||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Am Roehrenwerk 9||47259|Duisburg|DE|+49-(0)2 03-99 88-0|+49-(0)2 03-99 88-1 00|info@depot147.dpd.de||
+0241||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Am Roehrenwerk 9||47259|Duisburg|DE|+49-(0)2 03-99 88-0|+49-(0)2 03-99 88-1 00|info@depot147.dpd.de||
+0242||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Porschestrasse 20||00242|Wuppertal|DE|+49-(0)2 02-2 60 91-0|+49-(0)2 02-2 60 91-55|info@depot142.dpd.de||
+0244||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Elbestr. 39||49090|Osnabrueck|DE|+49-(0)5 41-9 65-0|+49-(0)5 41-9 65-11 32|info@depot149.dpd.de||
+0246||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Borsigstrasse 2||59609|Anroechte|DE|+49-(0) 29 47-97 60-0|+49-(0) 29 47-97 60-80|depotleitung@depot153.dpd.de||
+0247||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Am Roehrenwerk 9||47259|Duisburg|DE|+49-(0)2 03-99 88-0|+49-(0)2 03-99 88-1 00|info@depot147.dpd.de||
+0249||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Elbestr. 39||49090|Osnabrueck|DE|+49-(0)5 41-9 65-0|+49-(0)5 41-9 65-11 32|info@depot149.dpd.de||
+0250||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Europaallee||00250|Frechen|DE|+49-(0) 22 34-18 10-0|+49-(0) 22 34-18 10-5 03 99|info@depot150.dpd.de||
+0251||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Opelstr. 5||41836|Hueckelhoven|DE|+49-(0) 24 33-4 41-0|+49-(0) 24 33-4 41-1 09|info@depot147.dpd.de||
+0252||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Europaallee||50226|Frechen|DE|+49-(0) 22 34-18 10-0|+49-(0) 22 34-18 10-5 03 99|info@depot150.dpd.de||
+0253||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Am Roehrenwerk 9||47259|Duisburg|DE|+49-(0)2 03-99 88-0|+49-(0)2 03-99 88-1 00|info@depot147.dpd.de||
+0254||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Gewerbegebiet||54518|Sehlem|DE|+49-(0) 65 08-1 89-0|+49-(0) 65 08-16 27|info@depot154.dpd.de||
+0256||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Im Metternicher Feld 32||56072|Koblenz|DE|+49-(0)2 61-9 22 62-0|+49-(0)2 61-9 22 62-16|info@depot156.dpd.de||
+0257||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Oberhausener Strasse 9||00257|Wilnsdorf|DE|+49-(0) 27 39-8 06-0|+49-(0) 27 39-8 06-45|info@depot157.dpd.de||
+0258||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Spannstiftstr. 23||58119|Hagen|DE|+49-(0) 23 34-5 00-0|+49-(0) 23 34-5 00-4 45|info@depot158.dpd.de||
+0259||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Schleiferstr. 7||59425|Unna|DE|+49-(0) 23 03-6 74-0|+49-(0) 23 03-6 74-3 85|depotleitung@depot159.dpd.de||
+0260||EDED,EFDX|Deutscher Paket Dienst Zeitfracht G||Kelsterbacher Str. 64||00160|Raunheim|DE|+49-(0) 61 42-2 02-0|+49-(0) 61 42-2 02-1 34|kundendienst@depot160.dpd.de||
+0261||EDED,EFDX|Deutscher Paket Dienst Zeitfracht G||Kelsterbacher Str. 64||00160|Raunheim|DE|+49-(0) 61 42-2 02-0|+49-(0) 61 42-2 02-1 34|kundendienst@depot160.dpd.de||
+0263||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Auhofstr. 25||63741|Aschaffenburg|DE|+49-(0) 60 21-4 43 94-0|+49-(0) 60 21-4 43 94-39|Zentrale@depot163.dpd.de||
+0265||EDED,EFDX|Deutscher Paket Dienst Zeitfracht G||Kelsterbacher Str. 64||65479|Raunheim|DE|+49-(0) 61 42-2 02-0|+49-(0) 61 42-2 02-1 34|kundendienst@depot160.dpd.de||
+0266||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Suedstrasse 51||66386|St. Ingbert|DE|+49-(0) 68 94-89 07-0|+49-(0) 68 94-66 54|info@depot166.dpd.de||
+0267||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Mittelrheinstr. 19||67550|Worms|DE|+49-(0) 62 42-9 09-01|+49-(0) 62 42-9 09-1 49|info@depot167.dpd.de||
+0271||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Carl-Benz-Str. 17||00171|Ludwigsburg|DE|+49-(0) 71 41-30 03-0|+49-(0) 71 41-30 03-9 99|Depotleitung@depot171.dpd.de||
+0272||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||In der Au 11||00171|Nuertingen|DE|+49-(0) 70 22-30 03-0|+49-(0) 70 22-30 03-39|info@depot172.dpd.de||
+0273||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Carl-Benz-Str. 17||71634|Ludwigsburg|DE|+49-(0) 71 41-30 03-0|+49-(0) 71 41-30 03-9 99|Depotleitung@depot171.dpd.de||
+0274||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Pfaffenstrasse 31||74078|Heilbronn|DE|+49-(0) 71 31-2 92-0|+49-(0) 71 31-2 92-15|verkauf@depot174.dpd.de||
+0275||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Siemensstrasse 1||00275|Malsch|DE|+49-(0) 72 46-9 11-0|+49-(0) 72 46-9 11-1 50|kundendienst@depot176.dpd.de||
+0276||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Siemensstrasse 1||76316|Malsch|DE|+49-(0) 72 46-9 11-0|+49-(0) 72 46-9 11-1 50|kundendienst@depot176.dpd.de||
+0278||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||In Rammelswiesen 20||78056|Villingen-Schwenningen|DE|+49-(0) 77 20-80 99-8 00|+49-(0) 77 20-80 99-9 00|info@depot178.dpd.de||
+0279||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Blankreutestr. 5||79108|Freiburg|DE|+49-(0)7 61-13 05-6 00|+49-(0)7 61-13 05-6 39|info@depot179.dpd.de||
+0280||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Ludwig-Erhard-Str. 12||85375|Neufahrn|DE|+49-(0) 81 65-9 42-0|+49-(0) 81 65-9 42-3 77|info@depot180.dpd.de||
+0282||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Buergermeister-Graf-Ring 12||82538|Geretsried - Gelting|DE|+49-(0) 81 71-43 33-0|+49-(0) 81 71-43 33-10|info@depot182.dpd.de||
+0283||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Ludwig-Erhard-Str. 12||00180|Neufahrn|DE|+49-(0) 81 65-9 42-0|+49-(0) 81 65-9 42-3 77|info@depot180.dpd.de||
+0284||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Braeuackerring 1||83119|Obing|DE|+49-(0) 86 24-89 67-0|+49-(0) 86 24-89 67-99|info@depot184.dpd.de||
+0285||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Siemensstrasse 1||00176|Malsch|DE|+49-(0) 72 46-9 11-0|+49-(0) 72 46-9 11-1 50|kundendienst@depot176.dpd.de||
+0286||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Kalterer Str. 11||00286|Augsburg|DE|+49-(0)8 21-7 94 00-0|+49-(0)8 21-7 94 00-62|info@depot186.dpd.de||
+0287||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Memminger Str. 140||00287|Kempten|DE|+49-(0)8 31-5 92 14-0|+49-(0)8 31-5 92 14-39|info@depot187.dpd.de||
+0289||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Ernst-Abbe-Strasse 5||89231|Neu-Ulm|DE|+49-(0)7 31-97 54-1|+49-(0)7 31-97 54-4 00|info@depot189.dpd.de||
+0290||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Hamburger Str. 2||90451|Nuernberg|DE|+49-(0)9 11-6 41 35-0|+49-(0)9 11-6 41 35-1 50|zentrale190@depot190.dpd.de||
+0291||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Hamburger Str. 2||00191|Nuernberg|DE|+49-(0)9 11-6 41 35-0|+49-(0)9 11-6 41 35-1 50|zentrale190@depot190.dpd.de||
+0293||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Am Langwiesfeld 11||00293|Obertraubling|DE|+49-(0) 94 01-60 09-0|+49-(0) 94 01-60 09-30|maria.kazyk@depot193.dpd.de||
+0296||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Birkleite 4||00296|Ebersdorf|DE|+49-(0) 95 62-40 32-0|+49-(0) 95 62-40 32-50|depotleitung@depot196.dpd.de||
+0297||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Friedrich-Koenig-Strasse 45||97080|Wuerzburg|DE|+49-(0)9 31-3 04 26-0|+49-(0)9 31-3 04 26-40|zentrale197@depot197.dpd.de||
+0299||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Steinbruechenstrasse 15||99428|Nohra|DE|+49-(0) 36 43-24 65-0|+49-(0) 36 43-24 65-20|info@depot199.dpd.de||
+0300||EDED,EFDX|DPD Sweden c/o Posten AB||Signalvaegen 12||90322|Umea|SE|+46-(0)7 71-90-98 98|+46-(0)8-7 81-78 04|international.support@posten.se||
+0301||EDED,EFDX|DPD Sweden c/o Posten AB||Terminalvaegen 24||17173|Solna|SE|+46-(0)7 71-90 98 98|+46-(0)8-7 81 78 04|international.support@posten.se||
+0302||EDED,EFDX|DPD Sweden c/o Posten AB||Vevaxelgatan 8||21241|Malmoe|SE|+46-(0)7 71-90 98 98|+46-8-7 81 78 04|international.support@posten.se||
+0304||EDED,EFDX|DPD Sweden c/o Posten AB||Oestergardsgatan 8||43153|Moelndal|SE|+46-(0)7 71-90-98 98|+46-(0)8-7 81-78 04|international.support@posten.se||
+0305||EDED,EFDX|DPD Sweden c/o Posten AB||Stolsvaegen||55652|Joenkoeping|SE|+46-(0)7 71-90-98 98|+46-(0)8-7 81-78 04|international.support@posten.se||
+0306||EDED,EFDX|DPD Sweden c/o Posten AB||||21241||SE|||||
+0307||EDED,EFDX|DPD Sweden c/o Posten AB||Truckgatan 6||70227|Oerebro|SE|+46-(0)7 71-90 98 98|+46-(0)8-7 81 78 04|international.support@posten.se||
+0308||EDED,EFDX|DPD Sweden c/o Posten  AB||Jaernvaegsgatan 11||84100|Ange|SE|+46-(0)7 71-90-98 98|+46-(0)8-7 81-78 04|international.support@posten.se||
+0309||EDED,EFDX|DPD Sweden c/o Posten AB||Lulea Paketterminal||97100|Lulea|SE|+46-(0)7 71-90 98 98|+46-(0)8-7 81 78 04|international.support@posten.se||
+0312||EDED,EFDX|DPD Sweden c/o Posten AB||Haeradsvaegen 253||14171|Segeltorp|SE|+46-(0)7 71-90-98 98|+46-(0)8-7 81-78 04|international.support@posten.se||
+0317||EDED,EFDX|DPD Sweden c/o Posten AB||||21241||SE|||||
+0320||EDED,EFDX|DPD Sweden c/o Posten AB||||21241||SE|||||
+0326||EDED,EFDX|DPD Sweden c/o Posten AB||||21241||SE|||||
+0330|||Direct Parcel Distribution Nordic A||Storhofda 29||110|Reyjkjavik|IS|||||
+0333|||Faroer||||||FO|||||
+0335|||Greenland||||||GL|||||
+0337|||Armadillo Business Parcel||Vostriakovsky pr., 10D||113403|Moscow|RU|||||
+0338|||Armadillo Business Parcel||Predportovaya str., 10||196240|St. Petersburg|RU|||||
+0339|||Armadillo Business Parcel||||129226||RU|||||
+0341||ERUD,EALT|Rest of Russia - via Chronopost||||113403||RU|||||
+0345|||Direct Parcel Distribution Norge AS||Alfaset 3, Industrivei 25||0668|Oslo|NO|47 22 32 90 00|47 22 32 93 83|dpd@tollpost.no||
+0346|||Direct Parcel Distribution Norge AS||Tommersvingen 6||3400|Lier|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0347|||Direct Parcel Distribution Norge AS||Larvik Logistiksenter, Elveveien 14||3271|Larvik|NO|47 33 15 63 00|47 33 15 63 01|||
+0348|||Direct Parcel Distribution Norge AS||||0668||NO|||||
+0349|||Direct Parcel Distribution Norge AS||Stetesdalsveien 214||4618|Kristiansand|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0350|||Direct Parcel Distribution Norge AS||Klemmavegen 14||3550|Gol|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0351|||Direct Parcel Distribution Norge AS||Vallehellene 11||1662|Rolvsoy|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0352|||Direct Parcel Distribution Norge AS||Ostre Solorveg 134||2211|Kongsvinger|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0353|||Direct Parcel Distribution Norge AS||Rudsflata 7||2360|Rudshogda|NO|47 62 35 95 60|47 62 35 95 61|||
+0354|||Direct Parcel Distribution Norge AS||Storgata 22||3670|Otta|NO|47 61 23 44 90|47 61 23 44 91|||
+0355|||Direct Parcel Distribution Norge AS||Consul S. Bergesens vei||4016|Stavanger|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0356|||Direct Parcel Distribution Norge AS||Longhammavaien 17||5500|Haugesund|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0357|||Direct Parcel Distribution Norge AS||Lungegardskaien 30||5016|Bergen|NO|47 55 30 97 00|47 55 30 97 01|||
+0358|||Direct Parcel Distribution Norge AS||Liavegen 12||5700|Voss|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0359|||Direct Parcel Distribution Norge AS||Kaupangerskogen||5880|Kaupanper|NO|47 22 32 90 00|47 22 32 93 83|dpd@tollpost.no||
+0360|||Direct Parcel Distribution Norge AS||Firdavn. 9||6800|Forde|NO|47 57 82 70 40|47 57 82 70 41|||
+0361|||Direct Parcel Distribution Norge AS||Tonningsoyra||6880|Stryn|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0362|||Direct Parcel Distribution Norge AS||Vegsund||6037|Eidsnes|NO|47 70 19 15 10|47 70 19 15 11|||
+0363|||Direct Parcel Distribution Norge AS||Stokkekaia||6300|Andalsnes|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0364|||Direct Parcel Distribution Norge AS||Tommersvingen 6||3400|Lier|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0365|||Direct Parcel Distribution Norge AS||Larvik Logistiksenter, Elveveien 14||3271|Larvik|NO|47 33 15 63 00|47 33 15 63 01|||
+0366|||Direct Parcel Distribution Norge AS||Maskinistgt. 2 Nyhavna||7042|Trondheim|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0367|||Direct Parcel Distribution Norge AS||Jaektsmedg 1||7725|Steinkjer|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0369|||Direct Parcel Distribution Norge AS||Midtre Gate 17||8600|Mo i Rana|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0370|||Direct Parcel Distribution Norge AS||Bodoterminalen, Ronvikleira||8012|Bodo|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0371|||Direct Parcel Distribution Norge AS||Nordnesveien 1||8450|Stokmarknes|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0372|||Direct Parcel Distribution Norge AS||Stangnesterminalen 8a||9400|Harstad|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0373|||Direct Parcel Distribution Norge AS||Bernh. Lundsvei||9300|Finnsnes|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0374|||Direct Parcel Distribution Norge AS||Havnelageret Breivika||9019|Tromso|NO|47 77 60 71 20|47 77 60 71 21|||
+0375|||Direct Parcel Distribution Sweden A||Betongveien||9500|Alta|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0376|||Direct Parcel Distribution Norge AS||Stetesdalsveien 214||4618|Kristiansand|NO|47 22 32 90 00|47 22 32 93 83|dpd@dpd.no||
+0377|||Direct Parcel Distribution Norge AS||Tana Bru||9845|Tana Bru|NO|47 78 92 74 50|47 78 92 74 51|||
+0378|||Direct Parcel Distribution Norge AS||Alfaset 3, Industrivei 25||0668|Oslo|NO|47 22 32 90 00|47 22 32 93 83|dpd@tollpost.no||
+0379||EDED,EFDX|Rest of Finland via Vantaa||||01510|Rest of Finland|FI|+3 58-10-56 22-00|+3 58-10-56 22-6 02|info@dpd.fi||
+0380||EDED,EFDX|DPD Finland Oy||Ayritie 12 C||01510|Vantaa|FI|+3 58-10-80 48-48|+3 58-10-56 22-6 02|dpd.info@dpd.fi||
+0381||EDED,EFDX|DPD Finland Oy||||01510||FI|||||
+0382||EDED,EFDX|DPD Finland Oy||Uhrilaehteenkatu 2||20250|Turku|FI|+3 58-10-56 22-00|+3 58-10-56 22-6 30|dpd.info@dpd.fi||
+0383||EDED,EFDX|DPD Finland Oy||Patamaeenkatu 18||33990|Tampere|FI|+3 58-10-56 22-00|+3 58-10-56 22-6 02|info@dpd.fi||
+0384||EDED,EFDX|Rest of Finland via Turku||Rest of Finland||01510|Rest of Finland|FI|+3 58-10-56 22-00|+3 58-10-56 22-6 02|info@dpd.fi||
+0385||EDED,EFDX|DPD Finland Oy||Suolamannyntie 13||90520|Oulu|FI|||||
+0398|OSL|ENOD,EEUT|Oslo - location of CHR Int l agent|STS|Flyspeditorenes Senter|Po box 116|2001||NO|4763947550||||
+0401|MLV|EFRD|MARNE-LA-VALLEE||13 RUE DES VIEILLES VIGNES|ZI PARIS EST|77183|CROISSY BEAUBOURG|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0402|BCY|EFRD|BERCY||20 RUE ESCOFFIER|BAT 15/16/17|94671|CHARENTON LE PONT CEDEX|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0403|VER|EFRD|VERSAILLES||515 RUE ROLAND GARROS ZI||78530|BUC|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0404|GEN|EFRD|GENNEVILLIERS||3 ROUTE ANNEXE|BASSIN N 1|92230|GENNEVILLIERS|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0405|BBY|EFRD|BOBIGNY||165 AVENUE HENRI BARBUSSE||93017|BOBIGNY CEDEX|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0406|ORY|EFRD|ORLY||ZONE DE FRET SUD|BATIMENT 287 - MAG. 407|94394|ORLY AEROGARE CEDEX|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0407|CGY|EFRD|CERGY PONTOISE||1 RUE DE LA GARENNE|ZI VERT GALANT|95310|ST OUEN L AUMONE|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0408|MSY|EFRD|MASSY||21 RUE DU PEROU|ZI DU PEROU|91300|MASSY|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0409|PCO|EFRD|CONCORDE||||75008|PARIS|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0410|RNS|EFRD|RENNES||RUE JACQUELINE AURIOL|ZA AIRLANDE|35136|ST JACQUES DE LA LANDE|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0411|BES|EFRD|BREST||13 RUE ALEXIS CLAIRAUT||29200|BREST|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0412|TUF|EFRD|TOURS||ZI N. 2|RUE JOSEPH CUGNOT|37210|PARCAY MESLAY|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0413|NTE|EFRD|NANTES||RUE DE LA TOUR|AEROPORT NANTES - ZA DE LA TOUR|44860|ST AIGNAN GRANDLIEU|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0414|ORS|EFRD|ORLEANS||61 RUE JEAN BERTIN|POLE 45|45770|SARAN|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0415|MNS|EFRD|LE MANS||ZAC LES PORTES DE L OCEANE||72650|ST SATURNIN|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0416|PIS|EFRD|POITIERS||RUE CLAUDE BERTHOLLET|LES BASSES LANDES - ZI n3|86000|POITIERS|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0417|BOU|EFRD|BOURGES||13 RUE JOLIOT CURIE||18230|ST DOULCHARD|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0418|CMZ||Chilly Mazarin||||00018||FR|||||
+0419|ANG|EFRD|ANGOULEME||ZI DE FONTAINE||16440|ROULLET ST ESTEPHE|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0420|CAN|EFRD|CAEN||1076 RUE LEON FOUCAULT|ZI DE LA SPHERE|14200|HEROUVILLE ST CLAIR|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0421|LIL|EFRD|LILLE||RUE JULES VERNE|CENTRE DE GROS N2 DE LESQUIN|59273|FRETIN|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0422|CRE|EFRD|CREIL||1 AVENUE DES CHARMES|PARC ALATA|60100|CREIL|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0423|ARA|EFRD|ARRAS||75 ALLEE DE SUEDE|ZAC ARTOIPOLE|62223|FEUCHY|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0424|URO|EFRD|ROUEN||RUE DU CLOS TELLIER|ZONE MULTI MARCHANDISES II|76800|ST ETIENNE DU ROUVRAY|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0425|NCY|EFRD|ANNECY||ZI DE POISY||74330|POISY|FR||+33-1-41 08 76-58|||
+0426|MLV||Tat Express - Montpellier||Batiment n 18, Porte B et C, Garon||00026||FR|00 33-1- 48 14 58 88|00 33-1- 48 14 58 87|eurocomfort@tatexpress.fr||
+0427|MLV||Tat Express Hesingue||Batiment n 18, Porte B et C, Garon||00027||FR|00 33 - 1 48 14 58 88|00 33 - 1 48 14 58 87|eurocomfort@tatexpress.fr||
+0428|MLV||Tat Express Lieusaint||Batiment n 18, Porte B et C, Garon||00028||FR|00 33 - 1 48 14 58 88|00 33 -  1 48 14 58 87|eurocomfort@tatexpress.fr||
+0429|MLV||Tat Express - Lyon||Batiment n 18, Porte B et C, Garon||00029||FR|00 33 - 1 48 14 58 88|00 33 - 1 48 14 58 87|eurocomfort@tatexpress.fr||
+0430|DIJ|EFRD|DIJON||3 IMPASSE EDOUARD BELIN||21300|CHENOVE|FR||+33-1-41 08 76-58|||
+0431|RHE|EFRD|REIMS||2 RUE ALBERTO SANTOS DUMONT|ZAC DES ESSILLARDS|51100|REIMS|FR||+33-1-41 08 76-58|||
+0432|ETZ|EFRD|METZ||RUE MARC SEGUIN|ZAC DE GAROLOR|57365|ENNERY|FR||+33-1-41 08 76-58|||
+0433|SXB|EFRD|STRASBOURG||26 RUE DES TUILERIES|ZA DE SOUFFELWEYERSHEIM|67460|SOUFFELWEYERSHEIM|FR||+33-1-41 08 76-58|||
+0434|MLH|EFRD|MULHOUSE||2 RUE DU DANEMARK||68310|WITTELSHEIM|FR||+33-1-41 08 76-58|||
+0435|MAC|EFRD|MACON||PARC D ACTIVITES LES COMBES||71020|MACON CEDEX 9|FR||+33-1-41 08 76-58|||
+0436|TOY|EFRD|TROYES||RUE DES NOZEAUX||10600|BARBEREY ST SULPICE|FR||+33-1-41 08 76-58|||
+0437|CCF|EFRD|CARCASSONNE||6 RUE MICHEL FARADAY|ZI DE L ARNOUZETTE|11000|CARCASSONNE|FR||+33-1-41 08 76-58|||
+0440|TLN|EFRD|TOULON||RUE BARON DOMINIQUE LARREY|ZILE BEC DE CANARD|83210|LA FARLEDE|FR||+33-1-41 08 76-58|||
+0441|CFE|EFRD|CLERMONT-FERRAND||AEROPORT D AULNAT||63510|AULNAT|FR||+33-1-41 08 76-58|||
+0442|MRS|EFRD|MARSEILLE||AEROPORT DE MARSEILLES PROVENCE|ZONE DES SALINS - ROUTE DU FRET|13729|MARIGNANE CEDEX|FR||+33-1-41 08 76-58|||
+0443|AJA|EFRD|AJACCIO||ROUTE DU VAZZIO|COL D ASPRETTO|20090|AJACCIO|FR||+33-1-41 08 76-58|||
+0444|BIA|EFRD|BASTIA||RN 193|LIEU DIT CANALE|20600|FURIANI|FR||+33-1-41 08 76-58|||
+0445|IDA|EFRD|L ISLE D ABEAU||63 RUE DU MORELLON|PARC DE CHESNES|38070|ST QUENTIN FALLAVIER|FR||+33-1-41 08 76-58|||
+0446|NCE|EFRD|NICE||AEROPORT NICE COTE D AZUR|TERMINAL 2 HANGAR N6|6201|NICE CEDEX 3|FR||+33-1-41 08 76-58|||
+0447|AVN|EFRD|AVIGNON||1710 BD SALVADOR ALLENDE|ZI DU FOURNALET|84700|SORGUES|FR||+33-1-41 08 76-58|||
+0448|LYS|EFRD|LYON||6 RUE GABRIEL PERY||69960|CORBAS|FR||+33-1-41 08 76-58|||
+0450|TLS|EFRD|TOULOUSE||RUE JOSEPH LEBRIX - BP 80|ZONE AEROGARE AVIATION D AFFAIRE|31706|BLAGNAC CEDEX|FR||+33-1-41 08 76-58|||
+0451|BOD|EFRD|BORDEAUX||RUE CAMILLE FLAMMARION|AEROPORT DE BORDEAUX|33700|MERIGNAC|FR||+33-1-41 08 76-58|||
+0452|MPL|EFRD|MONTPELLIER||RUE DE LA CASTELLE|GAROSUD|34070|MONTPELLIER|FR||+33-1-41 08 76-58|||
+0453|LIG|EFRD|LIMOGES||AEROPORT DE LIMOGES BELLEGARDE||87100|LIMOGES|FR||+33-1-41 08 76-58|||
+0454|LBI|EFRD|ALBI||20 RUE FRANCOIS THERMES||81990|PUYGOUZON|FR||+33-1-41 08 76-58|||
+0455|BGX|EFRD|BAGNEUX||||92220||FR||+33-1-41 08 76-58|||
+0456|ARI|EFRD,ECDG|ROISSY INTER||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|00056|ROISSY CH DE GAULLE CEDEX|FR||+33-1-41 08 76-58|||
+0460|BVE|EFRD|BRIEVE||RUE GUSTAVE COURBET|ZI BEAUREGARD|19100|BRIVES-LA-GAILLARDE|FR|||||
+0461|CQF|EFRD|CALAIS||||62100||FR||+33-1-41 08 76-58|||
+0462|OMV|EFRD|MARSEILLE CENTRE||ZONE LOGISTIQUE ARENC||13002|MARSEILLES|FR||+33-1-41 08 76-58|||
+0463|GNB|EFRD|GRENOBLE||1 RUE FRANCOIS BLUMET||38360|SASSENAGE|FR||+33-1-41 08 76-58|||
+0464|LEH|EFRD|LE HAVRE||RUE DE BUFFON||76600|LE HAVRE|FR||+33-1-41 08 76-58|||
+0465|CMF|EFRD|CHAMBERY||91 RUE PAUL GIRAUD||73000|CHAMBERY|FR||+33-1-41 08 76-58|||
+0466|NEY|EFRD|NEY (Paris)||13 BVD NEY||75018|PARIS|FR|||||
+0469|PUF|EFRD|PAU||RUE DU PONT-LONG||64160|MORLAAS|FR||+33-1-41 08 76-58|||
+0470|PGF|EFRD|PERPIGNAN||||66000||FR||+33-1-41 08 76-58|||
+0471|EBU|EFRD|SAINT ETIENNE||ZI MOLINA LA CHAZOTE|120 RUE DE LA PIERRE PLANTEE|42650|ST JEAN BONNEFOND|FR||+33-1-41 08 76-58|||
+0472|SLO|EFRD|SAINT LO||RUE DE L ABBAYE||50000|ST LO|FR||+33-1-41 08 76-58|||
+0473|EXU|EFRD|ST EXUPERY||Barre de fret - portes 23  31||69125|LYON ST EXUPERY AEROPORT|FR|||||
+0474|STE|EFRD|SAINTES||ZA DE LA BOBINERIE||17810|ST GEORGES DES COTEAUX|FR||+33-1-41 08 76-58|||
+0475|VAL|EFRD|VALENCE||66 ROUTE DE BEAUVALLON||26000|VALENCE|FR||+33-1-41 08 76-58|||
+0476|XVS|EFRD|VALENCIENNES||76 RUE JEAN JAURES||59410|ANZIN|FR||+33-1-41 08 76-58|||
+0481|CTF||FEDEX||||95702||FR||+33-1-41 08 76-58|||
+0484|MLV||Exapaq||||00084|Lieusaint|FR|+33-1-41 90 80-78|+33-1-41 08 76-58|||
+0485|DZA|EYTD,EDOM|Mayotte||ZI NEL||97600|MAMOUDZOU|YT|0269 60 65 65||||
+0486|PTP|EPFD,EDOM|POINTE A PITRE||ZA DU PETIT PEROU||97139|LES ABYMES|FR||+33-1-41 08 76-58|||
+0487|FDF|EMQD,EDOM|FORT DE FRANCE||Z.I. DE LA LEZARDE|IMMEUBLE SEIM|97232|LE LAMENTIN|FR||+33-1-41 08 76-58|||
+0488|CAY|EGFD,EDOM|CAYENNE||AEROPORT DE ROCHAMBEAU|ZONE DE FRET|97351|MATOURY|FR||+33-1-41 08 76-58|||
+0489|RUN|ERED,EDOM|SAINT DENIS||40 RUE HELENE BOUCHER|POLE LOGISTIQUE ST-EXUPERY|97438|STE MARIE|FR||+33-1-41 08 76-58|||
+0493||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Neue Wollkaemmereistrasse 2||21107|Hamburg|DE|+49-(0) 40-75 37-01|+49-(0) 40-75 37-25 97|info@depot120.dpd.de||
+0494||EDED,EFDX|DPD GeoPost (Deutschland) GmbH & Co||Liebigstrasse 15||24941|Flensburg|DE|+49-(0)4 61-99 99-3 33|+49-(0)4 61-99 99-6 99|mailbox@depot124.dpd.de||
+0495|CPH|EFDX|Copenhagen|IRS|Copenhagen Airport||2600|Copenhagen|DK|+ 45 43 29 79 15||||
+0496|KLD|EFDX|Kolding|IRS|Copenhagen Airport||2600|Copenhagen|DK|+ 45 43 29 79 15||||
+0498||EDED,EFDX|Direct Parcel Distribution (Denmark||||2630|Taastrup|DK|||||
+0499||EDED,EFDX|Direct Parcel Distribution (Denmark||||6000|Kolding|DK|||||
+0500||EDED,EFDX|Direct Parcel Distribution (Denmark||Bohus Boulevard 3||2630|Taastrup|DK|+45-4 33-00-0|+45-4 33-00-2 30|dpd@dpddk.dk||
+0501||EDED,EFDX|Direct Parcel Distribution (Denmark||Gejlhavegaard 16||6000|Kolding|DK|+45-70-10 05-10|+45-76-30 25-15|dpd@dpddk.dk||
+0502||EDED,EFDX|Direct Parcel Distribution (Denmark||Viengevej 4||8240|Risskov|DK|+45-87-42 61-50|+45-87-42 61-55|dpd@dpddk.dk||
+0503||EDED,EFDX|Direct Parcel Distribution (Denmark||Gejlhavegaard 16||6000|Kolding|DK|+45-70-10 05-10|+45-76-30 25-15|dpd@dpddk.dk||
+0504||EDED,EFDX|Direct Parcel Distribution (Denmark||Assensvej 3||9220|Aalborg O|DK|00 45 70 10 05 10|00 45 76 30 25 25|dpd@dpddk.dk||
+0505||EDED,EFDX|Direct Parcel Distribution (Denmark||Teknikvej 11||5260|Odense S|DK|00 45 70 10 05 10|00 45 76 30 25 25|dpd@dpddk.dk||
+0506||EDED,EFDX|Direct Parcel Distribution (Denmark||Orebygaardvej 11||7400|Herning|DK|+45-7 01-00-5 10|+45-9 62-94-8 09|dpd@dpddk.dk||
+0507||EDED,EFDX|Direct Parcel Distribution (Denmark||||2630|Taastrup|DK|||||
+0509||EDED,EFDX|Direct Parcel Distribution (Denmark||||6000|Kolding|DK|||||
+0510||ENLD|GeoPost (Nederland) B.V.||||6716|AE Ede|NL|||||
+0511||ENLD|GeoPost (Nederland) B.V.||Galvanistraat 18 , Postbus 718||6716|AE Ede|NL|+31-(0)3 18-6 97-9 00|+31-(0)3 18-6 42-2 30|customersupport511@geopost.nl||
+0512||ENLD|GeoPost (Nederland) B.V.||Luxemburger Strasse 14||48455|Bad Bentheim-Gildehaus/Deutschland|NL|+49-(0) 59 24-7 87-7 22|+49-(0) 59 24-7 87-7 70|info@geopost.nl||
+0513||ENLD|GeoPost (Nederland) B.V.||Mandenveld 2||7942|KE Meppel|NL|+31-5 22-2 37-8 20|+31-5 22-2 40-2 52|customersupport513@geopost.nl||
+0514||ENLD|GeoPost (Nederland) B.V.||Meerweg 16 A||9482|WB Tynaarlo|NL|00 31- 592 544 475|00 31- 592 544 596|info@geopost.nl||
+0515||ENLD|GeoPost (Nederland) B.V.||Transportwei 18 A||8501|ZP JOURE|NL|00 31- 513 413 674|00 31- 513 417 772|info@geopost.nl||
+0516||ENLD|GeoPost (Nederland) B.V.||Cacaoweg 20-50||1047|BM AMSTERDAM|NL|+31-2 04-8 02-9 00|+31-2 04-8 02-9 01|customersupport516@geopost.nl||
+0517||ENLD|GeoPost (Nederland) B.V.||Cacaoweg 20-50||1047|BM AMSTERDAM|NL|+31-2 04-8 02-9 00|+31-2 04-8 02-9 01|customersupport516@geopost.nl||
+0520||ENLD|GeoPost (Nederland) B.V.||Tormentil 10||5684|PK Best|NL|+31-(0)4 99-3 39-9 00|+31-(0)4 99-3 39-9 01|customersupport522@geopost.nl||
+0521||ENLD|GeoPost (Nederland) B.V.||Bovendijk 192||3045|PD Rotterdam|NL|+31-10-27 81-5 50|+31-10-28 59-5 38|customersupport521@geopost.nl||
+0522||ENLD|GeoPost (Nederland) B.V.||Tormentil 10||5684|PK Best|NL|+31-(0)4 99-3 39-9 00|+31-(0)4 99-3 39-9 01|customersupport522@geopost.nl||
+0523||ENLD|GeoPost (Nederland) B.V.||Tormentil 10||5684|PK Best|NL|+31-(0)4 99-3 39-9 00|+31-(0)4 99-3 39-9 01|customersupport522@geopost.nl||
+0524||ENLD|GeoPost (Nederland) B.V.||Tormentil 10||5684|PK Best|NL|+31-(0)4 99-3 39-9 00|+31-(0)4 99-3 39-9 01|customersupport522@geopost.nl||
+0525||ENLD|GeoPost (Nederland) B.V.||Zwarthoofd 6a||4878|AL Etten-Leur|NL|+31-(0)7 65-0 41-8 66|+31-(0)7 65-0 41-8 67|customersupport522@geopost.nl||
+0528||ENLD|GeoPost (Nederland) B.V.||Tormentil 10||5684|PK Best|NL|+31-(0)4 99-3 39-9 00|+31-(0)4 99-3 39-9 01|customersupport522@geopost.nl||
+0529||EBED|Direct Parcel Distribution (Belgium||Leon - Bekaertlaan 1||9880|Aalter|BE|+32-(0) 93-25 73-90|+32-(0) 93-25 73-99|service.536@depot536.dpd.net||
+0530||EBED|Direct Parcel Distribution (Belgium||Egide Walschaertsstraat 20||2800|Mechelen|BE|+32-(0) 15-40-60 00|+32-(0) 15-40-60 29|service.530@depot530.dpd.net||
+0531||EBED|Direct Parcel Distribution (Belgium||Egide Walschaertsstraat 20||2800|Mechelen|BE|+32-(0) 15-40-60 00|+32-(0) 15-40-60 29|service.530@depot530.dpd.net||
+0532||EBED|Direct Parcel Distribution (Belgium||Rue de Wallonie 9b||4460|Grace-Hollogne|BE|+32-(0) 42-47 52-71|+32-(0) 42-47 58-89|service.532@depot532.dpd.net||
+0534||EBED|Direct Parcel Distribution (Belgium||Rue de Lige 25||6180|Courcelles|BE|open|open|service.534@depot534.dpd.net||
+0536||EBED|Direct Parcel Distribution (Belgium||Leon - Bekaertlaan 1||9880|Aalter|BE|+32-(0) 93-25 73-90|+32-(0) 93-25 73-99|service.536@depot536.dpd.net||
+0539||EBED|Direct Parcel Distribution (Luxembo||30 rue des Scillas||2529|Howald|LU|+35-2 39-53 39-1|+35-2 39-53 69-0|info@dpd.lu||
+0540||EBED|Direct Parcel Distribution (Belgium||Egide Walschaertsstraat 20||2800|Mechelen|BE|+32-(0) 15-40-60 00|+32-(0) 15-40-60 29|service.530@depot530.dpd.net||
+0541||EBED|Direct Parcel Distribution (Belgium||Rue de Wallonie 9b||4460|Grace-Hollogne|BE|+32-(0) 42-47 52-71|+32-(0) 42-47 58-89|service.532@depot532.dpd.net||
+0542||EBED|Direct Parcel Distribution (Belgium||Leon - Bekaertlaan 1||9880|Aalter|BE|+32-(0) 93-25 73-90|+32-(0) 93-25 73-99|service.536@depot536.dpd.net||
+0543||EBED|Direct Parcel Distribution (Belgium||Rue de Wallonie 9b||4460|Grace-Hollogne|BE|+32-(0) 42-47 52-71|+32-(0) 42-47 58-89|service.532@depot532.dpd.net||
+0544||EBED|Direct Parcel Distribution (Belgium||Rue de Lige 25||6180|Courcelles|BE|open|open|service.534@depot534.dpd.net||
+0545||EBED|Direct Parcel Distribution (Belgium||Leon - Bekaertlaan 1||9880|Aalter|BE|+32-(0) 93-25 73-90|+32-(0) 93-25 73-99|service.536@depot536.dpd.net||
+0550||EGBD,EFDX|GEOPOST (UK)||Roebuck Lane, Smethwick Warley||B661BY|West Midlands|GB|+44-(0)1 21-6 98-37 83|+44-(0)1 21-6 97-28 58|dpd.imports@parceline.com||
+0551||EGBD,EFDX|GEOPOST (UK)||Unit 1 Woodford Trading Estate Sout||IG88HF|Woodford Green Essex|GB|+44-1 21-5 00-25 00|+44-1 21-6 97-28 58|dpd.imports@parceline.com||
+0552||EGBD,EFDX|GEOPOST (UK)||Unit 1 Beddington Farm Rd Off Purle||CR04XB|Croydon|GB|00 44 84 59 30 03 50|00 44 12 16 97 28 58|||
+0553||EGBD,EFDX|GEOPOST (UK)||Site EVillage Industrial Estate101||NW10PF|London|GB|||||
+0554||EGBD,EFDX|GEOPOST (UK)||Unit 320 Kennett Road||DA14QN|CraydordKent|GB|||||
+0555||EGBD,EFDX|GEOPOST (UK)||Whitworth Road County Oak||RH117SS|Crawley West Sussex|GB|||||
+0556||EGBD,EFDX|GEOPOST (UK)||Foss Island Road||YO317UP|York|GB|||||
+0557||EGBD,EFDX|GEOPOST (UK)||Unit 5, Site 7Quedgeley Enterprise||GL22ZW|Quedgeley, Gloucester|GB|||||
+0558||EGBD,EFDX|GEOPOST (UK)||Unit 5 Limedale Cross Off, Lower Mi||ST59BT|Newcastle-under-Lyme Staffordshire|GB|1782578606||||
+0560||EGBD,EFDX|GEOPOST (UK)||Units 4 & 5 Larkfield Trading Estat||ME206SW|Larkfield|GB|||||
+0561||EGBD,EFDX|GEOPOST (UK)||Unit F Omega Enterprise Park Electr||SO534SE|Eastleigh Hants|GB|||||
+0562||EGBD,EFDX|GEOPOST (UK)||Unit 16 Humphreys Road Woodside Est||LU54TP|Dunstable|GB|||||
+0563||EGBD,EFDX|GEOPOST (UK)||Units 1 & 2 Commercial Close Commer||RG20QS|Reading|GB|||||
+0564||EGBD,EFDX|GEOPOST (UK)||Hambridge Lane Hambridge Road Green||RG145TU|Newbury Barkshire|GB|||||
+0566||EGBD,EFDX|GEOPOST (UK)||Unit 28A Centurion Way Meridian Bus||LE192WH|Leicester|GB|+44-(0)1 16-2 50-0|+44-(0)1 16-2 50-0|||
+0567||EGBD,EFDX|GEOPOST (UK)||Montrose House Montrose Road Dukes||CM26TE|Chelmsford Essex|GB|||||
+0568||EGBD,EFDX|GEOPOST (UK)||Aviation Park West, Bournemouth Int||BH236SE|Bournemouth|GB|||||
+0569||EGBD,EFDX|GEOPOST (UK)||Mandela Way||SE15SE|London|GB|||||
+0570||EGBD,EFDX|GEOPOST (UK)||Unit 2 Axis 40 Athlon Road||HA01FD|Alperton Middlesex|GB|||||
+0571||EGBD,EFDX|GEOPOST (UK)||10A Burrell Way Stephensons Way Ind||IP243RW|Thetford Norfolk|GB|||||
+0572||EGBD,EFDX|GEOPOST (UK)||Unit 17Norris Way Wellingborough Ro||NN106BP|Rushden|GB|||||
+0573||EGBD,EFDX|GEOPOST (UK)||Empire HouseSaville Road Westwood I||PE37PL|Peterborough|GB|||||
+0574||EGBD,EFDX|GEOPOST (UK)||Spring Meadow Industrial Estate Mar||CF38EH|Rumney Cardiff|GB|||||
+0575||EGBD,EFDX|GEOPOST (UK)||Nnits B1/B2 Kingsland Trading Estat||BS20JZ|St Philips|GB|||||
+0576||EGBD,EFDX|GEOPOST (UK)||Heron Road Sowton Industrial Estate||EX27LL|Exeter|GB|||||
+0577||EGBD,EFDX|GEOPOST (UK)||Unit A2B Bridge Road Industrial Est||TR49PY|Goonhaven Truro|GB|||||
+0578||EGBD,EFDX|GEOPOST (UK)||Unit 1 Wyndham Court Clarion Close||SA68QZ|Swansea|GB|||||
+0579||EGBD,EFDX|GEOPOST (UK)||Westcoast Eypress, Hatters lane||BS176AA|Chippinton, Sudbury, Avon|GB|||||
+0580||EGBD,EFDX|GEOPOST (UK)||Bessemer Road North Bank Industrial||M445BF|Birlan Manchester|GB|||||
+0581||EGBD,EFDX|GEOPOST (UK)||Martin Close Blenheim Ind Estate Bu||NG68UW|Nottingham|GB|||||
+0582||EGBD,EFDX|GEOPOST (UK)||Unit 4 Millshaw Park Ind Estate Bee||LS110LR|Leeds|GB|||||
+0583||EGBD,EFDX|GEOPOST (UK)||Units 3A & 3B Barley Castle Trading||WA44RF|Appleton Warrington|GB|||||
+0584||EGBD,EFDX|GEOPOST (UK)||Unit 1B Peel Street Abergele||LL227HY|ClwydLL|GB|||||
+0585||EGBD,EFDX|GEOPOST (UK)||Unit 41Roman Way Employment Area Lo||PR25BD|Ribbleton|GB|||||
+0586||EGBD,EFDX|GEOPOST (UK)||Unit 2 Brookdale Road Thorncliffe I||S304PH|Chapeltown|GB|||||
+0588||EGBD,EFDX|GEOPOST (UK)||Unit 7, Frogmore Industrial Estate,||NW107NQ|NW10 7NQLondon|GB|||||
+0590||EGBD,EFDX|GEOPOST (UK)||04 Fullerton Drive Cambusland Inves||G328FA|Cambusland Glasgow|GB|||||
+0591||EGBD,EFDX|GEOPOST (UK)||Unit 2 Granton Industrial Estate Ch||EH51QY|Edinburgh|GB|||||
+0592||EGBD,EFDX|GEOPOST (UK)||Aberdeen Express, Unit 11 Ocen Trad||AB14J2|Aberdeen|GB|||||
+0594||EGBD,EFDX|GEOPOST (UK)||Unit A1 Princes WayTeam Valley Trad||NE110TU|Gateshead|GB|||||
+0595||EGBD,EFDX|GEOPOST (UK)||Unit 2 Kingstown Industrial Estate||CA30HA|Cumbria|GB|||||
+0596||EGBD,EFDX|GEOPOST (UK)||Bessemer Road North Bank Industrial||M445BF|Birlan Manchester|GB|||||
+0598||EGBD,EFDX|GEOPOST (UK)|UK Norther Ireland Gateway - B ham|Roebuck Lane, Smethwick Warley||B661BY|West Midlands|GB|||||
+0599||EGBD,EFDX|GEOPOST (UK)||Unit 3, Trench Park, Trench Road||BP364PY|Mallask|GB|||||
+0601||EIED,EFDX|GEOPOST (UK)||Unit 53 Airways Industrial EstateSa||17|Dublin|IE|||||
+0602||EIED,EFDX|GEOPOST (UK)||Unit 53 Airways Industrial EstateSa||17|Dublin|IE|||||
+0603||EIED,EFDX|GEOPOST (UK)||Unit 53 Airways Industrial EstateSa||17|Dublin|IE|||||
+0608||ECHD,EEUT|DPD (Schweiz) AG||Sonnentalstr. 5||8600|Duebendorf|CH| +41 843 373 373| +41 843 373 370|info@dpd.ch||
+0609||ECHD,EEUT|DPD (Schweiz) AG||Sonnentalstr. 5||8600|Duebendorf|CH| +41 843 373 373| +41 843 373 370|info@dpd.ch||
+0610||ECHD,EEUT|DPD (Schweiz) AG||Rinaustrasse 143||4303|Kaiseraugst|CH|+41-43-3 55-21 21|+41-43-3 55-21 22|info@dpd.ch||
+0611||ECHD,EEUT|DPD (Schweiz) AG||Ch. de la Venoge 5||1030|Bussigny-pres-Lausanne|CH|+41-43-3 55-21 21|+41-43-3 55-21 22|info@dpd.ch||
+0612||ECHD,EEUT|DPD (Schweiz) AG||Steigerhubelstr. 94||3008|Bern|CH|+41-43-3 55-21 21|+41-43-3 55-21 22|info@dpd.ch||
+0613||ECHD,EEUT|DPD (Schweiz) AG||Rue de Levant 170||1920|Martigny|CH|+41-43-3 55-21 21|+41-43-3 55-21 22|info@dpd.ch||
+0614||ECHD,EEUT|DPD (Schweiz) AG||La Combe||2710|Tavannes|CH|+41-43-3 55-21 21|+41-43-3 55-21 22|info@dpd.ch||
+0615||ECHD,EEUT|DPD (Schweiz) AG||Kohlestrasse 12||8952|Schlieren|CH|+41-43-3 55-21 21|+41-43-3 55-21 22|info@dpd.ch||
+0616||ECHD,EEUT|DPD (Schweiz) AG||Hasenmoosstrasse 13||6023|Rothenburg|CH|+41-43-3 55-21 21|+41-43-3 55-21 22|info@dpd.ch||
+0617||ECHD,EEUT|DPD (Schweiz) AG||Haertistr. 70||7324|Vilters|CH|+41-43-3 55-21 21|+41-43-3 55-21 22|info@dpd.ch||
+0618||ECHD,EEUT|DPD (Schweiz) AG||Weiernstrasse||9547|Wittenwil|CH|+41-43-3 55-21 21|+41-43-3 55-21 22|info@dpd.ch||
+0619||ECHD,EEUT|DPD (Schweiz) AG||Via alla Campagna||6512|Giubiasco|CH|+41-43-3 55-21 21|+41-43-3 55-21 22|info@dpd.ch||
+0620||EDED,EFDX|Lagermax Paketdienst GmbH & Co. KG||Reitdorf 143||5542|Flachau|AT|+43-64 57-3 35 55-0|+43-64 57-39 02-95|depot620@dpd.at||
+0621||EDED,EFDX|Gebrueder Weiss Paketdienst Ges.m.b||Arbeitergasse 50||2333|Leopoldsdorf bei Wien|AT|+43-8 10-8 10-1 10|+43-22 35-43 28-9|depot621@dpd.at||
+0622||EDED,EFDX|Gebrueder Weiss Paketdienst Ges.m.b||Industriezeile 2||2100|Leobendorf|AT|+43-8 10-8 10-1 10|+43-22 62-6 81 92-23|depot622@dpd.at||
+0623||EDED,EFDX|Gebrueder Weiss Paketdienst Ges.m.b||Manker Strasse 55||3380|Poechlarn|AT|+43-8 10-8 10-1 10|+43-27 57-88 67-0|depot623@dpd.at||
+0624||EDED,EFDX|Schachinger Paketdienst Gesellschaf||Fischerweg 10||4063|Hoersching|AT|+43-72 21-7 12-0|+43-72 21-7 12-3 09|depot624@dpd.at||
+0625||EDED,EFDX|Lagermax Paketdienst GmbH & Co. KG||Franz-Peyerl-Strasse 12||5071|Wals bei Salzburg|AT|+43-6 62-22 66-0|+43-6 62-22 66-44 02|depot625@dpd.at||
+0626||EDED,EFDX|Gebrueder Weiss Paketdienst Ges.m.b||Schloeglstrasse 45||6060|Hall in Tirol|AT|+43-52 23-58 02-0|+43-52 23-53 43-9|depot626@dpd.at||
+0627||EDED,EFDX|Gebrueder Weiss Paketdienst Ges.m.b||Industriestrasse 16||6832|Sulz|AT|+43-55 22-7 45 20-0|+43-55 22-7 45 20-61 od 62 od 63|depot627@dpd.at||
+0628||EDED,EFDX|Gebrueder Weiss Paketdienst Ges.m.b||Feldkirchenstrasse 14-16||8401|Kalsdorf bei Graz|AT|+43-8 10-8 10-1 10|+43-31 35-57 77-0|depot628@dpd.at||
+0629||EDED,EFDX|Lagermax Paketdienst GmbH & Co. KG||Altglandorf 20||9300|St. Veit/Glan|AT|+43-42 12-29 88-0|+43-42 12-29 88-5|depot629@dpd.at||
+0630||EDED,EFDX|Gebrueder Weiss Paketdienst Ges.m.b||Waltenbachstrasse 7||8700|Leoben|AT|+43-8 10-8 10-1 10|+43-38 42-83 47-2 14|depot630@dpd.at||
+0631||EDED,EFDX|Gebrueder Weiss Paketdienst Ges.m.b||Arbeitergasse 50||2333|Leopoldsdorf bei Wien|AT|+43-8 10-8 10-1 10|+43-22 35-43 28-9|depot621@dpd.at||
+0632||EDED,EFDX|Lagermax Paketdienst GmbH & Co. KG||Franz-Peyerl-Strasse 12||5071|Wals bei Salzburg|AT|+43-6 62-22 66-0|+43-6 62-22 66-44 02|depot625@dpd.at||
+0633||EDED,EFDX|Schachinger Paketdienst Gesellschaf||Fischerweg 10||4063|Hoersching|AT|+43-72 21-7 12-0|+43-72 21-7 12-5 64|depot633@dpd.at||
+0634||EDED,EFDX|Schachinger Paketdienst Gesellschaf||Oberpointweg 29||4320|Perg|AT|+43-72 21-7 12-3 95|+43-72 21-7 12-3 09|depot624@dpd.at||
+0636|VIE|EDED,EFDX|Vienna - Chronopost Int l agent s l|JOHAN WEISS|Vienna Airport||2355|Vienna|AT|207806079,4||||
+0637||EDED,EFDX|Austria Paket System Ges.m.b.H.||Fischerweg 10||4063|Hoersching|AT|+43-72 21-7 12-0|+43-72 21-7 12-3 09|zentrale@dpd.at||
+0638||EDED,EFDX|DPD Systemlogistik GmbH & Co. KG||Ludwig-Erhard-Str. 12||85375|Neufahrn|DE|+49-(0) 81 65-9 42-0|+49-(0) 81 65-9 42-3 77|info@depot180.dpd.de||
+0639||EDED,EFDX|Lagermax Paketdienst GmbH & Co. KG||Altglandorf 20||9300|St. Veit/Glan|AT|+43-42 12-29 88-0|+43-42 12-29 88-5|depot629@dpd.at||
+0640||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||SEMPRA 398, P.O.BOX 6||40339|Chlumec u Usti nad Labem|CZ|+42-(0)-8 41 70 07 00|+42-(0)4 75-2 23-0 90|depo640@dpd.cz||
+0641||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Komercni zona Modletice|Modletice 135|25101|Ricany u Prahy|CZ|+4 20-27 20-0 16-1 55|+4 20-27 20-16-1 57|hub@dpd.cz||
+0642||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Svesedlicka 740||78353|Velka Bystrice|CZ|+42-(0)-8 41 70 07 00|+42-(0)5 85-35 30-77|depo642@dpd.cz||
+0643||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||U mostku||50341|Hradec Kralove - Pouchov|CZ|+42-(0)-8 41 70 07 00|+42-(0)4 95-4 06-9 29|depo643@dpd.cz||
+0644||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Obchodni Podnikatelsky Areal||74251|Monov|CZ|+42-(0)-8 41 70 07 00|+42-(0)5 97-47 13-0|depo644@dpd.cz||
+0645||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Nivky 630||66456|Blucina|CZ|+42-(0)-8 41 70 07 00|+42-(0)5 47-23 55-0|depo645@dpd.cz||
+0646||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Domazlicka 200||31804|Plzen|CZ|+42-(0)-8 41 70 07 00|+42-(0)3 77-38 90-0|depo646@dpd.cz||
+0647||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Okruni 7 (areal MANE)||37001|Ceske Budejovice|CZ|+42-(0)-8 41 70 07 00|+42-(0)3 87-41 18-85|depo647@dpd.cz||
+0648||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Statenicka ulice||25264|Velke Prilepy|CZ|+4 20-8 41 70 07 00|+4 20-2 20-93 08-84|||
+0649||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Hrncirska||35735|Chodov|CZ|||||
+0650||EDED,EFDX|DPD Direct Parcel Distribution SK s||Roznavska 1||83104|Bratislava|SK|+4 21-2 44-4 42-5 55|+4 21-2 44-4 42-5 56|depo650@dpd.sk||
+0651||EDED,EFDX|DPD Direct Parcel Distribution SK s||Zvolenska cesta 25||94701|Banska Bystrica|SK|+4 21-4 84-1 46-4 06|+4 21-4 84-1 46-4 09|depo651@dpd.sk||
+0652||EDED,EFDX|DPD Direct Parcel Distribution SK s||Zeleziarenska 49||4011|Kosice-Saca|SK|+4 21-5 56-8 41-1 03|+4 21-5 56-8 41-1 04|depo652@dpd.sk||
+0653||EDED,EFDX|DPD Direct Parcel Distribution SK s||K cintorinu 51/97||1089|Zilina-Banova|SK|+4 21-4 15-6 40-2 36|+4 21-4 15-6 40-1 02|depo653@dpd.sk||
+0654||EDED,EFDX|DPD Direct Parcel Distribution SK s||Stefanikova 19||91101|Trencin|SK|+4 21-9 08-7 24|+4 21-2 44-4 42-5 56|depo654@dpd.sk||
+0655||EDED,EFDX|DPD Direct Parcel Distribution SK s||Spojovacia 7||94901|Nitra|SK|+4 21-2-1 63 73|+4 21-2-44 44 25 56|depo655@dpd.sk||
+0656||EDED,EFDX|DPD Direct Parcel Distribution SK s||Hranicna 13||5801|Poprad|SK|+4 21-55-1 63 73|+4 21-55-6 84 11 04|depo656@dpd.sk||
+0657||EDED,EFDX|DPD Direct Parcel Distribution SK s||xxx||1089|xxx|SK|||||
+0658||EDED,EFDX|DPD Direct Parcel Distribution SK s||Oresianska 11||91859|Trnava|SK|||||
+0659||EDED,EFDX|DPD Direct Parcel Distribution SK s||xxx||1089|xxx|SK|||||
+0660||EDED,EFDX|DPD Hungaria Kft||Kesmark u. 14||1158|Budapest|HU|+36-1-41 46-2 04|+36-1-41 46-2 14|dpd@dpd.hu||
+0661||EDED,EFDX|DPD Hungaria Kft||Allomas u. 9||3553|Kistokaj|HU|||||
+0662||EDED,EFDX|DPD Hungaria Kft||Hajnal u. 18||4029|Debrecen|HU|||||
+0663||EDED,EFDX|DPD Hungaria Kft||Tancsics 6-10||5600|Bekescsaba|HU|||||
+0664||EDED,EFDX|DPD Hungaria Kft||Halasi u. 29||6001|Kecskemet|HU|||||
+0665||EDED,EFDX|DPD Hungaria Kft||Megyeri u. 64||7631|Pecs|HU|||||
+0666||EDED,EFDX|DPD Hungaria Kft||Csaba u. 12||9700|Szombathely|HU|||||
+0667||EDED,EFDX|DPD Hungaria Kft||Acsi ut 26||9421|Nagyigmand|HU|||||
+0670||EBGD,EALT|GeoPost Bulgaria OOD||63, Shipchenski prohod blvd.||1574|Sofia|BG|||||
+0671||EBGD,EALT|GeoPost Bulgaria OOD||63, Shipchenski prohod blvd.||1574|Sofia|BG|||||
+0674||EBGD,EALT|GeoPost Bulgaria OOD||8-10, Stefan Verkovich street||4000|Plovdiv|BG|||||
+0675||EBGD,EALT|GeoPost Bulgaria OOD||17, Magistralna street||5000|Veliko Tarnovo|BG|||||
+0676||EBGD,EALT|GeoPost Bulgaria OOD||100, Tzar Simeon Veliki street||6000|Stara Zagora|BG|||||
+0677||EBGD,EALT|GeoPost Bulgaria OOD||19, Olimpii Panov street||7000|Rousse|BG|||||
+0678||EBGD,EALT|GeoPost Bulgaria OOD||28, Mitropolit Simeon street||8000|Bourgas|BG|||||
+0679||EBGD,EALT|GeoPost Bulgaria OOD||16, Saborni blvd.||9000|Varna|BG|||||
+0680||EROD,EALT|S.C. GeoPost Cargus SA||Sos. Bucuresti Ploiesti nr.1||75100|Otopeni|RO|||||
+0681||EROD,EALT|S.C. GeoPost Cargus SA||Sos. Bucuresti Ploiesti nr.1||75100|Otopeni|RO|||||
+0690|||Estafeta Mexicana S.A. de C.V.||Hamburgo 213-14 Piso||06604|Col. Juarez|MX|-81|+52-(0)8-34-45|||
+0691|||Estafeta Mexicana S.A. de C.V.||Hamburgo 213-14 Piso||06600|Col. Juarez|MX|-81|+52-(0)8-34-45|||
+0692|||Estafeta Mexicana S.A. de C.V.||Hamburgo 213-14 Piso||06601|Col. Juarez|MX|-80|+52-(0)8-34-46|||
+0693|||Estafeta Mexicana S.A. de C.V.||Hamburgo 213-14 Piso||06602|Col. Juarez|MX|-79|+52-(0)8-34-47|||
+0694|||Estafeta Mexicana S.A. de C.V.||Hamburgo 213-14 Piso||06603|Col. Juarez|MX|-78|+52-(0)8-34-48|||
+0700||EESD,EFDX|Seur Internacional Express S.A.||Poligono Industrial Gran Via Sur -||8908|LHospitalet de Llobregat (Barcelona)|ES|+34-93-3 36 85 85|+34-93-2 63 08 01|||
+0701||EESD,EFDX|Seur Internacional Express S.A.||C/ Ollamendi, Parc. 4.8. Pol. Ind.||1015|Vitoria|ES|+34-94-529 23 23||||
+0702||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. Campollano, C/D, 35||2007|Albacete|ES|+34-967 19 0019||||
+0703||EESD,EFDX|Seur Internacional Express S.A.||Autovia Madrid, Edif. SEUR, Pol. In||3015|Alicante|ES|3 49 65 98 77 77||||
+0704||EESD,EFDX|Seur Internacional Express S.A.||C/ Los Marmoles, 28||4007|Almeria|ES|+34-95 022 06 00||||
+0705||EESD,EFDX|Seur Internacional Express S.A.||Avda. Sta Cruz de Tenerife, 1||5005|Avila|ES|||||
+0706||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. El Nevero, Complejo Enbas||6006|Badajoz|ES|+34-92 42 71 40 8||||
+0707||EESD,EFDX|Seur Internacional Express S.A.||C/ Gremi de Fusters, 8. Pol. Ind. d||7009|Mallorca|ES|3 49 71 43 66 66||||
+0708|BCN|EESD,EFDX|Seur Internacional Express S.A.||Pasaje de la Ribera, s/n||8820|El Prat de Llobregat (Barcelona)|ES|3 49 34 79 79 00||||
+0709||EESD,EFDX|Seur Internacional Express S.A.||C/ La Ribera, Parcela  Seur, Pol. I||9007|Burgos|ES|3 49 47 48 60 00||||
+0710||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. Las Capellanias, Travesia||10005|Caceres|ES|+34-92 76 29 063||||
+0711||EESD,EFDX|Seur Internacional Express S.A.||C/ Delta, s/n, Pol. Ind. Las Salina||11500|El Puerto de Santa Maria|ES|+34-95 68 60 505||||
+0712||EESD,EFDX|Seur Internacional Express S.A.||Avda. Valencia, 23||12005|Castellon|ES|+34-96 42 40 244||||
+0713||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. Carretera de Carrion, Nav||13005|Ciudad Real|ES|+34-92 62 740 00||||
+0714||EESD,EFDX|Seur Internacional Express S.A.||C/ Ingeniero Juan de la Cierva, s/n||14013|Cordoba|ES|+34-95 77 600 07 6||||
+0715||EESD,EFDX|Seur Internacional Express S.A.||C/ Juan de la Cierva, 28-32 Edifici||15008|La Coruna|ES|3 49 81 26 36 00||||
+0716||EESD,EFDX|Seur Internacional Express S.A.||Travesia Ronda Oeste, 5. Pol. Ind.||16004|Cuenca|ES|3 49 69 22 65 16||||
+0717||EESD,EFDX|Seur Internacional Express S.A.||Pont d en Canals, s/n. Sector Gueel||17180|Vilablareix|ES|3 49 72 24 25 26||||
+0718||EESD,EFDX|Seur Internacional Express S.A.||Avda. Asegra, s/n. Pol. Ind. Asegra||18210|Granada|ES|+34-95 84 02 288||||
+0719||EESD,EFDX|Seur Internacional Express S.A.||C/ Trafalgar, Parcela 51, Pol. Ind.||19004|Guadalajara|ES|||||
+0720||EESD,EFDX|Seur Internacional Express S.A.||C/ Mateo Errota, 15 Nave P. Pol. In||20014|Martutene|ES|3 49 43 44 56 77||||
+0721||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. La Paz, Naves 10 y 11||21007|Huelva|ES|+34-95 92 33 55 3||||
+0722||EESD,EFDX|Seur Internacional Express S.A.||C/ Agricultura, Nave 6, Pol. Ind. d||22006|Huesca|ES|||||
+0723||EESD,EFDX|Seur Internacional Express S.A.||C/ Torredonjimeno, 11. Pol. Ind. Lo||23009|Jaen|ES|+34-95 32 80 228||||
+0724||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. de Onzonilla, Parcela G-1||24231|Onzanilla|ES|34 98 72 14 70 12||||
+0725||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. Mecanova, Ctra Tarragona,||25191|Lerida|ES|3 49 73 20 52 66||||
+0726||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. Cantabria II, Edificio SE||26006|Logrono|ES|3 49 41 25 20 22||||
+0727||EESD,EFDX|Seur Internacional Express S.A.||Ctra. de Acceso al Pol. del Ceao, A||27003|Lugo|ES|3 49 82 20 93 67||||
+0728|MAD|EESD,EFDX|Seur Internacional Express S.A.||Ctra. Vallecas-Villaverde, Km. 2||28031|Madrid|ES|3 49 13 22 80 52||||
+0729||EESD,EFDX|Seur Internacional Express S.A.||C/ Fernando Sor, 2. Pol. Ind. Treve||29590|Malaga|ES|+34-95 23 54 911||||
+0730||EESD,EFDX|Seur Internacional Express S.A.||C/ La Palmera, 2. El Ranero||30100|Murcia|ES|3 49 68 27 43 11||||
+0731||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. Noain-Esquiroz||31110|Pamplona|ES|+34-94-8 31 71 12||||
+0732||EESD,EFDX|Seur Internacional Express S.A.||Rua Do Cumial, 5. Zona Industrial d||32970|Orense|ES|+34-98 82 34 808||||
+0733||EESD,EFDX|Seur Internacional Express S.A.||Ctra. Antigua Oviedo-Gijon (Frente||33192|Pruvia Llanera|ES|+34-985 266 005||||
+0734||EESD,EFDX|Seur Internacional Express S.A.||C/ Sevilla, 33. Pol.Ind. Los Angele||34004|Palencia|ES|+34-979 72 87 07||||
+0735||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. Salinetas, Ctra. Gral. de||35200|Telde|ES|+34-92 81 31 700||||
+0736||EESD,EFDX|Seur Internacional Express S.A.||C/ Fragosino, s/n||36214|San Pedro de Sardoma|ES|+34-98 641 11 11||||
+0737||EESD,EFDX|Seur Internacional Express S.A.||Avda. de La Aldehuela, s/n, Pol. In||37003|Salamanca|ES|+34-923 18 28 28||||
+0738||EESD,EFDX|Seur Internacional Express S.A.||(to be added)||38000|Santa Cruz de Tenerife|ES|||||
+0739||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. De Guarnizo, Parcela 96.||39610|Santander|ES|||||
+0740||EESD,EFDX|Seur Internacional Express S.A.||C/ Atalaya, 1. Pol. Ind. El Cerro||40006|Segovia|ES|+34-921 43 06 16||||
+0741||EESD,EFDX|Seur Internacional Express S.A.||Ctra. Camas-Santiponce, Km. 5||41900|Camas|ES|3 49 54 92 01 60||||
+0742||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. Las Casas, Parcela 10 C/D||42005|Soria|ES|+34-975 24 01 01||||
+0743||EESD,EFDX|Seur Internacional Express S.A.||Ctra. Tarragona-Valencia, Km. 1158||43006|Tarragona|ES|3 49 77 54 41 51||||
+0744||EESD,EFDX|Seur Internacional Express S.A.||Ctra. de Cuba, s/n||44001|Teruel|ES|+34-978 60 71 02||||
+0745||EESD,EFDX|Seur Internacional Express S.A.||Ctra. de Madrid-Toledo, Km. 63||45280|Olias del Rey|ES|+34-925 35 30 24||||
+0746|VLC|EESD,EFDX|Valencia|SEUR INTL|C/ Ciudad de Barcelona,|26 Parc. 43-44 Pol Fuente del Jarro|46980|Paterna Valencia|ES|||||
+0747||EESD,EFDX|Seur Internacional Express S.A.||C/ Niquel, 4||47012|Valladolid|ES|3 49 83 47 24 16||||
+0748||EESD,EFDX|Seur Internacional Express S.A.||Pol. Ind. Lezama Leguizamon. C/ Ara||48450|Echevarri|ES|3 49 44 87 10 10||||
+0749||EESD,EFDX|Seur Internacional Express S.A.||C/ Villalpando, 12||49005|Zamora|ES|+34-980 51 07 97||||
+0750||EESD,EFDX|Seur Internacional Express S.A.||Ctra. de Madrid, Km. 314,900||50012|Zaragoza|ES|3 48 76 25 53 00||||
+0751||EESD,EFDX|Seur Internacional Express S.A.||C/ Cervantes, 14||51001|Ceuta|ES|+34-95 65 12 772||||
+0752||EESD,EFDX|Seur Internacional Express S.A.||C/ Hortensia, Nave D-17, Pol. Ind.||52006|Melilla|ES|||||
+0754||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Kolejowa 59||22100|Chelm|PL| +48-82 564 30 17| +48-82 564 30 17|||
+0755||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Rysia 6||87800|Wloclawek|PL|||||
+0756||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Warynskiego 8||78400|Szczecinek|PL|48 22 66 80 80 02 57|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0757||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Brukowa 16/18||91341|LODZ|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0758||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Mickiewicza 5||96100|SKIERNIEWICE|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0759||EPLD,EALC|Masterlink Express Sp.z.oo||ul Mineralna 15||02274|WARSZAWA|PL|+48-22-6 68 08 00|+48-22-6 68 08 25|depot759@masterlink.com.pl||
+0760||EPLD,EALC|Masterlink Express Sp.z.oo||Al. Niepodleglosci  606/610||81855|GDYNIA - SOPOT|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0761||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Mieszka I-go 5A||75136|KOSZALIN|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0762||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Pomorska 61-65||70812|SZCZECIN|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0763||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Robot Nicza 185||83300|ELBLAG|PL|48 22 66 80 80 02 57|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0764||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Stalowa 4||10240|OLSZTYN|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0765||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Targowa 22 lok. 19||07410|OSTROLEKA|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0766||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Slowackiego 11||19300|ELK|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0767||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Gen. Mczka 60||15691|BIALYSTOK|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0768||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Otolinksa 27 C||09407|PLOCK|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0769||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Szarych Szeregow 12||76200|SLUPSK|PL|||||
+0770||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Grabiszynska 233 F||53234|WROCLAW|PL|4 87 13 68 99 60|4 87 13 68 99 66|dpd@masterlink.com.pl||
+0771||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Grunwaldzka 2/20||59220|LEGNICA|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0772||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Sw. Jozefa 4||58309|WALBRZYCH|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0773||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Swiatowida 2||45325|OPOLE|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0774||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Sulejowska 45||97300|PIOTRKOW TRYBUNALSKI|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0775||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Krakowska 81||42200|CZESTOCHOWA|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0776||EPLD,EALC|Masterlink Express Sp.z.oo||Porcelanowa 60||41246|Katowice|PL|+48-32-3 57 40 70|+48-32-3 57 40 77|depot776@masterlink.com.pl||
+0777||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Piekarska 20||43300|BIELSKO-BIALA|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0778||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Rolna 6||25419|KIELCE|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0779||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Sobieskiego 56/58||58500|JELENIA GORA|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0780||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Sw. Michala 43||61119|POZNAN|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0781||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Motylewska 24||64920|PILA|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0782||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Grobla 24||66400|GORZOW WIELKOPOLSKI|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0783||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Olowiana 18||85461|BYDGOSZCZ|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0784||EPLD,EALC|Masterlink Express Sp.z.oo||Aleja Zjednoczenia 92||65005|ZIELONA GORA|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0785||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Okrezna 10||64100|LESZNO|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0786||EPLD,EALC|Masterlink Express Sp.z.oo||Al. Wojska Polskiego 13||62800|KALISZ|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0787||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Wojska Polskiego 102||98200|SIERADZ|PL|||||
+0788||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Kleczewska 37||62510|KONIN|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0789||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Grudziadzka 79||87100|TORUN|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0790||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Siwka 11||31588|KRAKOW|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0791||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Traugutta 15||33300|NOWY SACZ|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0792||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Lubelska 50||35233|RZESZOW|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0793||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Okrezna 4||33100|TARNOW|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0794||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Szklarniowa 1||37400|STALOWA  WOLA - NISKO|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0795||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Przemyslowa 4||22400|ZAMOSC|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0796||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Tartaczna 29||26612|RADOM|PL|4 82 26 68 08 00|4 82 26 68 08 19|dpd@masterlink.com.pl||
+0797||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Droga Meczennikow Majdanka 74||20325|LUBLIN|PL|4 82 26 68 08 00|4 82 26 68 08 00|dpd@masterlink.com.pl||
+0798||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Brzeska 128||08110|SIEDLCE|PL|||||
+0800||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Portowa 10||44100|Gliwice|PL|||||
+0801||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Sportowa 7||44200|Rybnik|PL|||||
+0802||EPLD,EALC|Masterlink Express Sp.z.oo||ul. Mikolajczyka 25||41219|Dabrowa Gornicza|PL|||||
+0803||EPLD,EALC|Masterlink Express Sp.z.oo||Wolczynska 133||01919|Warszawa|PL|||||
+0819|||La Poste Tunisienne|| Centre des Colis Postaux - Complex||2035|Tunis Carthage|TN|||||
+0820||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via dell`Artigianato z.i.||65|Fiano Romano|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0821||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||L. Cascina Scaravella||20018|Sedriano|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0822||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Don Minzoni 10||20158|Milano|IT|+39-(0) 23-9 33-81|+39-(0) 23-9 32-10 53|int043@bartolini.it||
+0823||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Cassio Dione 7||20138|Milano|IT|+39-(0) 45-89 50-1 11|+39-(0) 45-8 77-92 01|||
+0824||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via D. Carbonieria 33 z.i.||6073|Solomeo Corciano|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0825||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||V. A. Grandi 51 Z.I.||25125|Brescia|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0826||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Le Elmas KM. 2,250||9125|Cagliari|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0827||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Interporto Orbassano||10043|Orbassano|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0828||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Quartini, 23||16161|Fegino|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0829||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Caduti D. Lavoro 3||60131|Ancona - Z.I. Baraccola|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0830||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||V. S. Gionvanni||64010|Isola Colonella|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0831||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via F. Lli Cervi||31050|Villobra|IT|39 04 58 95 01 55|39 04 58 77 92 01|||
+0832||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Tiburtina||66020|Sambuceto|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0833||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Z.I. Via Nickmann 4||70123|Bari|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0834||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Tavernetta 2||81025|Marcianise|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0835||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||V. Naviga. Interna 83||35129|Padova|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0836||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Zona Industriale||88044|Marcellinara|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0837||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Monte Pastello||37057|S. Giovanni Lupatoto (VR)|IT|+39-(0) 45-89 50-1 11|+39-(0) 45-87 79-2 01|||
+0838||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Altofonte 120/A||90126|Palermo|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0839||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Pirandello||95045|Piano Tavola|IT|+39-(0) 45-89 50-1 11|+39-(0) 45-87 79-2 01|||
+0840||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Interporto - BL. 1.2||40010|Bentivoglio|IT|39 04 58 75 31 11|39 04 58 77 92 01|||
+0841|VCE|EITD|Venice|SDA|Via  dell industria n.138||30020|Marcon (VE)|IT| +39/041-5951717||||
+0842|PSA|EITD|Pisa|SDA|Via Fonda di  Mezzana n- 61/A||59100|Prato (PO)|IT|-562860,9321||||
+0843||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Lisbona 1 - Int.Pr||43010|Fontevivo|IT|+39-(0) 45-8 95 01 11-1 55|+39-(0) 45-87 79-2 01|||
+0844||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Monte Pastello||37057|S. Giovanni Lupatoto (VR)|IT|+39-(0) 45-89 50-1 11|+39-(0) 45-87 79-2 01|||
+0845||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Monte Pastello||37057|S. Giovanni Lupatoto (VR)|IT|+39-(0) 45-89 50-1 11|+39-(0) 45-87 79-2 01|||
+0847|MXP|EITD|Milano|SDA|Via Bassano del Grappa  s.n.c.||21015|Lonate  Pozzolo (VA)|IT|+39/0331-662.452||||
+0848|FCO|EFCO|Rome|SDA|Via Corona Boareale  n.100||50|Fiumicino (RM)|IT|-655794,5||||
+0849||EDED,EFDX|Bartolini Corriere Espresso S.p.A.||Via Majorana 21/23/25||50019|Osmannoro|IT|39 04 58 95 01 11|39 04 58 77 92 01|||
+0866||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.||Merkez Mh.Tasocaklari Mh. No:25 Mah||3439|Istanbul-Bagcilar|TR| +90 21 24 46 36 80||||
+0880|||GeoPost Caspian LLP||52 Kabanbay Batyr Street||050010|050010Almaty|KZ|+7-32 72-59 99 95|+7-32 72-59 99 95|||
+0881|||GeoPost Caspian LLP||51 Sembinov Street||010000|Astana|KZ|+7-32 72-59 99 95|+7-32 72-59 99 95|||
+0882|||GeoPost Caspian LLP||52 Kabanbay Batyr Street||050010|050010Almaty|KZ|+7-32 72-59 99 95|+7-32 72-59 99 95|||
+0883|||GeoPost Caspian LLP||52 Kabanbay Batyr Street||050010|050010Almaty|KZ|+7-32 72-59 99 95|+7-32 72-59 99 95|||
+0890||EGRD,EALC|Athens||||18233||GR|||||
+0910|||DPD d.o.o.||Zrenjaninski put 153h||11211|Beograd|CS|+3 81-11-33 21  4 74|+3 81-11-33 20  1 98|dpd@dpd.co.yu||
+0911|||DPD d.o.o.||Zrenjaninski put 153h||11211|Beograd|CS|||||
+0912|||DPD d.o.o.||Zrenjaninski put 153h||11211|Beograd|CS|||||
+0913|||DPD d.o.o.||Zrenjaninski put 153h||11211|Beograd|CS|||||
+0918|ARA||SODEXI|Zone de Fret 4|Batiment Air France Express 3501, R|B.P. 10201||Roissy CDG Cedex (Aramex)|| +33 1 41 56 96 01||||
+0919|JUP||SODEXI|Zone de Fret 4|Batiment Air France Express 3501, R|B.P. 10201||Roissy CDG Cedex (Jupiter)|| +33 1 41 56 96 01||||
+0920|IBC||SODEXI|Zone de Fret 4|Batiment Air France Express 3501, R|B.P. 10201||Roissy CDG Cedex (IBC)|| +33 1 41 56 96 01||||
+0923|||DPD Croatia d.o.o.||Franje Lucica 23||10090|Zagreb|HR|38 50 13 43 06 00|38 50 13 43 06 66|dpd@dpd.hr||
+0924|||DPD Croatia d.o.o.||Miroslava Krleze 4||51000|Rijeka|HR|0,000112225|0,000112223|dpd@dpd.hr||
+0925|||DPD Croatia d.o.o.||Ulica Jablanova 47||31000|Osijek|HR|0,000112225|0,000112223|dpd@dpd.hr||
+0926|||DPD Croatia d.o.o.||Industrijska zona- Podi bb||21204|Dugopolje|HR|0,000112225|0,000112223|dpd@dpd.hr||
+0927|||DPD Croatia d.o.o.||Gaenica 28||23000|Zadar|HR|0,000112225|0,000112223|dpd@dpd.hr||
+0930||EDED,EFDX|DPD d.o.o.||Traka cesta 43||2000|Maribor|SI|+3 86-(0)2-33 02-2 60|+3 86-(0)2-33 02-2 65|dpd@dpd.si||
+0931||EDED,EFDX|DPD d.o.o.||Kamniska 41||1000|Ljubljana|SI|+3 86-(0)1-23 08-3 05|+3 86-(0)1-23 08-3 04|dpd@dpd.si||
+0935|||DPD d.o.o.||Halilovici bb||71000|Sarajevo|BA|+3 87-33-7 69-6 60|+3 87-33-7 69-6 61|||
+0936|||DPD d.o.o.||Halilovici bb||71000|Sarajevo|BA|+3 87-33-7 69-6 60|+3 87-33-7 69-6 61|||
+0941|||SODEXI|Zone de Fret 4|Batiment Air France Express 3501, R|B.P. 10201||Roissy CDG Cedex|| +33 1 41 56 96 01||||
+0942|TNT||Chronopost Express International|||||||||||
+0943|FDX||Chronopost Express International|||||||||||
+0948|||Depotnumber VTG for Collection Requ||||||DE|||||
+0950|||DOX||||||FR|||||
+0951|||China||||951||CN|||||
+0956|TNV|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Lugar de Videla, Freguesia de Zibre||2350830|Torres Novas|PT|+3 51-21-8 54 60-01|+3 51-21-8 54 61-18|customerservicelis@chrono-inter.com||
+0957|LRA|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Pinhal de S.Joao, Pinheiros-Marraze||2415566|Leiria|PT|+3 51-21-8 54 60-01|+3 51-21-8 54 61-18|||
+0958|LXX|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Avenida Casal da Serra, Lote I 13||2625086|Povoa de sta Iria|PT|+3 51-21-8 54 60-01|+3 51-21-8 54 61-18|customerservicelis@chrono-inter.com||
+0959|LIS|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Av.Infante D.Henrique, Lote 10||1849003|Lisboa|PT|+3 51-21-8 54 60-01|+3 51-21-8 54 61-18|customerservicelis@chrono-inter.com||
+0960|OPO|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Rua Bernardino Machado, n 355-395,||4445036|Alfena, Valongo|PT|+3 51-22-9 68 83-01|+3 51-22-9 68 83|customerserviceopo@chrono-inter.com||
+0961|CMB|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Mercado Abastecedor de Coimbra-Tave||3045504|Coimbra|PT|s. De po t9 64||customerserviceopo@chrono-inter.com||
+0962|VIS|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Rua do Vale, Lote 6, Freguesia de S||3500234|Viseu|PT|s. De po t9 64||customerserviceopo@chrono-inter.com||
+0963|VRL|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Zona Industrial de Vila Real, Lote||5000082|Vila Real|PT|s. De po t9 64||customerserviceopo@chrono-inter.com||
+0964|OPO|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Rua Bernardino Machado, n 355-395,||4445036|Alfena, Valongo|PT|+3 51-22-9 68 83-01|+3 51-22-9 68 83|customerserviceopo@chrono-inter.com||
+0965|GRD|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Parque Industrial da Guarda, Quinta||6300625|Guarda|PT|s. De po t9 64||customerserviceopo@chrono-inter.com||
+0966|FAO|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Marf-Mercado Abastecedor da Regiao||8005419|Faro|PT|+3 51-21-8 54-60 01|+3 51-21-8 54-61 18|customerservicelis@chrono-inter.com||
+0967|EVR|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Mare-Mercado Abastecedor da Regiao||7000500|Evora|PT|+3 51-21-8 54 60-01|+3 51-21-8 54 61-18|customerservicelis@chrono-inter.com||
+0968|FNC|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Caminho da Cancela, N 12 A||9060043|Funchal|PT|+3 51-21-8 54 60-01|+3 51-21-8 54 61-18|customerservicelis@chrono-inter.com||
+0969|PDL|EPTD,EFDX|Chronopost Portugal - Transporte Ex||Rua da Vitoria, N 69||9500441|Ponta Delgada|PT|+3 51-21-8 54 60-01|+3 51-21-8 54 61-18|customerservicelis@chrono-inter.com||
+0970||EDED,EFDX|AS Baltic Logistic System Eesti||Peterburi tee 38||11415|Tallinn|EE|+3 72-(0)-6 13 00-00|+3 72-(0)-6 13 00-13|bizpak@bizpak.com||
+0971||EDED,EFDX|AS Baltic Logistic System Eesti||Sepa 24 b||51013|Tartu|EE|+3 72-7-30 08 73|+3 72-7-30 08 73|bizpak@bizpak.com||
+0972||EDED,EFDX|AS Baltic Logistic System Eesti||Pae tee 4||80042|Paernu|EE|+3 72-(0)-6 13 00-00|+3 72-(0)-6 13 00-13|bizpak@bizpak.com||
+0973||EDED,EFDX|AS Baltic Logistic System Eesti||Raegavere tee 44||44312|Rakvere|EE|+3 72-(0)-6 13 00-00|+3 72-(0)-6 13 00-13|bizpak@bizpak.com||
+0974||EDED,EFDX|AS Baltic Logistic System Eesti||Linda 15 D||41536|Johvi|EE|+3 72-(0)-5 55 30-0 33||||
+0975||EDED,EFDX|AS Baltic Logistic System Eesti||Puiestee 1372||71012|Viljandi|EE|+3 72-(0)-6 13 00-00|+3 72-(0)-6 13 00-13|bizpak@bizpak.com||
+0976||EDED,EFDX|UAB Baltic Logistic System Vilnius||Vilkpedes Str. 4||3151|Vilnius|LT|+3 70-5-21 06-7 50|+3 70-5-21 06-7 40|dpd@bizpak.lt||
+0978||EDED,EFDX|UAB Baltic Logistic System Vilnius||Ateities 45b||52119|Kaunas|LT|+3 70-5-2 10 67 50|+3 70-5-2 10 67 40|info@bizpak.lt||
+0979||EDED,EFDX|UAB Baltic Logistic System Vilnius||Silutes pl. 79||94101|Klaipeda|LT|+3 70-5-2 10 67 50|+3 70-5-2 10 67 40|info@bizpak.lt||
+0980||EDED,EFDX|UAB Baltic Logistic System Vilnius||Donelaicio 1||72263|Taurage|LT|+3 70-5-2 10 67 50|+3 70-5-2 10 67 40|info@bizpak.lt||
+0981||EDED,EFDX|UAB Baltic Logistic System Vilnius||Stoties 17||90115|Plunge|LT|+3 70-5-2 10 67 50|+3 70-5-2 10 67 40|info@bizpak.lt||
+0982||EDED,EFDX|UAB Baltic Logistic System Vilnius||Serbentu 100/Pramones 21||78136|Siauliai|LT|+3 70-5-2 10 67 50|+3 70-5-2 10 67 40|info@bizpak.lt||
+0983||EDED,EFDX|UAB Baltic Logistic System Vilnius||Basanaviciaus 67||36204|Panevezys|LT|+3 70-5-2 10 67 50|+3 70-5-2 10 67 40|info@bizpak.lt||
+0984||EDED,EFDX|UAB Baltic Logistic System Vilnius||Stoties 28||28134|Utena|LT|+3 70-5-2 10 67 50|+3 70-5-21 07 40|info@bizpak.lt||
+0985||EDED,EFDX|SIA Baltic Logistic System-Latvija||Rankas iela 11||1005|Riga|LV|+3 71-7-3 87-2 84|+3 71-7-3 87-2 88|info@lv.dpd.net||
+0986||EDED,EFDX|SIA Baltic Logistic System-Latvija||Pulvera iela 10||3417|Liepaja|LV|+3 71-7-3 87-2 84|+3 71-7-3 87-2 88|info@lv.dpd.net||
+0987||EDED,EFDX|SIA Baltic Logistic System-Latvija||Karklu street 6||5403|Daugavpils|LV|||||
+0998||EDED,EFDX|Testdepot DPD DELICom||Wailandtstr. 1||63741|Aschaffenburg|DE| + 49 6021 4925||melanie.ackermann@dpd.de||
+1002|L1L||EXATRI LIEUSAINT||ZA PARISUD Boulevard du Luxembourg||00098|LIEUSAINT CEDEX|FR|||||
+1003|L3X||EXAPAQ SA||Boulevard du Luxembourg|ZAC Parisud 1|00036|LIEUSAINT CEDEX|FR|||||
+1004|L3X||EXATRI FRESNES||Z.A. de la Cerisaie Nord -|8, rue de Chevilly|00099|FRESNES|FR|||||
+1005|L2X||EXAPAQ GAP||3 Rue de Silos 5000||00037|GAP|FR|||||
+1007|L2X||EXAPAQ VILLEFRANCHE||PA de l Echangeur Rue Charles Seve||00074|VILLEFRANCHE S/ SAONE|FR|||||
+1008|L1X||EXAPAQ ST QUENTIN||Parc Chesnes La Noiree14 Bis|Rue Malacombe|00057|ST QUENTIN FALLAVIER|FR|||||
+1009|L2X||EXATRI TOULOUSE||26, Chemin de Fondeyre||00095|TOULOUSE|FR|||||
+1010|L1X||EXAPAQ TROYES||117, Route d  Auxerre - BP 36||00038| ST ANDRE LES VERGERS|FR|||||
+1011|L3X||EXAPAQ NARBONNE||RN 9 KM 3 Rt de Perpignan Lieu dit|PECH LOUBAT|00039|NARBONNE|FR|||||
+1013|L2X||EXAPAQ PROVENCE||Les Broquetiers||00040|SALON DE PROVENCE|FR|||||
+1014|L1X||EXAPAQ NORMANDIE||Z.I. Sud Caen-Mondeville|Rue des Frres Chappe|00041|GRENTHEVILLE|FR|||||
+1016|L3X||EXAPAQ ANGOULEME||ZA Les Coteaux||00042|VARS|FR|||||
+1018|L2X||EXAPAQ BERRY||Le Cezar ZAC du Bois des Chagnieres||00043|LE SUBDRAY|FR|||||
+1019|L2X||EXAPAQ CORREZE||ZAC De l  Aiguillon||00044|USSAC|FR|||||
+1020|L2X||CMS CORSE MESSAGERIE||Lot Michel Ange||00045|AFA|FR|||||
+1021|L2X||EXAPAQ VAL DE SAONE||3 Rue Franois Appert|ZAC des Renardires|00046|NUITS ST GEORGES|FR|||||
+1022|L3X||EXAPAQ CARHAIX||ZA De La Villeneuve||00047|CARHAIX PLOUGIER|FR|||||
+1025|L1X||EXAPAQ FRANCHE COMTE||Zone de Transport. ZAC de Valentin|Rue St Christophe|00048|BESANCON CEDEX|FR|||||
+1026|L1X||EXAPAQ DROME||Ple d activites Briffaut Est - Aven||00049|VALENCE|FR|||||
+1027|L1X||EXAPAQ VAL DE SEINE||Parc d activites  du Val Richard||00078|CRIQUEBOEUF S/SEINE|FR|||||
+1030|L2X||EXAPAQ LANGUEDOC||Z.I. de Grezan - Impasse Joseph Mon||00050|NIMES|FR|||||
+1031|L2X||EXAPAQ TOULOUSE||14 Chemin de Fondeyre||00051|TOULOUSE|FR|||||
+1033|L2X||EXAPAQ AQUITAINE||16 rue Jules Guesde||00052|CENON|FR|||||
+1034|L2X||EXAPAQ MONTPELLIER||2, Espace Commercial Frejorgues Est||00053|MAUGUIO|FR|||||
+1035|L3X||EXAPAQ RENNES||Rue Jacqueline Auriol ZAC Airlande||00054|ST JACQUES DE LA LANDE|FR|||||
+1036|L3X||EXATRI TOURS||95, Avenue Yves Farges||00096|SAINT PIERRE DES CORPS|FR|||||
+1037|L3X||EXAPAQ TOURS||ZI De La Fosse Neuve||00055|PARCAY MESLAY|FR|||||
+1038|L1X||EXAPAQ DAUPHINE||Z.A.Centr Alp - 347, rue de Chatagn||00034|MOIRANS|FR|||||
+1040|L2X||EXAPAQ DAX||1, allee Pampara||00058|DAX|FR|||||
+1042|L2X||EXAPAQ FOREZ||Z.I. de Molina la Chazotte - 154, r||00059|LA TALAUDIERE|FR|||||
+1043|X3X||EXATRI LYON||P.A de l Echangeur Rue Charles Sve||00097|VILLEFRANCHE S/ SAONE|FR|||||
+1044|L3X||EXAPAQ NANTES||Rue du Danube ZA Actiple||00061|THOUARE SUR LOIRE|FR|||||
+1045|L3X||EXAPAQ CENTRE||145, Rue des Chataigniers||00062|SARAN|FR|||||
+1047|L2X||EXAPAQ AGEN||Zone de Gaussens||00063|LE PASSAGE|FR|||||
+1048|L3X||EXATRI NIMES||ZI de Grezan Impasse Joseph Monier||00094|NIMES|FR|||||
+1051|L3X||EXAPAQ REIMS||Z.I. de la Gare||00064|MUIZON|FR|||||
+1054|L1X||EXAPAQ LORRAINE||14, Rue Albert Ernstein Parc d Act||00065|MAXEVILLE|FR|||||
+1059|L2X||EXAPAQ NORD||Z.A. des Six Mariannes||00066|ESCAUDAIN|FR|||||
+1060|L2X||EXAPAQ VALLEE DE L OISE||ZAC des Vallees Rue de Bruxelles BP||00067|MERU CEDEX|FR|||||
+1062|L2X||EXAPAQ PAS DE CALAIS||Z.I.  Artois - Flandres|Zone A - Secteur Est|00068|BILLY - BERCLAU|FR|||||
+1063|L2X||EXAPAQ AUVERGNE||Z.I. Ladoux - Parc Logistique||00069|GERZAT|FR|||||
+1065|L2X||EXAPAQ PAU||Z.I. du Pont Long||00070|LONS|FR|||||
+1067|L2X||EXAPAQ STRASBOURG||46, route de Brumath||00071|SOUFFEL WEYERSHEIM|FR|||||
+1068|L2X||EXAPAQ MULHOUSE||ZI 4, Rue Bartholdi||00072|ENSISHEIM|FR|||||
+1069|L2X||EXAPAQ RHONE||Av de Formans ZAC De Forquevaux||00073|TREVOUX|FR|||||
+1070|L2X||EXATRI BEAUNE||||00093||FR|||||
+1071|L1X||EXAPAQ ROANNE||223, Route de Charlieu||00060|ROANNE|FR|||||
+1072|L3X||EXAPAQ MAINE||Chemin des Queutes||00075|RUAUDIN|FR|||||
+1073|L2X||EXAPAQ AIGUE BLANCHE||97 Rue du Planteret||00076|AIGUE BLANCHE|FR|||||
+1074|L1X||EXAPAQ SAVOIES||Z.I.des Crts-de-Viry||00077|ALBY-SUR-CHERAN|FR|||||
+1076|L1X||EXAPAQ LE HAVRE||5 Rue Pierre Senard||00079|LE HAVRE|FR|||||
+1077|L3X||EXABEAUCE||ZAC PARISUD 1|Bd du Luxembourg - BP 08|00080|LIEUSAINT CEDEX|FR|||||
+1078|L3X||EXAPAQ PARIS OUEST||6 Rue des Frres Lumire|Z.A. de Trappes-Elancourt|00081|TRAPPES|FR|||||
+1079|L3X||EXAPAQ NIORT||Rue Norman Borlaug Centre Routier||00082|LA CRECHE|FR|||||
+1080|L1X||EXAPAQ POULAINVILLE||ZAC de la Couture Rue Marius Morel||00083|POULAINVILLE|FR|||||
+1081|L2X||EXAPAQ RODEZ||1, Rue de l Industrie Zone|Artisanale de Naujac|00035|LUC LA PRIMAUBE|FR|||||
+1082|L2X||EXAPAQ MONTAUBAN||Route Dpt 930 Gandal||00085|BRESSOLS|FR|||||
+1083|L1X||EXAPAQ COTE D AZUR||724, Route Nationale||00086|LE MUY|FR|||||
+1084|L2X||EXAPAQ AVIGNON||Avenue de St Chamand|ZI de Fontcouverte|00087|AVIGNON|FR|||||
+1087|L3X||EXAPAQ LIMOUSIN||2, Allee Edouard Le Corbusier BP 7||00088|LE PALAIS SUR VIENNE|FR|||||
+1091|L3X||EXABEAUCE||13-15, Rue Henri Dunant||00089|BONDOUFLE|FR|||||
+1092|L3X||EXAPAQ HAUTS DE SEINE||59/65 Avenue Du Vieux|Chemin De St Denis|00090|GENNEVILLIERS|FR|||||
+1093|L3X||EXAPAQ PARIS NORD||103/119, rue Henri Gautier||00091|BOBIGNY|FR|||||
+1094|L3X||EXAPAQ PARIS CENTRE||Z.A. de la Cerisaie Nord|8, rue de Chevilly|00092|FRESNES|FR|||||
+1098|||HUB|Provisoire|||||FR|||||
+1099|||Trafic|Local|||||FR|||||
+1305|WAW|EPLD,EALC|Masterlink Express Sp.z.oo||ul Mineralna 15||02274|WARSZAWA|PL|+48-22-6 68 08 00|+48-22-6 68 08 25|depot759@masterlink.com.pl||
+1380||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||SEMPRA 398, P.O.BOX 6||40339|Chlumec u Usti nad Labem|CZ|+42-(0)-8 41 70 07 00|+42-(0)4 75-2 23-0 90|depo640@dpd.cz||
+1381|PRG|EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Frantiska Divise 944, Areal CEREA||10400|Praha 10 - Uhoinives|CZ|+4 20-8 41-7 00-7 00|+4 20-2-7 20 16-1 54|depo641@dpd.cz||
+1382||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Svesedlicka 740||78353|Velka Bystrice|CZ|+42-(0)-8 41 70 07 00|+42-(0)5 85-35 30-77|depo642@dpd.cz||
+1383||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||U mostku||50341|Hradec Kralove - Pouchov|CZ|+42-(0)-8 41 70 07 00|+42-(0)4 95-4 06-9 29|depo643@dpd.cz||
+1384||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Obchodni Podnikatelsky Areal||74251|Monov|CZ|+42-(0)-8 41 70 07 00|+42-(0)5 97-47 13-0|depo644@dpd.cz||
+1385||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Nivky 630||66456|Blucina|CZ|+42-(0)-8 41 70 07 00|+42-(0)5 47-23 55-0|depo645@dpd.cz||
+1386||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Domazlicka 200||31804|Plzen|CZ|+42-(0)-8 41 70 07 00|+42-(0)3 77-38 90-0|depo646@dpd.cz||
+1387||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Okruni 7 (areal MANE)||37001|Ceske Budejovice|CZ|+42-(0)-8 41 70 07 00|+42-(0)3 87-41 18-85|depo647@dpd.cz||
+1388||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Statenicka ulice||25264|Velke Prilepy|CZ|+4 20-8 41 70 07 00|+4 20-2 20-93 08-84|||
+1389||EDED,EFDX|Direct Parcel Distribution (CZ) s.r||Hrncirska||35735|Chodov|CZ|||||
+1400|CPH||Faroer|IRS|Copenhagen Airport||2600|Copenhagen|DK|+ 45 43 29 79 15||||
+1407|CPH||Greenland|IRS|Copenhagen Airport||2600|Copenhagen|DK|+ 45 43 29 79 15||||
+1410|DUB|EIED,EFDX|GEOPOST (UK)|Athlone Headoffice|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1411|DUB|EIED,EFDX|GEOPOST (UK)|Overseas Contract|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1412|DUB|EIED,EFDX|GEOPOST (UK)|Dublin South West|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1414|DUB|EIED,EFDX|GEOPOST (UK)|Dublin South East|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1417|DUB|EIED,EFDX|GEOPOST (UK)|Dublin Central|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1418|DUB|EIED,EFDX|GEOPOST (UK)|Dublin North West|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1419|DUB|EIED,EFDX|GEOPOST (UK)|Dublin NE/NW|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1421|DUB|EIED,EFDX|GEOPOST (UK)|Kildare|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1422|DUB|EIED,EFDX|GEOPOST (UK)|Laoise|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1425|DUB|EIED,EFDX|GEOPOST (UK)|Kilkenny|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1426|DUB|EIED,EFDX|GEOPOST (UK)|Wexford|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1427|DUB|EIED,EFDX|GEOPOST (UK)|Waterford|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1428|DUB|EIED,EFDX|GEOPOST (UK)|Carlow|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1429|DUB|EIED,EFDX|GEOPOST (UK)|Wicklow|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1432|DUB|EIED,EFDX|GEOPOST (UK)|Kerry|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1433|DUB|EIED,EFDX|GEOPOST (UK)|Limerick|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1434|DUB|EIED,EFDX|GEOPOST (UK)|Tipperary|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1435|DUB|EIED,EFDX|GEOPOST (UK)|Clare|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1437|DUB|EIED,EFDX|GEOPOST (UK)|Cork West|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1438|DUB|EIED,EFDX|GEOPOST (UK)|Cork|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1439|DUB|EIED,EFDX|GEOPOST (UK)|North Cork|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1441|DUB|EIED,EFDX|GEOPOST (UK)|Galway|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1442|DUB|EIED,EFDX|GEOPOST (UK)|Roscommon/Longford|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1443|DUB|EIED,EFDX|GEOPOST (UK)|Mayo|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1444|DUB|EIED,EFDX|GEOPOST (UK)|Sligo|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1445|DUB|EIED,EFDX|GEOPOST (UK)|North Tipperary|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1446|DUB|EIED,EFDX|GEOPOST (UK)|Donegal|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1448|DUB|EIED,EFDX|GEOPOST (UK)|Offaly|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1451|DUB|EIED,EFDX|GEOPOST (UK)|Louth|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1452|DUB|EIED,EFDX|GEOPOST (UK)|Monaghan|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1453|DUB|EIED,EFDX|GEOPOST (UK)|Meath|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1454|DUB|EIED,EFDX|GEOPOST (UK)|Westmeath|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1455|DUB|EIED,EFDX|GEOPOST (UK)|Cavan|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1459|DUB|EIED,EFDX|GEOPOST (UK)|Interlink U.K.|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|1||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1500|DUB|EIED,EFDX|DUBLIN|PARCELINE DUBLIN|UNIT 53|AIRWAYS INDUSTRIAL ESTATE|DUBLIN17|SANTRY|IE|00353 18425122||michael.kinsella@parceline.com||
+1510||EGBD,EFDX|GEOPOST (UK)| JERSEY|FREIGHT BUILDINGS JERSEY AIRPORT|ST PETER JERSEY|je37by||GB|(+44) 01534747560|(+44) X|||
+1511||EGBD,EFDX|GEOPOST (UK)| GUERNSEY|LOWLANDS ROAD ST SAMPSONS|GUERNSEY|gy24nz||GB|(+44) 01481201121|(+44) X|||
+1512||EGBD,EFDX|GEOPOST (UK)| ISLE OF MAN|MANX INDEPENDENT CARRIERS SNUGBOROU|BRADDON ISLE OF MAN|IM44LG||GB|(+44) 01624 692135|(+44) 01624 677211|||
+1513||EGBD,EFDX|GEOPOST (UK)| SCOTTISH HIGHLAND & ISLANDS|||||GB|(+44) X|(+44) X|||
+1514||EGBD,EFDX|GEOPOST (UK)| SOUTH WESTERN ISLES+SKYE|||||GB|(+44) 0456450336|(+44) 0463243282|||
+1515||EGBD,EFDX|GEOPOST (UK)| ORKNEY SHETLAND|STREAMLINE BLAIKIES QUAY|ABERDEEN|AB115PU||GB|(+44) 01224 211520|(+44) 01224 211506|||
+1516||EGBD,EFDX|GEOPOST (UK)| NORTHERN HIGHLANDS|AJG HARBOUR ROAD|INVERNESS|IV11SY||GB|(+44) 01463 715843|(+44) 01463 714101|||
+1517||EGBD,EFDX|GEOPOST (UK)| SOUTHERN HIGHLANDS|||||GB|(+44) 0335234807|(+44) 0355238576|||
+1518||EGBD,EFDX|GEOPOST (UK)| OBAN|OBAN EXPRESS 7A GLENGALLEN ROAD|OBAN ARGYLL|PA304HG||GB|(+44) 01631 563745|(+44) 01631 563424|||
+1519||EGBD,EFDX|GEOPOST (UK)| ARRAN|ARRAN DELIVERIES 11 BRISBANE STREET|LARGS SCOTLAND|KA301AA||GB|(+44) 01475 676255|(+44) 01294 469492|||
+1530||EIED,EFDX|GEOPOST (UK)| ANTRIM|UNIT 3 TRANCH PARK|TRENCH ROAD NORTHERN IRELAND|bt364ty||IE|(+44) 02890844090|(+44) X|||
+1531||EIED,EFDX|GEOPOST (UK)|FERMANAGH & TYRONE|TYRONE DEPOT WOODLOUGH YARD|KILLIKISS ROAD GRANVILLE,DUGANNAN|BT701NX||IE|(+44) 02887729306|(+44) X|||
+1532||EIED,EFDX|GEOPOST (UK)| WEST OF BANN|DERRY DEPOT UNIT 3-17 DEERPARK ROAD|BALLAGHY MAGHERAFELT|BT458LB||IE|(+44) 02879386575|(+44) 02897 386546|||
+1533||EIED,EFDX|GEOPOST (UK)| ARMAGH|ARMAGH UNIT 7-9 LISBURN ENTER SYSTE|ENTERPRISE CRESENT OFF BALLINDERRYR|BT282BP||IE|(+44) 02892602894|(+44) 02892 601643|||
+1534||EIED,EFDX|GEOPOST (UK)| DOWN|DOWN DEPOT MARYLAND IND EST|286 BALLYGOWEN ROAD CASTLEREAGH, DO|BT234LB||IE|(+44) 02890449700|(+44) 02890 449701|||
+1549|STN|EGBD,EFDX|GEOPOST (UK)|GeoPost UK|||||GB|(+44) 01494613650|(+44) 01494613602|||
+1550|BHX|EGBD,EFDX|GEOPOST (UK)|Parceline|ROEBUCK LANE SMETWICK|WARLEY WEST MIDLANDS|B661BY|Birmingham|GB|(+44) 0121 500 2500|(+44) 0121 500 2502|||
+1551||EGBD,EFDX|GEOPOST (UK)| WOODFORD|UNIT 1 WOODFORD TRADING EST SOUTHEN|WOODFORD GREEN ESSEX|IG88HF||GB|(+44) 02084988600|(+44) 02084988602|||
+1552||EGBD,EFDX|GEOPOST (UK)|Croydon|UNIT 1, BEDDINGTON FARM ROAD OFF PU|CROYDON SURREY|CR04XB||GB|(+44) 0181 243 3600|(+44) 0181 243 3602|||
+1553||EGBD,EFDX|GEOPOST (UK)| KINGS CROSS|101 CAMLEY STREET LONDON||NW10PF|Kings Cross|GB|(+44) 02073918505|(+44) 02073918502|||
+1554||EGBD,EFDX|GEOPOST (UK)| DARTFORD|UNIT 3 20 KENNET ROAD|CRAYFORD KENT|DA14QN||GB|(+44) 01322625602|(+44) 01322625602|||
+1555||EGBD,EFDX|GEOPOST (UK)| CRAWLEY|WHITWORTH ROAD COUNTRY OAK WAY|CRAWLEY WEST SUSSEX|RH117SS||GB|(+44) 01293 893624|(+44) 01293 893602|||
+1556||EGBD,EFDX|GEOPOST (UK)| YORK|FOSS ISLANDS ROAD YORK||YO317UP||GB|(+44) 01904527643|(+44) X|||
+1557||EGBD,EFDX|GEOPOST (UK)| GLOUCESTER|JESSOP COURT WATERWELLS BUSINESS PA|QUEDGELEY GLOUCESTER|GL24AP||GB|(+44) 01452727150|(+44) .|||
+1558||EGBD,EFDX|GEOPOST (UK)| STOKE|BUILDING 5 LYMDALE CROSS|LOWER MILEHOUSE LANE NEWCASTLE UNDE|ST59BT||GB|(+44) 01782578643|(+44) 01782578602|||
+1559||EGBD,EFDX|GEOPOST (UK)| BIRMINGHAM|ROEBUCK LANE SMETHWICK|WARLEY WEST MIDLANDS|B661BY||GB|(+44) 021 500 2500|(+44) 021 500 2502|||
+1560||EGBD,EFDX|GEOPOST (UK)| MAIDSTONE|UNIT C RIVERSIDE BUS PARK NEW HYTHE|LARKFIELD KENT|ME206WT||GB|(+44) 01622 714600|(+44) 01622 714602|||
+1561||EGBD,EFDX|GEOPOST (UK)| SOUTHAMPTON|UNIT F, OMEGA ENTERPRISE PARK ELECT|SOUTHAMPTON HAMPSHIRE|SO534SE||GB|(+44) 01703 258600|(+44) 01703 258602|||
+1562||EGBD,EFDX|GEOPOST (UK)| DUNSTABLE|UNIT 16, HUMPHREYS ROAD WOODSIDE ES|DUNSTABLE BEDFORDSHIRE|LU54TP||GB|(+44) 01582 470600|(+44) 01582 470602|||
+1563||EGBD,EFDX|GEOPOST (UK)| READING|UNITS 1-3 COMMERICAL CLOSE COMMERCI|READING BERKSHIRE|RG20QS||GB|(+44) 01189232600|(+44) 01189323602|||
+1564||EGBD,EFDX|GEOPOST (UK)| NEWBURY|HAMBRIDGE LANE HAMBRIDGE ROAD|NEWBURY BERKSHIRE|RG145TU||GB|(+44) 01635 812600|(+44) 01635 812602|||
+1565||EGBD,EFDX|GEOPOST (UK)| ISLE OF WIGHT|SOMERTON IND EST NEWPORT RD|COWES IOW|PO318PA||GB|(+44) 02380 344644|(+44) 02380 393666|||
+1566||EGBD,EFDX|GEOPOST (UK)| LEICESTER|28A CENTURION WAY MERIDIAN BUSINESS|LEICESTER|LE32WY||GB|(+44) 01162 501600|(+44) 01162 501602|||
+1567||EGBD,EFDX|GEOPOST (UK)| CHELMSFORD|MONTROSE ROAD DUKES PARK INDUSTRIAL|CHELMSFORD ESSEX|CM26TE||GB|(+44) 01245 232 056|(+44) 01245 232 052|||
+1568||EGBD,EFDX|GEOPOST (UK)| BOURNEMOUTH|UNIT 1&2, ARIAL PARK UDDENS TRADING|WINBOURNE DORSET|BH217NL||GB|(+44) 01202850300|(+44) TBA|||
+1569||EGBD,EFDX|GEOPOST (UK)| LONDON BRIDGE|UNIT 5, MANDELA WAY|SOUTHWARK LONDON|SE15SE||GB|(+44) 08453061234|(+44) 00|||
+1570||EGBD,EFDX|GEOPOST (UK)| WEST LONDON|UNIT 2, AXIS 40 ATHLON ROAD|ALPERTON MIDDLESEX|HA01FD||GB|(+44) 02086017600|(+44) xx|||
+1571||EGBD,EFDX|GEOPOST (UK)| THETFORD|10A BURRELL WAY THETFORD|NORFOLK|IP249PY||GB|(+44) 01842 855600|(+44) 01842 855602|||
+1572||EGBD,EFDX|GEOPOST (UK)| RUSHDEN|UNIT 17, NORRIS WAY SANDERS LODGE I|RUSHDEN NORTHAMPTONSHIRE|NN109BP||GB|(+44) 01933 414600|(+44) 01933 414602|||
+1573||EGBD,EFDX|GEOPOST (UK)| PETERBOROUGH|EMPIRE HOUSE SAVILLE ROAD|WESTWOOD IND ESTATE PETERBOROUGH|PE36UX||GB|(+44) 01733 842600|(+44) 01733 842602|||
+1574||EGBD,EFDX|GEOPOST (UK)| CARDIFF|SPRING MEADOWS IND PARK MARDY ROAD|RUMNEY CARDIFF|CF38EH||GB|(+44) 01222 772600|(+44) 01222 772602|||
+1575||EGBD,EFDX|GEOPOST (UK)| BRISTOL|UNITS B1/B2 KINGSLANDS ESTATE|ST PHILLIPS ROAD BRISTOL|BS20JZ||GB|(+44) 0117 941 5600|(+44) 0117 941 5602|||
+1576||EGBD,EFDX|GEOPOST (UK)| EXETER|HERON ROAD SOWTON INDUSTRIAL ESTATE|EXETER|EX27LL||GB|(+44) 01392 449600|(+44) 01392 449602|||
+1577||EGBD,EFDX|GEOPOST (UK)| TRURO|UNIT 2B BRIDGE RD IND ESTATE GOONHA|TRURO CORNWALL|TR49QL||GB|(+44) 01872 574600|(+44) 01872 574602|||
+1578||EGBD,EFDX|GEOPOST (UK)| SWANSEA|UNIT 1, WYNDHAM COURT CLARION CLOSE|SWANSEA ENT PRISE PK SWANSEA|SA68QZ||GB|(+44) 01792 704600|(+44) 01792 704602|||
+1579||EGBD,EFDX|GEOPOST (UK)| YATE (WEST COAST EXPRESS)|HATTERS LANE CHIPPING SODBURY|AVON|BS176AA||GB|(+44) 0454 325500|(+44) 0454 273061|||
+1580||EGBD,EFDX|GEOPOST (UK)| MANCHESTER|NORTHBANK INDUSTRIAL EST BESSEMER R|IRLAM MANCHESTER|M445BF||GB|(+44) 0161 777 4500|(+44) 0161 777 4602|||
+1581||EGBD,EFDX|GEOPOST (UK)| NOTTINGHAM|UNIT 8 CENTURION BUSINESS CTR DABEL|BLENHEIM IND EST NOTTINGHAM|NG68WA||GB|(+44) 0115 977 7600|(+44) 0115 9777602|||
+1582||EGBD,EFDX|GEOPOST (UK)| LEEDS|UNIT 4 MILLSHAW PARK IND ESTATE|BEESTON LEEDS|LS110LR||GB|(+44) 0113 292 5600|(+44) 0113 292 5602|||
+1583||EGBD,EFDX|GEOPOST (UK)| WARRINGTON|UNIT 20 LANGFORD WAY|APPLETON, WARRINGTON CHESHIRE|WA44TQ||GB|(+44) 01925 605600|(+44) 01925 605602|||
+1584||EGBD,EFDX|GEOPOST (UK)| ABERGELE|UNIT 1B PEEL STREET|ABERGELE CLWYD|LL227HY||GB|(+44) 01745 828600|(+44) 01745 828602|||
+1585||EGBD,EFDX|GEOPOST (UK)| PRESTON|MILLENIUM ROAD MILLENIUM CITY PARK|PRESTON LANCS|PR25BL||GB|(+44) 01772 662600|(+44) 01772 662602|||
+1586||EGBD,EFDX|GEOPOST (UK)| SHEFFIELD|UNIT 2, BROOKDALE ROAD THORNCLIFFE|CHAPELTOWN SHEFFIELD|S352PW||GB|(+44) 0114 257 2600|(+44) 0114 257 2602|||
+1588||EGBD,EFDX|GEOPOST (UK)| PARK ROYAL|UNIT 7 FROGMORE IND EST ACTON LANE|LONDON|NW107NQ||GB|(+44) 02084539500|(+44) 02084539501|||
+1590|GLA|EGBD,EFDX|GEOPOST (UK)| GLASGOW|104 FULERTON DRIVE CAMBUSLANG INVES|CAMBUSLANG GLASGOW|G328FA||GB|(+44) 01413053600|(+44) 0141 305 3602|||
+1591||EGBD,EFDX|GEOPOST (UK)| EDINBURGH|CLIFTONHALL ROAD NEWBRDGE| EDINBURGH|EH288PW||GB|(+44) 0131 5517606|(+44) .|||
+1592||EGBD,EFDX|GEOPOST (UK)| ABERDEEN (EXPRESS)|ABERDEEN EXPRESS OCEAN TRADE CENTRE|MINTO AVENUE ALTENS IND EST|Ab123JZ||GB|(+44) 0224 249955|(+44) 0224 249942|||
+1594||EGBD,EFDX|GEOPOST (UK)| NEWCASTLE|UNIT 4 MONKTON BUSINESS PARK|HEBBURN SOUTH TYNESIDE|NE312EU||GB|(+44) 0191 402 5600|(+44) 0191 402 5602|||
+1595||EGBD,EFDX|GEOPOST (UK)| CARLISLE|UNIT 2, BRUNT HILL ROAD KINGSTOWN|CARLISLE CUMBRIA|CA30HA||GB|(+44) 01228 829600|(+44) 01228 829602|||
+1596||EGBD,EFDX|GEOPOST (UK)|Manchester|Bessemer Road North Bank Industrial||M445BF|Birlan Manchester|GB|||||
+1597||EGBD,EFDX|GEOPOST (UK)|Interlink Express|Roebuck Lane, Smethwick Warley||B661BY|West Midlands|GB|||||
+1598||EGBD,EFDX|GEOPOST (UK)|UK Norther Ireland Gateway - B ham|Roebuck Lane, Smethwick Warley||B661BY|West Midlands|GB|||||
+1599||EGBD,EFDX|GEOPOST (UK)||Unit 3, Trench Park, Trench Road||BP364PY|Mallask|GB|||||
+1601|DUB|EIED,EFDX|GEOPOST (UK)|DUBLIN|UNIT 53 AIRWAY INDUSTRIAL ESTATE|SANTRY DUBLIN|D17||IE|(+44) 0035318425122|(+44) 0035318425234|||
+1602||EIED,EFDX|GEOPOST (UK)|Interlink Ireland (to Interlink Exp|UNIT 53 AIRWAY INDUSTRIAL ESTA SANT|DUBLIN|E17||IE|(+44) 003539022055|(+44) X|||
+1603||EIED,EFDX|GEOPOST (UK)|Interlink Ireland|UNIT 53 AIRWAY INDUSTRIAL ESTA SANT|DUBLIN|E17||IE|||||
+1610||EDED,EFDX|DPD Finland Oy||Ayritie 12 C||01510|Vantaa|FI|+3 58-10-80 48-48|+3 58-10-56 22-6 02|dpd.info@dpd.fi||
+1611||EDED,EFDX|DPD Finland Oy||||01510||FI|||||
+1612||EDED,EFDX|DPD Finland Oy||Uhrilaehteenkatu 2||20250|Turku|FI|+3 58-10-56 22-00|+3 58-10-56 22-6 30|dpd.info@dpd.fi||
+1613||EDED,EFDX|DPD Finland Oy||Patamaeenkatu 18||33990|Tampere|FI|+3 58-10-56 22-00|+3 58-10-56 22-6 02|info@dpd.fi||
+1614||EDED,EFDX|DPD Finland Oy||Suolamannyntie 13||90520|Oulu|FI|||||
+1616||EDED,EFDX|Rest of Finland via Turku||Rest of Finland||01510|Rest of Finland|FI|+3 58-10-56 22-00|+3 58-10-56 22-6 02|info@dpd.fi||
+1617||EDED,EFDX|Rest of Finland via Vantaa||||01510|Rest of Finland|FI|+3 58-10-56 22-00|+3 58-10-56 22-6 02|info@dpd.fi||
+1619|HEL|EFDX|Helsinki - location of Chronopost I|GLOBAL MAIL FP Ltd|Helsinki Airport|||Helsinki|FI|||||
+1640||EDED,EFDX|DPD Hungaria Kft||Kesmark u. 14||1158|Budapest|HU|+36-1-41 46-2 04|+36-1-41 46-2 14|dpd@dpd.hu||
+1641||EDED,EFDX|DPD Hungaria Kft||Hajnal u. 18||4029|Debrecen|HU|||||
+1642||EDED,EFDX|DPD Hungaria Kft||Hajnal u. 18||4029|Debrecen|HU|||||
+1643||EDED,EFDX|DPD Hungaria Kft||Tancsics 6-10||5600|Bekescsaba|HU|||||
+1644||EDED,EFDX|DPD Hungaria Kft||Halasi u. 29||6001|Kecskemet|HU|||||
+1645||EDED,EFDX|DPD Hungaria Kft||Megyeri u. 64||7631|Pecs|HU|||||
+1646||EDED,EFDX|DPD Hungaria Kft||Csaba u. 12||9700|Szombathely|HU|||||
+1647||EDED,EFDX|DPD Hungaria Kft||Acsi ut 26||9421|Nagyigmand|HU|||||
+1670|SOF|EBGD,EALT|GeoPost Bulgaria OOD||63, Shipchenski prohod blvd.||1574|Sofia|BG|||||
+1671|SOG|EBGD,EALT|GeoPost Bulgaria OOD||63, Shipchenski prohod blvd.||1574|Sofia|BG|||||
+1674|SOG|EBGD,EALT|GeoPost Bulgaria OOD||8-10, Stefan Verkovich street||4000|Plovdiv|BG|||||
+1675|SOG|EBGD,EALT|GeoPost Bulgaria OOD||17, Magistralna street||5000|Veliko Tarnovo|BG|||||
+1676|SOG|EBGD,EALT|GeoPost Bulgaria OOD||100, Tzar Simeon Veliki street||6000|Stara Zagora|BG|||||
+1677|SOG|EBGD,EALT|GeoPost Bulgaria OOD||19, Olimpii Panov street||7000|Rousse|BG|||||
+1678|SOG|EBGD,EALT|GeoPost Bulgaria OOD||28, Mitropolit Simeon street||8000|Bourgas|BG|||||
+1679|SOG|EBGD,EALT|GeoPost Bulgaria OOD||16, Saborni blvd.||9000|Varna|BG|||||
+1695||EDED,EFDX|DPD d.o.o.||Traka cesta 43||2000|Maribor|SI|+3 86-(0)2-33 02-2 60|+3 86-(0)2-33 02-2 65|dpd@dpd.si||
+1696||EDED,EFDX|DPD d.o.o.||Kamniska 41||1000|Ljubljana|SI|+3 86-(0)1-23 08-3 05|+3 86-(0)1-23 08-3 04|dpd@dpd.si||
+1710|OTP|EROD,EALT|S.C. GeoPost Cargus SA||Sos. Bucuresti Ploiesti nr.1||75100|Otopeni|RO|||||
+1711|OTX|EROD,EALT|S.C. GeoPost Cargus SA||Sos. Bucuresti Ploiesti nr.1||75100|Otopeni|RO|||||
+1750|||DPD Croatia d.o.o.||Franje Lucica 23||10090|Zagreb|HR|38 50 13 43 06 00|38 50 13 43 06 66|dpd@dpd.hr||
+1751|||DPD Croatia d.o.o.||Miroslava Krleze 4||51000|Rijeka|HR|0,000112225|0,000112223|dpd@dpd.hr||
+1752|||DPD Croatia d.o.o.||Ulica Jablanova 47||31000|Osijek|HR|0,000112225|0,000112223|dpd@dpd.hr||
+1753|||DPD Croatia d.o.o.||Industrijska zona- Podi bb||21204|Dugopolje|HR|0,000112225|0,000112223|dpd@dpd.hr||
+1754|||DPD Croatia d.o.o.||Gaenica 28||23000|Zadar|HR|0,000112225|0,000112223|dpd@dpd.hr||
+1770|||DPD d.o.o.||Zrenjaninski put 153h||11211|Beograd|CS|+3 81-11-33 21  4 74|+3 81-11-33 20  1 98|dpd@dpd.co.yu||
+1771|||DPD d.o.o.||Zrenjaninski put 153h||11211|Beograd|CS|||||
+1772|||DPD d.o.o.||Zrenjaninski put 153h||11211|Beograd|CS|||||
+1773|||DPD d.o.o.||Zrenjaninski put 153h||11211|Beograd|CS|||||
+1795|||DPD d.o.o.||Halilovici bb||71000|Sarajevo|BA|+3 87-33-7 69-6 60|+3 87-33-7 69-6 61|||
+1900|100|EGRD,EALC|Interattica S.A.||163, Kifissou Ave.||18233|Athens|GR|+30-21-0-540.5400|+30-21-0-540.54.99|info@interattica.gr||
+1901|110|EGRD,EALC|Interattica S.A.||13, Kallirois str.||11743|Athens|GR|+30-21-0-92.41.557|+30-21-0-92.41.556|info@interattica.gr||
+1902|120|EGRD,EALC|Interattica S.A.||84, Leontariou str.||15344|Athens|GR|+30-21-0-66.58.958|+30-21-0-66.58.120|info@interattica.gr||
+1903|130|EGRD,EALC|Interattica S.A.||3, Chlois str. & Eleftheriou Venize||14452|Athens|GR|+30-21-0-28.36.881|+30-21-0-28.51.114|info@interattica.gr||
+1904|140|EGRD,EALC|Interattica S.A.||84, Dimokratias Ave.||19300|Athens|GR|+30-21-0-55.74.863|+30-21-0-55.74.864|info@interattica.gr||
+1905|150|EGRD,EALC|Interattica S.A.||3-5, Plateon str.||15233|Athens|GR|+30-21-0-68.11.033|+30-21-0-68.16.119|info@interattica.gr||
+1906|170|EGRD,EALC|Interattica S.A.||74, Argiroupoleos str.||16451|Athens|GR|+30-21-0-99.46.952|+30-21-0-99.46.951|info@interattica.gr||
+1920|798|EGRD,EALC|Interattica S.A.||163,Kifissou Ave.||18233|Athens|GR|+30-21-0-540.5400|+30-21-0-540.5499|info@interattica.gr||
+1921|799|EGRD,EALC|Interattica S.A.||163,Kifissou Ave.||18233|Athens|GR|+30-21-0-540.5400|+30-21-0-540.5499|info@interattica.gr||
+1922|900|EGRD,EALC|Interattica S.A.||163,Kifissou Ave.||18233|Athens|GR|+30-21-0-540.5400|+30-21-0-540.5499|info@interattica.gr||
+1923|200|EGRD,EALC|Interattica agent||4, Haina avenue||34100|Halkida|GR|+30-2221-0-87.587|+30-2221-0-60.699|station200@interattica.gr||
+1924|201|EGRD,EALC|Interattica agent||5, Bairaktari str.||34500|Aliveri|GR|+30-2221-0-61.392|+30-2221-0-61.342|station201@interattica.gr||
+1925|210|EGRD,EALC|Interattica agent||37, Avlidos str.||32200|Thiva|GR|+30-2262-0-89.439|+30-2262-0-21.508|station210@interattica.gr||
+1926|215|EGRD,EALC|Interattica agent||37, Karagianopoulou str.||32100|Livadia|GR|+30-2261-0-87.111|+30-2261-0-87.111|station215@interattica.gr||
+1927|220|EGRD,EALC|Interattica agent||20, Ethnikis Antistasis str.||33100|Amfissa|GR|+30-2265-0-79.269|+30-2265-0-79.269|station220@interattica.gr||
+1928|230|EGRD,EALC|Interattica agent||19, Ari Velouhioti str.||36100|Karpenisi|GR|+30-2237-0-80.818|+30-2237-0-80.107|station230@interattica.gr||
+1929|240|EGRD,EALC|Interattica agent||57, Leonidou str.||35100|Lamia|GR|+30-2231-0-46.416|+30-2231-0-67.563|station240@interattica.gr||
+1930|250|EGRD,EALC|Interattica agent||Mandilara & Livanaton str.||41222|Larisa|GR|+30-241-0-579.770|+30-241-0-579.771|station250@interattica.gr||
+1931|260|EGRD,EALC|Interattica agent||53a Hatziargiri str.||38333|Volos|GR|+30-2421-0-38.928|+30-2421-0-38.928|station260@interattica.gr||
+1932|270|EGRD,EALC|Interattica agent||1, Taliadourou & Karaiskaki str.||43100|Karditsa|GR|+30-2441-0-79.400|+30-2441-0-79.402|station270@interattica.gr||
+1933|280|EGRD,EALC|Interattica agent||16, Socratous str.||42100|Trikala|GR|+30-2431-0-762.63|+30-2431-0-79.358|station280@interattica.gr||
+1934|300|EGRD,EALC|Interattica S.A.||3, Koritsas str.||57009|Thessaloniki|GR|+30-231-0-755.855|+30-231-0-755.955|savramidis@interattica.gr||
+1935|320|EGRD,EALC|Interattica agent||11, Agiou Georgiou str.||63200|Nea Moudania|GR|+30-2373-0-65.750|+30-2373-0-65.751|station320@interattica.gr||
+1936|325|EGRD,EALC|Interattica agent||72, Venizelou str.||59100|Veria|GR|+30-2331-0-66.600|+30-2331-0-66.605|station325@interattica.gr||
+1937|330|EGRD,EALC|Interattica agent||28, 7th Merarchias str.||60100|Katerini|GR|+30-2351-0-33.666|+30-2331-0-789.10|station330@interattica.gr||
+1938|335|EGRD,EALC|Interattica agent||1, Akropolitou str. & Akropolitou||50100|Kozani|GR|+30-2461-0-29.343|+30-2461-0-29.344|station335@interattica.gr||
+1939|336|EGRD,EALC|Interattica agent||67, Macedonomahon str.||50200|Ptolemaida|GR|+30-2463-0-53.125|+30-2463-0-53.319|station336@interattica.gr||
+1940|340|EGRD,EALC|Interattica agent||6, Fardicampou str.||51100|Grevena|GR|+30-2462-0-87.915|+30-2462-0-87.916|station340@interattica.gr||
+1941|345|EGRD,EALC|Interattica agent||2, Orestion str.||52100|Kastoria|GR|+30-2467-0-23.330|+30-2467-0-23.331|station345@interattica.gr||
+1942|350|EGRD,EALC|Interattica agent||6, Bafras str.||58200|Giannitsa|GR|+30-2382-0-82.002|+30-2382-0-81.035|station350@interattica.gr||
+1943|351|EGRD,EALC|Interattica agent||14, Archiepiskopou Panteleimonos st||58400|Edessa|GR|+30-2381-0-222.11|+30-2381-0-222.17|station351@interattica.gr||
+1944|355|EGRD,EALC|Interattica agent||3, Dimarchou Kotsopoulou str.||53100|Florina|GR|+30-2385-0-44.800|+30-2385-0-44.801|station355@interattica.gr||
+1945|360|EGRD,EALC|Interattica agent||7, Agiou Georgiou str.||61100|Kilkis|GR|+30-2341-0-75.455|+30-2341-0-25.210|station360@interattica.gr||
+1946|365|EGRD,EALC|Interattica agent||3, Filota str.||62122|Serres|GR|+30-2321-0-97.717|+30-2321-0-97.718|station365@interattica.gr||
+1947|370|EGRD,EALC|Interattica agent||21, Konstantinou Paleologou str.||66400|Drama|GR|+30-2521-0-26.220|+30-2521-0-22.008|station370@interattica.gr||
+1948|375|EGRD,EALC|Interattica agent||7 Kountouriotou str.||65300|Kavala|GR|+30-251-0-620.670|+30-251-0-225.264|station375@interattica.gr||
+1949|400|EGRD,EALC|Interattica agent||12, Michael Vogdou str.||67100|Xanthi|GR|+30-2541-0-64.500|+30-2541-0-64.544|station400@interattica.gr||
+1950|410|EGRD,EALC|Interattica agent||25, Harilaou Trikoupi str.||69100|Komotini|GR|+30-2531-0-83.100|+30-2531-0-83.101|station410@interattica.gr||
+1951|420|EGRD,EALC|Interattica agent||54, Konstantinou Paleologou str.||68100|Alexandroupoli|GR|+30-2551-0-89.180|+30-2551-0-89.182|station420@interattica.gr||
+1952|421|EGRD,EALC|Interattica agent||15, Lochagou Diamanti str.||68200|Orestiada|GR|+30-2552-0-222.27|+30-2552-0-220.77|station421@interattica.gr||
+1953|423|EGRD,EALC|Interattica agent||59, Eleftheriou Venizelou str.||68400|Soufli|GR|+30-2554-0-22.631|+30-2554-0-22.631|station423@interattica.gr||
+1954|500|EGRD,EALC|Interattica agent||20, Adimantou str.||20100|Korinthos|GR|+30-2741-0-818.55|+30-2741-0-29.580|station500@interattica.gr||
+1955|510|EGRD,EALC|Interattica agent||1, Filellinon str.||21200|Argos|GR|+30-2751-0-22.405|+30-2751-0-63390|station510@interattica.gr||
+1956|520|EGRD,EALC|Interattica agent||4, Grigoriou E  str.||22100|Tripoli|GR|+30-271-0-233.839|+30-271-0-233.839|station520@interattica.gr||
+1957|530|EGRD,EALC|Interattica agent||93, Thermopilon str.||23100|Sparti|GR|+30-2731-0-25.809|+30-2731-0-25.809|station530@interattica.gr||
+1958|535|EGRD,EALC|Interattica agent||Molaon central square||23052|Molaoi|GR|+30-2732-0-29.123|+30-2732-0-23.532|station535@interattica.gr||
+1959|540|EGRD,EALC|Interattica agent||1, Perikleous str.||25100|Egio|GR|+30-2691-0-21.403|+30-2691-0-60.490|station540@interattica.gr||
+1960|600|EGRD,EALC|Interattica S.A.||9, Zaimi str. & Agiou Andrea||26220|Patra|GR|+30-261-0-222.227|+30-261-0-222.394|mbousounis@interattica.gr||
+1961|610|EGRD,EALC|Interattica agent||55, Patron str.||27100|Pirgos|GR|+30-2621-0-29.679|+30-2621-0-81.343|station610@interattica.gr||
+1962|611|EGRD,EALC|Interattica agent||24, Riga Fereou str.||27200|Amaliada|GR|+30-2622-0-29.777|+30-2622-0-38.395|station611@interattica.gr||
+1963|612|EGRD,EALC|Interattica agent||67, Nikolaou Vourtsi str.||27068|Vartholomio|GR|+30-2623-0-41.178|+30-2623-0-411.84|station612@interattica.gr||
+1964|620|EGRD,EALC|Interattica agent||55, Anastasiou Tavoulari str.||29100|Zakinthos|GR|+30-2695-0-49.307|+30-2695-0-295.96|station620@interattica.gr||
+1965|630|EGRD,EALC|Interattica agent||10, Siteboron str.||28100|Kefalonia|GR|+30-2671-0-26.210|+30-2671-0-26.268|station630@interattica.gr||
+1966|640|EGRD,EALC|Interattica agent||50, Psarron str & Damofontos||24100|Kalamata|GR|+30-2721-0-63.390|+30-2721-0-623.87|station640@interattica.gr||
+1967|650|EGRD,EALC|Interattica agent||9, Zaimi str. & Agiou Andrea||26220|Patra|GR|+30-261-0-222.227|+30-261-0-222.394|mbousounis@interattica.gr||
+1968|651|EGRD,EALC|Interattica agent||6, Alexandropoulou str.||30200|Mesologi|GR|+30-2631-0-22.143|+30-2631-0-27.140|station651@interattica.gr||
+1969|652|EGRD,EALC|Interattica agent||5, Karapaneika square||30100|Agrinio|GR|+30-2641-0-57.419|+30-2641-0-55.883|station652@interattica.gr||
+1970|660|EGRD,EALC|Interattica agent||22, Mostreon str. & Amvrakias||47100|Arta|GR|+30-2681-0-290.76|+30-2681-0-728.25|station660@interattica.gr||
+1971|670|EGRD,EALC|Interattica agent||16a Makrigianni str.||45444|Ioannina|GR|+30-2651-0-22.611|+30-2651-0-22.605|station670@interattica.gr||
+1972|680|EGRD,EALC|Interattica agent||21, Irinis Av.||48100|Preveza|GR|+30-2682-0-212.77|+30-2682-0-89.258|station680@interattica.gr||
+1973|685|EGRD,EALC|Interattica agent||Lefkada - Nidri Av.||31100|Lefkada|GR|+30- 2645-0-25.160|+30-2645-0-250.42|station685@interattica.gr||
+1974|690|EGRD,EALC|Interattica agent||15 Souliou str.||46100|Igoumenitsa|GR|+30-2665-0-26.448|+30-2665-0-25.502|station690@interattica.gr||
+1975|695|EGRD,EALC|Interattica agent||60, Palaiokastritsas Av.||49100|Kerkira|GR|+30-2661-0-47.463|+30-2661-0-30.175|station695@interattica.gr||
+1976|700|EGRD,EALC|Interattica agent||55, Theokritou str. & Faonos||8100|Mytilini|GR|+30-2251-0-42.845|+30-2251-0-42.846|station700@interattica.gr||
+1977|701|EGRD,EALC|Interattica agent||Myrina town||81400|Limnos|GR|+30-2254-0-240.81|+30-2254-0-24.143|station701@interattica.gr||
+1978|710|EGRD,EALC|Interattica agent||46, Kountouriotou str.||82100|Chios|GR|+30-2271-0-213.69|+30-2271-0-213.69|station710@interattica.gr||
+1979|720|EGRD,EALC|Interattica agent||5, Nikolareizi str.||83100|Samos|GR|+30-2273-0-25.379|+30-2273-0-24.388|station720@interattica.gr||
+1980|730|EGRD,EALC|Interattica agent||17, Garivaldi str.||85100|Rhodes|GR|+30-2241-0-765.11|+30-2241-0-765.11|station730@interattica.gr||
+1981|740|EGRD,EALC|Interattica agent||19, Panagi Tsaldari str.||85300|Kos|GR|+30-2242-0-222.33|+30-2242-0-220.33|station740@interattica.gr||
+1982|743|EGRD,EALC|Interattica agent||Agia Marina Town||85401|Leros|GR|+30-2247-0-24.000|+30-2247-0-280.23|station743@interattica.gr||
+1983|750|EGRD,EALC|Interattica agent||98, Stamati Proiou str.||84100|Syros|GR|+30-2281-0-83.183|+30-2281-0-88.448|station750@interattica.gr||
+1984|751|EGRD,EALC|Interattica agent||Adamantas Town||84801|Milos|GR|+30-2287-0-280.33|+30-2287-0-22.418|station751@interattica.gr||
+1985|753|EGRD,EALC|Interattica agent||Kamari Town||84700|Santorini|GR|+30-2286-0-28.890|+30-2286-0-28.891|station753@interattica.gr||
+1986|760|EGRD,EALC|Interattica agent||Ekatodapiliani District||84400|Paros|GR|+30-2284-0-25.171|+30-2284-0-22.146|station760@interattica.gr||
+1987|765|EGRD,EALC|Interattica agent||Aggelika District||84600|Mykonos|GR|+30-2289-0-28.550|+30-2289-0-28.550|station765@interattica.gr||
+1988|766|EGRD,EALC|Interattica agent||Naxos Town||84300|Naxos|GR|+30-2285-0-23.965|+30-2285-0-23.966|station766@interattica.gr||
+1989|800|EGRD,EALC|Interattica agent||168, Ethnikis Antistaseos str.||71300|Heraklio|GR|+30-281-0-333.450|+30-281-0-330.009|station800@interattica.gr||
+1990|809|EGRD,EALC|Interattica agent||3, Nikou Kazantzaki str.||70014|Hersonisos|GR|+30-2897-0-234.73|+30-2897-0-29.167|station809@interattica.gr||
+1991|810|EGRD,EALC|Interattica agent||41, Grigoriou E  str.||73100|Chania|GR|+30-2821-0-36.001|+30-2821-0-87.771|station810@interattica.gr||
+1992|820|EGRD,EALC|Interattica agent||85, Dimakopoulou str.||74100|Rethimno|GR|+30-2831-0-21.505|+30-2831-0-21.504|station820@interattica.gr||
+1993|835|EGRD,EALC|Interattica agent||11, Dimokratias str.||72100|Agios Nikolaos|GR|+30-2841-0-82.902|+30-2841-0-82.902|station835@interattica.gr||
+1994|840|EGRD,EALC|Interattica agent||2, Lasthenous str.||72200|Ierapetra|GR|+30-2842-0-22.997|+30-2842-0-22.542|station840@interattica.gr||
+1995|845|EGRD,EALC|Interattica agent||42, Michael Katapoti str.||72300|Sitia|GR|+30-2843-0-29.313|+30-2843-0-29.315|station845@interattica.gr||
+2000||ETRD,EALT|Atatuerk Hava Limani C Terminali||Sistem Lojistik Binasi||34100|Yesilkoey-Istanbul|TR|||||
+2001||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Adana|TR|+90-2 12-4 65|+39-2 12-3 65|||
+2002||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Afyon|TR|||||
+2003||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Aksaray|TR|||||
+2004||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Ankara|TR|||||
+2005||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Antalya|TR|||||
+2006||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Balikesir|TR|||||
+2007||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Bursa|TR|||||
+2008||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Denizli|TR|||||
+2009||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Diyarbakir|TR|||||
+2010||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Duezce|TR|||||
+2011||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Erzurum|TR|||||
+2012||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Gaziantep|TR|||||
+2013||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Istanbul|TR|||||
+2014||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Istanbul|TR|||||
+2015||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Istanbul|TR|||||
+2016|IST|ETRD,EALT|Surdisi Aktarma Merkezi||Merkez Mh.Tasocaklari Mh. No:25 Mah||34398|Istanbul-Bagcilar|TR|90 21 24 46 36 80||||
+2017||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Izmir|TR|||||
+2018||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Izmir|TR|||||
+2019||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Kayseri|TR|||||
+2020||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Kocaeli|TR|||||
+2021||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Konya|TR|||||
+2022||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Malatya|TR|||||
+2023||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Mersin|TR|||||
+2024||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Amasya|TR|||||
+2025||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Samsun|TR|||||
+2026||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Trabzon|TR|||||
+2027||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Eskisehir|TR|||||
+2028||ETRD,EALT|GeoPost Yurtici Kargo Servisi A.S.|||||Van|TR|||||
+2151|MOW|ERUD,EALT|Moscow - location of CHR Int l|EMS GARANTPOST|Varshavskoe sh. 33||113105|Moscow|RU|70959562597||||
+2201|||Armadillo Business Parcel||Vostriakovsky pr., 10D||113403|Moscow|RU|||||
+2599|||Testdepot DPD DELICom||Wailandtstr. 1||63741|Aschaffenburg|DE|+ 49 6021 492-6005||melanie.ackermann@dpd.de||
+2600|||GeoPost Caspian LLP||52 Kabanbay Batyr Street||050010|050010Almaty|KZ|+7-32 72-59 99 95|+7-32 72-59 99 95|||
+2900|NYC|EUSD|New York||165-15 145th Drive|Jamaica|NY11434|New York|US|+ 1 718 917 64 04||||
+3300|YUL||Montreal||2670, Sabourin||H4S1M2|SAINT LAURENT - QUEBEC|CA|1 613 514 331 74 70||||
+3548|FSP|EPMD,EDOM|St. Pierre  & Miquelon||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|PM||+33-1-41 08 76-58|||
+3755|HAV||Cuba||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|CU||+33-1-41 08 76-58|||
+3808|SXM|EAND,EDOM|Saint Martin||IMMEUBLE COMMERCIAL LE MADISON|ZAC SAINT JEAN BELLEVUE|97150|SAINT-MARTIN|AN||0590 87 03 40|||
+3816|PTP|EGPD,EDOM|Pointe a pitre (Guadeloupe)||AEROPORT POLE CARAIBES|ZONE DE FRET|97139|ABYMES|GP||0590 21 06 90|||
+3820|FDF|EMQD,EDOM|Fort de France (Martinique)||ZI LA LEZARDE|LE LAMENTIN CEDEX|97284|FORT DE France|MQ|||||
+4318|CAY|EGFD,EDOM|Cayenne (French Guyana)||Zone de fret - Aeroport de Rochambe||97351|Matoury|FR|0594 35 01 00|0594 35 88 84|||
+4600|CAS|EMAD,EALT|Casablanca (Marocco)||110 Boulevard Zerktouni||20000|Casablanca|MA|+ 212 22 20 40 20||||
+4601|RAK|EMAD,EALT|Marrakech (Marocco)||3, Immeuble le Verdoyant, Avenue Ha|||Marrakech|MA|212 44 42 20 20|212 44 43 31 00|||
+4602|RBA|EMAD,EALT|Rabat (Marocco)||29 rue Michlifen|||Agdal Rabat|MA|212 37 67 39 39|212 37 67 30 60|||
+4603|TNG|EMAD,EALT|Tangier||Residence Bouchra,5, rue Abou Darda|Place de Nations Unies|90000|Tangier|MA|+212 39 34 22 22|+212 39 94 39 49|||
+4640|ALG|EDZD,EALT|Alger (Algeria)||Zone Industrielle Oued Smar- Lot17||16270|Alger|DZ|+ 213 (0)21 51||||
+4686|TUN||La Poste Tunisienne|| Centre des Colis Postaux - Complex||2035|Tunis Carthage|TN|||||
+4694|TUN||Tunisia||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|TN||+33-1-41 08 76-58|||
+4700|TIP||Libye||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|LY||+33-1-41 08 76-58|||
+4730|NIM|ENED,EAFR|Niamey (Niger)||Rue de la Grande Poste|BP 11161|8009|Niamey|NE|+ 227 73 50 92||||
+4760|NDJ||Tschad||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|TD||+33-1-41 08 76-58|||
+4780|KRT||Soudan||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|SD||+33-1-41 08 76-58|||
+4980|JIB||Djibouti||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|DJ||+33-1-41 08 76-58|||
+5070|KGL||Rwanda||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|RW||+33-1-41 08 76-58|||
+5076|BJM||Burundi||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|BI||+33-1-41 08 76-58|||
+5145|BGF||Centrafrique (Central African Repub||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|CF||+33-1-41 08 76-58|||
+5310|TNR||Madagaskar||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|MG||+33-1-41 08 76-58|||
+5320|MRU||Maurice (Mauritus)||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|MU||+33-1-41 08 76-58|||
+5324|RUN|ERED,EDOM|Saint Denis de la Reunion||POLE LOGISTIQUE SAINT-EXUPERY|40 RUE HELENE BOUCHER|97438|SAINT-MARIE|RE||0262 48 34 34|||
+5326|YVA||Comores||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|KM||+33-1-41 08 76-58|||
+5410|NKC||Mauretanie||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|MR||+33-1-41 08 76-58|||
+5430|BKO||Mali||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|ML||+33-1-41 08 76-58|||
+5450|RAI||Cap Vert||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|CV||+33-1-41 08 76-58|||
+5455|DKR|ESND,EAFR|Dakar (Senegal)||Bordure VDN - Sacre Coeur III, Vill|BP 5457||Dakar|SN|+221 860 50 51||||
+5470|CKY||Guinee (Guinea)||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|GN||+33-1-41 08 76-58|||
+5500|ABJ|ECID,EAFR|Abidjan (Ivory Cost)||15 BP 34|||Abidjan|CI|+ 15 225 21 35 87 23||||
+5515|OUA|EBFD,EAFR|Ouagadougou (Burkina Faso)||1561 avenue de l Aeroport 01|BP 2423||Ouagadougou|BF|+226 50 31 35 49||||
+5516|BOB|EBFD,EAFR|Bobo Dioulasso (Burkina Faso)||01 BP 871|||Bobo Dioulasso 01|BF|226 20 98 23 93|226 20 97 07 50|||
+5546|LFW||Togo||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|TG||+33-1-41 08 76-58|||
+5551|COO||Benin||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|BJ||+33-1-41 08 76-58|||
+5720|DLA|ECMD,EAFR|Douala (Cameroon)||Rue Drouot, Akwa Bonejang|BP 4132||Douala|CM|+237 342 20 04||||
+5721|YAO|ECMD,EAFR|Yaounde (Cameroon)||Immeuble Jaco, 363 Avenue Mvog Foud|B.P.280||Yaounde|CM|237 2 23 00 32|237 2 23 00 32|||
+5730|SSG||Guinee Equat||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|GQ||+33-1-41 08 76-58|||
+5732|TMS||Sao Tome (Sao Tome and Principe)||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|ST||+33-1-41 08 76-58|||
+5736|LBV||Gabon||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|GA||+33-1-41 08 76-58|||
+5741|BZV||Congo||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|CG||+33-1-41 08 76-58|||
+5815|DAM||Syrie||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|SY||+33-1-41 08 76-58|||
+5831|BEY||Liban (Libanon)||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|LB||+33-1-41 08 76-58|||
+5865|DXB||Dubai|||||DUBAI|AE|||||
+5940|THR||Iran||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|IR||+33-1-41 08 76-58|||
+7535|||DPD GeoPost Vietnam|||||Hanoi|VN|||||
+8010|||DPD Direct Parcel Distribution Co.,|LTD, Beijing Branch|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Hohhot|CN|+86-010-80487058|+86-010-64567608|||
+8014|||DPD Direct Parcel Distribution Co.,|LTD, Beijing Branch|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Baotou|CN|+86-010-80487058|+86-010-64567608|||
+8030|||DPD Direct Parcel Distribution Co.,|LTD, Beijing Branch|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Taiyuan|CN|+86-010-80487058|+86-010-64567608|||
+8050|||DPD Direct Parcel Distribution Co.,|LTD, Beijing Branch|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Shuijiazhuang|CN|+86-010-80487058|+86-010-64567608|||
+8100|||DPD Direct Parcel Distribution Co.,|LTD, Beijing Branch|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Beijing|CN|+86-010-80487058|+86-010-64567608|||
+8110|||DPD Direct Parcel Distribution Co.,|LTD, Beijing Branch|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Shenyang|CN|+86-010-80487058|+86-010-64567608|||
+8116|||DPD Direct Parcel Distribution Co.,|LTD, Beijing Branch|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Dalian|CN|+86-010-80487058|+86-010-64567608|||
+8130|||DPD Direct Parcel Distribution Co.,|LTD, Beijing Branch|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Changchun|CN|+86-010-80487058|+86-010-64567608|||
+8150|||DPD Direct Parcel Distribution Co.,|LTD, Beijing Branch|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Harbin|CN|+86-010-80487058|+86-010-64567608|||
+8200|||DPD Direct Parcel Distribution Co.,|LTD, Shanghai Branch|1780 Long, Hua Xiang Road,|Minhang District, Shanghai|201106|Shanghai|CN|+86-021-52278775|+86-021-54866139|||
+8210|||DPD Direct Parcel Distribution Co.,|LTD, Shanghai Branch|1780 Long, Hua Xiang Road,|Minhang District, Shanghai|201106|Nanjing|CN|+86-021-52278775|+86-021-54866139|||
+8230|||DPD Direct Parcel Distribution Co.,|LTD, Shanghai Branch|1780 Long, Hua Xiang Road,|Minhang District, Shanghai|201106|Hefei|CN|+86-021-52278775|+86-021-54866139|||
+8250|||DPD Direct Parcel Distribution Co.,|LTD, Shanghai Branch|1780 Long, Hua Xiang Road,|Minhang District, Shanghai|201106|Jinan|CN|+86-021-52278775|+86-021-54866139|||
+8264|||DPD Direct Parcel Distribution Co.,|LTD, Shanghai Branch|1779 Long, Hua Xiang Road,|Minhang District, Shanghai|201106|Yantai|CN|+86-021-52278775|+86-021-54866139|||
+8266|||DPD Direct Parcel Distribution Co.,|LTD, Shanghai Branch|1780 Long, Hua Xiang Road,|Minhang District, Shanghai|201106|Qingdao|CN|+86-021-52278775|+86-021-54866139|||
+8300|||DPD Direct Parcel Distribution Co.,|LTD, Beijing Branch|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Tianjin|CN|+86-010-80487058|+86-010-64567608|||
+8310|||DPD Direct Parcel Distribution Co.,|LTD, Shanghai Branch|1780 Long, Hua Xiang Road,|Minhang District, Shanghai|201106|Hangzhou|CN|+86-021-52278775|+86-021-54866139|||
+8330|||DPD Direct Parcel Distribution Co.,|LTD, Guangzhou Branch|Ground Floor, No. 8 Dongda Jie,|Shachong Bei, Baiyun District, Guan|510403|Nanchang|CN|+86-020-86337370|+86-020-86337466|||
+8350|||DPD Direct Parcel Distribution Co.,|LTD, Guangzhou Branch|Ground Floor, No. 8 Dongda Jie,|Shachong Bei, Baiyun District, Guan|510403|Fuzhou|CN|+86-020-86337370|+86-020-86337466|||
+8361|||DPD Direct Parcel Distribution Co.,|LTD, Guangzhou Branch|Ground Floor, No. 8 Dongda Jie,|Shachong Bei, Baiyun District, Guan|510403|Xiamen|CN|+86-020-86337370|+86-020-86337466|||
+8400|||DPD Direct Parcel Distribution Co.,|LTD, Shenzhen Branch|B202, Building No.5, Xinghua Road|South, Xingwei Zone, Fuyong Town, B|518101|Chongqing|CN|+86-075583151688|+86-075583143896|||
+8410|||DPD Direct Parcel Distribution Co.,|LTD, Guangzhou Branch|Ground Floor, No. 8 Dongda Jie,|Shachong Bei, Baiyun District, Guan|510403|Changsha|CN|+86-020-86337370|+86-020-86337466|||
+8430|||DPD Direct Parcel Distribution Co.,|LTD, Guangzhou Branch|Ground Floor, No. 8 Dongda Jie,|Shachong Bei, Baiyun District, Guan|510403|Wuhan|CN|+86-020-86337370|+86-020-86337466|||
+8450|||DPD Direct Parcel Distribution Co.,|LTD, Shanghai Branch|1780 Long, Hua Xiang Road,|Minhang District, Shanghai|201106|Zhengzhou|CN|+86-021-52278775|+86-021-54866139|||
+8510|||DPD Direct Parcel Distribution Co.,|LTD, Guangzhou Branch|Ground Floor, No. 8 Dongda Jie,|Shachong Bei, Baiyun District, Guan|510403|Guangzhou|CN|+86-020-86337370|+86-020-86337466|||
+8518|||DPD Direct Parcel Distribution Co.,|LTD, Shenzhen Branch|B202, Building No.5, Xinghua Road|South, Xingwei Zone, Fuyong Town, B|518101|Shenzhen|CN|+86-075583151688|+86-075583143896|||
+8530|||DPD Direct Parcel Distribution Co.,|LTD, Guangzhou Branch|Ground Floor, No. 8 Dongda Jie,|Shachong Bei, Baiyun District, Guan|510403|Nanning|CN|+86-020-86337370|+86-020-86337466|||
+8541|||DPD Direct Parcel Distribution Co.,|LTD, Guangzhou Branch|Ground Floor, No. 8 Dongda Jie,|Shachong Bei, Baiyun District, Guan|510403|Guilin|CN|+86-020-86337370|+86-020-86337466|||
+8550|||DPD Direct Parcel Distribution Co.,|LTD, Shenzhen Branch|B202, Building No.5, Xinghua Road|South, Xingwei Zone, Fuyong Town, B|518101|Guiyang|CN|+86-075583151688|+86-075583143896|||
+8570|||DPD Direct Parcel Distribution Co.,|LTD, Guangzhou Branch|Ground Floor, No. 8 Dongda Jie,|Shachong Bei, Baiyun District, Guan|510403|Haikou|CN|+86-020-86337370|+86-020-86337466|||
+8610|||DPD Direct Parcel Distribution Co.,|LTD, Shenzhen Branch|B202, Building No.5, Xinghua Road|South, Xingwei Zone, Fuyong Town, B|518101|Chengdu|CN|+86-075583151688|+86-075583143896|||
+8650|||DPD Direct Parcel Distribution Co.,|LTD, Guangzhou Branch|Ground Floor, No. 8 Dongda Jie,|Shachong Bei, Baiyun District, Guan|510403|Kunming|CN|+86-020-86337370|+86-020-86337466|||
+8710|||DPD Direct Parcel Distribution Co.,|LTD, Shenzhen Branch|B202, Building No.5, Xinghua Road|South, Xingwei Zone, Fuyong Town, B|518101|Xi an|CN|+86-075583151688|+86-075583143896|||
+8730|||DPD Direct Parcel Distribution Co.,|LTD, Shenzhen Branch|B202, Building No.5, Xinghua Road|South, Xingwei Zone, Fuyong Town, B|518101|Lanzhou|CN|+86-075583151688|+86-075583143896|||
+8750|||DPD Direct Parcel Distribution Co.,|LTD, Shenzhen Branch|B202, Building No.5, Xinghua Road|South, Xingwei Zone, Fuyong Town, B|518101|Yinchuan|CN|+86-075583151688|+86-075583143896|||
+8810|||DPD Direct Parcel Distribution Co.,|LTD, Shenzhen Branch|B202, Building No.5, Xinghua Road|South, Xingwei Zone, Fuyong Town, B|518101|Xining|CN|+86-075583151688|+86-075583143896|||
+8830|||DPD Direct Parcel Distribution Co.,|LTD, Shenzhen Branch|B202, Building No.5, Xinghua Road|South, Xingwei Zone, Fuyong Town, B|518101|Urumchi|CN|+86-075583151688|+86-075583143896|||
+8850|||DPD Direct Parcel Distribution Co.,|LTD, Shenzhen Branch|B202, Building No.5, Xinghua Road|South, Xingwei Zone, Fuyong Town, B|518101|Lasa|CN|+86-075583151688|+86-075583143896|||
+8999|||DPD Direct Parcel Distribution Co.,|Rest of China|No.32, Fuqian First Street,Tianzhu|Town, Shunyi District, Beijing|101312|Beijing|CN|+86-010-80487058|+86-010-64567608|||
+9320|||AJU / DPD GeoPost Korea||Seoul Gangseo-gu, Yangcheon-gu|Yeongdeungpo-gu|15720|Guru|KR|||||
+9765|NOU||Nelle Caldedonie (New Caldedonia)||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|NC||+33-1-41 08 76-58|||
+9796|PPT|EPFD,EDOM|Polynesie Francaise (French Polynes||9 RUE DU HAUT DE LAVAL|ZONE DE FRET 7 - BP 10506|95709|ROISSY CH DE GAULLE CEDEX|PF||+33-1-41 08 76-58|||

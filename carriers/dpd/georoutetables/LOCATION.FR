@@ -1,0 +1,9 @@
+#Filename: LOCATION.FR
+#Version: 20070102
+#Expiration: 20070501
+#Hash: 71ba3db7983f8bcfa2a1b1cd327572ffcafaa331
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20070102.txt
+#Fields: AreaName|CityName|ISO-Alpha2CountryCode|PostCode|
+#Key: AreaName|CityName|
+|Dublin|IE|1|
+|Reste de l'Irlande (sauf Dublin)|IE|2|

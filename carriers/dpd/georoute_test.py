@@ -3,14 +3,8 @@
 
 """Test routing resolver for DPD. Coded by jmv"""
 
-import os, time
-import unittest
-
-import os, os.path, logging
-import sqlite3
-        
+import os, os.path, logging, sqlite3, time, unittest
 from georoute import *
-
 
 class RouteDataTest(unittest.TestCase):
     def setUp(self):

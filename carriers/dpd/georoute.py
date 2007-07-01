@@ -7,8 +7,7 @@ Originally coded by md, cleand up and extended by jmv and then again reworked by
 Copyright 2006, 2007 HUDORA GmbH. Published under a BSD License.
 """
 
-import os, os.path, logging
-import sqlite3
+import os, os.path, logging, sqlite3
 
 ROUTETABLES_BASE = os.path.join(os.path.split(os.path.abspath(__file__))[0], 'georoutetables')
 ROUTES_DB_BASE = '/tmp/dpdroutes'

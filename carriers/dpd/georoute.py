@@ -8,10 +8,7 @@ Copyright 2006, 2007 HUDORA GmbH. Published under a BSD License.
 """
 
 import os, os.path, logging
-try:
-    import sqlite3 # > python 2.5 
-except ImportError:
-    from pysqlite2 import dbapi2 as sqlite3 # external package
+import sqlite3
 
 ROUTETABLES_BASE = os.path.join(os.path.split(os.path.abspath(__file__))[0], 'georoutetables')
 ROUTES_DB_BASE = '/tmp/dpdroutes'

@@ -7,10 +7,7 @@ import os, time
 import unittest
 
 import os, os.path, logging
-try:
-    import sqlite3 # > python 2.5 
-except ImportError:
-    from pysqlite2 import dbapi2 as sqlite3 # external package
+import sqlite3
         
 from georoute import *
 

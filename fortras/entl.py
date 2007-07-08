@@ -134,7 +134,7 @@ class Entladebericht(object):
         import django.core.exceptions
         try:
             packstueck = huLOG.models.Packstueck.objects.get(_trackingnummer=nve)
-        except django.core.exceptions.ObjectDoesNotExist:
+        except huLOG.models.Packstueck.DoesNotExist:
             logging.warning('Problem locating Packstueck with barcode %r for ENTL record - ignoring' % nve)
             return
         info = []

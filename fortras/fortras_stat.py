@@ -110,7 +110,7 @@ class Statusmeldung(object):
         import django.core.exceptions
         try:
             lieferung = huLOG.models.Lieferung.objects.get(id=lieferung_id)
-        except django.core.exceptions.ObjectDoesNotExist:
+        except huLOG.models.Lieferung.DoesNotExist:
             logging.warning('Problem locating Lieferung with id %r for STAT record - ignoring' % lieferung_id)
             return
         if datadict['timestamp'] > datetime.datetime.now():

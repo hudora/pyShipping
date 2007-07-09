@@ -178,6 +178,9 @@ class Statusmeldung(object):
         """Parses Fortras STAT data."""
         lines = data.split('\n')
         lines = [x.strip('\r') for x in lines]
+        if lines[0] == '' and len(lines) == 1:
+            logging.error('empty file')
+            return
         if not lines[0].startswith('@@PHSTAT128 0128003500107 MAEULER HUDORA1                       '):
             raise RuntimeError, "illegal status data %r" % data [:300]
         for line in lines[1:]:

@@ -20,12 +20,12 @@ class AbstractItem(object):
     def __init__(self):
         # Wir gehen davon aus, dass folgende arrtibute von ausserhalb oder von abgeleiteten Klassen
         # definiert wird:
-        self.gewicht_pro_exportkarton = None
-        self.palettenfaktor = None
-        self.produkte_pro_exportkarton = None
         self.menge = None
-        self.einzelvolumen = None
-        self.einzelgewicht = None
+        #self.gewicht_pro_exportkarton = None
+        #self.palettenfaktor = None
+        #self.produkte_pro_exportkarton = None
+        #self.einzelvolumen = None
+        #self.einzelgewicht = None
     
     def __str__(self):
         if hasattr(self, 'liefertermin') and hasattr(self, 'artnr'):
@@ -38,11 +38,6 @@ class AbstractItem(object):
     def anbruch(self):
         """Returns True if this Item does not result in an export_package to be opened."""
         return (self.menge % self.produkte_pro_exportkarton) != 0
-    
-    @property
-    def feinkommissionierung(self):
-        """Returns True if this Item needs the opening of a VE1 (Greifeinheit)."""
-        raise NotImplementedError
     
     @property
     def volumen(self):

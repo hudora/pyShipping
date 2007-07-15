@@ -165,7 +165,6 @@ class RouteData(object):
             self.serviceinfo[servicecode] = line[1]
         
         filename = ROUTES_DB_BASE + ('-%s-%s.db' % (routingdepot, self.version))
-        logging.debug("opening DB %r" % filename)
         self.db = sqlite3.connect(filename)
         
         self.read_depots(ROUTETABLES_BASE)
@@ -514,7 +513,6 @@ def get_route_without_cache(country=None, postcode=None, city=None, servicecode=
 def get_route(country=None, postcode=None, city=None, servicecode='101'):
     # this includes somewhat overly complex caching
     filename = ROUTES_DB_BASE + ('_cache.db')
-    logging.debug("opening DB %r" % filename)
     cache_db = sqlite3.connect(filename, isolation_level=None)
     cur = cache_db.cursor()
     # ensure table exists

@@ -104,31 +104,31 @@ class Statusmeldung(object):
         100:'Nicht in Zustellung - Ereignis nicht zu Lasten Empfangspartner',
     }
     
-    def update_lieferung(self, lieferung_id, datadict):
-        """Updates a huLOG Lieferung record with the parsed STAT data."""
+    def update_sendung(self, sendung_id, datadict):
+        """Updates a huLOG Sendung record with the parsed STAT data."""
         import huLOG.models
         import django.core.exceptions
         try:
-            lieferung = huLOG.models.Lieferung.objects.get(id=lieferung_id)
-        except huLOG.models.Lieferung.DoesNotExist:
-            logging.warning('Problem locating Lieferung with id %r for STAT record - ignoring' % lieferung_id)
+            sendung = huLOG.models.Sendung.objects.get(id=sendung_id)
+        except huLOG.models.Sendung.DoesNotExist:
+            logging.warning('Problem locating Sendung with id %r for STAT record - ignoring' % sendung_id)
             return
         if datadict['timestamp'] > datetime.datetime.now():
-            logging.warning('Future timestamp for Lieferung with id %r: %s' % (lieferung_id, datadict['timestamp']))
+            logging.warning('Future timestamp for Sendung with id %r: %s' % (sendung_id, datadict['timestamp']))
             return
-        if datadict['timestamp'] < lieferung.created_at:
-            logging.warning('Inconsistent timestamps for Lieferung with id %r: %s' % (lieferung_id, datadict['timestamp']))
+        if datadict['timestamp'] < sendung.created_at:
+            logging.warning('Inconsistent timestamps for Sendung with id %r: %s' % (sendung_id, datadict['timestamp']))
             return
         if int(datadict['sendungsschluessel']) in Statusmeldung.warnstati:
-            lieferung.needs_attention = True
+            sendung.needs_attention = True
         if int(datadict['sendungsschluessel']) in Statusmeldung.erledigtstati:
-            lieferung.delivered_at = datadict['timestamp']
-            lieferung.status = 'delivered'
+            sendung.delivered_at = datadict['timestamp']
+            sendung.status = 'delivered'
         if int(datadict['sendungsschluessel']) in Statusmeldung.errorstati:
-            lieferung.needs_attention = True
-            lieferung.status = 'error'
+            sendung.needs_attention = True
+            sendung.status = 'error'
         if int(datadict['sendungsschluessel']) in Statusmeldung.bouncestati:
-            lieferung.status = 'bounced'
+            sendung.status = 'bounced'
             logging.warning('bounced shipment %r: %r (%r|%r)' % (datadict['sendungsnrversender'],
                                                                        datadict['sendungsschluessel'],
                                                                        datadict['statustext'],
@@ -145,7 +145,7 @@ class Statusmeldung(object):
         if datadict['zusatztext']:
             info.append(datadict['zusatztext'])
         info.append(str(datadict['timestamp']))
-        log = huLOG.models.LieferungLogentry(lieferung = lieferung)
+        log = huLOG.models.SendungLogentry(lieferung = sendung)
         log.displaytext = repr(', '.join(info))
         log.sourcedata  = repr(datadict)
         log.source      = 'Maeuler STAT'
@@ -156,23 +156,23 @@ class Statusmeldung(object):
             log.code        = '230'        
         log.timestamp   = datadict['timestamp']
         log.save()
-        lieferung.updated_at = datetime.datetime.now()
+        sendung.updated_at = datetime.datetime.now()
 
         # we only save well known stati
         if datadict['sendungsschluessel'] in ['005', '006', '007', '008', '009', '012', '015', '016', '017',
                                               '018', '031', '040', '050', '054', '055', '063', '068', '069',
                                               '071', '084', '085', '091', '099', '053', '100', '999']:
             if datadict['sendungsnrempfaenger']:
-                if (lieferung.speditionsauftragsnummer 
-                  and lieferung.speditionsauftragsnummer != datadict['sendungsnrempfaenger']):
-                    logging.error('Problem with Lieferung %r: original speditionsauftragsnummer %r replaced by %r' % (lieferung, lieferung.speditionsauftragsnummer, datadict['sendungsnrempfaenger']))
-                lieferung.speditionsauftragsnummer = datadict['sendungsnrempfaenger']
+                if (sendung.speditionsauftragsnummer 
+                  and sendung.speditionsauftragsnummer != datadict['sendungsnrempfaenger']):
+                    logging.error('Problem with Sendung %r: original speditionsauftragsnummer %r replaced by %r' % (sendung, sendung.speditionsauftragsnummer, datadict['sendungsnrempfaenger']))
+                sendung.speditionsauftragsnummer = datadict['sendungsnrempfaenger']
         else:
             logging.error('unknown STAT data for record %r: %r (%r|%r)' % (datadict['sendungsnrversender'],
                                                                            datadict['sendungsschluessel'], 
                                                                            datadict['statustext'],
                                                                            datadict['zusatztext']))
-        lieferung.save()
+        sendung.save()
 
     def parse(self, data):
         """Parses Fortras STAT data."""
@@ -206,6 +206,6 @@ class Statusmeldung(object):
             newdict['statustext'] = Statusmeldung.statustexte.get(int(newdict['sendungsschluessel']))
             try:
                 newdict['sendungsnrversender'] = int(newdict['sendungsnrversender'])
-                self.update_lieferung(newdict['sendungsnrversender'], newdict)
+                self.update_sendung(newdict['sendungsnrversender'], newdict)
             except ValueError:
                 logging.warning('Problem with invalid id %r for STAT record - ignoring' % newdict['sendungsnrversender'])

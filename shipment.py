@@ -87,7 +87,7 @@ class AbstractItem(object):
                 ret.append(self.gewicht_pro_exportkarton)
                 menge -= self.produkte_pro_exportkarton
             else:
-                gewicht.append(menge * self.einzelgewicht)
+                ret.append(menge * self.einzelgewicht)
                 menge = 0
         return ret
     
@@ -182,7 +182,10 @@ class AbstractLieferung(object):
     @property
     def export_karton_gewichte(self):
         """Returns the weights of the estimated number of packages which will be shipped in gramms."""
-        return sum([x.export_karton_gewichte for x in self.itemlist])
+        ret = []
+        for x in self.itemlist:
+            ret.extend(x.export_karton_gewichte)
+        return ret
     
     @property
     def kep(self):

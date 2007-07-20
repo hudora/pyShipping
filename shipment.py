@@ -78,6 +78,20 @@ class AbstractItem(object):
         return self.menge / float(self.produkte_pro_exportkarton)
     
     @property
+    def export_karton_gewichte(self):
+        """Returns the weights of the estimated number of packages which will be shipped in gramms."""
+        menge = self.menge
+        ret = []
+        while menge:
+            if menge > self.produkte_pro_exportkarton:
+                ret.append(self.gewicht_pro_exportkarton)
+                menge -= self.produkte_pro_exportkarton
+            else:
+                gewicht.append(menge * self.einzelgewicht)
+                menge = 0
+        return ret
+    
+    @property
     def packstuecke(self):
         """Returns the absolute number of packages to fullfill this item as an integer.
         
@@ -164,6 +178,11 @@ class AbstractLieferung(object):
     def export_kartons(self):
         """Returns the estimated number of packages which will be shipped. This is a float."""
         return sum([x.export_kartons for x in self.itemlist])
+    
+    @property
+    def export_karton_gewichte(self):
+        """Returns the weights of the estimated number of packages which will be shipped in gramms."""
+        return sum([x.export_karton_gewichte for x in self.itemlist])
     
     @property
     def kep(self):

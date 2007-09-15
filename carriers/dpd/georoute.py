@@ -86,8 +86,8 @@ class Route:
         self.routingtable_version = routingtable_version
         self.postcode = postcode
 
-    def __str__(self):
-        output = """Output parameters:
+    def __unicode__(self):
+        output = u"""Output parameters:
 Country: %s
 D-Depot: %s
 O-Sort: %s
@@ -285,7 +285,7 @@ class RouteData(object):
                 start = int(service[1:4])
                 end = int(service[4:])
                 for i in range(start, end+1):
-                    services_list.append(str(i))
+                    services_list.append(unicode(i))
             else:
                 services_list.append(service[1:])
         
@@ -412,7 +412,7 @@ class Router(object):
         # Save matched rows if there were any results
         if rows:
            self.add_condition(condition)
-        self.current_subset = [str(row[0]) for row in rows]
+        self.current_subset = [unicode(row[0]) for row in rows]
         return rows
     
     def select_country(self, parcel):
@@ -494,7 +494,7 @@ class Router(object):
     
     def select_depot(self, parcel):
         """Select all routes with the given depot."""
-        subset = "route IN (%s)" % ','.join([str(route) for route in self.current_subset])
+        subset = "route IN (%s)" % ','.join([unicode(route) for route in self.current_subset])
         cur = self.db.cursor()
         cur.execute("SELECT route FROM routedepots WHERE depot=%s AND %s" % (self.route_data.routingdepot, subset))
         rows = cur.fetchall()
@@ -504,7 +504,7 @@ class Router(object):
         if not rows:
             raise RoutingDepotError, "No route found for %r|%r|%r|%r|%r" % \
                   (parcel.country, parcel.postcode, parcel.service, self.route_data.routingdepot, subset)
-        self.current_subset = [str(row[0]) for row in rows]
+        self.current_subset = [unicode(row[0]) for row in rows]
 
 def get_route_without_cache(country=None, postcode=None, city=None, servicecode='101'):
     router = Router(RouteData())
@@ -539,7 +539,7 @@ def get_route(country=None, postcode=None, city=None, servicecode='101'):
         )""")
             
     # check if entry is cached
-    cur.execute("SELECT * FROM routing_cache WHERE country_postcode_servicecode=%r" % ("%s_%s_%s" % (country, postcode, servicecode)))
+    cur.execute("SELECT * FROM routing_cache WHERE country_postcode_servicecode='%s'" % ("%s_%s_%s" % (country, postcode, servicecode)))
     rows = cur.fetchall()
     if not rows:
         # nothing found
@@ -570,6 +570,6 @@ def get_route(country=None, postcode=None, city=None, servicecode='101'):
 
 # compability layer to old georoute code prior to huLOG revision 1710
 def find_route(depot, servicecode, land, plz):
-    if str(depot) != '0142':
+    if unicode(depot) != '0142':
         raise RuntimeError, "wrong depot"
-    return get_route(str(land), str(plz), servicecode=str(servicecode))
+    return get_route(unicode(land), unicode(plz), servicecode=unicode(servicecode))

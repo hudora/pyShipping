@@ -67,8 +67,8 @@ class PackageSize(object):
         
         return (self.heigth == other.heigth and self.width == other.width and self.length == other.length)
     
-    def __str__(self):
-        return "%dx%dx%d" % (self.heigth, self.width, self.length)
+    def __unicode__(self):
+        return u"%dx%dx%d" % (self.heigth, self.width, self.length)
     
     def __repr__(self):
         return "<PackageSize %dx%dx%d>" % (self.heigth, self.width, self.length)
@@ -90,12 +90,12 @@ class Package:
         if size:
             self.size = PackageSize(size)
     
-    def __str__(self):
+    def __unicode__(self):
         ret = ['Package']
         if self.size:
-            ret.append(str(self.size))
+            ret.append(unicode(self.size))
         if self.weight:
-            ret.append(str(self.weight))
+            ret.append(unicode(self.weight))
         return ', '.join(ret)
 
 
@@ -120,9 +120,9 @@ class PackageSizeTests(unittest.TestCase):
         self.assertEqual(8000, PackageSize((20, 20, 20)).volume)
     
     def test_str(self):
-        """Test __str__ implementation."""
-        self.assertEqual('100x200x200', PackageSize((100, 200, 200)).__str__())
-        self.assertEqual('100x200x200', PackageSize('100x200x200').__str__())
+        """Test __unicode__ implementation."""
+        self.assertEqual('100x200x200', PackageSize((100, 200, 200)).__unicode__())
+        self.assertEqual('100x200x200', PackageSize('100x200x200').__unicode__())
 
     def test_repr(self):
         """Test __repr__ implementation."""

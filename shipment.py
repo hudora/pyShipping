@@ -27,12 +27,12 @@ class AbstractItem(object):
         #self.einzelvolumen = None
         #self.einzelgewicht = None
     
-    def __str__(self):
+    def __unicode__(self):
         if hasattr(self, 'liefertermin') and hasattr(self, 'artnr'):
-            return "%d x %s, %s" % (self.menge, self.artnr, self.liefertermin)
+            return u"%d x %s, %s" % (self.menge, self.artnr, self.liefertermin)
         if hasattr(self, 'artnr'):
-            return "%d x %s" % (self.menge, self.artnr)
-        return "%d x ?????" % (self.menge)
+            return u"%d x %s" % (self.menge, self.artnr)
+        return u"%d x ?????" % (self.menge)
     
     @property
     def anbruch(self):

@@ -8,7 +8,7 @@ Created by Maximillian Dornseif on 2007-07-11. Based on code from 2007-04-17.
 Copyright (c) 2007 HUDORA GmbH. All rights reserved.
 """
 
-import unittest
+import unittest, math
 
 class AbstractPackstueck(object):
     """Definiert ein Packstück, d.h. eine Versandeinheit. In der Regel eine Palette der ein Karton"""
@@ -160,6 +160,11 @@ class AbstractLieferung(object):
     def paletten(self):
         """Returns the number of pallets of all Items in this Lieferung."""
         return sum([x.paletten for x in self.itemlist])
+    
+    @property
+    def versandpaletten(self):
+        """Returns the number of pallets to be shipped. Always an Integer"""
+        return math.ceil(self.paletten)
     
     @property
     def picks(self):

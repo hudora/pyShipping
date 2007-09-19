@@ -417,7 +417,7 @@ class Router(object):
     
     def select_country(self, parcel):
         """Select all routes with the given country."""
-        rows = self.select_routes("DestinationCountry=%r" % (parcel.country.upper(),))
+        rows = self.select_routes("DestinationCountry='%s'" % (parcel.country.upper().replace("'", ''),))
         if not rows:
             raise CountryError, "Country %s unknown" % parcel.country
     
@@ -463,10 +463,10 @@ class Router(object):
         """Select all routes matching the given postcode."""
         
         # direct match
-        rows = self.select_routes("BeginPostCode=%r" % parcel.postcode)
+        rows = self.select_routes("BeginPostCode='%s'" % parcel.postcode.replace("'", ''))
         if not rows:
             # range
-            rows = self.select_routes("BeginPostCode<=%r AND EndPostCode>=%r" % (parcel.postcode, parcel.postcode))
+            rows = self.select_routes("BeginPostCode<='%s' AND EndPostCode>='%s'" % (parcel.postcode.replace("'", ''), parcel.postcode.replace("'", '')))
         if not rows:
             # catch all
             rows = self.select_routes("BeginPostCode=''")
@@ -478,8 +478,8 @@ class Router(object):
         
         # we have to redo postcode query as a backoff strategy
         self.conditions.pop()
-        postcodequeries = ["BeginPostCode=%r" % parcel.postcode, 
-            "BeginPostCode<=%r AND EndPostCode>=%r" % (parcel.postcode, parcel.postcode), 
+        postcodequeries = ["BeginPostCode='%s'" % parcel.postcode.replace("'", ''), 
+            "BeginPostCode<='%s' AND EndPostCode>='%s'" % (parcel.postcode.replace("'", ''), parcel.postcode.replace("'", '')), 
             "BeginPostCode=''"]
         for postcodequery in postcodequeries:
             rows = self.select_routes("%s AND ServiceCodes LIKE '%%%s%%'" % (postcodequery, parcel.service))

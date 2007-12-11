@@ -154,7 +154,9 @@ class AbstractLieferung(object):
     @property
     def max_packstueck_gewicht(self):
         """Returns the highest gewicht of any package in the shippment in g."""
-        return max([x.max_packstueck_gewicht for x in self.itemlist])
+        if self.itemlist:
+            return max([x.max_packstueck_gewicht for x in self.itemlist])
+        return 0
     
     @property
     def paletten(self):

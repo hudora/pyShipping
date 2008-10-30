@@ -11,14 +11,14 @@ Copyright (c) 2007 HUDORA GmbH. All rights reserved.
 import unittest, math
 
 class AbstractPackstueck(object):
-    """Definiert ein Packstück, d.h. eine Versandeinheit. In der Regel eine Palette der ein Karton"""
+    """Definiert ein Packstück, d.h. eine Versandeinheit. In der Regel eine Palette oder ein Karton"""
     pass
 
 class AbstractItem(object):
     """Definiert ein Sendungsposition. In der Regel definiert als Artikel und Menge."""
-    # Kann in der Theorie aus mehreren Packstücken bestehen, das ist aber noch nciht implementeirt.
+    # Kann in der Theorie aus mehreren Packstücken bestehen, das ist aber noch nicht implementeirt.
     def __init__(self):
-        # Wir gehen davon aus, dass folgende arrtibute von ausserhalb oder von abgeleiteten Klassen
+        # Wir gehen davon aus, dass folgende Attribute von ausserhalb oder von abgeleiteten Klassen
         # definiert wird:
         self.menge = None
         #self.gewicht_pro_exportkarton = None

@@ -7,46 +7,51 @@ Created by Maximillian Dornseif on 2006-11-19.
 You may consider this BSD licensed.
 """
 
-import sys, os
 import unittest
-
-from bordero import _clip, Bordero, ship
-from fortras_stat import Statusmeldung
-from entl import Entladebericht
+from pyshipping.fortras.bordero import _clip, Bordero
+from pyshipping.fortras.fortras_stat import Statusmeldung
+from pyshipping.fortras.entl import Entladebericht
 
 _nvecount = 0
+
+
 class TestPackstueck:
+    
     def __init__(self):
         global _nvecount
-        self.gewicht            = 160000
-        self.nve                = '%018d' % (_nvecount)
+        self.gewicht = 160000
+        self.nve = '%018d' % (_nvecount)
         _nvecount += 1
-        self.trackingnummer     = self.nve
+        self.trackingnummer = self.nve
+
 
 class TestLieferung:
+    
     def __init__(self):
         global _nvecount
         self.packstuecke = [TestPackstueck(), TestPackstueck()]
-        self.lieferscheinnummer   = '123456'
-        self.auftragsnummer       = '654321'
+        self.lieferscheinnummer = '123456'
+        self.auftragsnummer = '654321'
         self.auftragsnummer_kunde = 'auftragsnummer_kunde'
-        self.kundennummer         = '54321'
-        self.name1                = 'name1-Iñtërnâtiônàlizætiøn-latin1-name1-name1'
-        self.name2                = 'name2zulangname2zulangname2zulangname2zulangname2zulangname2zulangname2n'
-        self.name3                = 'name3'
-        self.name4                = 'nane4'
-        self.adresse              = 'strassestrassestrassestrassestrassestrassestrasse'
-        self.plz                  = 'plz99999'
-        self.ort                  = 'ortortortortortortortortortortortortortortort'
-        self.land                 = 'DE'
-        self.spedition            = 'Maeuler'
-        self.frankatur            = 'frei'
-        self.codedata             = 'AAAA'
-        self.hebebuehne           = True
-        self.avisieren_unter      = '02195-8393'
-        self.versandhinweis       = 'versandhinweis'
-        self.info                 = 'info'
-        self.id                   = _nvecount
+        self.kundennummer = '54321'
+        self.name1 = 'name1-Iñtërnâtiônàlizætiøn-latin1-name1-name1'
+        self.name2 = 'name2zulangname2zulangname2zulangname2zulangname2zulangname2zulangname2n'
+        self.name3 = 'name3'
+        self.name4 = 'nane4'
+        self.adresse = 'strassestrassestrassestrassestrassestrassestrasse'
+        self.plz = 'plz99999'
+        self.ort = 'ortortortortortortortortortortortortortortort'
+        self.land = 'DE'
+        self.spedition = 'Maeuler'
+        self.frankatur = 'frei'
+        self.codedata = 'AAAA'
+        self.hebebuehne = True
+        self.avisieren_unter = '02195-8393'
+        self.versandhinweis = 'versandhinweis'
+        self.info = 'info'
+        self.fixtermin = False
+        self.code = 'c0de'
+        self.id = _nvecount
         _nvecount += 1
         
     def get_gewicht(self):
@@ -54,6 +59,7 @@ class TestLieferung:
     
 
 class BorderoTests(unittest.TestCase):
+    
     def test_clip(self):
         self.assertEqual(_clip(3, 'ABCDEF'), 'ABC')
         self.assertEqual(_clip(3, 'ABC'), 'ABC')
@@ -74,7 +80,8 @@ class BorderoTests(unittest.TestCase):
     
 
 class StatTests(unittest.TestCase):
-    def Xtest_status(self):
+
+    def test_status(self):
         tesdata = '''@@PHSTAT128 0128003500107 MAEULER HUDORA1                                                                                       
 Q11515     L00000000000000545177124         091071120061106                                                                    5\
 '''
@@ -125,7 +132,9 @@ Q11515     L6350706         5178934         012171120060911   PATER             
 '''
         stat.parse(testdata)
 
+
 class EntlTests(unittest.TestCase):
+
     def test_entladebericht(self):
         entl = Entladebericht()
 
@@ -182,6 +191,7 @@ V0000000000000000080000000000000077   00340059980000001203               0      
 V0000000000000000080000000000000076   00340059980000001197               0                          16112006184200              
 V0000000000000000080000000000000075   00340059980000001180               0                          16112006142914              
 V0000000000000000080000000000000074   00340059980000001173               0                          16112006184200              
+V461               720-00             00340498430009431112               0                          19092008183100              
 '''
         entl.parse(testdata)
 

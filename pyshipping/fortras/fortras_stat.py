@@ -7,7 +7,9 @@ Created by Maximillian Dornseif on 2006-11-19.
 You may consider this BSD licensed.
 """
 
-import re, datetime, logging
+import re
+import datetime
+import logging
 
 
 class Statusmeldung(object):
@@ -101,7 +103,7 @@ class Statusmeldung(object):
         90: 'Übermittlung des Quittungsgebers, des Zustelldatums und der Ablieferzeit',
         91: 'Zustellbeleg archiviert',
         99: 'Nicht in Zustellung - Ereignis zu Lasten Empfangspartner',
-        100:'Nicht in Zustellung - Ereignis nicht zu Lasten Empfangspartner',
+        100: 'Nicht in Zustellung - Ereignis nicht zu Lasten Empfangspartner',
     }
     
     def update_sendung(self, sendung_id, datadict):
@@ -147,14 +149,14 @@ class Statusmeldung(object):
         info.append(str(datadict['timestamp']))
         log = huLOG.models.SendungLogentry(lieferung = sendung)
         log.displaytext = repr(', '.join(info))
-        log.sourcedata  = repr(datadict)
-        log.source      = 'Maeuler STAT'
-        log.code        = '200'
+        log.sourcedata = repr(datadict)
+        log.source = 'Maeuler STAT'
+        log.code = '200'
         if datadict['sendungsschluessel'] in Statusmeldung.warnstati:
-            log.code        = '220'
+            log.code = '220'
         if datadict['sendungsschluessel'] in Statusmeldung.errorstati:
-            log.code        = '230'        
-        log.timestamp   = datadict['timestamp']
+            log.code = '230'        
+        log.timestamp = datadict['timestamp']
         log.save()
         sendung.updated_at = datetime.datetime.now()
 
@@ -182,7 +184,7 @@ class Statusmeldung(object):
             logging.error('empty file')
             return
         if not lines[0].startswith('@@PHSTAT128 0128003500107 MAEULER HUDORA1                       '):
-            raise RuntimeError, "illegal status data %r" % data [:300]
+            raise RuntimeError("illegal status data %r" % data[:300])
         for line in lines[1:]:
             if not line or line[0] == 'X': # 'X' records and empty lines are ignored
                 continue

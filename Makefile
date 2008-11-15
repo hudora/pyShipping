@@ -6,22 +6,15 @@ build:
 	python setup.py build
 
 test:
-	sh -c '(cd tests; python ./runtests.py -v 1 --settings=testsettings)'
-	python eap/api.py
+	python pyshipping/shipment.py 
+	python pyshipping/package.py 
+	python pyshipping/carriers/dpd/georoute_test.py
+	python pyshipping/fortras/test.py 
 
-upload: build
+upload: build doc
 	python setup.py sdist bdist_egg
 	rsync -rvapP dist/* root@cybernetics.hudora.biz:/usr/local/www/data/nonpublic/eggs/
-
-# publish:
-# 	# remove development tag
-# 	perl -npe 's/^tag_build = .dev/# tag_build = .dev/' -i setup.cfg
-# 	svn commit
-# 	python setup.py build sdist bdist_egg upload
-# 	# add development tag
-# 	perl -npe 's/^\# tag_build = .dev/tag_build = .dev/' -i setup.cfg
-# 	rsync dist/* root@cybernetics.hudora.biz:/usr/local/www/apache22/data/dist/huDjango/
-# 	echo "now bump version number in setup.py and commit"
+	rsync -rvapP html root@cybernetics.hudora.biz:/usr/local/www/apache22/data/dist/pyShipping
 
 doc: build
 	rm -Rf html
@@ -36,7 +29,7 @@ install: build
 	sudo python setup.py install
 
 clean:
-	rm -Rf build dist html test.db
+	rm -Rf build dist html test.db pyShipping.egg-info
 	find . -name '*.pyc' -or -name '*.pyo' -delete
 
-.PHONY: test build
+.PHONY: test build clean check upload doc install

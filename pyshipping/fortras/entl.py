@@ -7,7 +7,10 @@ Created by Maximillian Dornseif on 2006-11-19.
 You may consider this BSD licensed.
 """
 
-import re, logging, datetime
+import re
+import logging
+import datetime
+import unittest
 
 class Entladebericht(object):
     """Parses and represent an ENTL message."""
@@ -17,6 +20,7 @@ class Entladebericht(object):
                    + r'(?P<entladeende_datum>[0-9 ]{8})(?P<entladeende_zeit>[0-9 ]{4})'
                    + r'(?P<entladehinweis>.{30})             (?P<foo>.{9})5'
                    )
+    m_record_re = re.compile(m_record_re)
     # Satzart ‘M’ muss 1 001 - 001 
     # Bordero-Nr.Versandpartner muss          18 002 - 019 
     # Borderodatum Versandpartner (TTMMJJJJ) muss 8/0 020 - 027 
@@ -42,6 +46,7 @@ class Entladebericht(object):
                    + r'(?P<differenzzahl1>[0-9 ]{4})(?P<verpackungsart1>..)(?P<differenztext1>.{29})'
                    + r'(?P<differenzschluessel2>..)(?P<differenzzahl2>[0-9 ]{4})(?P<verpackungsart2>..)'
                    + r'(?P<differenztext2>.{29})')
+    n_record_re = re.compile(n_record_re)
     # Satzart ‘N’ muss 1 001 - 001 
     # Bordero-Nr. Versandpartner muss          18 002 - 019 
     # Laufende Bordero-Position Versandpartner muss 3/0 020 - 022 
@@ -56,10 +61,12 @@ class Entladebericht(object):
     # Verpackungsart 2** kann 2 098 - 099 
     # Text/Hinweis 2 kann          29 100 - 128 
     
-    v_record_re = (r'V(?P<borderonr>[0-9 ]{18})(?P<sendungsnrversender>[0-9 ]{16})(?P<barcodetype>...)'
+    # no match 'V461               720-00             00340498430009431112               0                          19092008183100              '
+    v_record_re = (r'V(?P<borderonr>[0-9 ]{18})(?P<sendungsnrversender>[0-9 -]{16})(?P<barcodetype>...)'
                    + r'(?P<nve>.{35})(?P<hinweiscode>...)(?P<hinweistext>.{24})'
                    + r'(?P<date>[0-9 ]{8})(?P<time>[0-9 ]{4})'
                    + r'(?P<benutzer>.{10})(?P<terminal>.{4})')
+    v_record_re = re.compile(v_record_re)
     # Lo�st 'N'-Satz ab bei Einsatz von Barcode 
     # Satzart ‘V’ muss 1 001 - 001 
     # Bordero-Nr. Versandpartner muss          18 002 - 019 
@@ -128,10 +135,12 @@ class Entladebericht(object):
        98: 'R�ckscannung - Packstu�ck wieder entladen',
        99: 'Korrekturscannung',
        }
+    
     def update_packstueck(self, nve, datadict):
         """Updates a huLOG Packstueck record with the parsed ENTL data."""
+
+        # TODO: decouple this from huLOG
         import huLOG.models
-        import django.core.exceptions
         try:
             packstueck = huLOG.models.Packstueck.objects.get(_trackingnummer=nve)
         except huLOG.models.Packstueck.DoesNotExist:
@@ -141,7 +150,7 @@ class Entladebericht(object):
         if datadict['terminal']:
             info.append('an Terminal %r' % datadict['terminal'])
         if datadict['benutzer']:
-           info.append('gescannt durch Nutzer %r' % datadict['benutzer'])
+            info.append('gescannt durch Nutzer %r' % datadict['benutzer'])
         if datadict['hinweiscode'] in ['0', '']:
             info.insert(0, 'Bei der Spedition entladen')
             if datadict['hinweistext']:
@@ -206,3 +215,14 @@ class Entladebericht(object):
                 pass # wee happyly ignore W records 
             else:
                 print "unknown %r" % line
+
+
+class entlTests(unittest.TestCase):
+    def test_vsatz(self):
+        parser = Entladebericht()
+        line = 'V461               720-00             00340498430009431112               0                          19092008183100              '
+        match = re.search(Entladebericht.v_record_re, line)
+        self.assertEqual(match.groupdict(), {'sendungsnrversender': '720-00          ', 'hinweistext': '                        ', 'barcodetype': '   ', 'terminal': '    ', 'nve': '00340498430009431112               ', 'hinweiscode': '0  ', 'time': '1831', 'date': '19092008', 'borderonr': '461               ', 'benutzer': '00        '})
+
+if __name__ == '__main__':
+    unittest.main()

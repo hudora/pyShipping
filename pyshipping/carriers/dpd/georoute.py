@@ -7,10 +7,15 @@ Originally coded by md, cleand up and extended by jmv and then again reworked by
 Copyright 2006, 2007 HUDORA GmbH. Published under a BSD License.
 """
 
-import os, os.path, logging, sqlite3
+import os
+import os.path
+import logging
+import sqlite3
+
 
 ROUTETABLES_BASE = os.path.join(os.path.split(os.path.abspath(__file__))[0], 'georoutetables')
 ROUTES_DB_BASE = '/tmp/dpdroutes'
+
 
 # Quelle: http://de.wikipedia.org/wiki/Liste_der_Kfz-Nationalitätszeichen
 ISO2CAR = {
@@ -19,29 +24,36 @@ ISO2CAR = {
     'FR': 'F',
 }
 
+
 class InvalidFormatError(Exception):
     """Invalid input file format."""
     pass
+
 
 class CountryError(Exception):
     """Unknown country."""
     pass
 
+
 class DepotError(Exception):
     """Unknown depot."""
     pass
+
 
 class ServiceError(Exception):
     """Unknown service."""
     pass
 
+
 class TranslationError(Exception):
     """Cannot translate city and country to postcode."""
     pass
 
+
 class RoutingDepotError(Exception):
     """Unknown routing depot."""
     pass
+
 
 class NoRouteError(Exception):
     """Route not found."""
@@ -50,8 +62,13 @@ class NoRouteError(Exception):
 
 class Parcel(object):
     """Parcel destination data."""
+    
     # depreciated
+    
     def __init__(self, depot='142', service='101', country='DE', city=None, postcode=None):
+        import warnings
+        warnings.warn("georoute.find_route() is deprecated", DeprecationWarning, stacklevel=2)
+        
         self.service = service
         self.country = country
         self.city = city
@@ -60,6 +77,7 @@ class Parcel(object):
 
 class Destination(object):
     """Parcel destination data."""
+    
     def __init__(self, country='DE', postcode=None, city=None, service='101'):
         self.service = service
         self.country = country
@@ -69,6 +87,7 @@ class Destination(object):
 
 class Route:
     """Output of the routing algorithm."""
+    
     def __init__(self, d_depot, o_sort, d_sort, grouping_priority, barcode_id,
                  iata_code, service_text, service_mark, country, serviceinfo, countrynum,
                  routingtable_version, postcode):
@@ -113,7 +132,7 @@ Service Text: %s""" % (self.country, self.d_depot, self.o_sort, self.d_sort,
     def routingdata(self):
         return {'o_sort': self.o_sort, 'd_sort': self.d_sort,
                 'd_depot': self.d_depot, 'country': self.country,
-                'service_text':  self.service_text, 'serviceinfo': self.serviceinfo}
+                'service_text': self.service_text, 'serviceinfo': self.serviceinfo}
     
 
 def _readfile(filename):
@@ -127,6 +146,7 @@ def _readfile(filename):
 
 class RouteData(object):
     """More convenient representation of the georoute data."""
+    
     def __init__(self, routingdepot='0142'):
         """@param path path to the georoute tables
            @param routingdepot the depot from where you are sending
@@ -142,7 +162,7 @@ class RouteData(object):
                 self.version = line.split(':')[1].strip()
                 break
         if self.version is None:
-            raise InvalidFormatError, "There's no version in the SERVICE file"
+            raise InvalidFormatError("There's no version in the SERVICE file")
         
         self.countries = {}
         for line in _readfile(os.path.join(ROUTETABLES_BASE, 'COUNTRY')):
@@ -314,29 +334,31 @@ class RouteData(object):
                                       (route, self.routingdepot))
                 else:
                     if depot[1:5] == self.routingdepot:
-                        c.execute("""INSERT INTO routedepots(route, depot) VALUES(?, ?)""", (route, depot[1:5]))
+                        c.execute("""INSERT INTO routedepots(route, depot) VALUES(?, ?)""",
+                                  (route, depot[1:5]))
             elif depot.startswith('G'):
                 if depot[1:] in self.routingdepotgroups:
-                    c.execute("INSERT INTO routedepots(route, depot) VALUES(?, ?)", (route, self.routingdepot))
+                    c.execute("INSERT INTO routedepots(route, depot) VALUES(?, ?)",
+                              (route, self.routingdepot))
             else:
-                raise InvalidFormatError, "Unable to parse depot '%s'" % depot
+                raise InvalidFormatError("Unable to parse depot '%s'" % depot)
     
     def get_countrynum(self, isoname):
         """Return country ISO code."""
         if not isoname.upper() in self.countries:
-            raise CountryError, "Country %s unknown" % isoname
+            raise CountryError("Country %s unknown" % isoname)
         return self.countries[isoname.upper()]
     
     def get_depot(self, depotnumber):
         """Return depot."""
         if not depotnumber in self.depots:
-            raise DepotError, "Depot %s unknown" % depotnumber
+            raise DepotError("Depot %s unknown" % depotnumber)
         return self.depots[depotnumber]
     
     def get_service(self, servicecode):
         """Return service."""
         if not servicecode in self.services:
-            raise ServiceError, "Service %s unknown" % servicecode
+            raise ServiceError("Service %s unknown" % servicecode)
         return self.services[servicecode]
     
     def get_servicetext(self, servicecode):
@@ -351,12 +373,13 @@ class RouteData(object):
         cur.execute("SELECT Postcode FROM location WHERE City=? AND Country=?", (city, country))
         rows = cur.fetchall()
         if not rows:
-            raise TranslationError, "Cannot find postcode for location %s, %s" % (city, country)
+            raise TranslationError("Cannot find postcode for location %s, %s" % (city, country))
         return rows[0][0]
     
 
 class Router(object):
     """Routes parcels."""
+    
     def __init__(self, data):
         self.route_data = data
         self.db = self.route_data.db
@@ -392,8 +415,8 @@ class Router(object):
                          iata_code, service_text, service_mark, country,
                          serviceinfo, self.route_data.get_countrynum(country),
                          self.route_data.version, parcel.postcode)
-        raise NoRouteError, "No route found for %r|%r|%r" % \
-              (parcel.country, parcel.postcode, parcel.service)
+        raise NoRouteError("No route found for %r|%r|%r" % \
+              (parcel.country, parcel.postcode, parcel.service))
     
     def add_condition(self, condition):
         self.conditions.append(condition)
@@ -411,15 +434,15 @@ class Router(object):
         
         # Save matched rows if there were any results
         if rows:
-           self.add_condition(condition)
+            self.add_condition(condition)
         self.current_subset = [unicode(row[0]) for row in rows]
         return rows
     
     def select_country(self, parcel):
         """Select all routes with the given country."""
-        rows = self.select_routes("DestinationCountry='%s'" % (parcel.country.upper().replace("'", ''),))
+        rows = self.select_routes("DestinationCountry='%s'" % (parcel.country.upper().replace("'", ''), ))
         if not rows:
-            raise CountryError, "Country %s unknown" % parcel.country
+            raise CountryError("Country %s unknown" % parcel.country)
     
     def cleanup_postcode(self, parcel):
         """Removes spaces and country prefixes from postcodes."""
@@ -457,8 +480,7 @@ class Router(object):
             parcel.country = 'AT'
             parcel.postcode = parcel.postcode[1:]
             self.cleanup_postcode(parcel)
-
-        
+    
     def select_postcode(self, parcel):
         """Select all routes matching the given postcode."""
         
@@ -466,12 +488,13 @@ class Router(object):
         rows = self.select_routes("BeginPostCode='%s'" % parcel.postcode.replace("'", ''))
         if not rows:
             # range
-            rows = self.select_routes("BeginPostCode<='%s' AND EndPostCode>='%s'" % (parcel.postcode.replace("'", ''), parcel.postcode.replace("'", '')))
+            rows = self.select_routes("BeginPostCode<='%s' AND EndPostCode>='%s'"
+                                       % (parcel.postcode.replace("'", ''), parcel.postcode.replace("'", '')))
         if not rows:
             # catch all
             rows = self.select_routes("BeginPostCode=''")
         if not rows:
-            raise NoRouteError, "Postcode %r|%r unknown" % (parcel.country, parcel.postcode)
+            raise NoRouteError("Postcode %r|%r unknown" % (parcel.country, parcel.postcode))
     
     def select_service(self, parcel):
         """Select all routes with the given service code."""
@@ -479,7 +502,8 @@ class Router(object):
         # we have to redo postcode query as a backoff strategy
         self.conditions.pop()
         postcodequeries = ["BeginPostCode='%s'" % parcel.postcode.replace("'", ''), 
-            "BeginPostCode<='%s' AND EndPostCode>='%s'" % (parcel.postcode.replace("'", ''), parcel.postcode.replace("'", '')), 
+            "BeginPostCode<='%s' AND EndPostCode>='%s'" % (parcel.postcode.replace("'", ''), 
+                                                           parcel.postcode.replace("'", '')), 
             "BeginPostCode=''"]
         for postcodequery in postcodequeries:
             rows = self.select_routes("%s AND ServiceCodes LIKE '%%%s%%'" % (postcodequery, parcel.service))
@@ -489,26 +513,29 @@ class Router(object):
             if rows:
                 break
         if not rows:
-            raise ServiceError, "No route for service found %r|%r|%r unknown" % \
-                (parcel.country, parcel.postcode, parcel.service)
+            raise ServiceError("No route for service found %r|%r|%r unknown" % \
+                (parcel.country, parcel.postcode, parcel.service))
     
     def select_depot(self, parcel):
         """Select all routes with the given depot."""
         subset = "route IN (%s)" % ','.join([unicode(route) for route in self.current_subset])
         cur = self.db.cursor()
-        cur.execute("SELECT route FROM routedepots WHERE depot=%s AND %s" % (self.route_data.routingdepot, subset))
+        cur.execute("SELECT route FROM routedepots WHERE depot=%s AND %s" % (self.route_data.routingdepot,
+                                                                             subset))
         rows = cur.fetchall()
         if not rows:
             cur.execute("SELECT route FROM routedepots WHERE %s" % (subset))
             rows = cur.fetchall()
         if not rows:
-            raise RoutingDepotError, "No route found for %r|%r|%r|%r|%r" % \
-                  (parcel.country, parcel.postcode, parcel.service, self.route_data.routingdepot, subset)
+            raise RoutingDepotError("No route found for %r|%r|%r|%r|%r" % \
+                  (parcel.country, parcel.postcode, parcel.service, self.route_data.routingdepot, subset))
         self.current_subset = [unicode(row[0]) for row in rows]
+        
 
 def get_route_without_cache(country=None, postcode=None, city=None, servicecode='101'):
     router = Router(RouteData())
     return router.route(Destination(country, postcode, city))
+    
 
 def get_route(country=None, postcode=None, city=None, servicecode='101'):
     # this includes somewhat overly complex caching
@@ -539,7 +566,8 @@ def get_route(country=None, postcode=None, city=None, servicecode='101'):
         )""")
             
     # check if entry is cached
-    cur.execute("SELECT * FROM routing_cache WHERE country_postcode_servicecode='%s'" % ("%s_%s_%s" % (country, postcode, servicecode)))
+    cur.execute("SELECT * FROM routing_cache WHERE country_postcode_servicecode='%s'" 
+                 % ("%s_%s_%s" % (country, postcode, servicecode)))
     rows = cur.fetchall()
     if not rows:
         # nothing found
@@ -564,12 +592,18 @@ def get_route(country=None, postcode=None, city=None, servicecode='101'):
         # cache_db.close()
     else:
         if len(rows) > 1:
-            raise RuntimeError, "to many cache hits!"
+            raise RuntimeError("to many cache hits!")
         route = Route(*rows[0][1:])
     return route
+    
 
 # compability layer to old georoute code prior to huLOG revision 1710
+
+
 def find_route(depot, servicecode, land, plz):
+    import warnings
+    warnings.warn("georoute.find_route() is deprecated", DeprecationWarning, stacklevel=2)
+                
     if unicode(depot) != '0142':
-        raise RuntimeError, "wrong depot"
+        raise RuntimeError("wrong depot")
     return get_route(unicode(land), unicode(plz), servicecode=unicode(servicecode))

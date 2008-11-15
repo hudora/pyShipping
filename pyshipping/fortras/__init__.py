@@ -4,4 +4,4 @@ enlightenment."""
 
 # You may consider this BSD licensed.
 
-from bordero import ship
+from pyshippinng.fortras.bordero import ship

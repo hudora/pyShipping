@@ -11,16 +11,20 @@ Created by Lars Ronge and Maximillian Dornseif on 2006-11-06.
 You may consider this BSD licensed.
 """
 
-import os, time
+import os
+import time
+import types
 
 #def _transcode(data):
 #    """Decode utf-8 to latin1 (which is used by fortras)."""
 #    return data.decode('utf-8', 'replace').encode('latin-1', 'replace')
 
+
 def _clip(length, data):
     """Clip a string to a maximum length."""
     # I wonder if this can't be done with clever formatstring usage.
-    data = unicode(data)
+    if type(data) != types.UnicodeType:
+        data = data.decode('latin-1')
     if len(data) > length:
         return data[:length]
     return data
@@ -361,6 +365,7 @@ def _clip(length, data):
 # Zusatztext 1 muss 62 005 - 066 
 # Zusatztext 2 kann 62 067 - 128
 
+
 class Bordero(object):
     """Kapselt die Daten für ein Gefäß (LKW) - Verwendung ähnlich IFTSTAR."""
     
@@ -375,14 +380,14 @@ class Bordero(object):
         # definitions of records
         self.satzarten = {'A': (u'%(borderonr)018d%(datum)-8s%(versandweg)s  %(empfangspartner)-10s %(frachtfuehrer)'
                                 + '-13s%(plz)-9s%(ort)-12s%(foo)-49s6'),
-                          'B':  u'%(name1)-35s%(name2)-35s%(strasse)-35s%(lkz)-3s%(plz)-9s       ',
-                          'C':  u'%(ort)-35s%(foo)-3s%(foo)9s%(foo)35s%(kdnnr)17s%(wert)09fEUR%(foo)-13s',
-                          'D':  u'%(name1)-35s%(name2)-35s%(foo)-35s%(foo)-19s',
+                          'B': u'%(name1)-35s%(name2)-35s%(strasse)-35s%(lkz)-3s%(plz)-9s       ',
+                          'C': u'%(ort)-35s%(foo)-3s%(foo)9s%(foo)35s%(kdnnr)17s%(wert)09fEUR%(foo)-13s',
+                          'D': u'%(name1)-35s%(name2)-35s%(foo)-35s%(foo)-19s',
                           'E': (u'%(strasse)-35s%(lkz)-3s%(plz)-9s%(ort)-35s%(foo)3s%(matchcode)-10s'
                                 + '%(kdnnr)17s%(foo)10s%(foo)2s'),
                           'F': (u'%(anzahlpackstuecke)04d%(verpackungsart)2s0000  %(wareninhalt)-20s'
                                 + '%(zeichennr)-20s%(sendungskilo)05d00000%(foo)-62s'),
-                          'H':  '002%(barcode)-35s%(foo)35s%(foo)35s%(foo)16s',
+                          'H': '002%(barcode)-35s%(foo)35s%(foo)35s%(foo)16s',
                           'I': (u'%(sendungsnummer)-16s%(sendungskilo)05d0000000000%(ladedm)03d    '
                                 + '%(frankatur)-2s%(frankatur)-2s  %(foo)30s  %(foo)30s%(foo)16s  '),
                           'L': (u'%(sendungen)05d%(packstuecke)05d%(bruttogewicht)05d'
@@ -392,20 +397,20 @@ class Bordero(object):
                           'T': (u'%(textschluessel1)02s%(hinweistext1)-30s'
                                 + '%(textschluessel2)02s%(hinweistext2)-30s'
                                 + '%(textschluessel3)02s%(hinweistext3)-30s%(foo)28s'),
-                          'J':  u'%(zusatztext1)-62s%(zusatztext2)-62s',
+                          'J': u'%(zusatztext1)-62s%(zusatztext2)-62s',
                           }
     
     def add_lieferung(self, lieferung):
         """Adds a lieferung to our Bordero."""
         if self.generated_output:
-            raise RuntimeError, 'tried to  add data to an already exported Bordero.'
+            raise RuntimeError('tried to  add data to an already exported Bordero.')
         self.lieferungen.append(lieferung)
     
     def generate_satz(self, satzart, data):
         """Helper function to generate output for a Record."""
         ret = (u'%s%03d' % (satzart, self.satznummer)) + (self.satzarten[satzart] % data)
         if len(ret) != 128:
-            raise RuntimeError, 'bordero Satz %r kaputt! (len=%r) %r %r' % (satzart, len(ret), ret, data)
+            raise RuntimeError('bordero Satz %r kaputt! (len=%r) %r %r' % (satzart, len(ret), ret, data))
         return ret
     
     def generate_kopfsatz_a(self, verladung=None):
@@ -450,7 +455,7 @@ class Bordero(object):
         """Generates bodero record E - second half of recipient."""
         data = {'strasse': _clip(35, lieferung.adresse), 'lkz': _clip(3, lieferung.land), 
         'plz': _clip(9, lieferung.plz), 'ort': _clip(35, lieferung.ort), 'kdnnr': lieferung.kundennummer,
-        'matchcode': _clip(10, (lieferung.name1 + lieferung.ort).replace(' ', '')),  'foo': ' '}
+        'matchcode': _clip(10, (lieferung.name1 + lieferung.ort).replace(' ', '')), 'foo': ' '}
         return self.generate_satz('E', data)
     
     def generate_sendungspossatz_f(self, lieferung):
@@ -462,7 +467,7 @@ class Bordero(object):
         'verpackungsart': _clip(2, 'FP'),
         'sendungskilo': int(lieferung.get_gewicht()/1000),
         'wareninhalt': _clip(20, 'HUDORA Sportartikel'),
-        'zeichennr': _clip( 20, '%s/%s' % (lieferung.lieferscheinnummer, lieferung.id)),
+        'zeichennr': _clip(20, '%s/%s' % (lieferung.lieferscheinnummer, lieferung.id)),
         'foo': ''}
         return self.generate_satz('F', data)
         
@@ -505,7 +510,7 @@ class Bordero(object):
                     'foo': ' '}
             if len(satz) > 1:
                 data['textschluessel2'] = '%02d' % int(satz[1][0])
-                data['hinweistext2']    = _clip(30, satz[1][1])
+                data['hinweistext2'] = _clip(30, satz[1][1])
             ret.append(self.generate_satz('T', data))
         return '\n'.join(ret)
     
@@ -519,7 +524,7 @@ class Bordero(object):
         if lieferung.fixtermin:
             # 15 = Fixtermin! Nicht früher oder später - am: ... (Zusatztext)* 
             datum = lieferung.fixtermin.strftime('%d%m%Y')
-            zeit  = lieferung.fixtermin.strftime('%H:%M')
+            zeit = lieferung.fixtermin.strftime('%H:%M')
             if zeit == '00:00':
                 zeit = '     '
             timestamp = '%8s %5s' % (datum, zeit) 
@@ -599,7 +604,6 @@ class Bordero(object):
         return self.generated_output
     
 
-
 def ship(verladung, empfangspartner='11515'):
     """Should be called when 'verladung' just left the building."""
     bordero = Bordero(empfangspartner)
@@ -620,6 +624,7 @@ def ship(verladung, empfangspartner='11515'):
         lieferung.save()
     verladung.ship()
     return bordero
+
 
 def ship_lieferungen(lieferungen, empfangspartner='11515'):
     """Should be called when 'lieferungen' just left the building."""

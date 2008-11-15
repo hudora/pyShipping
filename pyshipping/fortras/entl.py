@@ -10,7 +10,7 @@ You may consider this BSD licensed.
 import re
 import logging
 import datetime
-import unittest
+
 
 class Entladebericht(object):
     """Parses and represent an ENTL message."""
@@ -18,8 +18,7 @@ class Entladebericht(object):
                    + r'(?P<eingangsdatum>[0-9 ]{8})(?P<eingangszeit>[0-9 ]{4})(?P<zeitschranfenstatus>..)'
                    + r'(?P<entladebeginn_datum>[0-9 ]{8})(?P<entladebeginn_zeit>[0-9 ]{4})'
                    + r'(?P<entladeende_datum>[0-9 ]{8})(?P<entladeende_zeit>[0-9 ]{4})'
-                   + r'(?P<entladehinweis>.{30})             (?P<foo>.{9})5'
-                   )
+                   + r'(?P<entladehinweis>.{30})             (?P<foo>.{9})5')
     m_record_re = re.compile(m_record_re)
     # Satzart ‘M’ muss 1 001 - 001 
     # Bordero-Nr.Versandpartner muss          18 002 - 019 
@@ -159,32 +158,30 @@ class Entladebericht(object):
                 info.append(str(datadict['timestamp']))
             log = huLOG.models.PackstueckLogentry(packstueck=packstueck)
             log.displaytext = ', '.join(info)
-            log.sourcedata  = repr(datadict)
-            log.source      = 'Maeuler ENTL'
-            log.code        = '200'
-            log.timestamp   = datadict['timestamp']
+            log.sourcedata = repr(datadict)
+            log.source = 'Maeuler ENTL'
+            log.code = '200'
+            log.timestamp = datadict['timestamp']
             log.save()
         elif datadict['hinweiscode'] in ['50']:
             info.insert(0, 'Fehlte bei der Entladung')
             log = huLOG.models.PackstueckLogentry(packstueck=packstueck)
             log.displaytext = ', '.join(info)
-            log.sourcedata  = repr(datadict)
-            log.source      = 'Maeuler ENTL'
-            log.code        = '500'
-            log.timestamp   = datadict['timestamp']
+            log.sourcedata = repr(datadict)
+            log.source = 'Maeuler ENTL'
+            log.code = '500'
+            log.timestamp = datadict['timestamp']
             log.save()
-
         else:
             logging.error('unknown ENTL data: %r (%r)' % (datadict['hinweiscode'], 
                                                           datadict['hinweistext']))
-
-
+        
     def parse(self, data):
         """Parses Fortras ENTL data."""
         lines = data.split('\n')
         lines = [x.strip('\r') for x in lines]
         if not lines[0].startswith('@@PHENTL128 0128003500107 MAEULER HUDORA1                       '):
-            raise RuntimeError, "illegal status data %r" % data [:300]
+            raise RuntimeError("illegal status data %r" % data[:300])
         for line in lines[1:]:
             if not line:
                 continue
@@ -215,14 +212,3 @@ class Entladebericht(object):
                 pass # wee happyly ignore W records 
             else:
                 print "unknown %r" % line
-
-
-class entlTests(unittest.TestCase):
-    def test_vsatz(self):
-        parser = Entladebericht()
-        line = 'V461               720-00             00340498430009431112               0                          19092008183100              '
-        match = re.search(Entladebericht.v_record_re, line)
-        self.assertEqual(match.groupdict(), {'sendungsnrversender': '720-00          ', 'hinweistext': '                        ', 'barcodetype': '   ', 'terminal': '    ', 'nve': '00340498430009431112               ', 'hinweiscode': '0  ', 'time': '1831', 'date': '19092008', 'borderonr': '461               ', 'benutzer': '00        '})
-
-if __name__ == '__main__':
-    unittest.main()

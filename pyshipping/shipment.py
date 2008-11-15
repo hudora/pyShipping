@@ -8,15 +8,19 @@ Created by Maximillian Dornseif on 2007-07-11. Based on code from 2007-04-17.
 Copyright (c) 2007 HUDORA GmbH. All rights reserved.
 """
 
-import unittest, math
+import unittest
+import math
+
 
 class AbstractPackstueck(object):
     """Definiert ein Packstück, d.h. eine Versandeinheit. In der Regel eine Palette oder ein Karton"""
     pass
 
+
 class AbstractItem(object):
     """Definiert ein Sendungsposition. In der Regel definiert als Artikel und Menge."""
     # Kann in der Theorie aus mehreren Packstücken bestehen, das ist aber noch nicht implementeirt.
+    
     def __init__(self):
         # Wir gehen davon aus, dass folgende Attribute von ausserhalb oder von abgeleiteten Klassen
         # definiert wird:
@@ -190,8 +194,8 @@ class AbstractLieferung(object):
     def export_karton_gewichte(self):
         """Returns the weights of the estimated number of packages which will be shipped in gramms."""
         ret = []
-        for x in self.itemlist:
-            ret.extend(x.export_karton_gewichte)
+        for box in self.itemlist:
+            ret.extend(box.export_karton_gewichte)
         return ret
     
     @property
@@ -205,7 +209,10 @@ class AbstractLieferung(object):
 
 
 class simpleTests(unittest.TestCase):
+    """Very basic testing functionality."""
+    
     def test_stupid(self):
+        """Basic plausibility tests."""
         aitem = AbstractItem()
         aitem.menge = 12
         aitem.einzelgewicht = 3333

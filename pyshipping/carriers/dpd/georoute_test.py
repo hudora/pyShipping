@@ -3,10 +3,16 @@
 
 """Test routing resolver for DPD. Coded by jmv"""
 
-import os, os.path, logging, sqlite3, time, unittest
-from georoute import *
+import os.path
+import logging
+import sqlite3
+import time
+import unittest
+from pyshipping.carriers.dpd.georoute import *
+
 
 class RouteDataTest(unittest.TestCase):
+    
     def setUp(self):
         self.data = RouteData()
         self.db = self.data.db
@@ -22,7 +28,7 @@ class RouteDataTest(unittest.TestCase):
 
     def test_read_depots(self):
         c = self.db.cursor()
-        c.execute("""SELECT * FROM depots WHERE DepotNumber=?""", ('0015',))
+        c.execute("""SELECT * FROM depots WHERE DepotNumber=?""", ('0015', ))
         rows = c.fetchall()
         self.assertEqual(1, len(rows))
         self.assertEqual(('0015', '', 'EDED,EFDX', 'Betriebsgesellschaft DPD Deutscher',
@@ -38,7 +44,7 @@ class RouteDataTest(unittest.TestCase):
         rows = c.fetchall()
         self.assertEqual(1, len(rows))
         route = rows[0][0]
-        c.execute("SELECT depot FROM routedepots WHERE route=?", (route,))
+        c.execute("SELECT depot FROM routedepots WHERE route=?", (route, ))
         rows = c.fetchall()
         self.assertEqual(1, len(rows))
 
@@ -66,6 +72,7 @@ class RouteDataTest(unittest.TestCase):
 
 
 class RouterTest(unittest.TestCase):
+    
     def setUp(self):
         self.data = RouteData()
         self.router = Router(self.data)
@@ -271,7 +278,6 @@ class RouterTest(unittest.TestCase):
         self.assertEqual(route.routingdata(), {'d_depot': u'0617', 'serviceinfo': u'', 'country': u'CH',
                                                'd_sort': u'', 'o_sort': u'78', 'service_text': u'D'})
 
-
     def test_incorrectCountry(self):
         parcel = Parcel('0142', '101', 'URG', None, '42477')
         self.assertRaises(CountryError, self.router.route, parcel)
@@ -286,11 +292,12 @@ class RouterTest(unittest.TestCase):
 
     def test_select_routes(self):
         self.router.conditions = ['1=1']
-        rows = self.router.select_routes('DestinationCountry=?', ('UZ',))
+        rows = self.router.select_routes('DestinationCountry=?', ('UZ', ))
         self.assert_(len(rows) > 0)
     
 
 class HighLevelTest(unittest.TestCase):
+    
     def test_find_route(self):
         self.assertEqual(vars(find_route('0142', '101', 'LI', '8440')),
             {'service_mark': u'', 'o_sort': u'78', 'serviceinfo': u'', 'barcode_id': u'37',
@@ -309,7 +316,7 @@ class HighLevelTest(unittest.TestCase):
              'postcode': u'8440', 'd_depot': u'0617', 'service_text': u'D'})
     
     def test_get_route(self):
-        # TODO: dix test, test get_route
+        # TODO: test get_route
         self.assertEqual(vars(get_route('DE', '42897')),
             {'service_mark': u'', 'o_sort': u'42', 'serviceinfo': u'', 'barcode_id': u'37', 
              'grouping_priority': u'', 'country': u'DE', 'countrynum': u'276', 
@@ -335,6 +342,7 @@ if __name__ == '__main__':
     stamp = time.time()
     router.route(Destination('AT', '4240', 'Freistadt Österreich')).routingdata()
     end = time.time()
-    print "took %.3fs to find a single route (including %.3fs initialisation overhead)" % (end-start, stamp-start)
+    # print ("took %.3fs to find a single route (including %.3fs initialisation overhead)"
+    #        % (end-start, stamp-start))
     
     unittest.main()

@@ -7,7 +7,9 @@ Created by Maximillian Dornseif on 2006-12-02.
 You might consider this BSD-Licensed.
 """
 
-import doctest, unittest
+import doctest
+import unittest
+
 
 class PackageSize(object):
     """PackageSize objects capture the spartial properties of a Package."""
@@ -101,6 +103,7 @@ class Package:
 
 ### Tests
 
+
 class PackageSizeTests(unittest.TestCase):
     """Simple tests for PackageSize objects."""
     
@@ -138,4 +141,3 @@ class PackageSizeTests(unittest.TestCase):
 if __name__ == '__main__':
     doctest.testmod()
     unittest.main()
-    

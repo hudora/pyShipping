@@ -61,7 +61,7 @@ class Entladebericht(object):
     # Text/Hinweis 2 kann          29 100 - 128 
     
     # no match 'V461               720-00             00340498430009431112               0                          19092008183100              '
-    v_record_re = (r'V(?P<borderonr>[0-9 ]{18})(?P<sendungsnrversender>[0-9 -]{16})(?P<barcodetype>...)'
+    v_record_re = (r'V(?P<borderonr>[0-9 ]{18})(?P<sendungsnrversender>.{16})(?P<barcodetype>...)'
                    + r'(?P<nve>.{35})(?P<hinweiscode>...)(?P<hinweistext>.{24})'
                    + r'(?P<date>[0-9 ]{8})(?P<time>[0-9 ]{4})'
                    + r'(?P<benutzer>.{10})(?P<terminal>.{4})')
@@ -205,7 +205,7 @@ class Entladebericht(object):
                 newdict['timestamp'] = datetime.datetime(int(newdict['date'][4:]), int(newdict['date'][2:4]), 
                                                          int(newdict['date'][:2]), int(newdict['time'][:2]), 
                                                          int(newdict['time'][2:]))
-                newdict['sendungsnrversender'] = int(newdict['sendungsnrversender'])
+                newdict['sendungsnrversender'] = newdict['sendungsnrversender']
                 self.update_packstueck(newdict['nve'], newdict)
 
             elif line[0] == 'W':

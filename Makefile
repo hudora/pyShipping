@@ -9,7 +9,7 @@ test:
 	python pyshipping/shipment.py 
 	python pyshipping/package.py 
 	python pyshipping/carriers/dpd/georoute_test.py
-	python pyshipping/fortras/test.py 
+	PYTHONPATH=. python pyshipping/fortras/test.py 
 
 upload: build doc
 	python setup.py sdist bdist_egg

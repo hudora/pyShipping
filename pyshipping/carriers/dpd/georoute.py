@@ -67,7 +67,7 @@ class Parcel(object):
     
     def __init__(self, depot='142', service='101', country='DE', city=None, postcode=None):
         import warnings
-        warnings.warn("georoute.find_route() is deprecated", DeprecationWarning, stacklevel=2)
+        warnings.warn("Parcel() is deprecated", DeprecationWarning, stacklevel=2)
         
         self.service = service
         self.country = country
@@ -364,7 +364,7 @@ class RouteData(object):
     def get_servicetext(self, servicecode):
         """Return service info to be printed on label."""
         if not servicecode in self.serviceinfo:
-            return None
+            return ''
         return self.serviceinfo[servicecode]
     
     def translate_location(self, city, country):
@@ -601,6 +601,8 @@ def get_route(country=None, postcode=None, city=None, servicecode='101'):
 
 
 def find_route(depot, servicecode, land, plz):
+    """Legacy method - to be removed."""
+    
     import warnings
     warnings.warn("georoute.find_route() is deprecated", DeprecationWarning, stacklevel=2)
                 

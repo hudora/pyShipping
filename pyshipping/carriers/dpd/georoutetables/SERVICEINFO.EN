@@ -1,235 +1,79 @@
 #Filename: SERVICEINFO.EN
-#Version: 20070102
-#Expiration: 20070501
-#Hash: 378f6aa9b90d519e2aeaccfdc6fdd1b4a610780e
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20070102.txt
+#Version: 20080901
+#Expiration: 20090104
+#Hash: 7874753079be479d3cabe653943ac402c7caaaae
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20080901.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
-101||
 102|hazardous goods|
 103|saturday|
-104||
 105|ex works|
 106|ex works / hazardous goods|
-107||
-108||
 109|C.O.D.|
 110|C.O.D. / hazardous goods|
-111||
-112||
 113|exchange|
-114||
-115||
-116||
-117||
-118||
-119||
-120||
 121|hazardous goods|
-122||
-123||
 124|ex works|
 125|ex works / hazardous goods|
-126||
-127||
 128|C.O.D.|
 129|C.O.D. / hazardous goods|
-130||
-131||
 132|exchange|
-133||
-134||
-135||
-136||
 137|saturday|
 138|ex works|
-139||
 140|C.O.D.|
-141||
 142|exchange|
-143||
-144||
-145||
-146||
-147||
 148|ex works|
-149||
 150|C.O.D.|
-151||
 152|exchange|
-153||
 154|DPD PARCELLetter|
 155|DPD GUARANTEE|
-156||
-157||
 158|DPD GUARANTEE ex works|
-159||
-160||
 161|DPD GUARANTEE C.O.D.|
-162||
-163||
-164||
-165||
-166||
-167||
+164|DPD GUARANTEE exchange|
 168|DPD GUARANTEE|
-169||
-170||
 171|DPD GUARANTEE ex works|
-172||
-173||
 174|DPD GUARANTEE C.O.D.|
-175||
-176||
-177||
-178||
-179|DPD EXPRESS10|
-180||
-181||
-182||
-183||
-184||
-185|DPD EXPRESS10 ex works|
-186||
-187||
-188||
-189||
-190||
-191|DPD EXPRESS10 C.O.D.|
-192||
-193||
-194||
-195||
-196||
-197||
-198||
-199||
-200||
-201||
-202||
-203|DPD EXPRESS10|
-204||
-205||
-206||
-207||
-208||
-209|DPD EXPRESS10 ex works|
-210||
-211||
-212||
-213||
-214||
-215|DPD EXPRESS10 C.O.D.|
-216||
-217||
-218||
-219||
-220||
-221||
-222||
-223||
-224||
-225|DPD EXPRESS12|
-226||
-227||
-228|DPD EXPRESS12 saturday|
-229||
-230||
-231|DPD EXPRESS12 ex works|
-232||
-233||
-234|DPD EXPRESS12 saturday / ex works|
-235||
-236||
-237|DPD EXPRESS12 C.O.D.|
-238||
-239||
-240|DPD EXPRESS12 saturday / C.O.D.|
-241||
-242||
-243||
-244||
-245||
-246||
-247||
-248||
-249|DPD EXPRESS12|
-250||
-251||
-252|DPD EXPRESS12 saturday|
-253||
-254||
-255|DPD EXPRESS12 ex works|
-256||
-257||
-258|DPD EXPRESS12 saturday / ex works|
-259||
-260||
-261|DPD EXPRESS12 C.O.D.|
-262||
-263||
-264|DPD EXPRESS12 saturday / C.O.D.|
-265||
-266||
-267||
-268||
-269||
-270||
+179|DPD 10:00|
+185|DPD 10:00 ex works|
+191|DPD 10:00 C.O.D.|
+197|DPD 10:00 exchange|
+203|DPD 10:00|
+209|DPD 10:00 ex works|
+215|DPD 10:00 C.O.D.|
+225|DPD 12:00|
+228|DPD 12:00 saturday|
+231|DPD 12:00 ex works|
+234|DPD 12:00 saturday / ex works|
+237|DPD 12:00 C.O.D.|
+240|DPD 12:00 saturday / C.O.D.|
+243|DPD 12:00 exchange|
+249|DPD 12:00|
+252|DPD 12:00 saturday|
+255|DPD 12:00 ex works|
+258|DPD 12:00 saturday / ex works|
+261|DPD 12:00 C.O.D.|
+264|DPD 12:00 saturday / C.O.D.|
 271|same day|
-272||
-273||
-274||
-275||
-276||
-277||
-278||
-279||
-280||
-281||
-282||
-283||
-284||
-285||
-286||
-287||
-288||
-289||
-290||
-291||
-292||
-293||
 294|DPD International Mail|
-298||
-299||
-300||
-301||
-302|DPD EXPRESSInternational|
-303||
-304||
-305||
-306||
-307||
-308||
-309||
-310||
-311||
-312||
-313||
-314||
-350|DPD EXPRESS8:30|
-351|DPD EXPRESS8:30 ex works|
-352|DPD EXPRESS8:30 C.O.D.|
-353|DPD EXPRESS8:30 exchange|
-354|DPD EXPRESS8:30|
-355|DPD EXPRESS8:30|
-356|DPD EXPRESS8:30 ex works|
-357|DPD EXPRESS8:30 C.O.D.|
-358|DPD EXPRESS8:30 exchange|
-810||
-811||
-812||
-813||
-814||
-815||
-816||
-817||
+302|DPD EXPRESS|
+325|EXPRESS ECONOMY|
+326|EXPRESS ECONOMY|
+350|DPD 8:30|
+351|DPD 8:30 ex works|
+352|DPD 8:30 C.O.D.|
+353|DPD 8:30 exchange|
+354|DPD 8:30|
+355|DPD 8:30|
+356|DPD 8:30 ex works|
+357|DPD 8:30 C.O.D.|
+358|DPD 8:30 exchange|
+840|1 day transit time|
+841|2 days transit time|
+842|3 days transit time|
+843|4 days transit time|
+844|5 days transit time|
+845|1 day transit time / C.O.D.|
+846|2 days transit time / C.O.D.|
+847|3 days transit time / C.O.D.|
+848|4 days transit time / C.O.D.|
+849|5 days transit time / C.O.D.|

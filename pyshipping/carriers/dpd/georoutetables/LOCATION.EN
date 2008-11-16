@@ -1,9 +1,15 @@
 #Filename: LOCATION.EN
-#Version: 20070102
-#Expiration: 20070501
-#Hash: 6f7eff135d73b9bf60bc6d9c983313d8811fbcb2
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20070102.txt
+#Version: 20080901
+#Expiration: 20090104
+#Hash: 901b822fde49c5bdcd13586f9acc7b9cb2010b0a
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20080901.txt
 #Fields: AreaName|CityName|ISO-Alpha2CountryCode|PostCode|
 #Key: AreaName|CityName|
+|Dubai|AE|1|
 |Dublin|IE|1|
+|Abu Dhabi|AE|2|
+|Abu Dhabi - Faktura|AE|4|
 |Ireland excluding Dublin|IE|2|
+|VAE  excluding Dubai + Abu Dhabi|AE|3|
+|VAE (ex Dubai, Abu Dhabi)  Faktura|AE|6|
+|VAE (excl.Dubai, Abu Dhabi) Faktura|AE|5|

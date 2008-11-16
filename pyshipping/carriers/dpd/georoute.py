@@ -9,6 +9,7 @@ Copyright 2006, 2007 HUDORA GmbH. Published under a BSD License.
 
 import os
 import os.path
+import gzip
 import logging
 import sqlite3
 
@@ -137,7 +138,11 @@ Service Text: %s""" % (self.country, self.d_depot, self.o_sort, self.d_sort,
 
 def _readfile(filename):
     """Read file line-by-line skipping comments."""
-    for line in file(filename):
+    if os.path.exists(filename + '.gz'):
+        fhandle = gzip.GzipFile(filename + '.gz')
+    else:
+        fhandle = file(filename)
+    for line in fhandle:
         line = line.strip().decode('latin1')
         if line.startswith('#'):
             continue

@@ -153,9 +153,7 @@ class RouteData(object):
     """More convenient representation of the georoute data."""
     
     def __init__(self, routingdepot='0142'):
-        """@param path path to the georoute tables
-           @param routingdepot the depot from where you are sending
-        """
+        """Routingdepot the depot from where you are sending."""
         self.routingdepot = routingdepot
         self.routingdepotgroups = ''
         self.routingdepotcountry = ''
@@ -609,7 +607,8 @@ def find_route(depot, servicecode, land, plz):
     """Legacy method - to be removed."""
     
     import warnings
-    warnings.warn("georoute.find_route() is deprecated", DeprecationWarning, stacklevel=2)
+    warnings.warn("georoute.find_route() is deprecated use get_route() instead",
+                  DeprecationWarning, stacklevel=2)
                 
     if unicode(depot) != '0142':
         raise RuntimeError("wrong depot")

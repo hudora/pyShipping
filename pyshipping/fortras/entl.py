@@ -179,22 +179,22 @@ class Entladebericht(object):
     def parse(self, data):
         """Parses Fortras ENTL data."""
         lines = data.split('\n')
-        lines = [x.strip('\r') for x in lines]
         if not lines[0].startswith('@@PHENTL128 0128003500107 MAEULER HUDORA1                       '):
             raise RuntimeError("illegal status data %r" % data[:300])
         for line in lines[1:]:
+            line = line.strip(\r)
             if not line:
                 continue
             if line[0] == 'M':
                 match = re.search(Entladebericht.m_record_re, line)
-                newdict = {}
                 if not match:
                     print 'no match', repr(line)
+                # the content of M records are ignored
             elif line[0] == 'N':
                 match = re.search(Entladebericht.n_record_re, line)
-                newdict = {}
                 if not match:
                     print 'no match', repr(line)
+                # the content of N records are ignored
             elif line[0] == 'V':
                 match = re.search(Entladebericht.v_record_re, line)
                 newdict = {}
@@ -209,6 +209,6 @@ class Entladebericht(object):
                 self.update_packstueck(newdict['nve'], newdict)
 
             elif line[0] == 'W':
-                pass # wee happyly ignore W records 
+                pass # we happyly ignore W records 
             else:
                 print "unknown %r" % line

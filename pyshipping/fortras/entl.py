@@ -182,7 +182,7 @@ class Entladebericht(object):
         if not lines[0].startswith('@@PHENTL128 0128003500107 MAEULER HUDORA1                       '):
             raise RuntimeError("illegal status data %r" % data[:300])
         for line in lines[1:]:
-            line = line.strip(\r)
+            line = line.strip('\r')
             if not line:
                 continue
             if line[0] == 'M':

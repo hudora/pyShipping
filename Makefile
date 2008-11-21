@@ -6,6 +6,7 @@ build:
 	python setup.py build
 
 test:
+	python pyshipping/__init__.py # find import errors
 	python pyshipping/shipment.py 
 	python pyshipping/package.py 
 	python pyshipping/carriers/dpd/georoute_test.py

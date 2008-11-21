@@ -20,7 +20,8 @@ setup(name='pyShipping',
       # download_url
       zip_safe=False,
       packages=find_packages(),
-      # install_requires = ['huTools', 'hudjango>0.74', 'pyExcelerator>=0.6.0a'], # , 'pyShipping'],
-      # dependency_links = ['http://cybernetics.hudora.biz/dist/'],
+      package_data={'': ['pyshipping/carriers/dpd/georoutetables/*.gz']},
+      # install_requires = ['huLOG'],
+      dependency_links = ['http://cybernetics.hudora.biz/dist/', 'http://cybernetics.hudora.biz/nonpublic'],
 )
 

@@ -40,7 +40,7 @@ class PackageSize(object):
         """
         return self.heigth * self.width * self.length
     volume = property(_get_volume)
-        
+    
     def _get_gurtmass(self):
         """'gurtamss' is the circumference of the girth plus the length - which is often used to
             calculate shipping costs.
@@ -69,8 +69,24 @@ class PackageSize(object):
         
         return (self.heigth == other.heigth and self.width == other.width and self.length == other.length)
     
-    def __unicode__(self):
-        return u"%dx%dx%d" % (self.heigth, self.width, self.length)
+    def __mul__(self, multiplicand):
+        """PackageSize can be multiplied with an integer. This results in the PackageSize beeing
+           stacked along the biggest side.
+           
+           >>> PackageSize((400,300,600)) * 2
+           <PackageSize 400x600x600>
+           """
+        dimensions = [self.heigth, self.width, self.length]
+        mindimension = min(dimensions)
+        if mindimension == self.heigth:
+            return PackageSize((self.heigth*multiplicand, self.width, self.length))
+        elif mindimension == self.width:
+            return PackageSize((self.heigth, self.width*multiplicand, self.length))
+        elif mindimension == self.length:
+            return PackageSize((self.heigth, self.width, self.length*multiplicand))
+    
+    def __str__(self):
+        return "%dx%dx%d" % (self.heigth, self.width, self.length)
     
     def __repr__(self):
         return "<PackageSize %dx%dx%d>" % (self.heigth, self.width, self.length)
@@ -91,8 +107,11 @@ class Package:
         
         if size:
             self.size = PackageSize(size)
+            
+    def __mul__(self, multiplicand):
+        return Package(str(self.size*multiplicand), self.weight*multiplicand)
     
-    def __unicode__(self):
+    def __str__(self):
         ret = ['Package']
         if self.size:
             ret.append(unicode(self.size))
@@ -124,9 +143,9 @@ class PackageSizeTests(unittest.TestCase):
     
     def test_str(self):
         """Test __unicode__ implementation."""
-        self.assertEqual('100x200x200', PackageSize((100, 200, 200)).__unicode__())
-        self.assertEqual('100x200x200', PackageSize('100x200x200').__unicode__())
-
+        self.assertEqual('100x200x200', PackageSize((100, 200, 200)).__str__())
+        self.assertEqual('100x200x200', PackageSize('100x200x200').__str__())
+    
     def test_repr(self):
         """Test __repr__ implementation."""
         self.assertEqual('<PackageSize 100x200x200>', PackageSize((100, 200, 200)).__repr__())
@@ -137,7 +156,24 @@ class PackageSizeTests(unittest.TestCase):
         self.assertEqual(900, PackageSize((100, 200, 300)).gurtmass)
         self.assertEqual(1000, PackageSize((200, 200, 200)).gurtmass)
         self.assertEqual(3060, PackageSize((1600, 250, 480)).gurtmass)
+    
+    def test_mul(self):
+        """Test multiplication."""
+        self.assertEqual(PackageSize((200, 200, 200)), PackageSize((100, 200, 200))*2)
+    
 
 if __name__ == '__main__':
+    
+    factor = 0
+    while True:
+        factor += 1
+        single = Package((750, 240, 220), 7400)
+        multi = single * factor
+        if multi.weight > 31000 or multi.size.gurtmass > 3000:
+            multi = single * (factor - 1)
+            print factor - 1, multi, multi.size.gurtmass
+            break
+            
+            
     doctest.testmod()
     unittest.main()

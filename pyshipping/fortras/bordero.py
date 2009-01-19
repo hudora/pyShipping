@@ -465,7 +465,7 @@ class Bordero(object):
         # Tatsächliches Gewicht einpflegen
         data = {'anzahlpackstuecke': len(lieferung.packstuecke),
         'verpackungsart': _clip(2, 'FP'),
-        'sendungskilo': int(lieferung.get_gewicht()/1000),
+        'sendungskilo': int(lieferung.gewicht/1000),
         'wareninhalt': _clip(20, 'HUDORA Sportartikel'),
         'zeichennr': _clip(20, '%s/%s' % (lieferung.lieferscheinnummer, lieferung.id)),
         'foo': ''}
@@ -487,7 +487,7 @@ class Bordero(object):
         'ladedm': 0,
         'frankatur': '02', # frei Haus
         'foo': ' '}
-        data['sendungskilo'] = int(lieferung.get_gewicht()/1000)
+        data['sendungskilo'] = int(lieferung.gewicht/1000)
         return self.generate_satz('I', data)
     
     def generate_textsatz_t(self, lieferung, schluesselliste):
@@ -561,7 +561,7 @@ class Bordero(object):
         # Was bei CHEP / Düsseldorfer Paletten = speditereigenebehaelter
         # clearing kennzeichen?
         data = {'sendungen': len(self.lieferungen),
-            'bruttogewicht': int(sum([lieferung.get_gewicht() for lieferung in self.lieferungen])/1000),
+            'bruttogewicht': int(sum([lieferung.gewicht for lieferung in self.lieferungen])/1000),
             'kostensteuerplichtig': 0,
             'kostensteuerfrei': 0,
             'kostenzoll': 0,

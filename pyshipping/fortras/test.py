@@ -54,8 +54,9 @@ class TestLieferung:
         self.id = _nvecount
         _nvecount += 1
         
-    def get_gewicht(self):
+    def _get_gewicht(self):
         return sum([packstueck.gewicht for packstueck in self.packstuecke])
+    gewicht = property(_get_gewicht)
     
 
 class BorderoTests(unittest.TestCase):

@@ -20,7 +20,7 @@ class RouteDataTest(unittest.TestCase):
         self.db = self.data.db
 
     def test_version(self):
-        self.assertEqual(self.data.version, '20080901')
+        self.assertEqual(self.data.version, '20090504')
 
     def test_get_country(self):
         self.assertRaises(CountryError, self.data.get_countrynum, 'URW')
@@ -462,34 +462,34 @@ class HighLevelTest(unittest.TestCase):
         self.assertEqual(vars(get_route('DE', '42897')),
             {'service_mark': u'', 'o_sort': u'42', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'DE', 'countrynum': u'276',
-             'routingtable_version': u'20080901', 'iata_code': u'', 'd_sort': u'15',
+             'routingtable_version': u'20090504', 'iata_code': u'', 'd_sort': u'15',
 
              'postcode': u'42897', 'd_depot': u'0142', 'service_text': u'D'})
         self.assertEqual(vars(get_route('DE', '42897', 'Remscheid')),
             {'service_mark': u'', 'o_sort': u'42', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'DE', 'countrynum': u'276',
-             'routingtable_version': u'20080901', 'iata_code': u'', 'd_sort': u'15',
+             'routingtable_version': u'20090504', 'iata_code': u'', 'd_sort': u'15',
              'postcode': u'42897', 'd_depot': u'0142', 'service_text': u'D'})
         self.assertEqual(vars(get_route('DE', '42897', 'Remscheid', '101')),
             {'service_mark': u'', 'o_sort': u'42', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'DE', 'countrynum': u'276',
-             'routingtable_version': u'20080901', 'iata_code': u'', 'd_sort': u'15',
+             'routingtable_version': u'20090504', 'iata_code': u'', 'd_sort': u'15',
              'postcode': u'42897', 'd_depot': u'0142', 'service_text': u'D'})
 
         self.assertEqual(vars(get_route('LI', '8440')),
             {'service_mark': u'', 'o_sort': u'78', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'CH', 'countrynum': u'756',
-             'routingtable_version': u'20080901', 'iata_code': u'', 'd_sort': u'',
+             'routingtable_version': u'20090504', 'iata_code': u'', 'd_sort': u'',
              'postcode': u'8440', 'd_depot': u'0617', 'service_text': u'D'})
         self.assertEqual(vars(get_route(u'LI', '8440')),
             {'service_mark': u'', 'o_sort': u'78', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'CH', 'countrynum': u'756',
-             'routingtable_version': u'20080901', 'iata_code': u'', 'd_sort': u'',
+             'routingtable_version': u'20090504', 'iata_code': u'', 'd_sort': u'',
              'postcode': u'8440', 'd_depot': u'0617', 'service_text': u'D'})
         self.assertEqual(vars(get_route(u'LI', u'8440')),
             {'service_mark': u'', 'o_sort': u'78', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'CH', 'countrynum': u'756',
-             'routingtable_version': u'20080901', 'iata_code': u'', 'd_sort': u'',
+             'routingtable_version': u'20090504', 'iata_code': u'', 'd_sort': u'',
              'postcode': u'8440', 'd_depot': u'0617', 'service_text': u'D'})
 
     def test_cache(self):

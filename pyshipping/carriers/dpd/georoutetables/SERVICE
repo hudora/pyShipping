@@ -1,8 +1,8 @@
 #Filename: SERVICE
-#Version: 20080901
-#Expiration: 20090104
-#Hash: d91c7306de2c2f3c5ea7b6f41167319114d6c467
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20080901.txt
+#Version: 20090504
+#Expiration: 20090906
+#Hash: 89e456b802cba2cc7d3727314b944b1427e04dc0
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20090504.txt
 #Fields: ServiceCode|ServiceText|ServiceMark|ServiceElements|
 #Key: ServiceCode|
 101|D||001|
@@ -223,6 +223,8 @@
 329|D-COD-B2C||001,013,100|
 330|D-COD-B2C|X|002,013,100|
 331|D-TYRES||001,014|
+332|RETURN||072|
+340|DPD MAX||090|
 350|AM0||021|
 351|AM0-EXW||021,110|
 352|AM0-COD||021,100|

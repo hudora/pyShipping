@@ -425,10 +425,10 @@ class Bordero(object):
             satz = huLOG.models.BORDnr()
             satz.save()
             self.borderonr = satz.id
-        data = {'empfangspartner': self.empfangspartner, 'frachtfuehrer': 'Maeuler', 'plz': '42897', 'ort': 'Remscheid', 
-                'versandweg': 'L', 'foo': '',
-        'datum': time.strftime('%d%m%Y'),
-        'borderonr': self.borderonr}
+        data = {'empfangspartner': self.empfangspartner, 'frachtfuehrer': 'Maeuler', 'plz': '42897',
+                'ort': 'Remscheid',  'versandweg': 'L', 'foo': '',
+                'datum': time.strftime('%d%m%Y'),
+                'borderonr': self.borderonr}
         if verladung:
             if verladung.spedition == 'Direktfahrt':
                 data['versandweg'] = 'X'

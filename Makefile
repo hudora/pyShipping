@@ -1,3 +1,5 @@
+default: check test
+
 check: clean
 	find pyshipping -name '*.py'  -exec pep8 --ignore=E501,W291 --repeat {} \;
 	pylint pyshipping

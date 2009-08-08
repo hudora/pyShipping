@@ -11,7 +11,7 @@ from setuptools import setup, find_packages
 setup(name='pyShipping',
       maintainer='Maximillian Dornseif',
       maintainer_email='md@hudora.de',
-      version='1.2',
+      version='1.2p1',
       description='pyShipping - Shipping related Toolkit',
       long_description=long_description,
       classifiers=['License :: OSI Approved :: BSD License',

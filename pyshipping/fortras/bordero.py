@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-bordero.py - implements BORD messages. BORD is similar to IFTMIN in EDIFACT. Think of it as an work order 
+bordero.py - implements BORD messages. BORD is similar to IFTMIN in EDIFACT. Think of it as an work order
 to a freight forwarder.
 
-This implementation is specific for usage between HUDORA GmbH and Mäuler but could be used as the basis for a
-more generic implementation.
+This implementation is specific for usage between HUDORA GmbH and Mäuler but could be used as the basis for a more generic implementation.
 
 Created by Lars Ronge and Maximillian Dornseif on 2006-11-06.
 You may consider this BSD licensed.

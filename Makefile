@@ -1,8 +1,11 @@
-default: check test
+# setting the PATH seems only to work in GNUmake not in BSDmake
+PATH := ./testenv/bin:$(PATH)
 
-check: clean
-	find pyshipping -name '*.py'  -exec pep8 --ignore=E501,W291 --repeat {} \;
-	pylint pyshipping
+default: dependencies check test
+
+check:
+	find pyshipping -name '*.py' | xargs /usr/local/hudorakit/bin/hd_pep8
+	/usr/local/hudorakit/bin/hd_pylint pyshipping
 
 build:
 	python setup.py build
@@ -14,10 +17,17 @@ test:
 	python pyshipping/carriers/dpd/georoute_test.py
 	python pyshipping/fortras/test.py 
 
+
+dependencies:
+	virtualenv testenv
+	pip -q install -E testenv -r requirements.txt
+
 upload: build doc
 	python setup.py sdist bdist_egg
 	rsync -rvapP dist/* root@cybernetics.hudora.biz:/usr/local/www/data/nonpublic/eggs/
-	rsync -rvapP html root@cybernetics.hudora.biz:/usr/local/www/apache22/data/dist/pyShipping
+	rsync -rvapP dist/* root@cybernetics.hudora.biz:/usr/local/www/data/dist/pyShipping/
+	rsync -rvapP html root@cybernetics.hudora.biz:/usr/local/www/apache22/data/dist/pyShipping/
+	
 
 doc: build
 	rm -Rf html

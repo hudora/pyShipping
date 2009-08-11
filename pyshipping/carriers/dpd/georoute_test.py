@@ -178,7 +178,7 @@ class RouterTest(unittest.TestCase):
                                                'd_sort': u'S65', 'o_sort': '0016', 'service_text': 'D'})
         route = self.router.route(Destination('FR', '91044', 'Evry Cedex'))
         self.assertDicEq(route.routingdata(), {'d_depot': u'0408', 'serviceinfo': '', 'country': u'FR',
-                                               'd_sort': u'S61', 'o_sort': u'0050', 'service_text': u'D'} )
+                                               'd_sort': u'S61', 'o_sort': u'0050', 'service_text': u'D'})
 
     def test_difficult_routingdepots(self):
         route = self.router.route(Destination('AT', '3626', 'H<C3><BC>nibach'))
@@ -231,7 +231,7 @@ class RouterTest(unittest.TestCase):
                                                'd_sort': '65', 'd_depot': '0142', 'service_text': 'D'})
         route = self.router.route(Destination(postcode=' 42477'))
         self.assertDicEq(route.routingdata(), {'d_depot': u'0142', 'serviceinfo': '', 'country': u'DE',
-                                               'd_sort': u'65', 'o_sort': u'0042', 'service_text': u'D'} )
+                                               'd_sort': u'65', 'o_sort': u'0042', 'service_text': u'D'})
         route = self.router.route(Destination(postcode=' 42477 '))
         self.assertDicEq(route.routingdata(), {'d_depot': '0142', 'serviceinfo': '', 'country': 'DE',
                                                'd_sort': '65', 'o_sort': '0042', 'service_text': 'D'})
@@ -421,11 +421,6 @@ class RouterTest(unittest.TestCase):
         self.assertEqual(get_route('SK', '82105').routingdata(),
             {'d_depot': u'0661', 'serviceinfo': '', 'country': u'SK', 'd_sort': u'13', 'o_sort': u'0010',
              'service_text': u'D'})
-
-        # countries which still need testing:
-        # IE   |          | Nass, Co.Kildare / Rep. of Ireland
-        # PT   | 2645-060 | Alcabideche
-        # RO   | 31520    | -0 Curtici, jud.Arad
 
     def test_incorrectCountry(self):
         self.assertRaises(CountryError, get_route, 'URG', '42477')

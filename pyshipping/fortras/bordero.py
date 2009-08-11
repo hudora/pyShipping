@@ -18,7 +18,6 @@ import types
 #    """Decode utf-8 to latin1 (which is used by fortras)."""
 #    return data.decode('utf-8', 'replace').encode('latin-1', 'replace')
 
-
 def _clip(length, data):
     """Clip a string to a maximum length."""
     # I wonder if this can't be done with clever formatstring usage.
@@ -364,7 +363,6 @@ def _clip(length, data):
 # Zusatztext 1 muss 62 005 - 066 
 # Zusatztext 2 kann 62 067 - 128
 
-
 class Bordero(object):
     """Kapselt die Daten für ein Gefäß (LKW) - Verwendung ähnlich IFTSTAR."""
     
@@ -426,7 +424,7 @@ class Bordero(object):
             satz.save()
             self.borderonr = satz.id
         data = {'empfangspartner': self.empfangspartner, 'frachtfuehrer': 'Maeuler', 'plz': '42897',
-                'ort': 'Remscheid',  'versandweg': 'L', 'foo': '',
+                'ort': 'Remscheid', 'versandweg': 'L', 'foo': '',
                 'datum': time.strftime('%d%m%Y'),
                 'borderonr': self.borderonr}
         if verladung:

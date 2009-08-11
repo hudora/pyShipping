@@ -22,7 +22,7 @@ dependencies:
 	pip -q install -E testenv -r requirements.txt
 
 statistics:
-	sloccount --wide --details pyshipping setup.py | tee sloccount.sc
+	sloccount --wide --details pyshipping | tee sloccount.sc
 
 upload: build doc
 	python setup.py sdist bdist_egg

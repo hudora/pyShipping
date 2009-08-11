@@ -1,11 +1,11 @@
 # setting the PATH seems only to work in GNUmake not in BSDmake
 PATH := ./testenv/bin:$(PATH)
 
-default: dependencies check test
+default: dependencies check test statistics
 
 check:
 	find pyshipping -name '*.py' | xargs /usr/local/hudorakit/bin/hd_pep8
-	/usr/local/hudorakit/bin/hd_pylint pyshipping
+	/usr/local/hudorakit/bin/hd_pylint -f parseable pyshipping | tee pylint.out
 
 build:
 	python setup.py build
@@ -17,10 +17,12 @@ test:
 	PYTHONPATH=. python pyshipping/fortras/test.py 
 	PYTHONPATH=. python pyshipping/carriers/dpd/georoute_test.py
 
-
 dependencies:
 	virtualenv testenv
 	pip -q install -E testenv -r requirements.txt
+
+statistics:
+	sloccount --wide --details . | grep -v -E '(testenv|build|.svn)/' | tee sloccount.sc
 
 upload: build doc
 	python setup.py sdist bdist_egg
@@ -42,7 +44,7 @@ install: build
 	sudo python setup.py install
 
 clean:
-	rm -Rf build dist html test.db pyShipping.egg-info
+	rm -Rf testenv build dist html test.db pyShipping.egg-info pylint.out sloccount.sc pip-log.txt
 	find . -name '*.pyc' -or -name '*.pyo' -delete
 
 .PHONY: test build clean check upload doc install

@@ -122,7 +122,6 @@ class Package:
 
 ### Tests
 
-
 class PackageSizeTests(unittest.TestCase):
     """Simple tests for PackageSize objects."""
     

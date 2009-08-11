@@ -20,16 +20,15 @@ class AbstractPackstueck(object):
 class AbstractItem(object):
     """Definiert ein Sendungsposition. In der Regel definiert als Artikel und Menge."""
     # Kann in der Theorie aus mehreren Packstücken bestehen, das ist aber noch nicht implementeirt.
-    
     def __init__(self):
         # Wir gehen davon aus, dass folgende Attribute von ausserhalb oder von abgeleiteten Klassen
         # definiert wird:
-        self.menge = None
         #self.gewicht_pro_exportkarton = None
         #self.palettenfaktor = None
         #self.produkte_pro_exportkarton = None
         #self.einzelvolumen = None
         #self.einzelgewicht = None
+        self.menge = None
     
     def __unicode__(self):
         if hasattr(self, 'liefertermin') and hasattr(self, 'artnr'):
@@ -248,7 +247,6 @@ class simpleTests(unittest.TestCase):
         self.assertAlmostEqual(alieferung.paletten, 0.738095238095)
         # print alieferung.transportweg
         # print alieferung.fix
-
 
 if __name__ == '__main__':
     unittest.main()

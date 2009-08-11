@@ -65,7 +65,6 @@ class Parcel(object):
     """Parcel destination data."""
     
     # depreciated
-    
     def __init__(self, depot='142', service='101', country='DE', city=None, postcode=None):
         import warnings
         warnings.warn("Parcel() is deprecated", DeprecationWarning, stacklevel=2)
@@ -601,7 +600,6 @@ def get_route(country=None, postcode=None, city=None, servicecode='101'):
     
 
 # compability layer to old georoute code prior to huLOG revision 1710
-
 
 def find_route(depot, servicecode, land, plz):
     """Legacy method - to be removed."""

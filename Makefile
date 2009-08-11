@@ -22,7 +22,7 @@ dependencies:
 	pip -q install -E testenv -r requirements.txt
 
 statistics:
-	sloccount --wide --details . | grep -v -E '(testenv|build|.svn)/' | tee sloccount.sc
+	sloccount --wide --details . | grep -v -E '/(testenv|build|.svn|ez_setup.py)' | tee sloccount.sc
 
 upload: build doc
 	python setup.py sdist bdist_egg

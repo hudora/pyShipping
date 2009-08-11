@@ -11,11 +11,11 @@ build:
 	python setup.py build
 
 test:
-	python pyshipping/__init__.py # find import errors
-	python pyshipping/shipment.py 
-	python pyshipping/package.py 
-	python pyshipping/carriers/dpd/georoute_test.py
-	python pyshipping/fortras/test.py 
+	PYTHONPATH=. python pyshipping/__init__.py # find import errors
+	PYTHONPATH=. python pyshipping/shipment.py 
+	PYTHONPATH=. python pyshipping/package.py 
+	PYTHONPATH=. python pyshipping/fortras/test.py 
+	PYTHONPATH=. python pyshipping/carriers/dpd/georoute_test.py
 
 
 dependencies:

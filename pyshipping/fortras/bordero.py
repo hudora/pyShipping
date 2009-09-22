@@ -419,10 +419,7 @@ class Bordero(object):
         # Ladeeinheitnr - 1 & 2? frei
         # Plombennummer ?        frei
         if not self.borderonr:
-            import huLOG.models
-            satz = huLOG.models.BORDnr()
-            satz.save()
-            self.borderonr = satz.id
+            raise RuntimeError('No bordero nr set.')
         data = {'empfangspartner': self.empfangspartner, 'frachtfuehrer': 'Maeuler', 'plz': '42897',
                 'ort': 'Remscheid', 'versandweg': 'L', 'foo': '',
                 'datum': time.strftime('%d%m%Y'),
@@ -480,7 +477,7 @@ class Bordero(object):
     def generate_sendungsinfosatz_i(self, lieferung):
         """Generates bodero record I."""
         # Sendungsnummer - eindeutig!
-        data = {'sendungsnummer': _clip(16, "%016d" % lieferung.id),
+        data = {'sendungsnummer': _clip(16, "%016s" % lieferung.id),
         'ladedm': 0,
         'frankatur': '02', # frei Haus
         'foo': ' '}
@@ -605,6 +602,7 @@ def ship(verladung, empfangspartner='11515'):
     """Should be called when 'verladung' just left the building."""
     bordero = Bordero(empfangspartner)
     bordero.verladung = verladung
+    bordero.borderonr = verladung.borderonr
     for lieferung in verladung.lieferungen:
         bordero.add_lieferung(lieferung)
     data = bordero.generate_dataexport() #  generate  first to assure bordero.borderonr is set

@@ -1,8 +1,8 @@
 #Filename: SERVICE
-#Version: 20090504
-#Expiration: 20090906
-#Hash: 89e456b802cba2cc7d3727314b944b1427e04dc0
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20090504.txt
+#Version: 20090907
+#Expiration: 20100103
+#Hash: df7f6c5103fe623c33c7cf1a4399377e7f04b8e4
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20090907.txt
 #Fields: ServiceCode|ServiceText|ServiceMark|ServiceElements|
 #Key: ServiceCode|
 101|D||001|
@@ -224,6 +224,10 @@
 330|D-COD-B2C|X|002,013,100|
 331|D-TYRES||001,014|
 332|RETURN||072|
+333|D-B2C+||001,013,180|
+334|D-B2C+|X|002,013,180|
+335|D-COD-B2C+||001,013,100,180|
+336|D-COD-B2C+|X|002,013,100,180|
 340|DPD MAX||090|
 350|AM0||021|
 351|AM0-EXW||021,110|
@@ -248,6 +252,10 @@
 815|AM2-6||023,130|
 816|FIX||601|
 817|PRIVAT||602|
+820|D-6-B2C+||001,013,130,180|
+821|D-6-B2C+|X|002,013,130,180|
+822|D-6-COD-B2C+||001,013,100,130,180|
+823|D-6-COD-B2C+|X|002,013,100,130,180|
 825|DPD MAX||090|
 826|DPD MAX - COD||090,100|
 827|D-SWAP-B2C||001,013,120|

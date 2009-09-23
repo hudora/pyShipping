@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.DE
-#Version: 20090504
-#Expiration: 20090906
-#Hash: ee513624aa6186f4736e571b5b89fa5f5df8b5d5
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20090504.txt
+#Version: 20090907
+#Expiration: 20100103
+#Hash: e072a9d6b736b64be0fe7d8a720cdbc3356ff51f
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20090907.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|Gefahrgut / hazardous goods|
@@ -58,6 +58,10 @@
 302|DPD EXPRESS|
 325|EXPRESS ECONOMY|
 326|EXPRESS ECONOMY|
+329|Nachnahme / C.O.D.|
+330|Nachnahme / C.O.D.|
+335|Nachnahme / C.O.D.|
+336|Nachnahme / C.O.D.|
 350|DPD 8:30|
 351|DPD 8:30 Unfrei / ex works|
 352|DPD 8:30 Nachnahme / C.O.D.|
@@ -75,3 +79,19 @@
 815|Service Samstag 12:00 Uhr|
 816|Service Fixtermin|
 817|Privatpaket|
+820|Samstag / saturday|
+821|Samstag / saturday|
+822|Samstag / saturday Nachnahme / C.O.D.|
+823|Samstag / saturday Nachnahme / C.O.D.|
+827|Austausch / exchange|
+828|Austausch / exchange|
+829|Samstag / saturday|
+830|Samstag / saturday|
+831|Samstag / saturday Nachnahme / C.O.D.|
+832|Samstag / saturday Nachnahme / C.O.D.|
+833|Samstag / saturday Austausch / exchange|
+834|Samstag / saturday Austausch / exchange|
+835|Austausch / exchange Nachnahme / C.O.D.|
+836|Austausch / exchange Nachnahme / C.O.D.|
+837|Samstag / saturday Austausch / exchange Nachnahme / C.O.D.|
+838|Samstag / saturday Austausch / exchange Nachnahme / C.O.D.|

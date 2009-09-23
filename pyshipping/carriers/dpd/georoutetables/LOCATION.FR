@@ -1,8 +1,8 @@
 #Filename: LOCATION.FR
-#Version: 20090504
-#Expiration: 20090906
+#Version: 20090907
+#Expiration: 20100103
 #Hash: 374fc3b8ed4818be2b561be93cab2c5dea04b419
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20090504.txt
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20090907.txt
 #Fields: AreaName|CityName|ISO-Alpha2CountryCode|PostCode|
 #Key: AreaName|CityName|
 |Dubai|AE|1|

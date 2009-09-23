@@ -1,1 +1,2 @@
+1.3p2: Added new Routing Table for DPD
 1.3p1: Provide extra argument basedir to fortras.bordero.ship(). Bordero files will be saved in this directory.

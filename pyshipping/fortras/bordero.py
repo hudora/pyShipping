@@ -368,6 +368,7 @@ class Bordero(object):
     
     def __init__(self, empfangspartner='11515'):
         super(Bordero, self).__init__()
+        self.filename = ""
         self.empfangspartner = empfangspartner
         self.lieferungen = []
         self.satznummer = 0
@@ -598,26 +599,32 @@ class Bordero(object):
         return self.generated_output
     
 
-def ship(verladung, empfangspartner='11515'):
-    """Should be called when 'verladung' just left the building."""
+def ship(verladung, empfangspartner='11515', basedir='/usr/local/maeuler/current/In/BORD/'):
+    """Creates a BORDERO object and writes it to a file.
+    
+    The file lies in directory basedir containing the borderonr and a timestamp in its name.
+    Returns the BORDERO object w/ its filename attached.
+    """
     bordero = Bordero(empfangspartner)
     bordero.verladung = verladung
     bordero.borderonr = verladung.borderonr
     for lieferung in verladung.lieferungen:
         bordero.add_lieferung(lieferung)
     data = bordero.generate_dataexport() #  generate  first to assure bordero.borderonr is set
-    # we first create a temporary file and later rename it to it's finaal name
-    filename = time.strftime('%Y%m%dT%H%M%S') + ('_%05d.txt' % (bordero.borderonr))
-    outfile = open(os.path.join('/usr/local/maeuler/current/In/BORD/', '._' + filename + '_tmp'), 'w')
+    # we first create a temporary file and later rename it to it's final name
+    basefilename = time.strftime('%Y%m%dT%H%M%S') + ('_%05d.txt' % (bordero.borderonr))
+    tmpfilename = os.path.join(basedir, '._' + basefilename + '_tmp')
+    filename = os.path.join(basedir, basefilename)
+    outfile = open(tmpfilename, 'w')
     outfile.write(data.encode('latin-1', 'ignore'))
     outfile.close()
-    os.rename(os.path.join('/usr/local/maeuler/current/In/BORD/', '._' + filename + '_tmp'), 
-              os.path.join('/usr/local/maeuler/current/In/BORD/', filename))
+    os.rename(tmpfilename, filename)
     for lieferung in verladung.lieferungen:
         lieferung.ship()
         lieferung.log(code=201, message="Verladung abgeschlossen / DFü an Spedition (Mäuler)")
         lieferung.save()
     verladung.ship()
+    bordero.filename = filename
     return bordero
 
 
@@ -632,7 +639,7 @@ def ship_lieferungen(lieferungen, empfangspartner='11515'):
     outfile = open(os.path.join('/usr/local/maeuler/current/In/BORD/', '._' + filename + '_tmp'), 'w')
     outfile.write(data)
     outfile.close()
-    os.rename(os.path.join('/usr/local/maeuler/current/In/BORD/', '._' + filename + '_tmp'), 
+    os.rename(os.path.join('/usr/local/maeuler/current/In/BORD/', '._' + filename + '_tmp'),
               os.path.join('/usr/local/maeuler/current/In/BORD/', filename))
     for lieferung in lieferungen:
         lieferung.ship()

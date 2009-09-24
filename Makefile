@@ -6,6 +6,7 @@ default: dependencies check test statistics
 check:
 	find pyshipping -name '*.py' | xargs /usr/local/hudorakit/bin/hd_pep8
 	/usr/local/hudorakit/bin/hd_pylint -f parseable pyshipping | tee pylint.out
+	grep "our code has been rated at" < pylint.out|cut -d '/' -f 1|cut -d ' ' -f 7 >> .pylint.score
 
 build:
 	python setup.py build

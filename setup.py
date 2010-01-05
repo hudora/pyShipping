@@ -4,14 +4,16 @@ information.
 """
 
 from setuptools import setup, find_packages
+import codecs
 
 
 setup(name='pyShipping',
       maintainer='Maximillian Dornseif',
       maintainer_email='md@hudora.de',
+      url="https://github.com/hudora/pyShipping/",
       version='1.3p3',
       description='pyShipping - Shipping related Toolkit',
-      long_description=long_description,
+      long_description=codecs.open('README.rst', "r", "utf-8").read(),
       classifiers=['License :: OSI Approved :: BSD License',
                    'Intended Audience :: Developers',
                    'Programming Language :: Python'],

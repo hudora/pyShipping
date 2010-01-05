@@ -4,6 +4,7 @@
 package.py - shipping/cargo related calculations based on a unit of shipping (box, crate, package)
 
 Created by Maximillian Dornseif on 2006-12-02.
+Copyrigt HUDORA GmbH 2006, 2007
 You might consider this BSD-Licensed.
 """
 

@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 setup(name='pyShipping',
       maintainer='Maximillian Dornseif',
       maintainer_email='md@hudora.de',
-      version='1.3p2',
+      version='1.3p3',
       description='pyShipping - Shipping related Toolkit',
       long_description=long_description,
       classifiers=['License :: OSI Approved :: BSD License',

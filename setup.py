@@ -1,5 +1,5 @@
 long_description = """
-pyShipping provides connetions to interface with shipping companier and to transport shipping related
+pyShipping provides connections to interface with shipping companies and to transport shipping related
 information.
 """
 
@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 setup(name='pyShipping',
       maintainer='Maximillian Dornseif',
       maintainer_email='md@hudora.de',
-      version='1.3p2',
+      version='1.3p3',
       description='pyShipping - Shipping related Toolkit',
       long_description=long_description,
       classifiers=['License :: OSI Approved :: BSD License',

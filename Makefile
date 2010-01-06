@@ -26,11 +26,7 @@ statistics:
 	sloccount --wide --details pyshipping | tee sloccount.sc
 
 upload: build doc
-	python setup.py sdist bdist_egg
-	rsync -rvapP dist/* root@cybernetics.hudora.biz:/usr/local/www/data/nonpublic/eggs/
-	rsync -rvapP dist/* root@cybernetics.hudora.biz:/usr/local/www/data/dist/pyShipping/
-	rsync -rvapP html root@cybernetics.hudora.biz:/usr/local/www/apache22/data/dist/pyShipping/
-	
+	python setup.py sdist upload
 
 doc: build
 	rm -Rf html

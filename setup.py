@@ -20,7 +20,7 @@ setup(name='pyShipping',
       # download_url
       zip_safe=False,
       packages=find_packages(),
-      package_data={'pyshipping': ['carriers/dpd/georoutetables/*']},
+      package_data={'': ['README.rst'], 'pyshipping': ['carriers/dpd/georoutetables/*']},
       include_package_data=True,
 )
 

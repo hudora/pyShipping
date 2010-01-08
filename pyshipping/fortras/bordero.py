@@ -22,7 +22,7 @@ import types
 def _clip(length, data):
     """Clip a string to a maximum length."""
     # I wonder if this can't be done with clever formatstring usage.
-    if type(data) != types.UnicodeType:
+    if not isinstance(data, str):
         data = data.decode('latin-1')
     if len(data) > length:
         return data[:length]

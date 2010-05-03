@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.EE
-#Version: 20100104
-#Expiration: 20100502
-#Hash: b1622c442de13565e7d98ec5daf95c2f3a3fae0d
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20100104.txt
+#Version: 20100503
+#Expiration: 20100905
+#Hash: f51f94039fe1b78a3ee19c7d13b2a9c857d446d1
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20100503.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|hazardous goods|
@@ -12,6 +12,7 @@
 109|Lunapakk (COD)|
 110|Lunapakk (COD) / hazardous goods|
 113|exchange|
+117|Collection-upon-Delivery|
 121|hazardous goods|
 124|ex works|
 125|ex works / hazardous goods|
@@ -22,6 +23,7 @@
 138|ex works|
 140|Lunapakk (COD)|
 142|exchange|
+144|Collection-upon-Delivery|
 148|ex works|
 150|Lunapakk (COD)|
 152|exchange|

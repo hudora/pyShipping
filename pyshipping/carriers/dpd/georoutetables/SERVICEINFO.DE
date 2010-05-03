@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.DE
-#Version: 20100104
-#Expiration: 20100502
-#Hash: e072a9d6b736b64be0fe7d8a720cdbc3356ff51f
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20100104.txt
+#Version: 20100503
+#Expiration: 20100905
+#Hash: bfdb75b8c86f949ddc2151b4af228b30daf09eb3
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20100503.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|Gefahrgut / hazardous goods|
@@ -12,6 +12,7 @@
 109|Nachnahme / C.O.D.|
 110|Nachnahme / C.O.D. Gefahrgut / hazardous goods|
 113|Austausch / exchange|
+117|Mitnahme/Collection-upon-Delivery|
 121|Gefahrgut / hazardous goods|
 124|Unfrei / ex works|
 125|Unfrei / ex works Gefahrgut / hazardous goods|
@@ -22,6 +23,7 @@
 138|Unfrei / ex works|
 140|Nachnahme / C.O.D.|
 142|Austausch / exchange|
+144|Mitnahme/Collection-upon-Delivery|
 148|Unfrei / ex works|
 150|Nachnahme / C.O.D.|
 152|Austausch / exchange|

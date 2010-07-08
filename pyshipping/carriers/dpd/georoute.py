@@ -31,32 +31,36 @@ class InvalidFormatError(Exception):
     pass
 
 
-class CountryError(Exception):
+class GeorouteException(Exception):
+    """Base class for all routing exceptions"""
+    pass
+
+class CountryError(GeorouteException):
     """Unknown country."""
     pass
 
 
-class DepotError(Exception):
+class DepotError(GeorouteException):
     """Unknown depot."""
     pass
 
 
-class ServiceError(Exception):
+class ServiceError(GeorouteException):
     """Unknown service."""
     pass
 
 
-class TranslationError(Exception):
+class TranslationError(GeorouteException):
     """Cannot translate city and country to postcode."""
     pass
 
 
-class RoutingDepotError(Exception):
+class RoutingDepotError(GeorouteException):
     """Unknown routing depot."""
     pass
 
 
-class NoRouteError(Exception):
+class NoRouteError(GeorouteException):
     """Route not found."""
     pass
 

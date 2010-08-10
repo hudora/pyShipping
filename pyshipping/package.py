@@ -4,7 +4,7 @@
 package.py - shipping/cargo related calculations based on a unit of shipping (box, crate, package)
 
 Created by Maximillian Dornseif on 2006-12-02.
-Copyrigt HUDORA GmbH 2006, 2007
+Copyrigt HUDORA GmbH 2006, 2007, 2010
 You might consider this BSD-Licensed.
 """
 
@@ -20,15 +20,16 @@ class PackageSize(object):
         
         The size can be given as an list of integers or an string where the sizes are determined by the letter 'x':
         >>> PackageSize((300, 400, 500))
-        <PackageSize 300x400x500>
+        <PackageSize 500x400x300>
         >>> PackageSize('300x400x500')
-        <PackageSize 300x400x500>
+        <PackageSize 500x400x300>
         """
         if "x" in size:
             self.heigth, self.width, self.length = size.split('x')
         else:
             self.heigth, self.width, self.length = size
-        self.heigth, self.width, self.length = int(self.heigth), int(self.width), int(self.length)
+        (self.heigth, self.width, self.length) = sorted((int(self.heigth), int(self.width),
+                                                         int(self.length)), reverse=True)
     
     def _get_volume(self):
         """Calculates the volume of a PackageSize object.
@@ -43,7 +44,7 @@ class PackageSize(object):
     volume = property(_get_volume)
     
     def _get_gurtmass(self):
-        """'gurtamss' is the circumference of the girth plus the length - which is often used to
+        """'gurtamss' is the circumference of the box plus the length - which is often used to
             calculate shipping costs.
             
             >>> PackageSize((100,110,120)).gurtmass
@@ -60,12 +61,12 @@ class PackageSize(object):
     def __eq__(self, other):
         """PackageSize objects are equal if they have exactly the same dimensions.
            
-           Permutations of the dimensions are not considered equal:
+           Permutations of the dimensions are considered equal:
            
            >>> PackageSize((100,110,120)) == PackageSize((100,110,120))
            True
            >>> PackageSize((120,110,100)) == PackageSize((100,110,120))
-           False
+           True
        """
         
         return (self.heigth == other.heigth and self.width == other.width and self.length == other.length)
@@ -75,23 +76,17 @@ class PackageSize(object):
            stacked along the biggest side.
            
            >>> PackageSize((400,300,600)) * 2
-           <PackageSize 400x600x600>
+           <PackageSize 600x600x400>
            """
-        dimensions = [self.heigth, self.width, self.length]
-        mindimension = min(dimensions)
-        if mindimension == self.heigth:
-            return PackageSize((self.heigth*multiplicand, self.width, self.length))
-        elif mindimension == self.width:
-            return PackageSize((self.heigth, self.width*multiplicand, self.length))
-        elif mindimension == self.length:
-            return PackageSize((self.heigth, self.width, self.length*multiplicand))
+
+        return PackageSize((self.heigth, self.width, self.length*multiplicand))
     
     def __str__(self):
         return "%dx%dx%d" % (self.heigth, self.width, self.length)
     
     def __repr__(self):
         return "<PackageSize %dx%dx%d>" % (self.heigth, self.width, self.length)
-    
+
 
 class Package:
     """Represents a package as used in cargo/shipping aplications."""
@@ -128,13 +123,13 @@ class PackageSizeTests(unittest.TestCase):
     
     def test_init(self):
         """Tests object initialisation with different constructors."""
-        self.assertEqual(PackageSize((100, 200, 200)), PackageSize(('100', '200', '200')))
-        self.assertEqual(PackageSize((100.0, 200.0, 200.0)), PackageSize('100x200x200'))
+        self.assertEqual(PackageSize((100, 100, 200)), PackageSize(('100', '200', '100')))
+        self.assertEqual(PackageSize((100.0, 200.0, 200.0)), PackageSize('200x200x100'))
     
     def test_eq(self):
         """Tests __eq__() implementation."""
         self.assertEqual(PackageSize((200, 100, 200)), PackageSize(('200', '100', '200')))
-        self.assertNotEqual(PackageSize((200, 200, 100)), PackageSize(('200', '100', '200')))
+        self.assertNotEqual(PackageSize((200, 200, 100)), PackageSize(('100', '100', '200')))
         
     def test_volume(self):
         """Tests volume calculation"""
@@ -143,12 +138,12 @@ class PackageSizeTests(unittest.TestCase):
     
     def test_str(self):
         """Test __unicode__ implementation."""
-        self.assertEqual('100x200x200', PackageSize((100, 200, 200)).__str__())
-        self.assertEqual('100x200x200', PackageSize('100x200x200').__str__())
+        self.assertEqual('200x200x100', PackageSize((100, 200, 200)).__str__())
+        self.assertEqual('200x200x100', PackageSize('100x200x200').__str__())
     
     def test_repr(self):
         """Test __repr__ implementation."""
-        self.assertEqual('<PackageSize 100x200x200>', PackageSize((100, 200, 200)).__repr__())
+        self.assertEqual('<PackageSize 200x200x100>', PackageSize((100, 200, 200)).__repr__())
     
     def test_gurtmass(self):
         """Test gurtmass calculation."""

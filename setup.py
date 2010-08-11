@@ -4,8 +4,9 @@ information.
 """
 
 from setuptools import setup, find_packages
+from distutils.extension import Extension
 import codecs
-
+from Cython.Distutils import build_ext
 
 setup(name='pyShipping',
       maintainer='Maximillian Dornseif',
@@ -19,8 +20,13 @@ setup(name='pyShipping',
                    'Programming Language :: Python'],
       # download_url
       zip_safe=False,
+      install_requires=['cython'],
       packages=find_packages(),
       package_data={'': ['README.rst'], 'pyshipping': ['carriers/dpd/georoutetables/*']},
       include_package_data=True,
+      ext_modules=[ 
+          Extension("pyshipping.binpack", ["pyshipping/binpack.pyx", 'pyshipping/3dbpp.c'])
+      ],
+      cmdclass = {'build_ext': build_ext}
 )
 

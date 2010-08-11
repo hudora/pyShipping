@@ -8,3 +8,13 @@ pyShipping provides connections to interface with shipping companies and to tran
 .. _Wikipedia: http://de.wikipedia.org/wiki/Fortras
 
 You can get it at http://pypi.python.org/pypi/pyShipping
+
+
+This contains linked in the binpack module code (c) Copyright 1998, 2003, 2005, 2006 by
+
+   David Pisinger                        Silvano Martello, Daniele Vigo
+   DIKU, University of Copenhagen        DEIS, University of Bologna
+   Universitetsparken 1                  Viale Risorgimento 2
+   Copenhagen, Denmark                   Bologna, Italy
+
+ This code can be used free of charge for research and academic purposes.

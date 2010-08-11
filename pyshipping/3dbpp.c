@@ -34,8 +34,7 @@
  *                  int *x, int *y, int *z, int *bno,
  *                  int *lb, int *ub, 
  *                  int nodelimit, int iterlimit, int timelimit, 
- *                  int *nodeused, int *iterused, int *timeused, 
- *                  int packingtype);
+ *                  int *nodeused, int *iterused, int *timeused);
  *
  * the meaning of the parameters is the following:
  *   n         Size of problem, i.e., number of boxes to be packed.
@@ -67,10 +66,6 @@
  *   iterused  returns the number of iterations in ONEBIN algorithm,
  *             measured in thousands (see IUNIT).
  *   timeused  returns the time used in miliseconds
- *   packingtype 
- *             Desired packing type. If set to zero, the algorithm will
- *             search for an optimal general packing; if set to one, it
- *             will search for a robot packing.
  *
  * (c) Copyright 1998, 2003, 2005
  *
@@ -166,7 +161,6 @@ typedef struct {
   itype    D;            /* z-size of bin                         */
   stype    BVOL;         /* volume of a bin                       */
   ntype    n;            /* number of boxes                       */
-  boolean  packtype;     /* packing type: GENERAL or ROBOT        */
   box      *fbox;        /* first box in problem                  */
   box      *lbox;        /* last box in problem                   */
   box      *fsol;        /* first box in current solution         */
@@ -413,18 +407,11 @@ void pfree(void *p)
    ====================================================================== */
 
 /* Check correctnes of solution, i.e., no boxes overlap, no duplicated boxes.
- * If the solution should be robot packable, it is checked that there
- * exists an ordering of the boxes such that they can be removed one
- * by one withouth having any other boxes behind/above/right of the
- * current box.
  */
 
 void checksol(allinfo *a, box *f, box *l)
 {
   box *i, *j, *m;
-  boolean stillboxes, foundextreme, extreme;
-  int b;
-
   for (i = f, m = l+1; i != m; i++) { 
     if (!i->k) continue;  /* box currently not chosen */
     for (j = f; j != m; j++) {
@@ -439,46 +426,6 @@ void checksol(allinfo *a, box *f, box *l)
 	      i->no, j->no, i->w, i->h, i->d, j->w, j->h, j->d);
       }
     }
-  }
-
-  if (a->packtype != ROBOT) return;
-
-  /* check if robot packable */
-  for (b = 1; b <= a->z; b++) {
-    for (;;) {
-      stillboxes = FALSE; 
-      foundextreme = TRUE;
-      for (i = f; i <= m; i++) {
-        if ((i->bno == b) && (i->k == 1)) stillboxes = TRUE;
-      }
-      if (!stillboxes) break;
-  
-      foundextreme = FALSE;
-      for (i = f; i <= m; i++) { 
-        if ((i->bno != b) || (i->k != 1)) continue;
-        extreme = TRUE;
-        for (j = f; j <= m; j++) { 
-          if (j == i) continue;
-          if ((j->bno != b) || (!j->k != 1)) continue;
-          if ((i->x < j->x + j->w) || (i->y < j->y + j->h) 
-                                   || (i->z < j->z + j->d)) extreme = FALSE;
-        }
-        if (extreme) { i->k = -1; foundextreme = TRUE; }
-      }
-      if (!foundextreme) break;
-    }
-  
-    if (!foundextreme) {
-      for (i = f; i <= m; i++) {
-        if (i->bno == b) {
-          printf("no %d (%d %d %d) (%d %d %d) bin %d k %d\n",
-                 i->no, i->x, i->y, i->z, i->w, i->h, i->d, i->bno, i->k);
-        }
-      }
-      error("not robot packable");
-    }
-    /* restore k values */
-    for (i = f; i <= m; i++) if (i->k == -1) i->k = 1;
   }
 }
 
@@ -535,35 +482,6 @@ void isortincr(int *f, int *l)
     if (i > j) break; else SWAPINT(i, j);
   }
   isortincr(f, i-1); isortincr(i, l);
-}
-
-
-/* ======================================================================
-			       isortdecr
-   ====================================================================== */
-
-/* A specialized routine for sorting integers in decreasing order. */
-/* qsort could be used equally well, but this routine is faster. */
-
-void isortdecr(int *f, int *l)
-{
-  register int mi;
-  register int *i, *j, *m;
-  register int d;
-
-  d = l - f + 1;
-  if (d < 1) error("negative interval in isortdecr");
-  if (d == 1) return;
-  m = f + d / 2; if (*f < *m) SWAPINT(f, m);
-  if (d > 2) { if (*m < *l) { SWAPINT(m, l); if (*f < *m) SWAPINT(f, m); } }
-  if (d <= 3) return;
-  mi = *m; i = f; j = l;
-  for (;;) {
-    do i++; while (*i > mi);
-    do j--; while (*j < mi);
-    if (i > j) break; else SWAPINT(i, j);
-  }
-  isortdecr(f, i-1); isortdecr(i, l);
 }
 
 
@@ -1409,19 +1327,11 @@ boolean onebin_general(allinfo *a, box *f, box *l, boolean fast)
   /* calling general pack */
   timer(&t1);
   solution = general_pack(a, f, l);
-  if (solution) checksol(a, f, l); 
+  if (solution) checksol(a, f, l);
   timer(&t2);
   a->genertime += t2 - t1;
   return solution;
 }
-
-
-
-/* **********************************************************************
-   **********************************************************************
-                    fill one 3D bin using ROBOT packing
-   **********************************************************************
-   ********************************************************************** */
 
 
 /* ======================================================================
@@ -1644,49 +1554,6 @@ void branch(allinfo *a, box *f, box *l, int miss, stype fill)
 
 
 /* ======================================================================
-				onebin_robot
-   ====================================================================== */
-
-/* Knapsack filling of a single bin. The following procedure initializes */
-/* some variables before calling the recursive branch-and-bound algorithm. */
- 
-boolean onebin_robot(allinfo *a, box *f, box *l, boolean fast)
-{
-  box *i, *j, *m;
-  stype vol;
-  double t1, t2;
-  int n;
-
-  /* initialize boxes */
-  for (i = f, m = l+1, vol = 0; i != m; i++) {
-    i->x = 0; i->y = 0; i->z = 0; i->k = 0; vol += i->vol;
-  }
-
-  /* try to fill one bin with boxes [f,l] */
-  n = DIF(f,l);
-  a->iter3d  = 0;
-  a->maxfill = vol-1; /* lower bound equal to all minus one */
-  a->miss = n; 
-  a->maxiter = (fast ? MAXITER : 0); /* limited or infinitly many */
-  a->mcut = 0; /* try all branches */
-  terminate = FALSE;
-
-  /* calling branch-and-bound algorithm */
-  timer(&t1);
-  branch(a, f, l, n, 0);
-  timer(&t2);
-  a->robottime += t2 - t1;
-
-  /* copy solution */
-  if (a->maxfill == a->BVOL) { /* NB: maxfill = BVOL, when optimal found */
-    for (i = a->fsol, j = f, m = l+1; j != m; i++, j++) *j = *i;
-    return TRUE;
-  } 
-  return FALSE;
-}
-
-
-/* ======================================================================
 				mcut_heuristic
    ====================================================================== */
 
@@ -1795,7 +1662,7 @@ boolean fits2p(box *i, box *j, itype W, itype H, itype D)
 }
 
 
-boolean fits3(box *i, box *j, box *k, itype W, itype H, itype D, int packtype)
+boolean fits3(box *i, box *j, box *k, itype W, itype H, itype D)
 {
   box *t;
   itype w, h, d, r;
@@ -1810,8 +1677,7 @@ boolean fits3(box *i, box *j, box *k, itype W, itype H, itype D, int packtype)
     if ((i->d<=d) && (j->d<=d) && fits2(i,j,W,H,d)) { k->z = d; return TRUE; } 
     t = i; i = j; j = k; k = t;
   }
-  /* or by a sticky arrangement which is not guillotine packable */
-  if ((packtype != GENERAL) && (packtype != ROBOT)) return FALSE;
+
 
   /* (xi,yi,zi) = (0,0,0); (xj,yj,zj) = (wi,0,0); (xk,yk,zk) = (0,hi,dj) */
   if ((i->w+j->w <= W) && (i->h+k->h <= H) && (j->d+k->d <= D)) {
@@ -1849,8 +1715,7 @@ boolean fitsm(allinfo *a, box *t, box *k, boolean fast)
   lb = bound_two(a, t, k);
   if (lb > 1) return FALSE;
   a->exfill++; fits = FALSE;
-  if (a->packtype == GENERAL   ) fits = onebin_general(a, t, k, fast); 
-  if (a->packtype == ROBOT     ) fits = onebin_robot(a, t, k, fast); 
+  fits = onebin_general(a, t, k, fast); 
   return fits;
 }
 
@@ -1880,7 +1745,7 @@ boolean onebin_decision(allinfo *a, box *j, int bno)
     case 0: error("no boxes in onebin_decision");
     case 1: fits = TRUE; k->x = k->y = k->z = 0; break;
     case 2: fits = fits2(t, k, a->W, a->H, a->D); break;
-    case 3: fits = fits3(t, t+1, k, a->W, a->H, a->D, a->packtype); break;
+    case 3: fits = fits3(t, t+1, k, a->W, a->H, a->D); break;
     default: fits = fitsm(a, t, k, FALSE); break;
   }
   if (size <= 3) {
@@ -1920,7 +1785,7 @@ boolean onebin_heuristic(allinfo *a, box *f, box *l)
     case 0: error("no boxes in onebin_heuristic");
     case 1: fits = TRUE; break;
     case 2: fits = fits2(f, l, a->W, a->H, a->D); break;
-    case 3: fits = fits3(f, f+1, l, a->W, a->H, a->D, a->packtype); break;
+    case 3: fits = fits3(f, f+1, l, a->W, a->H, a->D); break;
     default: fits = fitsm(a, f, l, TRUE); break;
   }
   return fits;
@@ -2126,19 +1991,16 @@ void binpack3d(int n, int W, int H, int D,
                int *x, int *y, int *z, int *bno,
                int *lb, int *ub, 
                int nodelimit, int iterlimit, int timelimit, 
-               int *nodeused, int *iterused, int *timeused,
-               int packingtype)
+               int *nodeused, int *iterused, int *timeused)
 {
   allinfo a;
   box t0[MAXBOXES], t1[MAXBOXES], t2[MAXBOXES], t3[MAXBOXES];
   boolean cl[MAXBOXES];
-
+  
   /* start the timer */ 
   timer(NULL); stopped = FALSE; 
  
   /* copy info to a structure */
-  if ((packingtype != ROBOT) && 
-      (packingtype != GENERAL)) error("bad packtype");
   if (n+1 > MAXBOXES) error("too big instance");
   a.n = n; a.W = W; a.H = H; a.D = D;
   a.fbox     = t0; 
@@ -2152,7 +2014,6 @@ void binpack3d(int n, int W, int H, int D,
   a.noc      = 0;
   a.closed   = cl;
   a.BVOL     = W * (ptype) H * D;
-  a.packtype = packingtype;
   a.maxfill  = 0;
   a.exfill   = 0;
   a.nodelimit= 0;

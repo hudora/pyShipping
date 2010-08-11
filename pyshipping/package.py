@@ -70,8 +70,8 @@ class Package(object):
     def hat_gleiche_seiten(self, other):
         """Prüft, ob other mindestens eine gleich grosse Seite mit self hat."""
 
-        meineseiten = set([(self.heigth, self.width), (self.heigth, self.length),(self.heigth, self.length)])
-        otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),(other.heigth, other.length)])
+        meineseiten = set([(self.heigth, self.width), (self.heigth, self.length),(self.width, self.length)])
+        otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),(other.width, other.length)])
         return not meineseiten.isdisjoint(otherseiten)
 
     def __getitem__(self, key):

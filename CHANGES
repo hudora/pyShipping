@@ -1,4 +1,6 @@
-1.5dev: Keep Package dimensions sorted
+1.5dev: Keep Package dimensions sorted, buendelung(), __add__() and hat_gleiche_seiten() 
+        added binpacking (c) David Pisinger, Silvano Martello, Daniele Vigo
+        unified PAckageSize and Package, made Package sortable
 1.4: Gemeinsame Basisklasse fuer Exceptions in pyshipping.carriers.dpd.georoute
 1.3p3: Added new Routing Table for DPD (Routendatenbank Januar - April 2010)
 1.3p2: Added new Routing Table for DPD

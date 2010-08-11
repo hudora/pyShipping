@@ -1,7 +1,13 @@
 # setting the PATH seems only to work in GNUmake not in BSDmake
 PATH := ./testenv/bin:$(PATH)
 
-default: dependencies check test statistics
+default: binpack.so
+
+pyshipping/binpack.c: pyshipping/binpack.pyx
+	cython pyshipping/binpack.pyx
+
+binpack.so: pyshipping/binpack.c
+	python setup.py build_ext --inplace
 
 check:
 	find pyshipping -name '*.py' | xargs /usr/local/hudorakit/bin/hd_pep8

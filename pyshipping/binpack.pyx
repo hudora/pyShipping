@@ -4,8 +4,7 @@ cdef extern:
                    int *x, int *y, int *z, int *bno,
                    int *lb, int *ub, 
                    int nodelimit, int iterlimit, int timelimit, 
-                   int *nodeused, int *iterused, int *timeused, 
-                   int packingtype) nogil
+                   int *nodeused, int *iterused, int *timeused) nogil
 
 
 def binpack(binsize, sizes, nodelimit=5000, iterlimit=5000, timelimit=2, robotpackable=False):
@@ -17,7 +16,6 @@ def binpack(binsize, sizes, nodelimit=5000, iterlimit=5000, timelimit=2, robotpa
     cdef int nodeused, iterused, timeused
     cdef int packingtype
 
-    packingtype = 0
     if robotpackable:
         packingtype = 1
     numelements = len(sizes)
@@ -32,8 +30,7 @@ def binpack(binsize, sizes, nodelimit=5000, iterlimit=5000, timelimit=2, robotpa
                     w_output, h_output, d_output,
                     boxno, &lowerbound, &upperbound, 
                     nodelimit, iterlimit, timelimit, 
-                    &nodeused, &iterused, &timeused, 
-                    packingtype)
+                    &nodeused, &iterused, &timeused)
     retboxes = []
     boxcount = 1
     for i in range(numelements):

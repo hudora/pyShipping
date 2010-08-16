@@ -1,5 +1,9 @@
 # coding: utf-8
-# 20.7627530098 4903 2018 41.158474403
+# 13.5036859512 4903 2018 41.1584744034
+# 10.6387898922 4903 2018 41.1584744034
+# 9.07241487503 4903 2018 41.1584744034
+# 8.48105192184 4903 2018 41.1584744034
+
 
 def packstrip(bin, packages):
     """Creates a Strip which fits into bin.
@@ -8,21 +12,19 @@ def packstrip(bin, packages):
     and a list of "left over" packages.
     """
     strip = []
-    stripsize = 0
-    stripx = 0
-    stripy = 0
-    binsize = bin[0]
+    stripsize = stripx = stripy = 0
+    binsize = bin.heigth
     rest = []
     while packages and stripsize <= binsize:
         nextpackage = packages.pop(0)
-        if stripsize + nextpackage[0] < binsize:
-            stripsize += nextpackage[0]
+        if stripsize + nextpackage.heigth < binsize:
+            stripsize += nextpackage.heigth
             strip.append(nextpackage)
-            stripx = max([stripx, nextpackage[1]])
-            stripy = max([stripy, nextpackage[2]])
+            stripx = max([stripx, nextpackage.width])
+            stripy = max([stripy, nextpackage.length])
         else:
             rest.append(nextpackage)
-    return strip, (stripsize, stripx, stripy), sorted(rest+packages)
+    return strip, (stripsize, stripx, stripy), rest+packages
 
 
 def packlayer(bin, packages):
@@ -30,7 +32,7 @@ def packlayer(bin, packages):
     layersize = 0
     layerx = 0
     layery = 0
-    binsize = bin[1]
+    binsize = bin.width
     while packages:
         strip, (sizex, stripsize, sizez), rest = packstrip(bin, packages)
         if layersize + stripsize <= binsize:
@@ -46,7 +48,7 @@ def packlayer(bin, packages):
             # Next Layer please
             rest = strip + rest
             break
-    return strips, (layerx, layersize, layery), sorted(rest+packages)
+    return strips, (layerx, layersize, layery), rest+packages
 
 
 def packbin(bin, packages):
@@ -55,7 +57,7 @@ def packbin(bin, packages):
     contentheigth = 0
     contentx = 0
     contenty = 0
-    binsize = bin[2]
+    binsize = bin.length
     while packages:
         layer, (sizex, sizey, layersize), rest = packlayer(bin, packages)
         if contentheigth + layersize <= binsize:
@@ -71,7 +73,7 @@ def packbin(bin, packages):
             # Next Bin please
             rest = layer + rest
             break
-    return layers, (contentx, contenty, contentheigth), sorted(rest+packages)
+    return layers, (contentx, contenty, contentheigth), rest+packages
 
 
 def packit(bin, originalpackages):
@@ -132,7 +134,7 @@ def allpermutations(todo):
         # First try unpermuted
         trypack(bin, todo, bestpack)
         # now try permutations
-        allpermutations_helper([], packages, 1000, trypack, bin, bestpack, 0)
+        allpermutations_helper([], todo, 1000, trypack, bin, bestpack, 0)
     except Timeout:
         pass
     return bestpack['bins'], bestpack['rest']
@@ -140,20 +142,26 @@ def allpermutations(todo):
 
 from pyshipping.package import Package
 import time
-fd = open('testdata.txt')
-vorher = 0
-nachher = 0
-start = time.time()
-for line in fd:
-    packages = [Package(pack) for pack in line.strip().split()]
-    if not packages:
-        continue
-    bins, rest = allpermutations(packages)
-    if rest:
-        print "invalid data", rest, line
-    else:
-        #print len(packages), len(bins)
-        vorher += len(packages)
-        nachher += len(bins)
-print time.time() - start,
-print vorher, nachher, float(nachher)/vorher*100
+
+
+def test():
+    fd = open('testdata.txt')
+    vorher = 0
+    nachher = 0
+    start = time.time()
+    for line in fd:
+        packages = [Package(pack) for pack in line.strip().split()]
+        if not packages:
+            continue
+        bins, rest = allpermutations(packages)
+        if rest:
+            print "invalid data", rest, line
+        else:
+            #print len(packages), len(bins)
+            vorher += len(packages)
+            nachher += len(bins)
+    print time.time() - start,
+    print vorher, nachher, float(nachher)/vorher*100
+
+import cProfile
+cProfile.run('test()')

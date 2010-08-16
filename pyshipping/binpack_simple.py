@@ -1,20 +1,45 @@
-# coding: utf-8
-# 13.5036859512 4903 2018 41.1584744034
-# 10.6387898922 4903 2018 41.1584744034
-# 9.07241487503 4903 2018 41.1584744034
-# 8.48105192184 4903 2018 41.1584744034
+#!/usr/bin/env python
+# encoding: utf-8
+"""
+binpack_simple.py 
 
-# 35.9507751465 4903 2007 40.9341219661
-# 35.310297966  4903 2007 40.9341219661
-# 34.8188328743 4903 2007 40.9341219661
-# 33.2343409061 4903 2007 40.9341219661
-# 33.9700279236 4903 2007 40.9341219661
+This code implemnts 3D bin packing in pure Python
 
-# 33.4133989811 4970 2033 40.9054325956
-# 33.1115708351 4970 2033 40.9054325956
-# 33.8842139244 4970 2033 40.9054325956
-# 32.5221009254 4970 2033 40.9054325956
-# 33.1047270298 4970 2033 40.9054325956
+Bin packing in this context is calculating the best way to store a number of differently sized boxes in a
+number of fixed sized "bins". It is what usually happens in a Warehouse bevore shipping.
+
+The Algorithm has a simple fit first approach, but can archive relative good results because it tries
+different rectangular rotations of the packages. Since the Algorithm can't interate over all possible
+combinations we use a heuristic approach.
+
+For a few dozen packages it reaches adaequate runtime. Below are the results calculated about a set of
+500 real world packing problems.
+
+Binsize     Runtime                 Recuction in shipped Packages
+600x400x400 31.5993559361 4970 2033 40.9054325956
+600x445x400 31.5596890450 4970 1854 37.3038229376
+600x500x400 29.1432909966 4970 1685 33.9034205231
+
+
+On the datasets we operate on we can archive comparable preformance to academic higly optimized C code 
+like David Pisinger's 3bpp:
+
+     Runtime                 Recuction in shipped Packages
+py   11.3468761444 2721 1066 39.1767732451
+3bpp 9.95857691765 2721 1086 39.9117971334
+
+The Python implementation is somewhat slower but can archive slightly better packing results on our
+datasets.
+
+
+Created by Maximillian Dornseif on 2010-08-14.
+Copyright (c) 2010 HUDORA. All rights reserved.
+"""
+
+
+
+from pyshipping.package import Package
+import time
 
 
 def packstrip(bin, p):
@@ -65,9 +90,9 @@ def packlayer(bin, packages):
             packages = rest
         else:
             # Next Layer please
-            rest = strip + rest
+            packages = strip + rest
             break
-    return strips, (layerx, layersize, layery), rest + packages
+    return strips, (layerx, layersize, layery), packages
 
 
 def packbin(bin, packages):
@@ -144,8 +169,7 @@ def trypack(bin, packages, bestpack):
     return len(packages)
 
 
-def allpermutations(todo):
-    bin = Package("600x400x400")
+def allpermutations(todo, bin, iterlimit=5000):
     random.seed(1)
     random.shuffle(todo)
     bestpack = dict(bincount=len(todo)+1)
@@ -153,14 +177,20 @@ def allpermutations(todo):
         # First try unpermuted
         trypack(bin, todo, bestpack)
         # now try permutations
-        allpermutations_helper([], todo, 5000, trypack, bin, bestpack, 0)
+        allpermutations_helper([], todo, iterlimit, trypack, bin, bestpack, 0)
     except Timeout:
         pass
     return bestpack['bins'], bestpack['rest']
 
 
-from pyshipping.package import Package
-import time
+def binpack(packages, bin=None, iterlimit=5000):
+    """Packs a list of Package() objects into a number of equal-sized bins.
+    
+    Returns a list of bins listing the packages within the bins and a list of packages which can't be
+    packed because they are to big."""
+    if not bin:
+        bin = Package("600x400x400")
+    return allpermutations(packages, bin, iterlimit)
 
 
 def test():
@@ -172,15 +202,16 @@ def test():
         packages = [Package(pack) for pack in line.strip().split()]
         if not packages:
             continue
-        bins, rest = allpermutations(packages)
+        bins, rest = binpack(packages)
         if rest:
             print "invalid data", rest, line
         else:
-            #print len(packages), len(bins)
             vorher += len(packages)
             nachher += len(bins)
     print time.time() - start,
     print vorher, nachher, float(nachher)/vorher*100
 
-import cProfile
-cProfile.run('test()')
+
+if __name__ == '__main__':
+    import cProfile
+    cProfile.run('test()')

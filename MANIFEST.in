@@ -1,0 +1,2 @@
+include README.rst
+include pyshipping/carriers/dpd/georoutetables/*

@@ -4,27 +4,44 @@
 # 9.07241487503 4903 2018 41.1584744034
 # 8.48105192184 4903 2018 41.1584744034
 
+# 35.9507751465 4903 2007 40.9341219661
+# 35.310297966  4903 2007 40.9341219661
+# 34.8188328743 4903 2007 40.9341219661
+# 33.2343409061 4903 2007 40.9341219661
+# 33.9700279236 4903 2007 40.9341219661
 
-def packstrip(bin, packages):
+# 33.4133989811 4970 2033 40.9054325956
+# 33.1115708351 4970 2033 40.9054325956
+# 33.8842139244 4970 2033 40.9054325956
+
+
+
+def packstrip(bin, p):
     """Creates a Strip which fits into bin.
     
     Returns the Packages to be used in the strip, the dimensions of the strip as a 3-tuple
     and a list of "left over" packages.
     """
-    strip = []
-    stripsize = stripx = stripy = 0
-    binsize = bin.heigth
-    rest = []
-    while packages and stripsize <= binsize:
-        nextpackage = packages.pop(0)
-        if stripsize + nextpackage.heigth < binsize:
-            stripsize += nextpackage.heigth
-            strip.append(nextpackage)
-            stripx = max([stripx, nextpackage.width])
-            stripy = max([stripy, nextpackage.length])
+    s = []                # strip
+    r = []                # rest
+    ssiz = sx = sy = 0    # stripsize
+    bsiz = bin.heigth     # binsize
+    sapp = s.append       # speedup
+    rapp = r.append       # speedup
+    ppop = p.pop          # speedup
+    #print p
+    #print bsiz, ssiz, minsiz, ssiz+minsiz <= bsiz
+    while p and (ssiz <= bsiz):
+        n = ppop(0)
+        if ssiz + n.heigth <= bsiz:
+            ssiz += n.heigth
+            sapp(n)
+            sx = max([sx, n.width])
+            sy = max([sy, n.length])
         else:
-            rest.append(nextpackage)
-    return strip, (stripsize, stripx, stripy), rest+packages
+            #print bsiz, ssiz, minsiz, ssiz+minsiz
+            rapp(n)
+    return s, (ssiz, sx, sy), r + p
 
 
 def packlayer(bin, packages):
@@ -134,7 +151,7 @@ def allpermutations(todo):
         # First try unpermuted
         trypack(bin, todo, bestpack)
         # now try permutations
-        allpermutations_helper([], todo, 1000, trypack, bin, bestpack, 0)
+        allpermutations_helper([], todo, 5000, trypack, bin, bestpack, 0)
     except Timeout:
         pass
     return bestpack['bins'], bestpack['rest']

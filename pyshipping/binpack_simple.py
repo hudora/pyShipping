@@ -13,7 +13,8 @@
 # 33.4133989811 4970 2033 40.9054325956
 # 33.1115708351 4970 2033 40.9054325956
 # 33.8842139244 4970 2033 40.9054325956
-
+# 32.5221009254 4970 2033 40.9054325956
+# 33.1047270298 4970 2033 40.9054325956
 
 
 def packstrip(bin, p):
@@ -22,26 +23,27 @@ def packstrip(bin, p):
     Returns the Packages to be used in the strip, the dimensions of the strip as a 3-tuple
     and a list of "left over" packages.
     """
+    # This code is somewhat optimized and somewhat unreadable
     s = []                # strip
     r = []                # rest
-    ssiz = sx = sy = 0    # stripsize
-    bsiz = bin.heigth     # binsize
+    ss = sw = sl = 0      # stripsize
+    bs = bin.heigth       # binsize
     sapp = s.append       # speedup
     rapp = r.append       # speedup
     ppop = p.pop          # speedup
-    #print p
-    #print bsiz, ssiz, minsiz, ssiz+minsiz <= bsiz
-    while p and (ssiz <= bsiz):
+    while p and (ss <= bs):
         n = ppop(0)
-        if ssiz + n.heigth <= bsiz:
-            ssiz += n.heigth
+        nh, nw, nl = n.size
+        if ss + nh <= bs:
+            ss += nh
             sapp(n)
-            sx = max([sx, n.width])
-            sy = max([sy, n.length])
+            if nw > sw:
+                sw = nw
+            if nl > sl:
+                sl = nl
         else:
-            #print bsiz, ssiz, minsiz, ssiz+minsiz
             rapp(n)
-    return s, (ssiz, sx, sy), r + p
+    return s, (ss, sw, sl), r + p
 
 
 def packlayer(bin, packages):
@@ -65,7 +67,7 @@ def packlayer(bin, packages):
             # Next Layer please
             rest = strip + rest
             break
-    return strips, (layerx, layersize, layery), rest+packages
+    return strips, (layerx, layersize, layery), rest + packages
 
 
 def packbin(bin, packages):
@@ -88,9 +90,9 @@ def packbin(bin, packages):
             packages = rest
         else:
             # Next Bin please
-            rest = layer + rest
+            packages = layer + rest
             break
-    return layers, (contentx, contenty, contentheigth), rest+packages
+    return layers, (contentx, contenty, contentheigth), packages
 
 
 def packit(bin, originalpackages):

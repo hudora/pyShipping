@@ -25,7 +25,7 @@ setup(name='pyShipping',
       package_data={'': ['README.rst'], 'pyshipping': ['carriers/dpd/georoutetables/*']},
       include_package_data=True,
       ext_modules=[ 
-          Extension("pyshipping.binpack", ["pyshipping/binpack.pyx", 'pyshipping/3dbpp.c'])
+          Extension("pyshipping.binpack_3dbpp", ["pyshipping/binpack_3dbpp.pyx", 'pyshipping/3dbpp.c']),
       ],
       cmdclass = {'build_ext': build_ext}
 )

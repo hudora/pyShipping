@@ -15,7 +15,7 @@ import unittest
 class Package(object):
     """Represents a package as used in cargo/shipping aplications."""
 
-    def __init__(self, size, weight=0):
+    def __init__(self, size, weight=0, nosort=False):
         """Generates a new Package object.
 
         The size can be given as an list of integers or an string where the sizes are determined by the letter 'x':
@@ -26,31 +26,14 @@ class Package(object):
         """
         self.weight = weight
         if "x" in size:
-            self.heigth, self.width, self.length = size.split('x')
+            self.heigth, self.width, self.length = [int(x) for x in size.split('x')]
         else:
             self.heigth, self.width, self.length = size
-        (self.heigth, self.width, self.length) = sorted((int(self.heigth), int(self.width),
-                                                         int(self.length)), reverse=True)
-
-    def _get_size(self):
-        """Returns the dimensions as a Tuple
-           >>> Package((100,110,120)).size
-           (120, 110, 100)
-        """
-        return tuple(sorted((self.heigth, self.width, self.length), reverse=True))
-    size = property(_get_size)
-
-    def _get_volume(self):
-        """Calculates the volume of a Package object.
-
-            Since the volume is calculated in mm^3 very large numbers occur. Divide by 1000 to get cm^3
-            or by 1 000 000 000 to get m^3.
-
-           >>> Package((100,110,120)).volume
-           1320000
-        """
-        return self.heigth * self.width * self.length
-    volume = property(_get_volume)
+        if not nosort:
+            (self.heigth, self.width, self.length) = sorted((int(self.heigth), int(self.width),
+                                                             int(self.length)), reverse=True)
+        self.volume = self.heigth * self.width *self.length
+        self.size = (self.heigth, self.width, self.length)
 
     def _get_gurtmass(self):
         """'gurtamss' is the circumference of the box plus the length - which is often used to
@@ -70,7 +53,7 @@ class Package(object):
     def hat_gleiche_seiten(self, other):
         """Prüft, ob other mindestens eine gleich grosse Seite mit self hat."""
 
-        meineseiten = set([(self.heigth, self.width), (self.heigth, self.length),(self.width, self.length)])
+        meineseiten = set([(self.heigth, self.width), (self.heigth, self.length), (self.width, self.length)])
         otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),(other.width, other.length)])
         return not meineseiten.isdisjoint(otherseiten)
 
@@ -102,6 +85,9 @@ class Package(object):
         """
         return self[0] >= other[0] and self[1] >= other[1] and self[2] >= other[2]
 
+    def __hash__(self):
+        return self.heigth+(self.width<<16)+(self.length<<32)
+
     def __eq__(self, other):
         """Package objects are equal if they have exactly the same dimensions.
 
@@ -116,10 +102,7 @@ class Package(object):
 
     def __cmp__(self, other):
         """Enables to sort by Volume."""
-        if hasattr(other, 'volume'):
-            return cmp(self.volume, other.volume)
-        else:
-            return cmp(self.volume, other)
+        return cmp(self.volume, other.volume)
 
     def __mul__(self, multiplicand):
         """Package can be multiplied with an integer. This results in the Package beeing

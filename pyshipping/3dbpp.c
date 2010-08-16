@@ -104,9 +104,6 @@
 #define HDIM  1
 #define DDIM  2
 
-#define GENERAL     0     /* packing type */
-#define ROBOT       1
-
 #define LEFT   0          /* relative placements */
 #define RIGHT  1
 #define UNDER  2

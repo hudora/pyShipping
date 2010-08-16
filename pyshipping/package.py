@@ -4,12 +4,13 @@
 package.py - shipping/cargo related calculations based on a unit of shipping (box, crate, package)
 
 Created by Maximillian Dornseif on 2006-12-02.
-Copyrigt HUDORA GmbH 2006, 2007, 2010
+Copyright HUDORA GmbH 2006, 2007, 2010
 You might consider this BSD-Licensed.
 """
 
 import doctest
 import unittest
+import pyshipping.binpack
 
 
 class Package(object):
@@ -149,63 +150,62 @@ class Package(object):
             return "<Package %dx%dx%d>" % (self.heigth, self.width, self.length)
 
 
-def buendelung(kartons, maxweight=32000, maxgurtmass=3000):
+def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
     """Versucht Pakete so zu bündeln, so dass das Gurtmass nicht überschritten wird.
 
     Gibt die gebündelten Pakete und die Zahl der benötigten Bündelungsvorgänge zurück.
 
     >>> buendelung([Package((800, 310, 250)), Package((800, 310, 250)), Package((800, 310, 250)), Package((800, 310, 250))])
-    ([<Package 800x750x310>, <Package 800x310x250>], 1)
+    ([<Package 800x750x310>], [<Package 800x310x250>])
     >>> buendelung([Package((800, 310, 250)), Package((800, 310, 250)), Package((800, 310, 250)), Package((800, 310, 250)), Package((450, 290, 250)), Package((450, 290, 250))])
-    ([<Package 800x750x310>, <Package 800x310x250>, <Package 500x450x290>], 2)
+    ([<Package 800x750x310>, <Package 500x450x290>], [<Package 800x310x250>])
     """
 
     if not kartons:
         return kartons
-    ret = []
+    gebuendelt = []
+    rest = []
     lastkarton = kartons.pop(0)
     buendel = False
     buendelcounter = 0
     while kartons:
         currentcarton = kartons.pop(0)
         # check if 2 dimensions fit
-        if currentcarton.hat_gleiche_seiten(lastkarton) and ((lastkarton + currentcarton).gurtmass < maxgurtmass):
+        if (currentcarton.hat_gleiche_seiten(lastkarton) 
+            and (lastkarton.weight + currentcarton.weight < maxweight)
+            and ((lastkarton + currentcarton).gurtmass < maxgurtmass)):
             # new carton has the same size in two dimensions and the sum of both in the third
             # ok, we can bundle
             lastkarton = (lastkarton + currentcarton)
             if buendel is False:
+                # neues Bündel
                 buendelcounter += 1
             buendel = True
         else:
             # different sizes, or too big
-            ret.append(lastkarton)
+            if buendel:
+                gebuendelt.append(lastkarton)
+            else:
+                rest.append(lastkarton)
             lastkarton = currentcarton
             buendel = False
-    ret.append(lastkarton)
-    return ret, buendelcounter
+    if buendel:
+        gebuendelt.append(lastkarton)
+    else:
+        rest.append(lastkarton)
+    return gebuendelt, rest
 
 
-def pack_in_bins(versandkarton, kartons):
+def pack_in_bins(kartons, versandkarton):
     """Implements Bin-Packing.
     
     You provide it with a bin size and a list of Package Objects to be bined. Returns a list op packages
     too big for binning and a list of list representing the bins with the binned Packages.
     
-    >>> pack_in_bins(Package('600x400x400'), \
-                    [Package('135x200x250'), Package('170x380x390'), Package('485x280x590'), Package('254x171x368'), Package('201x172x349'), Package('254x171x368')])
-    ([<Package 590x485x280>], [[<Package 349x201x172>, <Package 368x254x171>, <Package 250x200x135>], [<Package 368x254x171>, <Package 390x380x170>]])
-    
-    This function contains linked in code (c) Copyright 1998, 2003, 2005, 2006 by
-    
-        David Pisinger                        Silvano Martello, Daniele Vigo
-        DIKU, University of Copenhagen        DEIS, University of Bologna
-        Universitetsparken 1                  Viale Risorgimento 2
-        Copenhagen, Denmark                   Bologna, Italy
-    
-    This code can be used free of charge for research and academic purposes.
-    See http://www.diku.dk/hjemmesider/ansatte/pisinger/new3dbpp/3dbpp.c
+    >>> pack_in_bins([Package('135x200x250'), Package('170x380x390'), Package('485x280x590'), Package('254x171x368'), Package('201x172x349'), Package('254x171x368')], \
+                     Package('600x400x400'))
+    ([[<Package 250x200x135>, <Package 349x201x172>, <Package 368x254x171>], [<Package 368x254x171>, <Package 390x380x170>]], [<Package 590x485x280>])
     """
-    import binpack
     
     toobig, packagelist, umkartons = [], [], []
     for i in range(len(kartons)):
@@ -217,11 +217,8 @@ def pack_in_bins(versandkarton, kartons):
         else:
             packagelist.append(box)
     if packagelist:
-        versandkartons, locations, stats = binpack.binpack(versandkarton.size, [x.size for x in packagelist])
-        for ((heigth, width, length), versandkartonnr, (x, y, z)) in locations:
-            umkartons[versandkartonnr].append(Package((heigth, width, length)))
-    umkartons = [x for x in umkartons if x]
-    return toobig, umkartons
+        bins, rest = pyshipping.binpack.binpack(packagelist, versandkarton)
+    return bins, toobig+rest
 
 
 

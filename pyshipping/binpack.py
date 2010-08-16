@@ -58,8 +58,9 @@ def test(func):
     print time.time() - start,
     print vorher, nachher, float(nachher)/vorher*100
 
-print "py", 
-test(binpack)
-print "c ", 
-test(binpack_alt)
+if __name__ == '__main__':
+    print "py", 
+    test(binpack)
+    print "c ", 
+    test(binpack_alt)
 

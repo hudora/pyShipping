@@ -10,7 +10,6 @@ You might consider this BSD-Licensed.
 
 import doctest
 import unittest
-import pyshipping.binpack
 
 
 class Package(object):
@@ -123,8 +122,8 @@ class Package(object):
             >>> Package((1600, 250, 480)) + Package((1600, 490, 480))
             <Package 1600x740x480>
             """
-        meineseiten = set([(self.heigth, self.width), (self.heigth, self.length),(self.heigth, self.length)])
-        otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),(other.heigth, other.length)])
+        meineseiten = set([(self.heigth, self.width), (self.heigth, self.length),(self.width, self.length)])
+        otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),(other.width, other.length)])
         if meineseiten.isdisjoint(otherseiten):
             raise ValueError("%s has no fitting sites to %s" % (self, other))
         candidates = sorted(meineseiten.intersection(otherseiten), reverse=True)
@@ -162,7 +161,7 @@ def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
     """
 
     if not kartons:
-        return kartons
+        return 0, [], kartons
     gebuendelt = []
     rest = []
     lastkarton = kartons.pop(0)
@@ -207,7 +206,7 @@ def pack_in_bins(kartons, versandkarton):
     ([[<Package 250x200x135>, <Package 349x201x172>, <Package 368x254x171>], [<Package 368x254x171>, <Package 390x380x170>]], [<Package 590x485x280>])
     """
     
-    toobig, packagelist = [], []
+    toobig, packagelist, bins, rest = [], [], [], []
     for box in sorted(kartons, reverse=True):
         if box not in versandkarton:
             # passt eh nicht
@@ -216,7 +215,7 @@ def pack_in_bins(kartons, versandkarton):
             packagelist.append(box)
     if packagelist:
         bins, rest = pyshipping.binpack.binpack(packagelist, versandkarton)
-    return bins, toobig+rest
+    return bins, toobig + rest
 
 
 
@@ -283,3 +282,6 @@ if __name__ == '__main__':
 
     doctest.testmod()
     unittest.main()
+
+
+import pyshipping.binpack

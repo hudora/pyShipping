@@ -153,12 +153,12 @@ class Package(object):
 def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
     """Versucht Pakete so zu bündeln, so dass das Gurtmass nicht überschritten wird.
 
-    Gibt die gebündelten Pakete und die Zahl der benötigten Bündelungsvorgänge zurück.
+    Gibt die gebündelten Pakete und die nicht bündelbaren Pakete zurück.
 
     >>> buendelung([Package((800, 310, 250)), Package((800, 310, 250)), Package((800, 310, 250)), Package((800, 310, 250))])
-    ([<Package 800x750x310>], [<Package 800x310x250>])
+    (1, [<Package 800x750x310>], [<Package 800x310x250>])
     >>> buendelung([Package((800, 310, 250)), Package((800, 310, 250)), Package((800, 310, 250)), Package((800, 310, 250)), Package((450, 290, 250)), Package((450, 290, 250))])
-    ([<Package 800x750x310>, <Package 500x450x290>], [<Package 800x310x250>])
+    (2, [<Package 800x750x310>, <Package 500x450x290>], [<Package 800x310x250>])
     """
 
     if not kartons:
@@ -193,23 +193,21 @@ def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
         gebuendelt.append(lastkarton)
     else:
         rest.append(lastkarton)
-    return gebuendelt, rest
+    return buendelcounter, gebuendelt, rest
 
 
 def pack_in_bins(kartons, versandkarton):
     """Implements Bin-Packing.
     
-    You provide it with a bin size and a list of Package Objects to be bined. Returns a list op packages
-    too big for binning and a list of list representing the bins with the binned Packages.
+    You provide it with a bin size and a list of Package Objects to be bined. Returns a list of lists 
+    representing the bins with the binned Packages and a list of Packages too big for binning.
     
     >>> pack_in_bins([Package('135x200x250'), Package('170x380x390'), Package('485x280x590'), Package('254x171x368'), Package('201x172x349'), Package('254x171x368')], \
                      Package('600x400x400'))
     ([[<Package 250x200x135>, <Package 349x201x172>, <Package 368x254x171>], [<Package 368x254x171>, <Package 390x380x170>]], [<Package 590x485x280>])
     """
     
-    toobig, packagelist, umkartons = [], [], []
-    for i in range(len(kartons)):
-        umkartons.append([])
+    toobig, packagelist = [], []
     for box in sorted(kartons, reverse=True):
         if box not in versandkarton:
             # passt eh nicht

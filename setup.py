@@ -6,7 +6,10 @@ information.
 from setuptools import setup, find_packages
 from distutils.extension import Extension
 import codecs
-from Cython.Distutils import build_ext
+try:
+    from Cython.Distutils import build_ext
+except ImportError:
+    from distutils.command import build_ext
 
 setup(name='pyShipping',
       maintainer='Maximillian Dornseif',

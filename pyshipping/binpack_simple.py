@@ -37,8 +37,6 @@ Copyright (c) 2010 HUDORA. All rights reserved.
 """
 
 
-
-from pyshipping.package import Package
 import time
 
 
@@ -215,3 +213,6 @@ def test():
 if __name__ == '__main__':
     import cProfile
     cProfile.run('test()')
+
+
+from pyshipping.package import Package

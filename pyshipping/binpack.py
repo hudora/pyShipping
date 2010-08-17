@@ -32,9 +32,6 @@ def binpack_alt(packages, bin=None):
 def binpack(packages, bin=None, iterlimit=5000):
     return binpack_simple.binpack(packages, bin, iterlimit)
 
-import time
-from pyshipping.package import Package
-
 
 def test(func):
     fd = open('testdata.txt')
@@ -64,3 +61,6 @@ if __name__ == '__main__':
     print "c ", 
     test(binpack_alt)
 
+
+import time
+from pyshipping.package import Package

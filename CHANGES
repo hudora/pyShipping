@@ -1,3 +1,4 @@
+1.6:    addressvalidation added
 1.5:    Keep Package dimensions sorted, buendelung(), __add__() and hat_gleiche_seiten() 
         added binpacking (c) David Pisinger, Silvano Martello, Daniele Vigo
         and an independent pure Python implementation

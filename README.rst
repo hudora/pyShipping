@@ -1,7 +1,9 @@
 pyShipping provides connections to interface with shipping companies and to transport shipping related information. 
 
- * package - shipping/cargo related calculations based on a unit of shipping (box, crate, package)
+ * package - shipping/cargo related calculations based on a unit of shipping (box, crate, package), includes
+   a bin packing implementation in pure Python
  * sendung - defines an abstract shippment (Sendung), with packages and calculations based on that
+ * addressvalidation - check if an address is valid
  * carriers.dpd - calculation of DPD/Georoutes routing data and labels. Included tables are for shippments from Wuppertal but it should work with all other german routing tables.
  * fortras - tools for reading and writing Fortras messages. Fortras is a EDI standard for logistics related information somewhat common in Germany. See Wikipedia_ for further enlightenment
 

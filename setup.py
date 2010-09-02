@@ -30,6 +30,6 @@ setup(name='pyShipping',
       ext_modules=[ 
           Extension("pyshipping.binpack_3dbpp", ["pyshipping/binpack_3dbpp.pyx", 'pyshipping/3dbpp.c']),
       ],
-      cmdclass = {'build_ext': build_ext}
+      # cmdclass = {'build_ext': build_ext}
 )
 

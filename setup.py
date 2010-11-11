@@ -6,10 +6,6 @@ information.
 from setuptools import setup, find_packages
 from distutils.extension import Extension
 import codecs
-try:
-    from Cython.Distutils import build_ext
-except ImportError:
-    from distutils.command import build_ext
 
 setup(name='pyShipping',
       maintainer='Maximillian Dornseif',
@@ -27,9 +23,6 @@ setup(name='pyShipping',
       packages=find_packages(),
       package_data={'': ['README.rst'], 'pyshipping': ['carriers/dpd/georoutetables/*']},
       include_package_data=True,
-      ext_modules=[ 
-          Extension("pyshipping.binpack_3dbpp", ["pyshipping/binpack_3dbpp.pyx", 'pyshipping/3dbpp.c']),
-      ],
       # cmdclass = {'build_ext': build_ext}
 )
 

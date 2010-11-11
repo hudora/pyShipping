@@ -14,16 +14,4 @@ It also comes with the only python based `3D Bin Packing <http://www.cs.sunysb.e
 
 You can get the whole Package at http://pypi.python.org/pypi/pyShipping
 
-
-..literal::
-
-    This contains linked in the binpack module code (c) Copyright 1998, 2003, 2005, 2006 by
-    
-    David Pisinger                        Silvano Martello, Daniele Vigo
-    DIKU, University of Copenhagen        DEIS, University of Bologna
-    Universitetsparken 1                  Viale Risorgimento 2
-    Copenhagen, Denmark                   Bologna, Italy
-    
-    This code can be used free of charge for research and academic purposes.
-
-The rest of the code is BSD Licensed.
+This code is BSD Licensed.

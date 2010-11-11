@@ -1,14 +1,6 @@
 # setting the PATH seems only to work in GNUmake not in BSDmake
 PATH := ./testenv/bin:$(PATH)
 
-default: binpack_3dbpp.so
-
-pyshipping/binpack_3dbpp.c: pyshipping/binpack_3dbpp.pyx
-	cython pyshipping/binpack_3dbpp.pyx
-
-binpack_3dbpp.so: pyshipping/binpack_3dbpp.c
-	python setup.py build_ext --inplace
-
 check:
 	find pyshipping -name '*.py' | xargs /usr/local/hudorakit/bin/hd_pep8
 	/usr/local/hudorakit/bin/hd_pylint -f parseable pyshipping | tee pylint.out

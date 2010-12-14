@@ -55,7 +55,7 @@ class Package(object):
 
         meineseiten = set([(self.heigth, self.width), (self.heigth, self.length), (self.width, self.length)])
         otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),(other.width, other.length)])
-        return not meineseiten.isdisjoint(otherseiten)
+        return bool(meineseiten.intersection(otherseiten))
 
     def __getitem__(self, key):
         """The coordinates can be accessed as if the object is a tuple.
@@ -124,7 +124,7 @@ class Package(object):
             """
         meineseiten = set([(self.heigth, self.width), (self.heigth, self.length),(self.width, self.length)])
         otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),(other.width, other.length)])
-        if meineseiten.isdisjoint(otherseiten):
+        if not meineseiten.intersection(otherseiten):
             raise ValueError("%s has no fitting sites to %s" % (self, other))
         candidates = sorted(meineseiten.intersection(otherseiten), reverse=True)
         stack_on = candidates[0]

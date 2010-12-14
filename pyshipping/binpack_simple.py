@@ -38,6 +38,7 @@ Copyright (c) 2010 HUDORA. All rights reserved.
 
 
 import time
+import random
 
 
 def packstrip(bin, p):
@@ -133,8 +134,28 @@ def packit(bin, originalpackages):
     return packedbins, rest
 
 
-import itertools
-import random
+try:
+    from itertools import permutations
+except ImportError:
+    def product(*args, **kwds):
+        # product('ABCD', 'xy') --> Ax Ay Bx By Cx Cy Dx Dy
+        # product(range(2), repeat=3) --> 000 001 010 011 100 101 110 111
+        pools = map(tuple, args) * kwds.get('repeat', 1)
+        result = [[]]
+        for pool in pools:
+            result = [x+[y] for x in result for y in pool]
+        for prod in result:
+            yield tuple(prod)
+
+
+    def permutations(iterable, r=None):
+        pool = tuple(iterable)
+        n = len(pool)
+        r = n if r is None else r
+        for indices in product(range(n), repeat=r):
+            if len(set(indices)) == r:
+                yield tuple(pool[i] for i in indices)
+
 
 class Timeout(Exception):
     pass
@@ -146,7 +167,7 @@ def allpermutations_helper(permuted, todo, maxcounter, callback, bin, bestpack, 
     else:
         others = todo[1:]
         thispackage = todo[0]
-        for dimensions in set(itertools.permutations((thispackage[0], thispackage[1], thispackage[2]))):
+        for dimensions in set(permutations((thispackage[0], thispackage[1], thispackage[2]))):
             thispackage = Package(dimensions, nosort=True)
             if thispackage in bin:
                 counter = allpermutations_helper(permuted+[thispackage], others, maxcounter, callback, bin,

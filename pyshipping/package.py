@@ -283,6 +283,3 @@ if __name__ == '__main__':
 
     doctest.testmod()
     unittest.main()
-
-
-import pyshipping.binpack

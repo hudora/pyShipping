@@ -134,7 +134,7 @@ class Package(object):
         othersides = [other.heigth, other.width, other.length]
         othersides.remove(stack_on[0])
         othersides.remove(stack_on[1])
-        return Package((stack_on[0], stack_on[1], mysides[0] + othersides[0]))
+        return Package((stack_on[0], stack_on[1], mysides[0] + othersides[0]), self.weight + other.weight)
 
     def __str__(self):
         if self.weight:

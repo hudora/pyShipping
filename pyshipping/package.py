@@ -160,6 +160,7 @@ def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
     (2, [<Package 800x750x310>, <Package 500x450x290>], [<Package 800x310x250>])
     """
 
+    MAXKARTOONSIMBUENDEL = 6
     if not kartons:
         return 0, [], kartons
     gebuendelt = []
@@ -167,15 +168,18 @@ def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
     lastkarton = kartons.pop(0)
     buendel = False
     buendelcounter = 0
+    kartons_im_buendel = 1
     while kartons:
         currentcarton = kartons.pop(0)
         # check if 2 dimensions fit
         if (currentcarton.hat_gleiche_seiten(lastkarton) 
             and (lastkarton.weight + currentcarton.weight < maxweight)
-            and ((lastkarton + currentcarton).gurtmass < maxgurtmass)):
+            and ((lastkarton + currentcarton).gurtmass < maxgurtmass)
+            and (kartons_im_buendel < MAXKARTOONSIMBUENDEL)):
             # new carton has the same size in two dimensions and the sum of both in the third
             # ok, we can bundle
             lastkarton = (lastkarton + currentcarton)
+            kartons_im_buendel += 1
             if buendel is False:
                 # neues Bündel
                 buendelcounter += 1
@@ -186,6 +190,7 @@ def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
                 gebuendelt.append(lastkarton)
             else:
                 rest.append(lastkarton)
+            kartons_im_buendel = 1
             lastkarton = currentcarton
             buendel = False
     if buendel:

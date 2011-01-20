@@ -3,9 +3,6 @@
 
 """Test routing resolver for DPD. Coded by jmv, extended by md"""
 
-import os.path
-import logging
-import sqlite3
 import time
 import unittest
 from pyshipping.carriers.dpd.georoute import get_route, get_route_without_cache
@@ -445,7 +442,7 @@ class RouterTest(TestCase):
 
     def test_cache(self):
         self.assertDicEq(vars(get_route('LI', '8440')), vars(get_route_without_cache('LI', '8440')))
-    
+
 
 class HighLevelTest(TestCase):
 

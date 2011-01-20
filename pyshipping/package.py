@@ -32,7 +32,7 @@ class Package(object):
         if not nosort:
             (self.heigth, self.width, self.length) = sorted((int(self.heigth), int(self.width),
                                                              int(self.length)), reverse=True)
-        self.volume = self.heigth * self.width *self.length
+        self.volume = self.heigth * self.width * self.length
         self.size = (self.heigth, self.width, self.length)
 
     def _get_gurtmass(self):
@@ -54,7 +54,8 @@ class Package(object):
         """Prüft, ob other mindestens eine gleich grosse Seite mit self hat."""
 
         meineseiten = set([(self.heigth, self.width), (self.heigth, self.length), (self.width, self.length)])
-        otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),(other.width, other.length)])
+        otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),
+                           (other.width, other.length)])
         return bool(meineseiten.intersection(otherseiten))
 
     def __getitem__(self, key):
@@ -77,7 +78,7 @@ class Package(object):
 
     def __contains__(self, other):
         """Checks if on package fits within an other.
-        
+
         >>> Package((1600, 250, 480)) in Package((1600, 250, 480))
         True
         >>> Package((1600, 252, 480)) in Package((1600, 250, 480))
@@ -86,7 +87,7 @@ class Package(object):
         return self[0] >= other[0] and self[1] >= other[1] and self[2] >= other[2]
 
     def __hash__(self):
-        return self.heigth+(self.width<<16)+(self.length<<32)
+        return self.heigth + (self.width << 16) + (self.length << 32)
 
     def __eq__(self, other):
         """Package objects are equal if they have exactly the same dimensions.
@@ -111,7 +112,7 @@ class Package(object):
            >>> Package((400,300,600)) * 2
            <Package 600x600x400>
            """
-        return Package((self.heigth, self.width, self.length*multiplicand), self.weight*multiplicand)
+        return Package((self.heigth, self.width, self.length * multiplicand), self.weight * multiplicand)
 
     def __add__(self, other):
         """
@@ -122,8 +123,10 @@ class Package(object):
             >>> Package((1600, 250, 480)) + Package((1600, 490, 480))
             <Package 1600x740x480>
             """
-        meineseiten = set([(self.heigth, self.width), (self.heigth, self.length),(self.width, self.length)])
-        otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),(other.width, other.length)])
+        meineseiten = set([(self.heigth, self.width), (self.heigth, self.length),
+                           (self.width, self.length)])
+        otherseiten = set([(other.heigth, other.width), (other.heigth, other.length),
+                           (other.width, other.length)])
         if not meineseiten.intersection(otherseiten):
             raise ValueError("%s has no fitting sites to %s" % (self, other))
         candidates = sorted(meineseiten.intersection(otherseiten), reverse=True)
@@ -172,7 +175,7 @@ def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
     while kartons:
         currentcarton = kartons.pop(0)
         # check if 2 dimensions fit
-        if (currentcarton.hat_gleiche_seiten(lastkarton) 
+        if (currentcarton.hat_gleiche_seiten(lastkarton)
             and (lastkarton.weight + currentcarton.weight < maxweight)
             and ((lastkarton + currentcarton).gurtmass < maxgurtmass)
             and (kartons_im_buendel < MAXKARTOONSIMBUENDEL)):
@@ -202,15 +205,15 @@ def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
 
 def pack_in_bins(kartons, versandkarton):
     """Implements Bin-Packing.
-    
-    You provide it with a bin size and a list of Package Objects to be bined. Returns a list of lists 
+
+    You provide it with a bin size and a list of Package Objects to be bined. Returns a list of lists
     representing the bins with the binned Packages and a list of Packages too big for binning.
-    
+
     >>> pack_in_bins([Package('135x200x250'), Package('170x380x390'), Package('485x280x590'), Package('254x171x368'), Package('201x172x349'), Package('254x171x368')], \
                      Package('600x400x400'))
     ([[<Package 250x200x135>, <Package 349x201x172>, <Package 368x254x171>], [<Package 368x254x171>, <Package 390x380x170>]], [<Package 590x485x280>])
     """
-    
+
     import pyshipping.binpack
     toobig, packagelist, bins, rest = [], [], [], []
     for box in sorted(kartons, reverse=True):
@@ -224,9 +227,7 @@ def pack_in_bins(kartons, versandkarton):
     return bins, toobig + rest
 
 
-
 ### Tests
-
 class PackageTests(unittest.TestCase):
     """Simple tests for Package objects."""
 
@@ -263,7 +264,7 @@ class PackageTests(unittest.TestCase):
 
     def test_mul(self):
         """Test multiplication."""
-        self.assertEqual(Package((200, 200, 200)), Package((100, 200, 200))*2)
+        self.assertEqual(Package((200, 200, 200)), Package((100, 200, 200)) * 2)
 
     def test_sort(self):
         """Test multiplication."""

@@ -18,39 +18,39 @@ class Statusmeldung(object):
                    + r'(?P<sendungsnrempfaenger>.{16})(?P<sendungsschluessel>[0-9 ]{3})(?P<date>[0-9 ]{8})'
                    + r'(?P<time>[0-9 ]{4})(?P<wartezeit>[0-9 ]{3})(?P<quittungsgeber>.{15})(?P<zusatztext>.{49})'
                    + r'(?P<foo>.)5')
-    # Satzart ‘Q’ muss 1 001 - 001 
-    # Identifkations-Nr. des Versandpartners beim Empfangspartner** muss          10 002 - 011 
-    # Verkehrsart muss 1 012 - 012 
-    # Sendungs-Nr. Versandpartner muss          16 013 - 028 
-    # Sendungs-Nr.Empfangspartner muss          16 029 - 044 
-    # Statusschlüssel* muss 3 045 - 047 
-    # Datum des Ereignisses 
-    # (TTMMJJJJ) muss 8/0 048 - 055 
-    # Uhrzeit des Ereignisses 
-    # (SSMM) muss 4/0 056 - 059 
-    # Warte-/Standzeit in Minuten kann 3 060 - 062 
-    # Name des Quittungsgebers kann          15 063 - 077 
-    # Zusatztext kann          49 078 - 126 
-    # Frei 1 127 - 127 
-    # Releasestand ‘5’ muss 1 128 - 128 
-    
+    # Satzart ‘Q’ muss 1 001 - 001
+    # Identifkations-Nr. des Versandpartners beim Empfangspartner** muss          10 002 - 011
+    # Verkehrsart muss 1 012 - 012
+    # Sendungs-Nr. Versandpartner muss          16 013 - 028
+    # Sendungs-Nr.Empfangspartner muss          16 029 - 044
+    # Statusschlüssel* muss 3 045 - 047
+    # Datum des Ereignisses
+    # (TTMMJJJJ) muss 8/0 048 - 055
+    # Uhrzeit des Ereignisses
+    # (SSMM) muss 4/0 056 - 059
+    # Warte-/Standzeit in Minuten kann 3 060 - 062
+    # Name des Quittungsgebers kann          15 063 - 077
+    # Zusatztext kann          49 078 - 126
+    # Frei 1 127 - 127
+    # Releasestand ‘5’ muss 1 128 - 128
+
     # stati, die dazu fuehren, dass eine  sendung erledigt ist
-    erledigtstati = [11, # Nicht in Zustellung - Sendung endgültig in Verlust
-                     12, # Zugestellt - reine Quittung
-                     66, # Keine Zustellung - Komplett-Fehlmenge per Entladebericht gemeldet
-                     67, # Nicht zugestellt - annahmeverweigerte Sendung, Retour lt. Verfügung
-                     68, # Nicht zugestellt - annahmeverweigerte Sendung, Retour-Verfügung fehlt
-                     69, # Zugestellt - mit Teilfehlmenge
-                     70, # Zugestellt - mit Beschädigung
-                     71, # Zugestellt - Zustellung nicht belegbar/SPÜS verloren
-                     74, # Zugestellt - Teil-AV
-                     80, # AV - Ware beschädigt
-                     81, # AV - Fehlmenge
-                     82, # AV - Liefertermin überschritten
-                     83, # AV - Lieferschein fehlt/Begleitpapiere unvollständig
-                     84, # AV - Empfänger zahlt WWNN/EUSt. nicht
-                     85, # AV - nicht bestellt
-                     88, # Erledigung durch ...
+    erledigtstati = [11,  # Nicht in Zustellung - Sendung endgültig in Verlust
+                     12,  # Zugestellt - reine Quittung
+                     66,  # Keine Zustellung - Komplett-Fehlmenge per Entladebericht gemeldet
+                     67,  # Nicht zugestellt - annahmeverweigerte Sendung, Retour lt. Verfügung
+                     68,  # Nicht zugestellt - annahmeverweigerte Sendung, Retour-Verfügung fehlt
+                     69,  # Zugestellt - mit Teilfehlmenge
+                     70,  # Zugestellt - mit Beschädigung
+                     71,  # Zugestellt - Zustellung nicht belegbar/SPÜS verloren
+                     74,  # Zugestellt - Teil-AV
+                     80,  # AV - Ware beschädigt
+                     81,  # AV - Fehlmenge
+                     82,  # AV - Liefertermin überschritten
+                     83,  # AV - Lieferschein fehlt/Begleitpapiere unvollständig
+                     84,  # AV - Empfänger zahlt WWNN/EUSt. nicht
+                     85,  # AV - nicht bestellt
+                     88,  # Erledigung durch ...
                    ]
     okstati = [12, 50]
     bouncestati = [80, 81, 82, 83, 84, 85]
@@ -105,11 +105,10 @@ class Statusmeldung(object):
         99: 'Nicht in Zustellung - Ereignis zu Lasten Empfangspartner',
         100: 'Nicht in Zustellung - Ereignis nicht zu Lasten Empfangspartner',
     }
-    
+
     def update_sendung(self, sendung_id, datadict):
         """Updates a huLOG Sendung record with the parsed STAT data."""
         import huLOG.models
-        import django.core.exceptions
         try:
             sendung = huLOG.models.Sendung.objects.get(id=sendung_id)
         except huLOG.models.Sendung.DoesNotExist:
@@ -135,7 +134,7 @@ class Statusmeldung(object):
                                                                        datadict['sendungsschluessel'],
                                                                        datadict['statustext'],
                                                                        datadict['zusatztext']))
-        
+
         if datadict['statustext']:
             info = [datadict['statustext']]
         else:
@@ -147,7 +146,7 @@ class Statusmeldung(object):
         if datadict['zusatztext']:
             info.append(datadict['zusatztext'])
         info.append(str(datadict['timestamp']))
-        log = huLOG.models.SendungLogentry(lieferung = sendung)
+        log = huLOG.models.SendungLogentry(lieferung=sendung)
         log.displaytext = repr(', '.join(info))
         log.sourcedata = repr(datadict)
         log.source = 'Maeuler STAT'
@@ -155,7 +154,7 @@ class Statusmeldung(object):
         if datadict['sendungsschluessel'] in Statusmeldung.warnstati:
             log.code = '220'
         if datadict['sendungsschluessel'] in Statusmeldung.errorstati:
-            log.code = '230'        
+            log.code = '230'
         log.timestamp = datadict['timestamp']
         log.save()
         sendung.updated_at = datetime.datetime.now()
@@ -165,13 +164,13 @@ class Statusmeldung(object):
                                               '018', '031', '040', '050', '054', '055', '063', '068', '069',
                                               '071', '084', '085', '091', '099', '053', '100', '999']:
             if datadict['sendungsnrempfaenger']:
-                if (sendung.speditionsauftragsnummer 
+                if (sendung.speditionsauftragsnummer
                   and sendung.speditionsauftragsnummer != datadict['sendungsnrempfaenger']):
                     logging.error('Problem with Sendung %r: original speditionsauftragsnummer %r replaced by %r' % (sendung, sendung.speditionsauftragsnummer, datadict['sendungsnrempfaenger']))
                 sendung.speditionsauftragsnummer = datadict['sendungsnrempfaenger']
         else:
             logging.error('unknown STAT data for record %r: %r (%r|%r)' % (datadict['sendungsnrversender'],
-                                                                           datadict['sendungsschluessel'], 
+                                                                           datadict['sendungsschluessel'],
                                                                            datadict['statustext'],
                                                                            datadict['zusatztext']))
         sendung.save()
@@ -186,7 +185,7 @@ class Statusmeldung(object):
         if not lines[0].startswith('@@PHSTAT128 0128003500107 MAEULER HUDORA1                       '):
             raise RuntimeError("illegal status data %r" % data[:300])
         for line in lines[1:]:
-            if not line or line[0] == 'X': # 'X' records and empty lines are ignored
+            if not line or line[0] == 'X':  # 'X' records and empty lines are ignored
                 continue
             match = re.search(Statusmeldung.q_record_re, line)
             newdict = {}
@@ -196,11 +195,11 @@ class Statusmeldung(object):
                 newdict[key] = value.strip()
             try:
                 if newdict['time']:
-                    newdict['timestamp'] = datetime.datetime(int(newdict['date'][4:]), int(newdict['date'][2:4]), 
-                                                             int(newdict['date'][:2]), int(newdict['time'][:2]), 
+                    newdict['timestamp'] = datetime.datetime(int(newdict['date'][4:]), int(newdict['date'][2:4]),
+                                                             int(newdict['date'][:2]), int(newdict['time'][:2]),
                                                              int(newdict['time'][2:]))
                 else:
-                    newdict['timestamp'] = datetime.datetime(int(newdict['date'][4:]), int(newdict['date'][2:4]), 
+                    newdict['timestamp'] = datetime.datetime(int(newdict['date'][4:]), int(newdict['date'][2:4]),
                                                              int(newdict['date'][:2]))
             except ValueError:
                 logging.error("malformed timestamp %r|%r" % (newdict['date'], newdict['time']))

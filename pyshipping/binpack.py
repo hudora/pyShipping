@@ -35,13 +35,12 @@ def test(func):
             vorher += len(packages)
             nachher += len(bins)
     print time.time() - start,
-    print vorher, nachher, float(nachher)/vorher*100
+    print vorher, nachher, float(nachher) / vorher * 100
+
 
 if __name__ == '__main__':
-    print "py", 
+    print "py",
     test(binpack)
-    print "c ", 
-    test(binpack_alt)
 
 
 import time

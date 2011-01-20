@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-binpack_simple.py 
+binpack_simple.py
 
 This code implemnts 3D bin packing in pure Python
 
@@ -21,7 +21,7 @@ Binsize     Runtime                 Recuction in shipped Packages
 600x500x400 29.1432909966 4970 1685 33.9034205231
 
 
-On the datasets we operate on we can archive comparable preformance to academic higly optimized C code 
+On the datasets we operate on we can archive comparable preformance to academic higly optimized C code
 like David Pisinger's 3bpp:
 
      Runtime                 Recuction in shipped Packages
@@ -43,7 +43,7 @@ import random
 
 def packstrip(bin, p):
     """Creates a Strip which fits into bin.
-    
+
     Returns the Packages to be used in the strip, the dimensions of the strip as a 3-tuple
     and a list of "left over" packages.
     """
@@ -130,31 +130,30 @@ def packit(bin, originalpackages):
         packedbins.append(packagesinbin)
         packages = rest
     # we now have a result, try to get a better result by rotating some bins
-    
+
     return packedbins, rest
 
 
-try:
-    from itertools import permutations
-except ImportError:
-    def product(*args, **kwds):
-        # product('ABCD', 'xy') --> Ax Ay Bx By Cx Cy Dx Dy
-        # product(range(2), repeat=3) --> 000 001 010 011 100 101 110 111
-        pools = map(tuple, args) * kwds.get('repeat', 1)
-        result = [[]]
-        for pool in pools:
-            result = [x+[y] for x in result for y in pool]
-        for prod in result:
-            yield tuple(prod)
+# In newer Python versions these van be imported:
+# from itertools import permutations
+def product(*args, **kwds):
+    # product('ABCD', 'xy') --> Ax Ay Bx By Cx Cy Dx Dy
+    # product(range(2), repeat=3) --> 000 001 010 011 100 101 110 111
+    pools = map(tuple, args) * kwds.get('repeat', 1)
+    result = [[]]
+    for pool in pools:
+        result = [x + [y] for x in result for y in pool]
+    for prod in result:
+        yield tuple(prod)
 
 
-    def permutations(iterable, r=None):
-        pool = tuple(iterable)
-        n = len(pool)
-        r = n if r is None else r
-        for indices in product(range(n), repeat=r):
-            if len(set(indices)) == r:
-                yield tuple(pool[i] for i in indices)
+def permutations(iterable, r=None):
+    pool = tuple(iterable)
+    n = len(pool)
+    r = n if r is None else r
+    for indices in product(range(n), repeat=r):
+        if len(set(indices)) == r:
+            yield tuple(pool[i] for i in indices)
 
 
 class Timeout(Exception):
@@ -170,8 +169,8 @@ def allpermutations_helper(permuted, todo, maxcounter, callback, bin, bestpack, 
         for dimensions in set(permutations((thispackage[0], thispackage[1], thispackage[2]))):
             thispackage = Package(dimensions, nosort=True)
             if thispackage in bin:
-                counter = allpermutations_helper(permuted+[thispackage], others, maxcounter, callback, bin,
-                                                 bestpack, counter)
+                counter = allpermutations_helper(permuted + [thispackage], others, maxcounter, callback,
+                                                 bin, bestpack, counter)
             if counter > maxcounter:
                 raise Timeout('more than %d iterations tries' % counter)
         return counter
@@ -191,7 +190,7 @@ def trypack(bin, packages, bestpack):
 def allpermutations(todo, bin, iterlimit=5000):
     random.seed(1)
     random.shuffle(todo)
-    bestpack = dict(bincount=len(todo)+1)
+    bestpack = dict(bincount=len(todo) + 1)
     try:
         # First try unpermuted
         trypack(bin, todo, bestpack)
@@ -204,7 +203,7 @@ def allpermutations(todo, bin, iterlimit=5000):
 
 def binpack(packages, bin=None, iterlimit=5000):
     """Packs a list of Package() objects into a number of equal-sized bins.
-    
+
     Returns a list of bins listing the packages within the bins and a list of packages which can't be
     packed because they are to big."""
     if not bin:
@@ -228,7 +227,7 @@ def test():
             vorher += len(packages)
             nachher += len(bins)
     print time.time() - start,
-    print vorher, nachher, float(nachher)/vorher*100
+    print vorher, nachher, float(nachher) / vorher * 100
 
 
 if __name__ == '__main__':

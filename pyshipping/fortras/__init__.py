@@ -5,4 +5,4 @@ enlightenment."""
 # You may consider this BSD licensed.
 
 from pyshipping.fortras.bordero import ship
-__slots__ = [ship]
+__all__ = [ship]

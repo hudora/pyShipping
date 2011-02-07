@@ -408,7 +408,11 @@ class Bordero(object):
 
     def generate_satz(self, satzart, data):
         """Helper function to generate output for a Record."""
-        ret = (u'%s%03d' % (satzart, self.satznummer)) + (self.satzarten[satzart] % data)
+        for key in data.keys():
+            if isinstance(data[key], str):
+                data[key] = unicode(data[key], 'ascii', errors='ignore')
+        ret = ((u'%s%03d' % (satzart, self.satznummer)) +
+               (self.satzarten[satzart] % data))
         if len(ret) != 128:
             raise RuntimeError('bordero Satz %r kaputt! (len=%r) %r %r' % (satzart, len(ret), ret, data))
         return ret

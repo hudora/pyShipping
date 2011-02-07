@@ -37,7 +37,7 @@ class RouteDataTest(TestCase):
         self.db = self.data.db
 
     def test_version(self):
-        self.assertEqual(self.data.version, '20100503')
+        self.assertEqual(self.data.version, '20110103')
 
     def test_get_country(self):
         self.assertRaises(CountryError, self.data.get_countrynum, 'URW')
@@ -113,10 +113,10 @@ class RouterTest(TestCase):
     def test_known_routes_world(self):
         route = self.router.route(Destination(postcode='66400', country='FR'))
         self.assertDicEq(route.routingdata(), {'d_depot': u'0470', 'serviceinfo': '', 'country': u'FR',
-                                               'd_sort': u'U53', 'o_sort': u'16', 'service_text': u'D'})
+                                               'd_sort': u'U50', 'o_sort': u'16', 'service_text': u'D'})
         route = self.router.route(Destination('FR', '66400', 'Ceret'))
         self.assertDicEq(route.routingdata(), {'d_depot': '0470', 'serviceinfo': '', 'country': 'FR',
-                                               'd_sort': 'U53', 'o_sort': '16', 'service_text': 'D'})
+                                               'd_sort': 'U50', 'o_sort': '16', 'service_text': 'D'})
         route = self.router.route(Destination('BE', '3960', 'Bree/Belgien'))
         self.assertDicEq(route.routingdata(), {'d_depot': '0532', 'serviceinfo': '', 'country': 'BE',
                                                'd_sort': u'A353', 'o_sort': '52', 'service_text': 'D'})
@@ -183,7 +183,7 @@ class RouterTest(TestCase):
                                                'd_sort': u'S65', 'o_sort': '16', 'service_text': 'D'})
         route = self.router.route(Destination('FR', '91044', 'Evry Cedex'))
         self.assertDicEq(route.routingdata(), {'d_depot': u'0408', 'serviceinfo': '', 'country': u'FR',
-                                               'd_sort': u'S61', 'o_sort': u'50', 'service_text': u'D'})
+                                               'd_sort': u'S62', 'o_sort': u'50', 'service_text': u'D'})
 
     def test_difficult_routingdepots(self):
         route = self.router.route(Destination('AT', '3626', 'H<C3><BC>nibach'))
@@ -219,16 +219,16 @@ class RouterTest(TestCase):
     def test_postcode_with_country(self):
         route = self.router.route(Destination(postcode='FR-66400', country='FR'))
         self.assertDicEq(route.routingdata(), {'d_depot': u'0470', 'serviceinfo': '', 'country': u'FR',
-                                               'd_sort': u'U53', 'o_sort': u'16', 'service_text': u'D'})
+                                               'd_sort': u'U50', 'o_sort': u'16', 'service_text': u'D'})
         route = self.router.route(Destination(postcode='FR 66400', country='FR'))
         self.assertDicEq(route.routingdata(), {'d_depot': u'0470', 'serviceinfo': '', 'country': u'FR',
-                                               'd_sort': u'U53', 'o_sort': u'16', 'service_text': u'D'})
+                                               'd_sort': u'U50', 'o_sort': u'16', 'service_text': u'D'})
         route = self.router.route(Destination(postcode='FR66400', country='FR'))
         self.assertDicEq(route.routingdata(), {'d_depot': '0470', 'serviceinfo': '', 'country': 'FR',
-                                               'd_sort': 'U53', 'o_sort': '16', 'service_text': 'D'})
+                                               'd_sort': 'U50', 'o_sort': '16', 'service_text': 'D'})
         route = self.router.route(Destination(postcode='F-66400', country='FR'))
         self.assertDicEq(route.routingdata(), {'d_depot': '0470', 'serviceinfo': '', 'country': 'FR',
-                                               'd_sort': 'U53', 'o_sort': '16', 'service_text': 'D'})
+                                               'd_sort': 'U50', 'o_sort': '16', 'service_text': 'D'})
 
     def test_postcode_spaces(self):
         route = self.router.route(Destination(postcode='42 477'))
@@ -287,7 +287,7 @@ class RouterTest(TestCase):
             'service_text': u'D'})
         # DE   | 04316 | Leipzig
         self.assertDicEq(get_route('DE', '04316').routingdata(),
-            {'d_depot': u'0104', 'serviceinfo': '', 'country': u'DE', 'd_sort': u'3MEN', 'o_sort': u'10',
+            {'d_depot': u'0104', 'serviceinfo': '', 'country': u'DE', 'd_sort': u'1POP', 'o_sort': u'10',
              'service_text': u'D'})
         # DE   | 99974 | M<C3><BC>hlhausen / Th<C3><BC>ringen
         self.assertDicEq(get_route('DE', '99974').routingdata(),
@@ -315,7 +315,7 @@ class RouterTest(TestCase):
             'service_text': u'D'})
         # FR   | 91044  | EVRY-LISSES
         self.assertDicEq(get_route('FR', '91044').routingdata(),
-            {'d_depot': u'0408', 'serviceinfo': '', 'country': u'FR', 'd_sort': u'S61', 'o_sort': u'50',
+            {'d_depot': u'0408', 'serviceinfo': '', 'country': u'FR', 'd_sort': u'S62', 'o_sort': u'50',
              'service_text': u'D'})
         # GB   | BT387AR              | Carrickfergus
         self.assertDicEq(get_route('GB', 'BT387AR').routingdata(),
@@ -339,11 +339,11 @@ class RouterTest(TestCase):
             'service_text': u'D'})
         # GR   | 17341  | Athens
         self.assertDicEq(get_route('GR', '17341').routingdata(),
-            {'d_depot': u'1900', 'serviceinfo': u'', 'country': u'GR', 'd_sort': u'', 'o_sort': u'62',
+            {'d_depot': u'1251', 'serviceinfo': u'', 'country': u'GR', 'd_sort': u'', 'o_sort': u'62',
             'service_text': u'D'})
         # GR   | 64200  | Chrisoupoli-KAVALA
         self.assertDicEq(get_route('GR', '64200').routingdata(),
-            {'d_depot': u'1948', 'serviceinfo': u'', 'country': u'GR', 'd_sort': u'', 'o_sort': u'62',
+            {'d_depot': u'1251', 'serviceinfo': u'', 'country': u'GR', 'd_sort': u'', 'o_sort': u'62',
             'service_text': u'D'})
         # HR   | 10000 | Zagreb
         self.assertDicEq(get_route('HR', '10000').routingdata(),
@@ -395,7 +395,7 @@ class RouterTest(TestCase):
              'service_text': u'D'})
         # NL   | 9405 JB  | Assen
         self.assertDicEq(get_route('NL', '9405 JB').routingdata(),
-            {'d_depot': u'0513', 'serviceinfo': u'', 'country': u'NL', 'd_sort': u'421', 'o_sort': u'52',
+            {'d_depot': u'0513', 'serviceinfo': u'', 'country': u'NL', 'd_sort': u'B242', 'o_sort': u'52',
             'service_text': u'D'})
         # NO   | 6800     | Förde
         self.assertDicEq(get_route('NO', '6800').routingdata(),
@@ -450,32 +450,32 @@ class HighLevelTest(TestCase):
         self.assertDicEq(vars(get_route('DE', '42897')),
             {'service_mark': u'', 'o_sort': u'42', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'DE', 'countrynum': u'276',
-             'routingtable_version': u'20100503', 'iata_code': u'', 'd_sort': u'15',
+             'routingtable_version': u'20110103', 'iata_code': u'', 'd_sort': u'15',
              'postcode': u'42897', 'd_depot': u'0142', 'service_text': u'D'})
         self.assertDicEq(vars(get_route('DE', '42897', 'Remscheid')),
             {'service_mark': u'', 'o_sort': u'42', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'DE', 'countrynum': u'276',
-             'routingtable_version': u'20100503', 'iata_code': u'', 'd_sort': u'15',
+             'routingtable_version': u'20110103', 'iata_code': u'', 'd_sort': u'15',
              'postcode': u'42897', 'd_depot': u'0142', 'service_text': u'D'})
         self.assertDicEq(vars(get_route('DE', '42897', 'Remscheid', '101')),
             {'service_mark': u'', 'o_sort': u'42', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'DE', 'countrynum': u'276',
-             'routingtable_version': u'20100503', 'iata_code': u'', 'd_sort': u'15',
+             'routingtable_version': u'20110103', 'iata_code': u'', 'd_sort': u'15',
              'postcode': u'42897', 'd_depot': u'0142', 'service_text': u'D'})
         self.assertDicEq(vars(get_route('LI', '8440')),
             {'service_mark': u'', 'o_sort': u'78', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'CH', 'countrynum': u'756',
-             'routingtable_version': u'20100503', 'iata_code': u'', 'd_sort': u'',
+             'routingtable_version': u'20110103', 'iata_code': u'', 'd_sort': u'',
              'postcode': u'8440', 'd_depot': u'0617', 'service_text': u'D'})
         self.assertDicEq(vars(get_route(u'LI', '8440')),
             {'service_mark': u'', 'o_sort': u'78', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'CH', 'countrynum': u'756',
-             'routingtable_version': u'20100503', 'iata_code': u'', 'd_sort': u'',
+             'routingtable_version': u'20110103', 'iata_code': u'', 'd_sort': u'',
              'postcode': u'8440', 'd_depot': u'0617', 'service_text': u'D'})
         self.assertDicEq(vars(get_route(u'LI', u'8440')),
             {'service_mark': u'', 'o_sort': u'78', 'serviceinfo': u'', 'barcode_id': u'37',
              'grouping_priority': u'', 'country': u'CH', 'countrynum': u'756',
-             'routingtable_version': u'20100503', 'iata_code': u'', 'd_sort': u'',
+             'routingtable_version': u'20110103', 'iata_code': u'', 'd_sort': u'',
              'postcode': u'8440', 'd_depot': u'0617', 'service_text': u'D'})
 
     def test_cache(self):

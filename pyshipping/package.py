@@ -18,7 +18,8 @@ class Package(object):
     def __init__(self, size, weight=0, nosort=False):
         """Generates a new Package object.
 
-        The size can be given as an list of integers or an string where the sizes are determined by the letter 'x':
+        The size can be given as an list of integers or an string where the sizes are
+        separated by the letter 'x':
         >>> Package((300, 400, 500))
         <Package 500x400x300>
         >>> Package('300x400x500')
@@ -112,7 +113,11 @@ class Package(object):
            >>> Package((400,300,600)) * 2
            <Package 600x600x400>
            """
-        return Package((self.heigth, self.width, self.length * multiplicand), self.weight * multiplicand)
+        if self.weight:
+            new_weight = self.weight * multiplicand
+        else:
+            new_weight = None
+        return Package((self.heigth, self.width, self.length * multiplicand), new_weight)
 
     def __add__(self, other):
         """
@@ -137,7 +142,13 @@ class Package(object):
         othersides = [other.heigth, other.width, other.length]
         othersides.remove(stack_on[0])
         othersides.remove(stack_on[1])
-        return Package((stack_on[0], stack_on[1], mysides[0] + othersides[0]), self.weight + other.weight)
+
+        if self.weight and other.weight:
+            new_weight = self.weight + other.weight
+        else:
+            new_weight = None
+
+        return Package((stack_on[0], stack_on[1], mysides[0] + othersides[0]), new_weight)
 
     def __str__(self):
         if self.weight:
@@ -163,25 +174,40 @@ def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
     (2, [<Package 800x750x310>, <Package 500x450x290>], [<Package 800x310x250>])
     """
 
-    MAXKARTOONSIMBUENDEL = 6
+    def buendelung_moeglich(box_a, box_b):
+        """Entscheide, ob eine Bündelung der beiden Kartons möglich ist.
+
+        Es kann gebündelt werden, wenn die Summe der Gewichte (falls gepflegt)
+        kleiner ist als das maximale Gewicht,
+        das Gurtmaß nicht das maximale Gurtmaß übersteigt
+        und nicht bereits die maximale Anzahl der Bündelungen erreicht ist.
+        """
+
+        if kartons_im_buendel > MAXKARTONSIMBUENDEL:
+            return False
+
+        tmp = box_a + box_b
+        if tmp.weight > maxweight:
+            return False
+        elif tmp.gurtmass > maxgurtmass:
+            return False
+        return True
+
+    MAXKARTONSIMBUENDEL = 6
     if not kartons:
         return 0, [], kartons
     gebuendelt = []
     rest = []
-    lastkarton = kartons.pop(0)
+    lastcarton = kartons.pop(0)
     buendel = False
     buendelcounter = 0
     kartons_im_buendel = 1
     while kartons:
         currentcarton = kartons.pop(0)
-        # check if 2 dimensions fit
-        if (currentcarton.hat_gleiche_seiten(lastkarton)
-            and (lastkarton.weight + currentcarton.weight < maxweight)
-            and ((lastkarton + currentcarton).gurtmass < maxgurtmass)
-            and (kartons_im_buendel < MAXKARTOONSIMBUENDEL)):
+        # check if 2 dimensions fit and bundling is possible
+        if currentcarton.hat_gleiche_seiten(lastcarton) and buendelung_moeglich(lastcarton, currentcarton):
             # new carton has the same size in two dimensions and the sum of both in the third
-            # ok, we can bundle
-            lastkarton = (lastkarton + currentcarton)
+            lastcarton = lastcarton + currentcarton
             kartons_im_buendel += 1
             if buendel is False:
                 # neues Bündel
@@ -190,16 +216,16 @@ def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
         else:
             # different sizes, or too big
             if buendel:
-                gebuendelt.append(lastkarton)
+                gebuendelt.append(lastcarton)
             else:
-                rest.append(lastkarton)
+                rest.append(lastcarton)
             kartons_im_buendel = 1
-            lastkarton = currentcarton
+            lastcarton = currentcarton
             buendel = False
     if buendel:
-        gebuendelt.append(lastkarton)
+        gebuendelt.append(lastcarton)
     else:
-        rest.append(lastkarton)
+        rest.append(lastcarton)
     return buendelcounter, gebuendelt, rest
 
 

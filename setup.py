@@ -19,7 +19,6 @@ setup(name='pyShipping',
                    'Programming Language :: Python'],
       # download_url
       zip_safe=False,
-      install_requires=['cython'],
       packages=find_packages(),
       package_data={'': ['README.rst'], 'pyshipping': ['carriers/dpd/georoutetables/*']},
       include_package_data=True,

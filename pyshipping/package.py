@@ -173,6 +173,7 @@ def buendelung(kartons, maxweight=31000, maxgurtmass=3000):
     >>> buendelung([Package((800, 310, 250)), Package((800, 310, 250)), Package((800, 310, 250)), Package((800, 310, 250)), Package((450, 290, 250)), Package((450, 290, 250))])
     (2, [<Package 800x750x310>, <Package 500x450x290>], [<Package 800x310x250>])
     """
+    kartons = list(kartons)
 
     def buendelung_moeglich(box_a, box_b):
         """Entscheide, ob eine Bündelung der beiden Kartons möglich ist.

@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.EE
-#Version: 20110103
-#Expiration: 20110501
-#Hash: f51f94039fe1b78a3ee19c7d13b2a9c857d446d1
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20110103.txt
+#Version: 20110905
+#Expiration: 20120101
+#Hash: d8d55ca2e78b6aad2ecb2a4169dd58b108007c6e
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20110905.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|hazardous goods|
@@ -56,7 +56,7 @@
 261|DPD 12:00 Lunapakk (COD)|
 264|DPD 12:00 saturday / Lunapakk (COD)|
 271|same day|
-294|DPD International Mail|
+294|DPD Mail|
 302|DPD EXPRESS|
 325|EXPRESS ECONOMY|
 326|EXPRESS ECONOMY|

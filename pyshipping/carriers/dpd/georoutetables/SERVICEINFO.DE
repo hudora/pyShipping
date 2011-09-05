@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.DE
-#Version: 20110103
-#Expiration: 20110501
-#Hash: bfdb75b8c86f949ddc2151b4af228b30daf09eb3
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20110103.txt
+#Version: 20110905
+#Expiration: 20120101
+#Hash: 2d80b6e94b7d90785ee5b84c906644b86d5e0b53
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20110905.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|Gefahrgut / hazardous goods|
@@ -56,7 +56,7 @@
 261|DPD 12:00 Nachnahme / C.O.D.|
 264|DPD 12:00 Samstag / saturday Nachnahme / C.O.D.|
 271|same day|
-294|DPD International Mail|
+294|DPD Mail|
 302|DPD EXPRESS|
 325|EXPRESS ECONOMY|
 326|EXPRESS ECONOMY|
@@ -73,6 +73,8 @@
 356|DPD 8:30 Unfrei / ex works|
 357|DPD 8:30 Nachnahme / C.O.D.|
 358|DPD 8:30 Austausch / exchange|
+361|Unfrei / ex works|
+362|Unfrei / ex works|
 810|Service Werktag 09:00 Uhr|
 811|Service Werktag 12:00 Uhr|
 812|Service Werktag 17:00 Uhr|

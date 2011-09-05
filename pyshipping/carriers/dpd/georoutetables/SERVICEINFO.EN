@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.EN
-#Version: 20110103
-#Expiration: 20110501
-#Hash: f0464c27a50db4c5538019d835e2f1f5c61a982e
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20110103.txt
+#Version: 20110905
+#Expiration: 20120101
+#Hash: 9cc51d550e5a8b64ba24052a1b7d456fe77a68d0
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20110905.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|hazardous goods|
@@ -56,7 +56,7 @@
 261|DPD 12:00 C.O.D.|
 264|DPD 12:00 saturday / C.O.D.|
 271|same day|
-294|DPD International Mail|
+294|DPD Mail|
 302|DPD EXPRESS|
 325|EXPRESS ECONOMY|
 326|EXPRESS ECONOMY|
@@ -73,6 +73,8 @@
 356|DPD 8:30 ex works|
 357|DPD 8:30 C.O.D.|
 358|DPD 8:30 exchange|
+361|ex works|
+362|ex works|
 820|saturday|
 821|saturday|
 822|saturday / C.O.D.|

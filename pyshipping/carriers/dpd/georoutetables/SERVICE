@@ -1,8 +1,8 @@
 #Filename: SERVICE
-#Version: 20110103
-#Expiration: 20110501
-#Hash: df7f6c5103fe623c33c7cf1a4399377e7f04b8e4
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20110103.txt
+#Version: 20110905
+#Expiration: 20120101
+#Hash: 15f5af3830a3a7fa10f8f287ede4e75360e71ae0
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20110905.txt
 #Fields: ServiceCode|ServiceText|ServiceMark|ServiceElements|
 #Key: ServiceCode|
 101|D||001|
@@ -238,6 +238,10 @@
 356|AM0-EXW+||021,110,180|
 357|AM0-COD+||021,100,180|
 358|AM0-SWAP+||021,120,180|
+359|D||001,190|
+360|D|X|002,190|
+361|D||001,110,190|
+362|D|X|002,110,190|
 800|EXP||020|
 801|EXP-COD||020,100|
 802|EXP-EXW||020,110|

@@ -1,8 +1,9 @@
 #Filename: SERVICEINFO.CZ
 #Version: 20110905
+#Update: 20111107
 #Expiration: 20120101
 #Hash: de42bef2636b38cd7f371000f71df64f66cc0eda
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20110905.txt
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20111107.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|nebezpecne zbozi / hazardous goods|

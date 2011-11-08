@@ -1,8 +1,9 @@
 #Filename: SERVICEINFO.DE
 #Version: 20110905
+#Update: 20111107
 #Expiration: 20120101
 #Hash: 2d80b6e94b7d90785ee5b84c906644b86d5e0b53
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20110905.txt
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20111107.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|Gefahrgut / hazardous goods|

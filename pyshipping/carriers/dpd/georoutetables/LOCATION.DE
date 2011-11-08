@@ -1,8 +1,9 @@
 #Filename: LOCATION.DE
 #Version: 20110905
+#Update: 20111107
 #Expiration: 20120101
 #Hash: 6eedc807e450c4e8a76ee039ff22226d38b95f30
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20110905.txt
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20111107.txt
 #Fields: AreaName|CityName|ISO-Alpha2CountryCode|PostCode|
 #Key: AreaName|CityName|
 |Dublin|IE|1|

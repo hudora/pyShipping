@@ -292,8 +292,11 @@ class RouteData(object):
             i = 1
             for line in _readfile(os.path.join(path, 'ROUTES')):
                 services = self.expand_services(line[3])
+                # mit der Version "20110905, Update 20111107" hat DPD das Format der Routen-
+                # Daten geaendert, es gibt jetzt ein neues zusaetzliches Feld "Updated", das
+                # wir zwar nicht mitspeichern aber abschneiden muessen, deshalb "line[4:-2]"
                 c.execute('INSERT INTO routes VALUES (?,?,?,?,?,?,?,?,?,?,?,?)',
-                          [i] + line[:3] + [services] + line[4:-1])
+                          [i] + line[:3] + [services] + line[4:-2])
                 self.expand_depots(i, line[4], c)
                 i += 1
 

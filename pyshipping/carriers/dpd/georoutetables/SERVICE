@@ -1,8 +1,9 @@
 #Filename: SERVICE
 #Version: 20110905
+#Update: 20111107
 #Expiration: 20120101
-#Hash: 15f5af3830a3a7fa10f8f287ede4e75360e71ae0
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20110905.txt
+#Hash: 83fa84b54fe528b507174443b38643ea29e71cd6
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20111107.txt
 #Fields: ServiceCode|ServiceText|ServiceMark|ServiceElements|
 #Key: ServiceCode|
 101|D||001|
@@ -198,7 +199,7 @@
 291|IP||080|
 292|POD BOX||081|
 293|EXPRESS BAG||020,060|
-294|INTERNAT MAIL||006,060|
+294|DPD MAIL||006,060|
 298|RETURN SENDER||070,071|
 299|RETURN|E|020,070|
 300|RETURN||070|

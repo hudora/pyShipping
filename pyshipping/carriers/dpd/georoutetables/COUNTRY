@@ -1,8 +1,8 @@
 #Filename: COUNTRY
-#Version: 20110905
-#Expiration: 20120101
-#Hash: 4d80ee0f0340bdc3c9080ded0beb60c67f23749f
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20110905.txt
+#Version: 20120507
+#Expiration: 20120902
+#Hash: 0ec1b0110b83ae5629e8be26e59015e399dbbc7b
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20120507.txt
 #Fields: ISO-NumCountryCode|ISO-Alpha2CountryCode|ISO-Alpha3CountryCode|DestinationLanguages|FlagPostCodeNo|
 #Key: ISO-NumCountryCode|
 004|AF|AFG|EN|0|
@@ -74,8 +74,8 @@
 232|ER|ERI|AR,TI,EN|0|
 233|EE|EST|ET|0|
 234|FO|FRO|FO|0|
-238|FK|FLK|EN|1|
-239|GS|SGS|EN|1|
+238|FK|FLK|EN|0|
+239|GS|SGS|EN|0|
 242|FJ|FJI|EN|0|
 246|FI|FIN|FI,SV|0|
 248|AX|ALA|SV|0|
@@ -157,7 +157,9 @@
 524|NP|NPL|NE|0|
 528|NL|NLD|NL|0|
 530|AN|ANT|NL|1|
+531|CW|CUW|EN,NL|1|
 533|AW|ABW|EN|1|
+534|SX|SXM|EN,NL|1|
 535|BQ|BES|NL|1|
 540|NC|NCL|FR|0|
 548|VU|VUT|FR,EN|0|
@@ -179,18 +181,18 @@
 600|PY|PRY|ES,GN|0|
 604|PE|PER|ES,QU,AY|0|
 608|PH|PHL|EN|0|
-612|PN|PCN|EN|1|
+612|PN|PCN|EN|0|
 616|PL|POL|PL|0|
 620|PT|PRT|PT|0|
 624|GW|GNB|PT|0|
 626|TL|TLS|PT,ID|1|
-630|PR|PRI|ES,EN|1|
-634|QA|QAT|AR|0|
+630|PR|PRI|ES,EN|0|
+634|QA|QAT|AR|1|
 638|RE|REU|FR|0|
 642|RO|ROU|RO|0|
 643|RU|RUS|RU|0|
 646|RW|RWA|FR,EN,RW|1|
-654|SH|SHN|EN|1|
+654|SH|SHN|EN|0|
 659|KN|KNA|EN|1|
 660|AI|AIA|EN|0|
 662|LC|LCA|EN|1|
@@ -212,6 +214,7 @@
 710|ZA|ZAF|AF,EN|0|
 716|ZW|ZWE|EN|1|
 724|ES|ESP|ES|0|
+728|SS|SSD|EN|0|
 732|EH|ESH|AR,ES,FR|0|
 736|SD|SDN|AR,EN|0|
 740|SR|SUR|EN,NL|1|

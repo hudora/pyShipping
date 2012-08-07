@@ -79,6 +79,7 @@ def packlayer(bin, packages):
     while packages:
         strip, (sizex, stripsize, sizez), rest = packstrip(bin, packages)
         if layersize + stripsize <= binsize:
+            packages = rest
             if not strip:
                 # we were not able to pack anything
                 break
@@ -86,7 +87,6 @@ def packlayer(bin, packages):
             layerx = max([sizex, layerx])
             layery = max([sizez, layery])
             strips.extend(strip)
-            packages = rest
         else:
             # Next Layer please
             packages = strip + rest
@@ -104,6 +104,7 @@ def packbin(bin, packages):
     while packages:
         layer, (sizex, sizey, layersize), rest = packlayer(bin, packages)
         if contentheigth + layersize <= binsize:
+            packages = rest
             if not layer:
                 # we were not able to pack anything
                 break
@@ -111,7 +112,6 @@ def packbin(bin, packages):
             contentx = max([contentx, sizex])
             contenty = max([contenty, sizey])
             layers.extend(layer)
-            packages = rest
         else:
             # Next Bin please
             packages = layer + rest

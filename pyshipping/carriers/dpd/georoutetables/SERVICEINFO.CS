@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.CS
-#Version: 20120507
-#Expiration: 20120902
+#Version: 20120903
+#Expiration: 20130106
 #Hash: de42bef2636b38cd7f371000f71df64f66cc0eda
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20120507.txt
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20120903.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|nebezpecne zbozi / hazardous goods|

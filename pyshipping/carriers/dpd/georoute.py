@@ -408,7 +408,9 @@ class Router(object):
         self.select_depot(parcel)
         # Sending date is not used yet, according to documentation
 
-        if len(self.current_subset) == 1:
+        # If there are several routes, always use the first one.
+        # In prior versions, an exception was raised instead.
+        if len(self.current_subset) >= 1:
             rows = self.select_routes("1=1")
             (service_text, service_mark) = self.route_data.get_service(parcel.service)[1:3]
             depot = self.route_data.get_depot(rows[0][8])

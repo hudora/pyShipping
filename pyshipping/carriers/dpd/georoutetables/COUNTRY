@@ -1,8 +1,8 @@
 #Filename: COUNTRY
-#Version: 20120903
-#Expiration: 20130106
-#Hash: cf67a8b71a7094228b84909724e7599f9f934932
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20120903.txt
+#Version: 20130107
+#Expiration: 20130505
+#Hash: bda1c9b15b61d30c190d677f8c9c43c45e6c0b51
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20130107.txt
 #Fields: ISO-NumCountryCode|ISO-Alpha2CountryCode|ISO-Alpha3CountryCode|DestinationLanguages|FlagPostCodeNo|
 #Key: ISO-NumCountryCode|
 004|AF|AFG|EN|0|
@@ -125,7 +125,7 @@
 414|KW|KWT|AR|0|
 417|KG|KGZ|UZ,KY,RU|0|
 418|LA|LAO|LO|0|
-422|LB|LBN|AR,EN,FR|0|
+422|LB|LBN|AR,EN,FR|1|
 426|LS|LSO|EN|0|
 428|LV|LVA|LV|0|
 430|LR|LBR|EN|0|

@@ -1,8 +1,8 @@
 #Filename: SERVICE
-#Version: 20120903
-#Expiration: 20130106
-#Hash: f30df75d53212cc65cfc09fed2751e765d510012
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20120903.txt
+#Version: 20130107
+#Expiration: 20130505
+#Hash: 1b7758c1a5a772a252a899867aeb4655dbe04912
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20130107.txt
 #Fields: ServiceCode|ServiceText|ServiceMark|ServiceElements|
 #Key: ServiceCode|
 101|D||001|
@@ -150,7 +150,7 @@
 243|AM2-SWAP||023,120|
 244|AM2-SWAP-HAZ||023,120,150|
 245|AM2-6-SWAP||023,120,130|
-246|AM2-SWAP-HAZ||023,120,130,150|
+246|AM2-6-SWAP-HAZ||023,120,130,150|
 247|AM2-BACK||023,121|
 248|AM2-BACK-HAZ||023,121,150|
 249|AM2+||023,180|
@@ -231,6 +231,8 @@
 337|D-B2C-PSD||001,013,200|
 338|D-B2C-PSD|X|002,013,200|
 340|DPD MAX||090|
+341|D-B2C-COD-PSD||001,013,100,200|
+342|D-B2C-COD-PSD|X|002,013,100,200|
 350|AM0||021|
 351|AM0-EXW||021,110|
 352|AM0-COD||021,100|

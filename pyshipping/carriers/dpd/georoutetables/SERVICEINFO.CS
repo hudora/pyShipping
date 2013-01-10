@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.CS
-#Version: 20120903
-#Expiration: 20130106
-#Hash: de42bef2636b38cd7f371000f71df64f66cc0eda
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20120903.txt
+#Version: 20130107
+#Expiration: 20130505
+#Hash: ce38e47f7bbfe45ed0ad7de9f596f5234fa6c17d
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20130107.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|nebezpecne zbozi / hazardous goods|
@@ -66,3 +66,7 @@
 353|DPD 8:30 vymena / exchange|
 357|DPD 8:30 dobirka / C.O.D.|
 358|DPD 8:30 vymena / exchange|
+839|VECERNI DORUCENI 17:00-20:00|
+840|VECERNI DORUCENI 17:00-20:00|
+841|VECERNI DORUCENI 17:00-20:00 DOBIRKA|
+842|VECERNI DORUCENI 17:00-20:00 DOBIRKA|

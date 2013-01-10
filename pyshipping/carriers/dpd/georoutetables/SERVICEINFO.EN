@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.EN
-#Version: 20120903
-#Expiration: 20130106
-#Hash: 00e8f7c19db9a164f17b89bb62cee3311c6813db
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20120903.txt
+#Version: 20130107
+#Expiration: 20130505
+#Hash: 7f4c06f2f180728b3c3a7e7ce31cc32d2adfac40
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20130107.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|hazardous goods|
@@ -66,6 +66,8 @@
 336|C.O.D.|
 337|Parcel Shop Delivery|
 338|Parcel Shop Delivery|
+341|Parcel Shop Delivery C.O.D.|
+342|Parcel Shop Delivery C.O.D.|
 350|DPD 8:30|
 351|DPD 8:30 ex works|
 352|DPD 8:30 C.O.D.|
@@ -93,9 +95,10 @@
 836|exchange / C.O.D.|
 837|saturday / exchange / C.O.D.|
 838|saturday / exchange / C.O.D.|
-840|1 day transit time|
-841|2 days transit time|
-842|3 days transit time|
+839|Evening Delivery|
+840|Evening Delivery|
+841|Evening Delivery COD|
+842|Evening Delivery COD|
 843|4 days transit time|
 844|5 days transit time|
 845|1 day transit time / C.O.D.|

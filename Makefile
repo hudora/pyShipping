@@ -11,9 +11,11 @@ build:
 
 test:
 	PYTHONPATH=. python pyshipping/__init__.py # find import errors
-	PYTHONPATH=. python pyshipping/shipment.py 
-	PYTHONPATH=. python pyshipping/package.py 
-	PYTHONPATH=. python pyshipping/fortras/test.py 
+	PYTHONPATH=. python pyshipping/shipment.py
+	PYTHONPATH=. python pyshipping/package.py
+	PYTHONPATH=. python pyshipping/fortras/test.py
+	PYTHONPATH=. python pyshipping/binpack.py
+	# These tests tend to fail because of routing table updates
 	PYTHONPATH=. python pyshipping/carriers/dpd/georoute_test.py
 
 dependencies:

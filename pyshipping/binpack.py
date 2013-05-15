@@ -16,6 +16,8 @@ def binpack(packages, bin=None, iterlimit=5000):
 
 
 def test(func):
+    import time
+    from package import Package
     fd = open('testdata.txt')
     vorher = 0
     nachher = 0

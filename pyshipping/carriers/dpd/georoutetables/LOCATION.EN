@@ -1,8 +1,8 @@
 #Filename: LOCATION.EN
-#Version: 20130107
-#Expiration: 20130505
+#Version: 20130506
+#Expiration: 20130901
 #Hash: 6f7eff135d73b9bf60bc6d9c983313d8811fbcb2
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20130107.txt
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20130506.txt
 #Fields: AreaName|CityName|ISO-Alpha2CountryCode|PostCode|
 #Key: AreaName|CityName|
 |Dublin|IE|1|

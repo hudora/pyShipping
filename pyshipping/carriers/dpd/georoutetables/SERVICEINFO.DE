@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.DE
-#Version: 20130107
-#Expiration: 20130505
-#Hash: bf0906ea390eeefd9d0b7ee1d82dcb3c11829bf0
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20130107.txt
+#Version: 20130506
+#Expiration: 20130901
+#Hash: 489053fb725c045e59474778f1708e54e3eb013a
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20130506.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|Gefahrgut / hazardous goods|
@@ -55,6 +55,7 @@
 258|DPD 12:00 Samstag / saturday Unfrei / ex works|
 261|DPD 12:00 Nachnahme / C.O.D.|
 264|DPD 12:00 Samstag / saturday Nachnahme / C.O.D.|
+270|DPD 12:00 Samstag Austausch Gefahrgut / Saturday Swap Hazardous Goods|
 271|same day|
 294|DPD Mail|
 302|DPD EXPRESS|
@@ -107,3 +108,7 @@
 840|Abendzustellung / Evening Delivery|
 841|Abendzustellung Nachnahme / Evening Delivery C.O.D.|
 842|Abendzustellung Nachnahme / Evening Delivery C.O.D.|
+844|DPD Private|
+845|DPD Private|
+846|DPD Home|
+847|DPD Home|

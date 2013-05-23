@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.CS
-#Version: 20130107
-#Expiration: 20130505
-#Hash: ce38e47f7bbfe45ed0ad7de9f596f5234fa6c17d
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20130107.txt
+#Version: 20130506
+#Expiration: 20130901
+#Hash: 755fd81761d0474d68f00ff70ce4516fa8fef173
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20130506.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|nebezpecne zbozi / hazardous goods|
@@ -54,10 +54,10 @@
 258|DPD 12:00 sobota ex works / Saturday ex works|
 261|DPD 12:00 dobirka / C.O.D.|
 271|stejny den / same day|
-327|SOUKROMA ADRESA / KONTAKTOVAT PRIJEMCE|
-328|SOUKROMA ADRESA / KONTAKTOVAT PRIJEMCE|
-329|SOUKROMA ADRESA DOBIRKA / KONTAKTOVAT PRIJEMCE|
-330|SOUKROMA ADRESA DOBIRKA / KONTAKTOVAT PRIJEMCE|
+327|PRIVATE ADDRESS / B2C|
+328|PRIVATE ADDRESS / B2C|
+329|PRIVATE ADDRESS / B2C - C.O.D.|
+330|PRIVATE ADDRESS / B2C - C.O.D.|
 333|SOUKROMA ADRESA / KONTAKTOVAT PRIJEMCE|
 334|SOUKROMA ADRESA / KONTAKTOVAT PRIJEMCE|
 335|SOUKROMA ADRESA DOBIRKA / KONTAKTOVAT PRIJEMCE|

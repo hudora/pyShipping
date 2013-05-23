@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.EN
-#Version: 20130107
-#Expiration: 20130505
-#Hash: 7f4c06f2f180728b3c3a7e7ce31cc32d2adfac40
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20130107.txt
+#Version: 20130506
+#Expiration: 20130901
+#Hash: 246c4ad45913de3f101d0697186a27a2e0953f09
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20130506.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|hazardous goods|
@@ -55,6 +55,7 @@
 258|DPD 12:00 saturday / ex works|
 261|DPD 12:00 C.O.D.|
 264|DPD 12:00 saturday / C.O.D.|
+270|DPD 12:00 Saturday Swap Hazardous Goods|
 271|same day|
 294|DPD Mail|
 302|DPD EXPRESS|
@@ -99,10 +100,10 @@
 840|Evening Delivery|
 841|Evening Delivery COD|
 842|Evening Delivery COD|
-843|4 days transit time|
-844|5 days transit time|
-845|1 day transit time / C.O.D.|
-846|2 days transit time / C.O.D.|
-847|3 days transit time / C.O.D.|
+843|Special Pallet|
+844|DPD Private|
+845|DPD Private|
+846|DPD Home|
+847|DPD Home|
 848|4 days transit time / C.O.D.|
 849|5 days transit time / C.O.D.|

@@ -15,3 +15,8 @@ It also comes with the only python based `3D Bin Packing <http://www.cs.sunysb.e
 You can get the whole Package at http://pypi.python.org/pypi/pyShipping
 
 This code is BSD Licensed.
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/hudora/pyshipping/trend.png
+   :alt: Bitdeli badge
+   :target: https://bitdeli.com/free
+

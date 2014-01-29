@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.EN
-#Version: 20130506
-#Expiration: 20130901
-#Hash: 246c4ad45913de3f101d0697186a27a2e0953f09
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20130506.txt
+#Version: 20140106
+#Expiration: 20140504
+#Hash: 85037002df19b84563bcfdbc1153cd85ff629e9f
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20140106.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|hazardous goods|
@@ -80,6 +80,9 @@
 358|DPD 8:30 exchange|
 361|ex works|
 362|ex works|
+365|Tyre|
+366|Tyre B2C|
+367|Tyre C.O.D.|
 820|saturday|
 821|saturday|
 822|saturday / C.O.D.|
@@ -101,9 +104,9 @@
 841|Evening Delivery COD|
 842|Evening Delivery COD|
 843|Special Pallet|
-844|DPD Private|
-845|DPD Private|
-846|DPD Home|
-847|DPD Home|
+844|Consumer Home|
+845|Consumer Home|
+846|Consumer Home & Shop|
+847|Consumer Home & Shop|
 848|4 days transit time / C.O.D.|
 849|5 days transit time / C.O.D.|

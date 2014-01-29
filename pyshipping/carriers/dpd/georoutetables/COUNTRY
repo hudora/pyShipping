@@ -1,8 +1,8 @@
 #Filename: COUNTRY
-#Version: 20130506
-#Expiration: 20130901
-#Hash: 795919d689e05bd2e8324a718be548adfa89da1a
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20130506.txt
+#Version: 20140106
+#Expiration: 20140504
+#Hash: 01f9fd1927280385e2afd8287ca19c8528cb4ad2
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20140106.txt
 #Fields: ISO-NumCountryCode|ISO-Alpha2CountryCode|ISO-Alpha3CountryCode|DestinationLanguages|FlagPostCodeNo|
 #Key: ISO-NumCountryCode|
 004|AF|AFG|EN|0|
@@ -68,7 +68,7 @@
 212|DM|DMA|EN|0|
 214|DO|DOM|ES|0|
 218|EC|ECU|ES,QU|0|
-222|SV|SLV|ES|0|
+222|SV|SLV|ES|1|
 226|GQ|GNQ|ES,FR|1|
 231|ET|ETH|AM|0|
 232|ER|ERI|AR,TI,EN|0|

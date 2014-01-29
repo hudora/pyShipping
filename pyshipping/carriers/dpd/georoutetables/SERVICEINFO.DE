@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.DE
-#Version: 20130506
-#Expiration: 20130901
-#Hash: 489053fb725c045e59474778f1708e54e3eb013a
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20130506.txt
+#Version: 20140106
+#Expiration: 20140504
+#Hash: b89918164e74d7a8415b23142c7f4d11a0fbeb6b
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20140106.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|Gefahrgut / hazardous goods|
@@ -80,6 +80,9 @@
 358|DPD 8:30 Austausch / exchange|
 361|Unfrei / ex works|
 362|Unfrei / ex works|
+365|Reifen / Tyre|
+366|Reifen / Tyre B2C|
+367|Reifen / Tyre Nachnahme / C.O.D.|
 810|Service Werktag 09:00 Uhr|
 811|Service Werktag 12:00 Uhr|
 812|Service Werktag 17:00 Uhr|
@@ -108,7 +111,7 @@
 840|Abendzustellung / Evening Delivery|
 841|Abendzustellung Nachnahme / Evening Delivery C.O.D.|
 842|Abendzustellung Nachnahme / Evening Delivery C.O.D.|
-844|DPD Private|
-845|DPD Private|
-846|DPD Home|
-847|DPD Home|
+844|Consumer Home|
+845|Consumer Home|
+846|Consumer Home & Shop|
+847|Consumer Home & Shop|

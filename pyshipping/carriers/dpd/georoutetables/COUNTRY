@@ -1,8 +1,8 @@
 #Filename: COUNTRY
-#Version: 20140106
-#Expiration: 20140504
+#Version: 20140505
+#Expiration: 20140831
 #Hash: 01f9fd1927280385e2afd8287ca19c8528cb4ad2
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20140106.txt
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20140505.txt
 #Fields: ISO-NumCountryCode|ISO-Alpha2CountryCode|ISO-Alpha3CountryCode|DestinationLanguages|FlagPostCodeNo|
 #Key: ISO-NumCountryCode|
 004|AF|AFG|EN|0|

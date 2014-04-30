@@ -1,8 +1,8 @@
 #Filename: SERVICE
-#Version: 20140106
-#Expiration: 20140504
+#Version: 20140505
+#Expiration: 20140831
 #Hash: c8aa7333314e4057f7cf43d42ec66e9f89588345
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20140106.txt
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20140505.txt
 #Fields: ServiceCode|ServiceText|ServiceMark|ServiceElements|
 #Key: ServiceCode|
 101|D||001|

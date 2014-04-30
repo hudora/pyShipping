@@ -1,8 +1,8 @@
 #Filename: SERVICEINFO.DE
-#Version: 20140106
-#Expiration: 20140504
-#Hash: b89918164e74d7a8415b23142c7f4d11a0fbeb6b
-#Reference: http://extranet.dpd.de/georoute/references_dpd_20140106.txt
+#Version: 20140505
+#Expiration: 20140831
+#Hash: 8124d0f60be0fe5c28a7f0af019c975fc2bd3542
+#Reference: http://extranet.dpd.de/georoute/references_dpd_20140505.txt
 #Fields: ServiceCode|ServiceFieldInfo|
 #Key: ServiceCode|
 102|Gefahrgut / hazardous goods|
@@ -65,10 +65,10 @@
 330|Nachnahme / C.O.D.|
 335|Nachnahme / C.O.D.|
 336|Nachnahme / C.O.D.|
-337|Paket-Shop Zustellung / Parcel Shop Delivery|
-338|Paket-Shop Zustellung / Parcel Shop Delivery|
-341|Paket-Shop Zustellung Nachnahme / Parcel Shop Delivery C.O.D.|
-342|Paket-Shop Zustellung Nachnahme / Parcel Shop Delivery C.O.D.|
+337|DPD PaketShop Zustellung / Parcel Shop Delivery|
+338|DPD PaketShop Zustellung / Parcel Shop Delivery|
+341|DPD PaketShop Zustellung Nachnahme / Parcel Shop Delivery C.O.D.|
+342|DPD PaketShop Zustellung Nachnahme / Parcel Shop Delivery C.O.D.|
 350|DPD 8:30|
 351|DPD 8:30 Unfrei / ex works|
 352|DPD 8:30 Nachnahme / C.O.D.|

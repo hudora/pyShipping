@@ -6,13 +6,13 @@ binpack_simple.py
 This code implemnts 3D bin packing in pure Python
 
 Bin packing in this context is calculating the best way to store a number of differently sized boxes in a
-number of fixed sized "bins". It is what usually happens in a Warehouse bevore shipping.
+number of fixed sized "bins". It is what usually happens in a Warehouse before shipping.
 
 The Algorithm has a simple fit first approach, but can archive relative good results because it tries
-different rectangular rotations of the packages. Since the Algorithm can't interate over all possible
+different rectangular rotations of the packages. Since the Algorithm can't iterate over all possible
 combinations we use a heuristic approach.
 
-For a few dozen packages it reaches adaequate runtime. Below are the results calculated about a set of
+For a few dozen packages it reaches adequate runtime. Below are the results calculated about a set of
 500 real world packing problems.
 
 Binsize     Runtime                 Recuction in shipped Packages

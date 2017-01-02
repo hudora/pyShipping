@@ -166,8 +166,10 @@ def allpermutations_helper(permuted, todo, maxcounter, callback, bin, bestpack, 
     else:
         others = todo[1:]
         thispackage = todo[0]
+        weight = thispackage.weight
         for dimensions in set(permutations((thispackage[0], thispackage[1], thispackage[2]))):
             thispackage = Package(dimensions, nosort=True)
+            thispackage.weight = weight
             if thispackage in bin:
                 counter = allpermutations_helper(permuted + [thispackage], others, maxcounter, callback,
                                                  bin, bestpack, counter)

@@ -95,7 +95,7 @@ def packlayer(bin, packages):
 
 
 def packbin(bin, packages):
-    packages.sort()
+    packages.sort(key=lambda x: x.volume)
     layers = []
     contentheigth = 0
     contentx = 0
@@ -121,7 +121,7 @@ def packbin(bin, packages):
 
 def packit(bin, originalpackages):
     packedbins = []
-    packages = sorted(originalpackages)
+    packages = sorted(originalpackages, key=lambda x: x.volume)
     while packages:
         packagesinbin, (binx, biny, binz), rest = packbin(bin, packages)
         if not packagesinbin:
@@ -139,7 +139,7 @@ def packit(bin, originalpackages):
 def product(*args, **kwds):
     # product('ABCD', 'xy') --> Ax Ay Bx By Cx Cy Dx Dy
     # product(range(2), repeat=3) --> 000 001 010 011 100 101 110 111
-    pools = map(tuple, args) * kwds.get('repeat', 1)
+    pools = list(map(tuple, args)) * kwds.get('repeat', 1)
     result = [[]]
     for pool in pools:
         result = [x + [y] for x in result for y in pool]
@@ -222,12 +222,12 @@ def test():
             continue
         bins, rest = binpack(packages)
         if rest:
-            print "invalid data", rest, line
+            print("invalid data", rest, line)
         else:
             vorher += len(packages)
             nachher += len(bins)
-    print time.time() - start,
-    print vorher, nachher, float(nachher) / vorher * 100
+    print(time.time() - start)
+    print(vorher, nachher, float(nachher) / vorher * 100)
 
 
 if __name__ == '__main__':

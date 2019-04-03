@@ -1,4 +1,11 @@
-pyShipping provides connections to interface with shipping companies and to transport shipping related information. 
+I take no credit for the excellent pyShipping (https://github.com/hudora/pyShipping) module. All I've done is fork their repo and make it python3 compatible. For the record, I submitted a pull request to the original maintainers almost 6 weeks ago (at the time of writing) but the project appears to be dormant and I needed this available via pip install today.
+
+Install via...
+pip install pyShipping-python3
+
+---
+
+pyShipping provides connections to interface with shipping companies and to transport shipping related information.
 
  * package - shipping/cargo related calculations based on a unit of shipping (box, crate, package), includes
    a bin packing implementation in pure Python

@@ -38,7 +38,7 @@ class Entladebericht(object):
     # Gitterbox-Paletten-Entladung Empfangspartner kann 3/0 115 - 117
     # Verkehrsart** kann 1 118 - 118
     # Frei 9 119 - 127
-    # Releasestand â€˜5â€™ muss 1 128 - 128
+    # Releasestand ï¿½ï¿½ï¿½5â€™ muss 1 128 - 128
 
     n_record_re = (r'N(?P<borderonr>[0-9 ]{18})(?P<position>[0-9 ]{3})(?P<sendungsnrversender>[0-9 ]{16})'
                    + r'(?P<sendungsnrempfaenger>[0-9 ]{16})(?P<differenzschluessel1>..)'
@@ -51,11 +51,11 @@ class Entladebericht(object):
     # Laufende Bordero-Position Versandpartner muss 3/0 020 - 022
     # Sendungs-Nr.  Versandpartner muss          16 023 - 038
     # Sendungs-Nr. Empfangspartner muss          16 039 - 054
-    # DifferenzartschluŸssel 1* muss 2 055 - 056
+    # Differenzartschluï¿½ssel 1* muss 2 055 - 056
     # Differenzanzahl 1 kann 4/0 057 - 060
     # Verpackungsart 1** kann 2 061 - 062
     # Text/Hinweis 1 kann          29 063 - 091
-    # DifferenzartschluŸssel 2* kann 2 092 - 093
+    # Differenzartschluï¿½ssel 2* kann 2 092 - 093
     # Differenzanzahl 2 kann 4/0 094 - 097
     # Verpackungsart 2** kann 2 098 - 099
     # Text/Hinweis 2 kann          29 100 - 128
@@ -66,60 +66,60 @@ class Entladebericht(object):
                    + r'(?P<date>[0-9 ]{8})(?P<time>[0-9 ]{4})'
                    + r'(?P<benutzer>.{10})(?P<terminal>.{4})')
     v_record_re = re.compile(v_record_re)
-    # LoŸst 'N'-Satz ab bei Einsatz von Barcode
+    # Loï¿½st 'N'-Satz ab bei Einsatz von Barcode
     # Satzart â€˜Vâ€™ muss 1 001 - 001
     # Bordero-Nr. Versandpartner muss          18 002 - 019
     # Sendungs-Nr. Versandpartner muss          16 020 - 035
     # Barcode-Qualifier * kann 3 036 - 038
     # Barcode-Nr. muss          35 039 - 073
     # Fehler-/Hinweiscode 1 ** muss 3 074 - 076
-    # Frei waŸhlbarer Text/Hinweis kann          24 077 - 100
+    # Frei waï¿½hlbarer Text/Hinweis kann          24 077 - 100
     # Ereignisdatum (TTMMJJJJ) muss 8 101 - 108
     # Ereignisuhrzeit (HHMMSS) muss 6 109 - 114
     # Benutzer-ID kann          10 115 - 124
     # Scanner/Terminal-ID kann 4 125 - 128
     # Fehler-/Hinweiscode:
     statustexte = {
-        0: 'PackstŸck',
-        2: 'PackstŸck eingedrŸckt',
-        3: 'PackstŸck aufgerissen, Ware greifbar',
-        4: 'PackstŸck nass',
-        5: 'PackstŸckinhalt lŠuft aus',
-        9: 'PackstŸck beschŠdigt',
+        0: 'Packstï¿½ck',
+        2: 'Packstï¿½ck eingedrï¿½ckt',
+        3: 'Packstï¿½ck aufgerissen, Ware greifbar',
+        4: 'Packstï¿½ck nass',
+        5: 'Packstï¿½ckinhalt lï¿½uft aus',
+        9: 'Packstï¿½ck beschï¿½digt',
        10: 'Euro-Palette',
-       11: 'Euro-Palette, Ware beschŠdigt',
-       12: 'Euro-Palette beschŠdigt',
-       13: 'Euro-Palette und Ware beschŠdigt',
-       14: 'Euro-Palette verschwei§t/gewickelt',
+       11: 'Euro-Palette, Ware beschï¿½digt',
+       12: 'Euro-Palette beschï¿½digt',
+       13: 'Euro-Palette und Ware beschï¿½digt',
+       14: 'Euro-Palette verschweiï¿½t/gewickelt',
        15: 'Euro-Palette, Folie ein-/aufgerissen, Ware greifbar',
-       19: 'Euro-Palette und/oder Ware mit BeschŠdigung',
+       19: 'Euro-Palette und/oder Ware mit Beschï¿½digung',
        20: 'Gitterbox',
-       21: 'Gitterbox, Ware beschŠdigt',
-       22: 'Gitterbox beschŠdigt',
-       23: 'Gitterbox und Ware beschŠdigt',
-       29: 'Gitterbox und/oder Ware mit BeschŠdigung',
+       21: 'Gitterbox, Ware beschï¿½digt',
+       22: 'Gitterbox beschï¿½digt',
+       23: 'Gitterbox und Ware beschï¿½digt',
+       29: 'Gitterbox und/oder Ware mit Beschï¿½digung',
        30: 'Halbpalette',
-       31: 'Halbpalette, Ware beschŠdigt',
-       32: 'Halbpalette beschŠdigt',
-       33: 'Halbpalette und Ware beschŠdigt',
-       34: 'Halbpalette verschwei§t/gewickelt',
+       31: 'Halbpalette, Ware beschï¿½digt',
+       32: 'Halbpalette beschï¿½digt',
+       33: 'Halbpalette und Ware beschï¿½digt',
+       34: 'Halbpalette verschweiï¿½t/gewickelt',
        35: 'Halbpalette, Folie ein-/aufgerissen, Ware greifbar',
-       39: 'Halbpalette und/oder Ware mit BeschŠdigung',
+       39: 'Halbpalette und/oder Ware mit Beschï¿½digung',
        40: 'Einwegpalette',
-       41: 'Einwegpalette, Ware beschŠdigt',
-       42: 'Einwegpalette beschŠdigt',
-       43: 'Einwegpalette und Ware beschŠdigt',
-       44: 'Einwegpalette verschwei§t/gewickelt',
+       41: 'Einwegpalette, Ware beschï¿½digt',
+       42: 'Einwegpalette beschï¿½digt',
+       43: 'Einwegpalette und Ware beschï¿½digt',
+       44: 'Einwegpalette verschweiï¿½t/gewickelt',
        45: 'Einwegpalette, Folie ein-/aufgerissen, Ware greifbar',
-       49: 'Einwegpalette und/oder Ware mit BeschŠdigung.',
-       50: 'PackstŸck fehlt bei Entladung',  # (Wird durch Entladebericht beim EP erzeugt)
+       49: 'Einwegpalette und/oder Ware mit Beschï¿½digung.',
+       50: 'Packstï¿½ck fehlt bei Entladung',  # (Wird durch Entladebericht beim EP erzeugt)
        51: 'Backbox SK1*',
        52: 'Backbox SK2*',
        53: 'Backbox SK3*',
        54: 'Backbox SK4*',
-       62: 'HUB/Konsolidierungspunkt - PackstŸck handverteilt',
-       63: 'HUB/Konsolidierungspunkt - Palette mit †berma§',
-       64: 'HUB/Konsolidierungspunkt - PackstuŸckroutung nicht lesbar (Nachbearbeitung)',
+       62: 'HUB/Konsolidierungspunkt - Packstï¿½ck handverteilt',
+       63: 'HUB/Konsolidierungspunkt - Palette mit ï¿½bermaï¿½',
+       64: 'HUB/Konsolidierungspunkt - Packstuï¿½ckroutung nicht lesbar (Nachbearbeitung)',
        65: 'HUB/Konsolidierungspunkt - Versender Direktanlieferung - Aufkleber erstellt',
        66: 'HUB/Konsolidierungspunkt - Dienstleistung - Routung durch HUB / Konsolidierungspunkt',
        67: 'HUB/Konsolidierungspunkt - Dienstleistung - Vereinbarte Nachbearbeitung',
@@ -131,7 +131,7 @@ class Entladebericht(object):
        95: 'PLZ-Fehler*',
        96: 'Platzmangel',
        97: 'Zeitmangel',
-       98: 'RŸckscannung - PackstuŸck wieder entladen',
+       98: 'Rï¿½ckscannung - Packstuï¿½ck wieder entladen',
        99: 'Korrekturscannung',
        }
 
@@ -188,18 +188,18 @@ class Entladebericht(object):
             if line[0] == 'M':
                 match = re.search(Entladebericht.m_record_re, line)
                 if not match:
-                    print 'no match', repr(line)
+                    print('no match', repr(line))
                 # the content of M records are ignored
             elif line[0] == 'N':
                 match = re.search(Entladebericht.n_record_re, line)
                 if not match:
-                    print 'no match', repr(line)
+                    print('no match', repr(line))
                 # the content of N records are ignored
             elif line[0] == 'V':
                 match = re.search(Entladebericht.v_record_re, line)
                 newdict = {}
                 if not match:
-                    print 'no match', repr(line)
+                    ('no match', repr(line))
                 for key, value in match.groupdict().items():
                     newdict[key] = value.strip()
                 newdict['timestamp'] = datetime.datetime(int(newdict['date'][4:]), int(newdict['date'][2:4]),
@@ -211,4 +211,4 @@ class Entladebericht(object):
             elif line[0] == 'W':
                 pass  # we happyly ignore W records
             else:
-                print "unknown %r" % line
+                print("unknown %r" % line)

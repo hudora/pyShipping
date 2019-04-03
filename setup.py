@@ -7,11 +7,11 @@ from setuptools import setup, find_packages
 from distutils.extension import Extension
 import codecs
 
-setup(name='pyShipping',
-      maintainer='Maximillian Dornseif',
-      maintainer_email='md@hudora.de',
-      url="https://github.com/hudora/pyShipping/",
-      version='1.9',
+setup(name='pyShipping-python3',
+      maintainer='Jon Combe via Maximillian Dornseif',
+      maintainer_email='jon@naremit.com',
+      url="https://github.com/joncombe/pyShipping-python3",
+      version='0.0.1',
       description='pyShipping - Shipping related Toolkit',
       long_description=codecs.open('README.rst', "r", "utf-8").read(),
       classifiers=['License :: OSI Approved :: BSD License',

@@ -190,7 +190,7 @@ class Statusmeldung(object):
             match = re.search(Statusmeldung.q_record_re, line)
             newdict = {}
             if not match:
-                print 'no match', repr(line)
+                print('no match', repr(line))
             for key, value in match.groupdict().items():
                 newdict[key] = value.strip()
             try:
